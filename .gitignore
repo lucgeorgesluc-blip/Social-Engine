@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+autopilot/node_modules/
+
+# Environment (secrets)
+autopilot/.env
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/

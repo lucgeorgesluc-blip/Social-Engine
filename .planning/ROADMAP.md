@@ -32,7 +32,10 @@ into a scheduled cron service on Render and ships to production.
   3. `autopilot/config/loader.js` reads `.seo-engine/config.yaml` and `assets/js/config.js` (pricing section only) without crashing, and trims content-map.yaml to slug+title pairs
   4. `.env.example` is committed with all required key names and no values
   5. A `curl` test against the Google AI API confirms the exact Gemini image model name string
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 01-01-PLAN.md — Project setup, deps, Express server, config loader, env template, tests
+- [ ] 01-02-PLAN.md — Gemini image model name verification via API
 
 **Key packages to install:**
 - `@anthropic-ai/sdk` — Claude API
@@ -175,11 +178,11 @@ Document the working model name in `autopilot/config/gemini-model.txt` for Phase
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Scaffolding | 0/TBD | Not started | - |
-| 2. Article Generation Pipeline | 0/TBD | Not started | - |
-| 3. Image Generation | 0/TBD | Not started | - |
-| 4. SFTP Deploy + GSC Ping | 0/TBD | Not started | - |
-| 5. Telegram Approval Bot | 0/TBD | Not started | - |
-| 6. Dashboard Backend | 0/TBD | Not started | - |
-| 7. Dashboard Frontend | 0/TBD | Not started | - |
-| 8. Cron Orchestrator + Production | 0/TBD | Not started | - |
+| 1. Foundation & Scaffolding | 0/2 | Planning complete | - |
+| 2. Article Generation Pipeline | 0/2 | Planning complete | - |
+| 3. Image Generation | 0/2 | Planning complete | - |
+| 4. SFTP Deploy + GSC Ping | 0/2 | Planning complete | - |
+| 5. Telegram Approval Bot | 0/2 | Planning complete | - |
+| 6. Dashboard Backend | 0/2 | Planning complete | - |
+| 7. Dashboard Frontend | 0/2 | Planning complete | - |
+| 8. Cron Orchestrator + Production | 0/2 | Planning complete | - |

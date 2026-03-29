@@ -34,7 +34,7 @@ into a scheduled cron service on Render and ships to production.
   5. A `curl` test against the Google AI API confirms the exact Gemini image model name string
 **Plans:** 2 plans
 Plans:
-- [ ] 01-01-PLAN.md — Project setup, deps, Express server, config loader, env template, tests
+- [x] 01-01-PLAN.md — Project setup, deps, Express server, config loader, env template, tests
 - [ ] 01-02-PLAN.md — Gemini image model name verification via API
 
 **Key packages to install:**

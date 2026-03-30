@@ -2,8 +2,8 @@
 phase: 06
 slug: dashboard-backend
 status: draft
-nyquist_compliant: false
-wave_0_complete: false
+nyquist_compliant: true
+wave_0_complete: true
 created: 2026-03-30
 ---
 
@@ -17,10 +17,10 @@ created: 2026-03-30
 
 | Property | Value |
 |----------|-------|
-| **Framework** | jest 29.x |
-| **Config file** | `autopilot/package.json` (jest config) |
-| **Quick run command** | `cd autopilot && node --experimental-vm-modules node_modules/.bin/jest --testPathPattern="dashboard\|auth\|sse\|activity" --no-coverage -q` |
-| **Full suite command** | `cd autopilot && node --experimental-vm-modules node_modules/.bin/jest --no-coverage` |
+| **Framework** | Node built-in (node:test) |
+| **Config file** | none — native Node.js test runner |
+| **Quick run command** | `cd autopilot && node --test tests/auth.test.js tests/activity-logger.test.js tests/api-articles.test.js tests/api-rankings.test.js tests/api-links.test.js tests/api-sse.test.js` |
+| **Full suite command** | `cd autopilot && node --test tests/*.test.js` |
 | **Estimated runtime** | ~15 seconds |
 
 ---
@@ -38,12 +38,12 @@ created: 2026-03-30
 
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|-----------|-------------------|-------------|--------|
-| 06-01-01 | 01 | 1 | F2.7 | unit | `jest --testPathPattern="auth"` | ❌ W0 | ⬜ pending |
-| 06-01-02 | 01 | 1 | F2.6 | unit | `jest --testPathPattern="activity"` | ❌ W0 | ⬜ pending |
-| 06-01-03 | 01 | 1 | F2.1 | unit | `jest --testPathPattern="articles"` | ❌ W0 | ⬜ pending |
-| 06-02-01 | 02 | 2 | F2.2 | unit | `jest --testPathPattern="rankings"` | ❌ W0 | ⬜ pending |
-| 06-02-02 | 02 | 2 | F2.3 | unit | `jest --testPathPattern="links"` | ❌ W0 | ⬜ pending |
-| 06-02-03 | 02 | 2 | F2.4 | unit | `jest --testPathPattern="pipeline-status\|sse"` | ❌ W0 | ⬜ pending |
+| 06-01-01 | 01 | 1 | F2.6 | unit | `node --test tests/activity-logger.test.js` | ❌ W0 | ⬜ pending |
+| 06-01-02 | 01 | 1 | F2.7 | unit | `node --test tests/auth.test.js` | ❌ W0 | ⬜ pending |
+| 06-01-03 | 01 | 1 | F2.1,F2.8 | unit | `node --test tests/api-articles.test.js` | ❌ W0 | ⬜ pending |
+| 06-02-01 | 02 | 2 | F2.2 | unit | `node --test tests/api-rankings.test.js` | ❌ W0 | ⬜ pending |
+| 06-02-02 | 02 | 2 | F2.3 | unit | `node --test tests/api-links.test.js` | ❌ W0 | ⬜ pending |
+| 06-02-03 | 02 | 2 | F2.4 | unit | `node --test tests/api-sse.test.js` | ❌ W0 | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -58,7 +58,7 @@ created: 2026-03-30
 - [ ] `autopilot/tests/api-links.test.js` — stubs for F2.3 (D3 hierarchy output shape)
 - [ ] `autopilot/tests/api-sse.test.js` — stubs for F2.4 (pipeline-status.json + SSE headers)
 
-*Existing jest infrastructure covers all phase requirements — no new framework install needed.*
+*Existing Node built-in test runner (node:test) covers all phase requirements — no framework install needed.*
 
 ---
 

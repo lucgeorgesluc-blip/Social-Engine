@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.47.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 01-02-PLAN.md
-last_updated: "2026-03-30T05:34:36.291Z"
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-30T08:09:10.354Z"
 last_activity: 2026-03-30
 progress:
   total_phases: 8
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
+  total_plans: 4
+  completed_plans: 3
   percent: 0
 ---
 
@@ -49,6 +49,7 @@ Progress: [░░░░░░░░░░] 0%
 *Updated after each plan completion*
 | Phase 01 P01 | 5min | 2 tasks | 11 files |
 | Phase 01 P02 | 4min | 1 tasks | 2 files |
+| Phase 02-article-generation-pipeline P01 | 3 | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -63,6 +64,8 @@ Progress: [░░░░░░░░░░] 0%
 - [Phase 01]: Node built-in test runner (node --test) — zero-dependency, stable in Node 22
 - [Phase 01]: Test glob pattern tests/*.test.js required on Windows (bare directory fails)
 - [Phase 01]: Gemini model: models/gemini-2.5-flash-image -- verified via live API call, uses generateContent method compatible with @google/genai SDK
+- [Phase 02-article-generation-pipeline]: Slug derivation uses queue entry slug field when present, title-derived otherwise (NFD normalize for French accents)
+- [Phase 02-article-generation-pipeline]: validator.js canonical regex uses flexible attribute-order match to handle real HTML patterns
 
 ### Pending Todos
 
@@ -76,6 +79,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-30T05:25:50.187Z
-Stopped at: Completed 01-02-PLAN.md
+Last session: 2026-03-30T08:09:10.347Z
+Stopped at: Completed 02-01-PLAN.md
 Resume file: None

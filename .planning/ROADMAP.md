@@ -80,6 +80,11 @@ Document the working model name in `autopilot/config/gemini-model.txt` for Phase
 - `seo-keywords.csv` — 3-5 relevant rows for the target keyword (~200 tokens)
 - `content-map.yaml` — slug + title pairs ONLY (full file = 53KB / ~13K tokens; trimmed = ~2 000 tokens)
 
+**Plans:** 2 plans
+Plans:
+- [ ] 02-01-PLAN.md — Pure-function modules: loader extension, topic-selector, validator, cost-logger + tests
+- [ ] 02-02-PLAN.md — Generator, prompt-builder, file-updater, run.js orchestrator + tests
+
 ### Phase 3: Image Generation
 **Goal**: The pipeline generates a 800x450 WebP hero image for each article, saved to `assets/images/blog/[slug].webp`, with graceful fallback when the Gemini API fails
 **Complexity**: M

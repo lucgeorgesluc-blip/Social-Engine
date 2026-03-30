@@ -140,7 +140,7 @@ Plans:
 **Plans:** 2 plans
 Plans:
 - [x] 05-01-PLAN.md — Preview extraction, pending array migration, bot core with approve flow
-- [ ] 05-02-PLAN.md — Edit-in-place handler, server.js/run.js wiring, stack limit
+- [x] 05-02-PLAN.md — Edit-in-place handler, server.js/run.js wiring, stack limit
 
 ### Phase 6: Dashboard Backend
 **Goal**: All dashboard data is available via authenticated Express API routes and a real-time SSE stream reflects pipeline state — the frontend can be wired up against real data

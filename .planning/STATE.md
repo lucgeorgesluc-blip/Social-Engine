@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.47.0
 milestone_name: milestone
-status: executing
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-03-30T15:43:13.935Z"
+status: verifying
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-03-30T15:55:40.238Z"
 last_activity: 2026-03-30
 progress:
   total_phases: 8
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 10
-  completed_plans: 9
+  completed_plans: 10
   percent: 0
 ---
 
@@ -27,7 +27,7 @@ See: .planning/PROJECT.md (updated 2026-03-29)
 
 Phase: 05 (telegram-approval-bot) — EXECUTING
 Plan: 2 of 2
-Status: Ready to execute
+Status: Phase complete — ready for verification
 Last activity: 2026-03-30
 
 Progress: [░░░░░░░░░░] 0%
@@ -56,6 +56,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 04 P01 | 5min | 2 tasks | 6 files |
 | Phase 04 P02 | 4min | 2 tasks | 3 files |
 | Phase 05 P01 | 6min | 2 tasks | 7 files |
+| Phase 05 P02 | 4min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -85,6 +86,9 @@ Progress: [░░░░░░░░░░] 0%
 - [Phase 05]: Handler testing via _handlers Map + DI _deps -- avoids Telegraf middleware complexity in tests
 - [Phase 05]: Array-based pending.json with migration guard wraps legacy single-object in [obj] automatically
 - [Phase 05]: triggerDeploy uses removePendingBySlug instead of unlinkSync to support multiple pending articles
+- [Phase 05]: Edit-handler uses same streaming pattern as generator.js for consistency
+- [Phase 05]: abandonArticle uses string replacement not YAML parser to preserve comments in content-queue.yaml
+- [Phase 05]: DI for fs operations (readFileSync/writeFileSync) injected via deps for testable bot file I/O
 
 ### Pending Todos
 
@@ -98,6 +102,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-30T15:43:13.905Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-03-30T15:55:40.225Z
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None

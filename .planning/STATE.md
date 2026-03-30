@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.47.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-03-30T08:09:10.354Z"
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-03-30T08:17:00.000Z"
 last_activity: 2026-03-30
 progress:
   total_phases: 8
   completed_phases: 1
   total_plans: 4
-  completed_plans: 3
+  completed_plans: 4
   percent: 0
 ---
 
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-03-29)
 ## Current Position
 
 Phase: 2
-Plan: Not started
-Status: Phase complete — ready for verification
+Plan: 02 (complete)
+Status: Phase 02 plan 02 complete — pipeline orchestrator wired end-to-end
 Last activity: 2026-03-30
 
 Progress: [░░░░░░░░░░] 0%
@@ -50,6 +50,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01 P01 | 5min | 2 tasks | 11 files |
 | Phase 01 P02 | 4min | 1 tasks | 2 files |
 | Phase 02-article-generation-pipeline P01 | 3 | 2 tasks | 8 files |
+| Phase 02-article-generation-pipeline P02 | 3 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -66,6 +67,9 @@ Progress: [░░░░░░░░░░] 0%
 - [Phase 01]: Gemini model: models/gemini-2.5-flash-image -- verified via live API call, uses generateContent method compatible with @google/genai SDK
 - [Phase 02-article-generation-pipeline]: Slug derivation uses queue entry slug field when present, title-derived otherwise (NFD normalize for French accents)
 - [Phase 02-article-generation-pipeline]: validator.js canonical regex uses flexible attribute-order match to handle real HTML patterns
+- [Phase 02-02]: YAML mutation uses string replacement not yaml.dump() to preserve comments in content-queue.yaml
+- [Phase 02-02]: generator uses full dated model ID claude-sonnet-4-5-20250514 per RESEARCH.md Pitfall 1
+- [Phase 02-02]: run.js logs cost even on validation failure so spend is always tracked
 
 ### Pending Todos
 
@@ -79,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-30T08:09:10.347Z
-Stopped at: Completed 02-01-PLAN.md
+Last session: 2026-03-30T08:17:00.000Z
+Stopped at: Completed 02-02-PLAN.md
 Resume file: None

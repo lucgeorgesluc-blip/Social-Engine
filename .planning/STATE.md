@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-03-29)
 ## Current Position
 
 Phase: 6
-Plan: Not started
-Status: Phase complete — ready for verification
+Plan: 1 of 2 complete
+Status: In progress — Plan 01 complete, Plan 02 next
 Last activity: 2026-03-30
 
 Progress: [░░░░░░░░░░] 0%
@@ -57,6 +57,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 04 P02 | 4min | 2 tasks | 3 files |
 | Phase 05 P01 | 6min | 2 tasks | 7 files |
 | Phase 05 P02 | 4min | 2 tasks | 7 files |
+| Phase 06 P01 | 17min | 3 tasks | 11 files |
 
 ## Accumulated Context
 
@@ -89,6 +90,9 @@ Progress: [░░░░░░░░░░] 0%
 - [Phase 05]: Edit-handler uses same streaming pattern as generator.js for consistency
 - [Phase 05]: abandonArticle uses string replacement not YAML parser to preserve comments in content-queue.yaml
 - [Phase 05]: DI for fs operations (readFileSync/writeFileSync) injected via deps for testable bot file I/O
+- [Phase 06]: DI uses both _appendFn and _activityPath injection to fully decouple tests from real filesystem
+- [Phase 06]: writePipelineStatus uses try/catch on readFn (not existsSync) so injected readFn works in tests
+- [Phase 06]: logoutHandler wraps session.destroy() in Promise for async/await, returns 500 on destroy error
 
 ### Pending Todos
 
@@ -102,6 +106,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-30T15:55:40.225Z
-Stopped at: Completed 05-02-PLAN.md
+Last session: 2026-03-30T22:25:17Z
+Stopped at: Completed 06-01-PLAN.md
 Resume file: None

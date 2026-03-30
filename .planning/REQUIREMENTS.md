@@ -237,8 +237,8 @@ SITE_BASE_PATH=/path/to/site-cl   # absolute path to E:/Site CL on server
 | F2.3 — Internal Link Tree | Phase 6, Phase 7 | Pending |
 | F2.4 — Pipeline Stepper | Phase 6, Phase 7 | Pending |
 | F2.5 — Stats Row | Phase 6, Phase 7 | Pending |
-| F2.6 — Activity Feed | Phase 6, Phase 7 | Pending |
-| F2.7 — Auth | Phase 6, Phase 7 | Pending |
+| F2.6 — Activity Feed | Phase 6, Phase 7 | Partial (backend logger done, API route in Plan 02) |
+| F2.7 — Auth | Phase 6, Phase 7 | Partial (middleware done, full route protection in Plan 02) |
 | F2.8 — Pending Notification Indicator | Phase 6, Phase 7 | Pending |
 | F3.1 — Environment Variables | Phase 1 | Pending |
 | F3.2 — Render Setup | Phase 8 | Pending |

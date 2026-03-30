@@ -154,7 +154,10 @@ Plans:
   4. `GET /api/pipeline-status` returns current step name, timestamp, and history — and `GET /api/events` (SSE) pushes updates in real time when pipeline state changes
   5. `POST /login` with correct credentials sets a session cookie and redirects to dashboard; all `/api/*` and `/dashboard` routes return 401 without a valid session
   6. A pending-approval badge count is available via `/api/articles?status=pending` for the nav indicator
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 06-01-PLAN.md — Auth middleware, activity-logger module, run.js+bot.js instrumentation, Wave 0 test stubs
+- [ ] 06-02-PLAN.md — GSC rankings module, all API routes (articles/rankings/links/pipeline-status/events/activity/stats/approve), server.js wiring, .env.example
 
 ### Phase 7: Dashboard Frontend
 **Goal**: The dashboard is a functional Mac-app dark UI where Corinne (or the site manager) can view the article queue, inspect keyword rankings, explore the internal link tree, and watch the pipeline stepper in real time
@@ -201,6 +204,6 @@ Plans:
 | 3. Image Generation | 1/2 | Planning complete | - |
 | 4. SFTP Deploy + GSC Ping | 0/2 | Planning complete | - |
 | 5. Telegram Approval Bot | 0/2 | Planning complete | - |
-| 6. Dashboard Backend | 0/2 | Planning complete | - |
+| 6. Dashboard Backend | 1/2 | In Progress | - |
 | 7. Dashboard Frontend | 0/2 | Planning complete | - |
 | 8. Cron Orchestrator + Production | 0/2 | Planning complete | - |

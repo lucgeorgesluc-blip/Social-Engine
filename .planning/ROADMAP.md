@@ -101,9 +101,10 @@ Plans:
 - Use `sharp` for image processing (NOT ImageMagick — eliminates Render system dependency)
 - Model name: use verified string from Phase 1 `curl` test
 
-**Plans:** 1 plan
+**Plans:** 2 plans
 Plans:
 - [x] 03-01-PLAN.md — Image generator module (Gemini API + sharp) + run.js integration
+- [ ] 03-02-PLAN.md — Strip img tag from HTML when image generation fails (gap closure)
 
 ### Phase 4: SFTP Deploy + GSC Ping
 **Goal**: On pipeline approval, exactly 5 files deploy atomically to the IONOS production server and Google Search Console is pinged for indexing — with retry logic and a persisted state file
@@ -189,7 +190,7 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Foundation & Scaffolding | 0/2 | Planning complete | - |
 | 2. Article Generation Pipeline | 1/2 | In Progress|  |
-| 3. Image Generation | 0/1 | Planning complete | - |
+| 3. Image Generation | 1/2 | Planning complete | - |
 | 4. SFTP Deploy + GSC Ping | 0/2 | Planning complete | - |
 | 5. Telegram Approval Bot | 0/2 | Planning complete | - |
 | 6. Dashboard Backend | 0/2 | Planning complete | - |

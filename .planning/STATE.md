@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.47.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 03-01-PLAN.md
-last_updated: "2026-03-30T12:53:24.451Z"
+stopped_at: Completed 03-02-PLAN.md
+last_updated: "2026-03-30T13:28:30.648Z"
 last_activity: 2026-03-30
 progress:
   total_phases: 8
   completed_phases: 3
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 6
+  completed_plans: 6
   percent: 0
 ---
 
@@ -52,6 +52,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-article-generation-pipeline P01 | 3 | 2 tasks | 8 files |
 | Phase 02-article-generation-pipeline P02 | 3 | 2 tasks | 6 files |
 | Phase 03 P01 | 4min | 2 tasks | 3 files |
+| Phase 03 P02 | 3min | 1 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,7 @@ Progress: [░░░░░░░░░░] 0%
 - [Phase 02-02]: run.js logs cost even on validation failure so spend is always tracked
 - [Phase 03]: DI via _aiClient parameter for testable Gemini API calls without module-level mocking
 - [Phase 03]: Graceful fallback pattern: single try/catch returning { success: false } instead of p-retry (image is optional)
+- [Phase 03]: Regex targets class='w-full h-auto object-cover' as unique hero image identifier; stripHeroImage exported as pure function for testability
 
 ### Pending Todos
 
@@ -86,6 +88,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-30T12:53:24.422Z
-Stopped at: Completed 03-01-PLAN.md
+Last session: 2026-03-30T13:28:30.628Z
+Stopped at: Completed 03-02-PLAN.md
 Resume file: None

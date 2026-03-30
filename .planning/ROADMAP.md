@@ -104,7 +104,7 @@ Plans:
 **Plans:** 2 plans
 Plans:
 - [x] 03-01-PLAN.md — Image generator module (Gemini API + sharp) + run.js integration
-- [ ] 03-02-PLAN.md — Strip img tag from HTML when image generation fails (gap closure)
+- [x] 03-02-PLAN.md — Strip img tag from HTML when image generation fails (gap closure)
 
 ### Phase 4: SFTP Deploy + GSC Ping
 **Goal**: On pipeline approval, exactly 5 files deploy atomically to the IONOS production server and Google Search Console is pinged for indexing — with retry logic and a persisted state file

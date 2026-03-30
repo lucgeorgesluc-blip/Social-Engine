@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.47.0
 milestone_name: milestone
-status: verifying
-stopped_at: Completed 04-02-PLAN.md
-last_updated: "2026-03-30T14:02:36.259Z"
+status: executing
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-03-30T15:43:13.935Z"
 last_activity: 2026-03-30
 progress:
   total_phases: 8
   completed_phases: 4
-  total_plans: 8
-  completed_plans: 8
+  total_plans: 10
+  completed_plans: 9
   percent: 0
 ---
 
@@ -21,13 +21,13 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-29)
 
 **Core value:** Corinne approves one article per day from her phone and wakes up to a higher Google ranking — zero manual writing, deploying, or config editing required.
-**Current focus:** Phase 04 — sftp-deploy-gsc-ping
+**Current focus:** Phase 05 — telegram-approval-bot
 
 ## Current Position
 
-Phase: 5
-Plan: Not started
-Status: Phase complete — ready for verification
+Phase: 05 (telegram-approval-bot) — EXECUTING
+Plan: 2 of 2
+Status: Ready to execute
 Last activity: 2026-03-30
 
 Progress: [░░░░░░░░░░] 0%
@@ -55,6 +55,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 03 P02 | 3min | 1 tasks | 2 files |
 | Phase 04 P01 | 5min | 2 tasks | 6 files |
 | Phase 04 P02 | 4min | 2 tasks | 3 files |
+| Phase 05 P01 | 6min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -81,6 +82,9 @@ Progress: [░░░░░░░░░░] 0%
 - [Phase 04]: SFTP_REMOTE_PATH env var defaults to / but configurable for IONOS web root variations
 - [Phase 04]: pending.json as approval gate: pipeline writes state then stops; Telegram bot calls triggerDeploy externally
 - [Phase 04]: DI _stateDir parameter for all three deploy-orchestrator functions enables temp-dir testing
+- [Phase 05]: Handler testing via _handlers Map + DI _deps -- avoids Telegraf middleware complexity in tests
+- [Phase 05]: Array-based pending.json with migration guard wraps legacy single-object in [obj] automatically
+- [Phase 05]: triggerDeploy uses removePendingBySlug instead of unlinkSync to support multiple pending articles
 
 ### Pending Todos
 
@@ -94,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-30T13:57:08.532Z
-Stopped at: Completed 04-02-PLAN.md
+Last session: 2026-03-30T15:43:13.905Z
+Stopped at: Completed 05-01-PLAN.md
 Resume file: None

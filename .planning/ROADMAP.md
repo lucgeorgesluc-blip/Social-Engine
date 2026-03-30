@@ -35,7 +35,7 @@ into a scheduled cron service on Render and ships to production.
 **Plans:** 2 plans
 Plans:
 - [x] 01-01-PLAN.md — Project setup, deps, Express server, config loader, env template, tests
-- [ ] 01-02-PLAN.md — Gemini image model name verification via API
+- [x] 01-02-PLAN.md — Gemini image model name verification via API
 
 **Key packages to install:**
 - `@anthropic-ai/sdk` — Claude API

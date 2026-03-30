@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.47.0
 milestone_name: milestone
-status: executing
-stopped_at: Completed 04-01-PLAN.md
-last_updated: "2026-03-30T13:50:51.358Z"
+status: verifying
+stopped_at: Completed 04-02-PLAN.md
+last_updated: "2026-03-30T13:57:08.548Z"
 last_activity: 2026-03-30
 progress:
   total_phases: 8
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 8
-  completed_plans: 7
+  completed_plans: 8
   percent: 0
 ---
 
@@ -27,7 +27,7 @@ See: .planning/PROJECT.md (updated 2026-03-29)
 
 Phase: 04 (sftp-deploy-gsc-ping) — EXECUTING
 Plan: 2 of 2
-Status: Ready to execute
+Status: Phase complete — ready for verification
 Last activity: 2026-03-30
 
 Progress: [░░░░░░░░░░] 0%
@@ -54,6 +54,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 03 P01 | 4min | 2 tasks | 3 files |
 | Phase 03 P02 | 3min | 1 tasks | 2 files |
 | Phase 04 P01 | 5min | 2 tasks | 6 files |
+| Phase 04 P02 | 4min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -78,6 +79,8 @@ Progress: [░░░░░░░░░░] 0%
 - [Phase 03]: Regex targets class='w-full h-auto object-cover' as unique hero image identifier; stripHeroImage exported as pure function for testability
 - [Phase 04]: coverageState 'not indexed' exclusion prevents false positive already_indexed status in GSC ping
 - [Phase 04]: SFTP_REMOTE_PATH env var defaults to / but configurable for IONOS web root variations
+- [Phase 04]: pending.json as approval gate: pipeline writes state then stops; Telegram bot calls triggerDeploy externally
+- [Phase 04]: DI _stateDir parameter for all three deploy-orchestrator functions enables temp-dir testing
 
 ### Pending Todos
 
@@ -91,6 +94,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-30T13:50:51.340Z
-Stopped at: Completed 04-01-PLAN.md
+Last session: 2026-03-30T13:57:08.532Z
+Stopped at: Completed 04-02-PLAN.md
 Resume file: None

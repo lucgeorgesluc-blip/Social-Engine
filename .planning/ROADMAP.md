@@ -83,7 +83,7 @@ Document the working model name in `autopilot/config/gemini-model.txt` for Phase
 **Plans:** 1/2 plans executed
 Plans:
 - [x] 02-01-PLAN.md — Pure-function modules: loader extension, topic-selector, validator, cost-logger + tests
-- [ ] 02-02-PLAN.md — Generator, prompt-builder, file-updater, run.js orchestrator + tests
+- [x] 02-02-PLAN.md — Generator, prompt-builder, file-updater, run.js orchestrator + tests
 
 ### Phase 3: Image Generation
 **Goal**: The pipeline generates a 800x450 WebP hero image for each article, saved to `assets/images/blog/[slug].webp`, with graceful fallback when the Gemini API fails
@@ -100,6 +100,10 @@ Plans:
 - Use `@google/genai` (NOT deprecated `@google/generative-ai`)
 - Use `sharp` for image processing (NOT ImageMagick — eliminates Render system dependency)
 - Model name: use verified string from Phase 1 `curl` test
+
+**Plans:** 1 plan
+Plans:
+- [ ] 03-01-PLAN.md — Image generator module (Gemini API + sharp) + run.js integration
 
 ### Phase 4: SFTP Deploy + GSC Ping
 **Goal**: On pipeline approval, exactly 5 files deploy atomically to the IONOS production server and Google Search Console is pinged for indexing — with retry logic and a persisted state file
@@ -185,7 +189,7 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Foundation & Scaffolding | 0/2 | Planning complete | - |
 | 2. Article Generation Pipeline | 1/2 | In Progress|  |
-| 3. Image Generation | 0/2 | Planning complete | - |
+| 3. Image Generation | 0/1 | Planning complete | - |
 | 4. SFTP Deploy + GSC Ping | 0/2 | Planning complete | - |
 | 5. Telegram Approval Bot | 0/2 | Planning complete | - |
 | 6. Dashboard Backend | 0/2 | Planning complete | - |

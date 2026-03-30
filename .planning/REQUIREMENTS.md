@@ -229,8 +229,8 @@ SITE_BASE_PATH=/path/to/site-cl   # absolute path to E:/Site CL on server
 | F1.6 — Image Generation | Phase 3 | Pending |
 | F1.7 — Approval Gate | Phase 4 | Pending |
 | F1.7a — Edit via Prompt | Phase 5 | Pending |
-| F1.8 — SFTP Deploy | Phase 4 | Pending |
-| F1.9 — GSC Ping | Phase 4 | Pending |
+| F1.8 — SFTP Deploy | Phase 4 | Complete |
+| F1.9 — GSC Ping | Phase 4 | Complete |
 | F1.10 — Spend Safeguard | Phase 2 | Pending |
 | F2.1 — Article Queue | Phase 6, Phase 7 | Pending |
 | F2.2 — Keyword Rankings | Phase 6, Phase 7 | Pending |

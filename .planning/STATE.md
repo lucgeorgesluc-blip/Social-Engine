@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.47.0
 milestone_name: milestone
-status: verifying
-stopped_at: Completed 03-02-PLAN.md
-last_updated: "2026-03-30T13:28:30.648Z"
+status: executing
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-03-30T13:50:51.358Z"
 last_activity: 2026-03-30
 progress:
   total_phases: 8
   completed_phases: 3
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 8
+  completed_plans: 7
   percent: 0
 ---
 
@@ -21,13 +21,13 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-29)
 
 **Core value:** Corinne approves one article per day from her phone and wakes up to a higher Google ranking — zero manual writing, deploying, or config editing required.
-**Current focus:** Phase 03 — image-generation
+**Current focus:** Phase 04 — sftp-deploy-gsc-ping
 
 ## Current Position
 
-Phase: 03 (image-generation) — EXECUTING
-Plan: 1 of 1
-Status: Phase complete — ready for verification
+Phase: 04 (sftp-deploy-gsc-ping) — EXECUTING
+Plan: 2 of 2
+Status: Ready to execute
 Last activity: 2026-03-30
 
 Progress: [░░░░░░░░░░] 0%
@@ -53,6 +53,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-article-generation-pipeline P02 | 3 | 2 tasks | 6 files |
 | Phase 03 P01 | 4min | 2 tasks | 3 files |
 | Phase 03 P02 | 3min | 1 tasks | 2 files |
+| Phase 04 P01 | 5min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,8 @@ Progress: [░░░░░░░░░░] 0%
 - [Phase 03]: DI via _aiClient parameter for testable Gemini API calls without module-level mocking
 - [Phase 03]: Graceful fallback pattern: single try/catch returning { success: false } instead of p-retry (image is optional)
 - [Phase 03]: Regex targets class='w-full h-auto object-cover' as unique hero image identifier; stripHeroImage exported as pure function for testability
+- [Phase 04]: coverageState 'not indexed' exclusion prevents false positive already_indexed status in GSC ping
+- [Phase 04]: SFTP_REMOTE_PATH env var defaults to / but configurable for IONOS web root variations
 
 ### Pending Todos
 
@@ -88,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-30T13:28:30.628Z
-Stopped at: Completed 03-02-PLAN.md
+Last session: 2026-03-30T13:50:51.340Z
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None

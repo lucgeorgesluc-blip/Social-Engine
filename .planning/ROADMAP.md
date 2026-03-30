@@ -119,7 +119,7 @@ Plans:
   5. GSC URL Inspection API call is logged as `submitted`, `already indexed`, or `error` — a GSC failure does not block the deploy
 **Plans:** 2 plans
 Plans:
-- [ ] 04-01-PLAN.md — SFTP deployer module + GSC ping module + tests
+- [x] 04-01-PLAN.md — SFTP deployer module + GSC ping module + tests
 - [ ] 04-02-PLAN.md — Deploy orchestrator + pending.json state + run.js Step 8 wiring + tests
 **UI hint**: no
 

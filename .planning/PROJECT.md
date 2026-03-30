@@ -12,7 +12,8 @@ Corinne approves one article per day from her phone and wakes up to a higher Goo
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Generates hero image via Gemini API → sharp → WebP 800×450 @q85 — *Validated in Phase 3: Image Generation*
+- [x] Graceful fallback: when Gemini API fails, article HTML strips the `<img>` tag — no broken image shown — *Validated in Phase 3: Image Generation*
 
 ### Active
 
@@ -122,4 +123,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-30 — Phase 1 (Foundation & Scaffolding) complete: autopilot/ skeleton with 13 deps, Express /health, config loader, Gemini model verified*
+*Last updated: 2026-03-30 — Phase 3 (Image Generation) complete: generateImage() module with @google/genai + sharp, stripHeroImage() fallback, 78/78 tests passing*

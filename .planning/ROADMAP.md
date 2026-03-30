@@ -170,7 +170,10 @@ Plans:
   3. The internal link tree renders as a d3-hierarchy tree with node colors: Pillar (gold), Service (blue), Blog (cyan), Orphan/0-inbound (red) — clicking a node highlights its inbound and outbound links
   4. The pipeline stepper shows the 6 steps, the current step is animated, completed steps are checked, and it updates in real time via SSE without a page refresh
   5. The login page accepts username + password, a wrong password shows an error, and the logout button ends the session — all dashboard routes redirect to login without a valid session cookie
-**Plans**: TBD
+**Plans:** 1/2 plans executed
+Plans:
+- [x] 07-01-PLAN.md — server.js wiring + login.html + dashboard index.html shell (sidebar, stats, queue, pipeline, SSE)
+- [ ] 07-02-PLAN.md — Rankings Chart.js panel + D3 link tree + approve confirmation modal
 **UI hint**: yes
 
 **Design reference:** Mac-app dark theme (banana_20260329_114555_292068.png) — navy bg (#0d1117 / #161b22), rounded cards (border-radius: 12px), blue accents (#3b82f6), sidebar navigation.
@@ -205,5 +208,5 @@ Plans:
 | 4. SFTP Deploy + GSC Ping | 0/2 | Planning complete | - |
 | 5. Telegram Approval Bot | 0/2 | Planning complete | - |
 | 6. Dashboard Backend | 2/2 | Complete   | 2026-03-30 |
-| 7. Dashboard Frontend | 0/2 | Planning complete | - |
+| 7. Dashboard Frontend | 1/2 | In Progress|  |
 | 8. Cron Orchestrator + Production | 0/2 | Planning complete | - |

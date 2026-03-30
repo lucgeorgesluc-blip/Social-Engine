@@ -137,6 +137,11 @@ Plans:
 
 **Library decision:** Use `telegraf` v4.16.3 (NOT `node-telegram-bot-api` which depends on deprecated `@cypress/request`). telegraf has native webhook + inline keyboard + callback_query support and TypeScript types.
 
+**Plans:** 2 plans
+Plans:
+- [ ] 05-01-PLAN.md — Preview extraction, pending array migration, bot core with approve flow
+- [ ] 05-02-PLAN.md — Edit-in-place handler, server.js/run.js wiring, stack limit
+
 ### Phase 6: Dashboard Backend
 **Goal**: All dashboard data is available via authenticated Express API routes and a real-time SSE stream reflects pipeline state — the frontend can be wired up against real data
 **Complexity**: M

@@ -1,0 +1,358 @@
+# Features Registry — magnetiseuse-lacoste-corinne.fr
+project: "magnetiseuse-lacoste-corinne.fr"
+last_updated: "2026-03-26"
+generated_from: "magnetiseur-troyes.html, hypnose-troyes.html, soins.html, arret-tabac-troyes.html, a-propos.html, index.html"
+
+categories:
+
+  - id: "cat_arret_tabac"
+    name: "Arrêt du Tabac"
+    description: "Sevrage tabagique par magnétisme + hypnose ericksonienne combinés"
+    subcategories:
+
+      - id: "sub_seance_tabac"
+        name: "Séance arrêt tabac"
+        features:
+          - id: "feat_arret_tabac_seance"
+            name: "Séance arrêt tabac magnétisme + hypnose"
+            description: "Séance combinée magnétisme + hypnose ericksonienne pour arrêt du tabac en 1 à 3 séances. 85% de réussite dès la 1ère séance. 120€, 1h à 1h30."
+            status: "available"
+            price: "120€"
+            duration: "1h à 1h30"
+            doc_refs:
+              - path: "arret-tabac-troyes.html"
+                section: "Méthode"
+              - path: "index.html"
+                section: "Hero"
+            blog_refs:
+              - "hypnose-arret-tabac-troyes"
+              - "magnetiseur-troyes-arreter-fumer"
+              - "methode-hypnose-arret-tabac"
+              - "guide-complet-arret-tabac-troyes"
+            tags: ["arrêt tabac", "hypnose", "magnétisme", "sevrage", "Troyes"]
+            notes: "Service phare du cabinet — 85% réussite 1ère séance"
+
+          - id: "feat_suivi_gratuit"
+            name: "2 séances de suivi gratuites incluses"
+            description: "En cas de besoin, 2 séances de suivi gratuites sont incluses avec toute séance arrêt tabac."
+            status: "available"
+            price: "Inclus"
+            doc_refs:
+              - path: "arret-tabac-troyes.html"
+                section: "Garantie"
+            blog_refs: []
+            tags: ["arrêt tabac", "suivi", "garantie"]
+            notes: "Différenciateur fort vs concurrents"
+
+          - id: "feat_sans_manque"
+            name: "Arrêt sans manque ni stress"
+            description: "Méthode permettant l'arrêt du tabac sans symptômes de manque, sans stress et sans médicaments."
+            status: "available"
+            doc_refs:
+              - path: "arret-tabac-troyes.html"
+                section: "Bénéfices"
+              - path: "index.html"
+                section: "Hero"
+            blog_refs: []
+            tags: ["arrêt tabac", "sans manque", "naturel"]
+            notes: ""
+
+  - id: "cat_techniques"
+    name: "Techniques Thérapeutiques"
+    description: "Méthodes et techniques utilisées en cabinet"
+    subcategories:
+
+      - id: "sub_magnetisme"
+        name: "Magnétisme"
+        features:
+          - id: "feat_magnetisme_adulte"
+            name: "Magnétisme adulte"
+            description: "Séance de magnétisme pour adultes : rééquilibrage énergétique, régulation du système nerveux, soulagement douleurs. 80€, 45min à 1h."
+            status: "available"
+            price: "80€"
+            duration: "45min à 1h"
+            doc_refs:
+              - path: "magnetiseur-troyes.html"
+                section: "Tarifs"
+              - path: "soins.html"
+                section: "Services"
+            blog_refs:
+              - "magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif"
+              - "douleurs-chroniques-magnetiseur-troyes-soulage"
+            tags: ["magnétisme", "adulte", "énergie"]
+            notes: ""
+
+          - id: "feat_magnetisme_enfant"
+            name: "Magnétisme enfant / nourrisson"
+            description: "Séance de magnétisme adaptée aux enfants de moins de 12 ans et nourrissons. 45€, 30min."
+            status: "available"
+            price: "45€"
+            duration: "30min"
+            doc_refs:
+              - path: "soins.html"
+                section: "Nourrissons & Enfants"
+            blog_refs: []
+            tags: ["magnétisme", "enfant", "nourrisson", "pédiatrie"]
+            notes: ""
+
+          - id: "feat_passes_magnetiques"
+            name: "Passes magnétiques (non-contact)"
+            description: "Technique de transmission d'énergie apaisante/rééquilibrante via les mains, sans contact physique."
+            status: "available"
+            doc_refs:
+              - path: "magnetiseur-troyes.html"
+                section: "Comment ça marche"
+            blog_refs: []
+            tags: ["magnétisme", "technique", "énergie"]
+            notes: ""
+
+      - id: "sub_hypnose"
+        name: "Hypnose Ericksonienne"
+        features:
+          - id: "feat_hypnose_ericksonienne"
+            name: "Hypnose ericksonienne"
+            description: "Hypnose permissive et douce (type Erickson) : état modifié de conscience, suggestions, métaphores, visualisation. Le patient reste conscient et en contrôle. 120€, 1h à 1h30."
+            status: "available"
+            price: "120€"
+            duration: "1h à 1h30"
+            doc_refs:
+              - path: "hypnose-troyes.html"
+                section: "Méthode"
+            blog_refs:
+              - "hypnose-ericksonienne-vs-classique-differences"
+              - "methode-hypnose-arret-tabac"
+              - "hypnose-pour-arret-du-tabac-guide-complet"
+            tags: ["hypnose", "ericksonienne", "permissive"]
+            notes: "Différence clé vs hypnose classique : patient conscient et en contrôle"
+
+          - id: "feat_combo_magnetisme_hypnose"
+            name: "Combinaison magnétisme + hypnose"
+            description: "Approche unique combinant magnétisme et hypnose ericksonienne en une seule séance pour résultats optimaux."
+            status: "available"
+            doc_refs:
+              - path: "index.html"
+                section: "Méthode"
+              - path: "arret-tabac-troyes.html"
+                section: "Méthode"
+            blog_refs:
+              - "magnetisme-hypnose-arreter-fumer-comparatif"
+            tags: ["magnétisme", "hypnose", "combinaison", "synergie"]
+            notes: "Angle différenciateur principal vs concurrents"
+
+  - id: "cat_conditions"
+    name: "Conditions Traitées"
+    description: "Problématiques prises en charge au cabinet"
+    subcategories:
+
+      - id: "sub_bien_etre_mental"
+        name: "Bien-être mental & émotionnel"
+        features:
+          - id: "feat_stress_anxiete"
+            name: "Stress, anxiété, burn-out"
+            description: "Prise en charge du stress chronique, anxiété, nervosité, burn-out par magnétisme + hypnose. 90€, 1h."
+            status: "available"
+            price: "90€"
+            duration: "1h"
+            doc_refs:
+              - path: "soins.html"
+                section: "Dépression, Poids, Stress"
+            blog_refs:
+              - "gestion-stress-troyes-magnetisme-hypnose"
+              - "hypnose-troyes-stress-naturellement"
+            tags: ["stress", "anxiété", "burn-out", "bien-être"]
+            notes: ""
+
+          - id: "feat_confiance_soi"
+            name: "Confiance en soi & affirmation"
+            description: "Développement de la confiance en soi, dépassement de la timidité, prise de parole publique. 90€, 1h."
+            status: "available"
+            price: "90€"
+            duration: "1h"
+            doc_refs:
+              - path: "soins.html"
+                section: "Confiance"
+              - path: "assets/js/config.js"
+                section: "pricing.confiance"
+            blog_refs:
+              - "confiance-en-soi-hypnose-magnetisme-troyes"
+            tags: ["confiance", "timidité", "affirmation"]
+            notes: ""
+
+      - id: "sub_bien_etre_physique"
+        name: "Bien-être physique"
+        features:
+          - id: "feat_troubles_sommeil"
+            name: "Troubles du sommeil & insomnie"
+            description: "Traitement des insomnies, réveils nocturnes, troubles du sommeil. 80% d'efficacité. 80€, 1h."
+            status: "available"
+            price: "80€"
+            duration: "1h"
+            doc_refs:
+              - path: "soins.html"
+                section: "Sommeil"
+              - path: "assets/js/config.js"
+                section: "pricing.sommeil"
+            blog_refs:
+              - "troubles-sommeil-insomnie-troyes-solutions-naturelles"
+              - "insomnie-arret-tabac-combien-temps"
+            tags: ["sommeil", "insomnie", "réveils nocturnes"]
+            notes: ""
+
+          - id: "feat_perte_poids"
+            name: "Gestion du poids"
+            description: "Aide à la perte de poids par hypnose + magnétisme. 70% d'efficacité. 90€, 1h."
+            status: "available"
+            price: "90€"
+            duration: "1h"
+            doc_refs:
+              - path: "soins.html"
+                section: "Dépression, Poids, Stress"
+              - path: "assets/js/config.js"
+                section: "pricing.poids"
+            blog_refs:
+              - "perte-poids-hypnose-troyes-temoignages"
+              - "arret-tabac-prise-poids-solutions"
+            tags: ["poids", "amaigrissement", "régime"]
+            notes: ""
+
+          - id: "feat_douleurs_chroniques"
+            name: "Douleurs chroniques"
+            description: "Soulagement des douleurs chroniques : dos, articulations, migraines, fibromyalgie. 70% d'efficacité. 45€, 45min."
+            status: "available"
+            price: "45€"
+            duration: "45min"
+            doc_refs:
+              - path: "soins.html"
+                section: "Douleurs"
+              - path: "assets/js/config.js"
+                section: "pricing.douleurs"
+            blog_refs:
+              - "douleurs-chroniques-magnetiseur-troyes-soulage"
+            tags: ["douleurs", "chroniques", "dos", "migraines", "fibromyalgie"]
+            notes: ""
+
+          - id: "feat_allergies_eczema"
+            name: "Allergies, eczéma, zona"
+            description: "Traitement des manifestations cutanées et allergiques par magnétisme pur. 45€, 45min."
+            status: "available"
+            price: "45€"
+            duration: "45min"
+            doc_refs:
+              - path: "soins.html"
+                section: "Zona, Eczéma"
+              - path: "assets/js/config.js"
+                section: "pricing.allergies"
+            blog_refs: []
+            tags: ["allergies", "eczéma", "zona", "peau"]
+            notes: ""
+
+          - id: "feat_post_chimio"
+            name: "Récupération post-chimiothérapie / radiothérapie"
+            description: "Accompagnement magnétique post-traitement cancer. Technique barreur de feu incluse. 45€, 45min."
+            status: "available"
+            price: "45€"
+            duration: "45min"
+            doc_refs:
+              - path: "soins.html"
+                section: "Après rayons/chimio"
+            blog_refs: []
+            tags: ["chimio", "radiothérapie", "cancer", "récupération", "barreur de feu"]
+            notes: "Technique spécifique : barreur de feu"
+
+          - id: "feat_cicatrisation"
+            name: "Cicatrisation post-opératoire"
+            description: "Accélération de la cicatrisation après opération chirurgicale par magnétisme. 45€, 30min."
+            status: "available"
+            price: "45€"
+            duration: "30min"
+            doc_refs:
+              - path: "assets/js/config.js"
+                section: "pricing.cicatrisation"
+            blog_refs: []
+            tags: ["cicatrisation", "post-opératoire", "chirurgie"]
+            notes: ""
+
+      - id: "sub_techniques_complementaires"
+        name: "Techniques complémentaires"
+        features:
+          - id: "feat_reflexologie"
+            name: "Réflexologie plantaire"
+            description: "Massage des zones réflexes du pied + magnétisme. Pour tendinites, entorses. 80€."
+            status: "available"
+            price: "80€"
+            duration: "45min à 1h"
+            doc_refs:
+              - path: "soins.html"
+                section: "Réflexologie plantaire"
+            blog_refs: []
+            tags: ["réflexologie", "massage", "pieds", "tendinite"]
+            notes: ""
+
+          - id: "feat_pierres_chaudes"
+            name: "Massage pierres chaudes"
+            description: "Massage aux pierres chaudes + magnétisme pour détente profonde. 60€."
+            status: "available"
+            price: "60€"
+            duration: "45min à 1h"
+            doc_refs:
+              - path: "soins.html"
+                section: "Pierres chaudes"
+            blog_refs: []
+            tags: ["pierres chaudes", "massage", "détente"]
+            notes: ""
+
+          - id: "feat_douleurs_dos"
+            name: "Douleurs du dos"
+            description: "Traitement des douleurs dorsales sans manipulation — étirements + magnétisme uniquement. 80€."
+            status: "available"
+            price: "80€"
+            duration: "45min à 1h"
+            doc_refs:
+              - path: "soins.html"
+                section: "Douleurs du dos"
+            blog_refs: []
+            tags: ["dos", "lombalgie", "cervicales", "étirements"]
+            notes: "Sans manipulation — différenciateur sécurité"
+
+  - id: "cat_logistique"
+    name: "Logistique & Accès"
+    description: "Informations pratiques sur le cabinet"
+    subcategories:
+
+      - id: "sub_cabinet"
+        name: "Cabinet"
+        features:
+          - id: "feat_rdv_7_jours"
+            name: "RDV disponible sous 7 jours"
+            description: "Prise de rendez-vous rapide, disponibilité sous 7 jours en général."
+            status: "available"
+            doc_refs:
+              - path: "index.html"
+                section: "CTA"
+            blog_refs: []
+            tags: ["RDV", "disponibilité", "rapide"]
+            notes: ""
+
+          - id: "feat_zone_aube"
+            name: "Accessible depuis tout le département Aube"
+            description: "Cabinet à Saint-Germain, 10min de Troyes. Accessible depuis Romilly, Bar-sur-Aube, Bar-sur-Seine, Vendeuvre, Brienne, Nogent."
+            status: "available"
+            doc_refs:
+              - path: "magnetiseur-aube.html"
+                section: "Accessibilité"
+            blog_refs:
+              - "magnetiseur-aube-arreter-fumer"
+              - "arret-tabac-aube-methodes-naturelles-troyes"
+            tags: ["Aube", "Troyes", "Saint-Germain", "localisation"]
+            notes: "Parkings gratuits à proximité"
+
+          - id: "feat_formation_gnoma"
+            name: "Formée par Pascal Bescos — GNOMA"
+            description: "Formation Magnétisme + Hypnose auprès de Pascal Bescos (30 ans d'expérience, GNOMA). Oct 2017 – Avril 2018."
+            status: "available"
+            doc_refs:
+              - path: "a-propos.html"
+                section: "Formation"
+            blog_refs: []
+            tags: ["formation", "GNOMA", "Pascal Bescos", "certification"]
+            notes: "GNOMA = Groupement National des Organismes de formation en Magnétologie"

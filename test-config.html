@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Configuration Dynamique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #2C5F4F;
+            border-bottom: 3px solid #DC512C;
+            padding-bottom: 10px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .test-item:last-child {
+            border-bottom: none;
+        }
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+        .value {
+            color: #DC512C;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .success {
+            color: #28a745;
+        }
+        .error {
+            color: #dc3545;
+        }
+        .info {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test de Configuration Centralisée</h1>
+    
+    <div class="info">
+        <strong>📋 Instructions :</strong><br>
+        Cette page teste si le système de configuration fonctionne correctement.<br>
+        Si tous les champs affichent des valeurs (pas vides), c'est bon ! ✅
+    </div>
+
+    <!-- SECTION PRIX -->
+    <div class="section">
+        <h2>💰 Prix des Services</h2>
+        <div class="test-item">
+            <span class="label">Tabac :</span>
+            <span class="value" data-price="tabac"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Magnétisme adulte :</span>
+            <span class="value" data-price="tabac_adulte"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Magnétisme enfant :</span>
+            <span class="value" data-price="tabac_enfant"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Stress & anxiété :</span>
+            <span class="value" data-price="stress_anxiete"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Gestion du poids :</span>
+            <span class="value" data-price="poids"></span>
+        </div>
+    </div>
+
+    <!-- SECTION DURÉES -->
+    <div class="section">
+        <h2>⏱️ Durées des Séances</h2>
+        <div class="test-item">
+            <span class="label">Tabac :</span>
+            <span class="value" data-duration="tabac"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Magnétisme adulte :</span>
+            <span class="value" data-duration="magnetisme_adulte"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Stress :</span>
+            <span class="value" data-duration="stress_anxiete"></span>
+        </div>
+    </div>
+
+    <!-- SECTION CONTACT -->
+    <div class="section">
+        <h2>📞 Informations de Contact</h2>
+        <div class="test-item">
+            <span class="label">Nom :</span>
+            <span class="value" data-contact="nom"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Téléphone :</span>
+            <span class="value" data-contact="telephone"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Adresse :</span>
+            <span class="value"><span data-contact="adresse.rue"></span>, <span data-contact="adresse.codePostal"></span> <span data-contact="adresse.ville"></span></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Horaires :</span>
+            <span class="value" data-contact="horaires"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">SIRET :</span>
+            <span class="value" data-contact="siret"></span>
+        </div>
+    </div>
+
+    <!-- SECTION STATISTIQUES -->
+    <div class="section">
+        <h2>📊 Statistiques</h2>
+        <div class="test-item">
+            <span class="label">Taux de réussite :</span>
+            <span class="value" data-stat="tauxReussite"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Nombre de clients :</span>
+            <span class="value" data-stat="nombreClients"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Note Google :</span>
+            <span class="value" data-stat="noteGoogle"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Nombre d'avis :</span>
+            <span class="value" data-stat="nombreAvis"></span>
+        </div>
+    </div>
+
+    <!-- SECTION CALCULS -->
+    <div class="section">
+        <h2>🧮 Calculs Automatiques</h2>
+        <div class="test-item">
+            <span class="label">Prix paquet/jour :</span>
+            <span class="value" data-calc="prixPaquetJour"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Économies mensuelles :</span>
+            <span class="value" data-calc="economiesMensuelle"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Économies annuelles :</span>
+            <span class="value" data-calc="economiesAnnuelle"></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Jours pour rentabiliser :</span>
+            <span class="value"><span data-calc="joursRentabilisation"></span> jours</span>
+        </div>
+    </div>
+
+    <!-- SECTION LIENS -->
+    <div class="section">
+        <h2>🔗 Liens Externes</h2>
+        <div class="test-item">
+            <span class="label">Calendly :</span>
+            <span class="value"><a href="#" data-link="calendly" target="_blank">Tester le lien</a></span>
+        </div>
+        <div class="test-item">
+            <span class="label">Google Maps :</span>
+            <span class="value"><a href="#" data-link="googleMaps" target="_blank">Tester le lien</a></span>
+        </div>
+    </div>
+
+    <div class="warning">
+        <strong>⚠️ Si des valeurs sont vides :</strong><br>
+        1. Vérifiez que le fichier <code>assets/js/config.js</code> est bien chargé<br>
+        2. Ouvrez la console du navigateur (F12) pour voir les erreurs<br>
+        3. Vérifiez que le chemin vers le fichier est correct
+    </div>
+
+    <div class="section" style="text-align: center; background: #2C5F4F; color: white;">
+        <h2>✅ Test Réussi !</h2>
+        <p>Si toutes les valeurs ci-dessus s'affichent correctement, votre système de configuration fonctionne parfaitement.</p>
+        <p style="margin-top: 20px;">
+            <strong>Prochaine étape :</strong> Mettre à jour vos autres pages HTML pour utiliser les attributs <code>data-*</code>
+        </p>
+    </div>
+
+    <!-- Charger le script de configuration -->
+    <script src="assets/js/config.min.js"></script>
+    
+    <!-- Script de vérification -->
+    <script>
+        // Vérifier après 1 seconde si tout est chargé
+        setTimeout(() => {
+            const emptyElements = [];
+            
+            // Vérifier tous les éléments avec data-*
+            document.querySelectorAll('[data-price], [data-duration], [data-contact], [data-stat], [data-calc]').forEach(el => {
+                if (!el.textContent || el.textContent.trim() === '') {
+                    emptyElements.push(el);
+                    el.textContent = '❌ ERREUR';
+                    el.classList.add('error');
+                }
+            });
+            
+            if (emptyElements.length === 0) {
+                console.log('✅ Tous les tests sont passés avec succès !');
+            } else {
+                console.error('❌ Certains éléments n\'ont pas été remplis:', emptyElements);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+

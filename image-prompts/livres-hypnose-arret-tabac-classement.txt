@@ -1,0 +1,13 @@
+FICHIER IMAGE ATTENDU : assets/images/blog/livres-hypnose-arret-tabac-classement.webp
+TAILLE CIBLE : 800x450px, format WebP, qualité 85
+
+--- PROMPT IMAGE (à coller dans votre outil de génération) ---
+
+Three self-help books stacked slightly askew on a warm wooden bedside table, spines facing camera with minimal readable typography in French, a pair of delicate reading glasses resting on top of the stack, a small white pillar candle burning softly beside them casting a gentle warm glow, cozy intimate bedroom interior, warm golden evening light from a bedside lamp creating long soft shadows across the wooden surface, close-up three-quarter angle shot, warm amber and deep brown tones with lifted shadows, Kodak Portra 400 film grain aesthetic, lifestyle editorial photography, no specific brand names visible
+
+--- INSTRUCTIONS ---
+1. Générez l'image avec l'outil de votre choix (Midjourney, DALL-E, Firefly, Gemini...)
+2. Redimensionnez en 800x450px (crop centré)
+3. Convertissez en WebP qualité 85
+4. Renommez le fichier : livres-hypnose-arret-tabac-classement.webp
+5. Placez le fichier dans : E:/Site CL/assets/images/blog/

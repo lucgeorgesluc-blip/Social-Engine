@@ -1,0 +1,13 @@
+FICHIER IMAGE ATTENDU : assets/images/blog/auriculotherapie-arret-tabac.webp
+TAILLE CIBLE : 800x450px, format WebP, qualité 85
+
+--- PROMPT IMAGE (à coller dans votre outil de génération) ---
+
+An extreme close-up macro shot of a human ear with a single tiny golden acupuncture needle delicately placed at an auricular point on the upper cartilage, the skin is smooth and warm-toned, a softly blurred natural green background suggests a calm wellness clinic interior, the needle tip catches a gentle golden highlight, shallow depth of field isolating the needle in sharp focus against a dreamy bokeh background, soft natural daylight from the left side with warm skin tones, clinical wellness photography shot on Sony A7R IV with 100mm macro lens f/2.8, serene and professional aesthetic, no text or overlays
+
+--- INSTRUCTIONS ---
+1. Générez l'image avec l'outil de votre choix (Midjourney, DALL-E, Firefly, Gemini...)
+2. Redimensionnez en 800x450px (crop centré)
+3. Convertissez en WebP qualité 85
+4. Renommez le fichier : auriculotherapie-arret-tabac.webp
+5. Placez le fichier dans : E:/Site CL/assets/images/blog/

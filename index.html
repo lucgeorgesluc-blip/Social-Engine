@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Consent Mode v2 - Configuration par défaut (tous refusés) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      
+      // Configuration du consentement par défaut (RGPD)
+      gtag('consent', 'default', {
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500,
+      });
+      
+      // Vérifier si le consentement a déjà été donné
+      if (localStorage.getItem('consentGranted') === 'true') {
+        gtag('consent', 'update', {
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
+    <!-- Google tag (gtag.js) - Google Ads AW-17956035279 (Consent Mode géré ci-dessus) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956035279"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'AW-17956035279');
+    </script>
+    
+    <!-- Ahrefs Web Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="ZmVUUNMo9OUSVRurS/ikCw" async></script>
+    <link rel="canonical" href="https://www.magnetiseuse-lacoste-corinne.fr/">
+    <meta name="description" content="Magnétisme et hypnose à Troyes : arrêt tabac, stress, sommeil. Cabinet Saint-Germain. Corinne Lacoste, 15+ ans d'expérience. Séance 120€. RDV rapide.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Arrêter de Fumer en 1 Séance | Magnétisme + Hypnose">
+    <meta property="og:description" content="Libérez-vous du tabac sans manque ni stress. 85% de réussite.">
+    <meta property="og:type" content="website">
+
+    <title>Corinne Lacoste | Magnétiseuse & Hypnothérapeute à Troyes (Aube)</title>
+
+    <!-- Schema.org LocalBusiness : injecté dynamiquement par config.min.js (données depuis config.js) -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://calendly.com">
+    <link rel="dns-prefetch" href="https://js.stripe.com">
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+    
+    <!-- Fonts (self-hosted) -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/playfair-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Tailwind CSS (built locally) -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="antialiased text-gray-800 bg-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFK6BL36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" x-data="{ mobileMenuOpen: false, servicesOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold text-secondary">
+                        Corinne Lacoste
+                    </a>
+                </div>
+
+                <!-- Desktop Menu (same spacing as a-propos.html: space-x-8) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Accueil</a>
+                    <a href="a-propos.html" class="text-gray-700 hover:text-primary transition">À propos</a>
+                    <!-- Soins submenu -->
+                    <div class="relative" @mouseenter="servicesOpen = true" @mouseleave="servicesOpen = false">
+                        <button type="button" class="text-gray-700 hover:text-primary transition inline-flex items-center gap-0.5">
+                            Soins
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="servicesOpen" x-transition class="absolute top-full left-0 pt-1 min-w-[10rem]">
+                            <div class="bg-white rounded-lg shadow-lg border border-gray-100 py-1">
+                                <a href="hypnose-troyes.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary">Hypnose</a>
+                                <a href="magnetiseur-troyes.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary">Magnétisme</a>
+                                <a href="arret-tabac-troyes.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary">Arrêt tabac</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#methode" class="text-gray-700 hover:text-primary transition">La méthode</a>
+                    <a href="#temoignages" class="text-gray-700 hover:text-primary transition">Témoignages</a>
+                    <a href="#tarifs" class="text-gray-700 hover:text-primary transition">Tarifs</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-primary transition">FAQ</a>
+                    <a href="blog/hypnotherapeute-troyes-choisir.html" class="text-gray-700 hover:text-primary transition">Blog</a>
+                    <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition font-medium">
+                        Réserver
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2" aria-label="Ouvrir le menu" :aria-expanded="mobileMenuOpen">
+                    <span class="sr-only">Menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Accueil</a>
+                <a href="a-propos.html" class="block py-2 text-gray-700 hover:text-primary">À propos</a>
+                <!-- Soins submenu mobile -->
+                <div class="py-1">
+                    <button type="button" @click="servicesOpen = !servicesOpen" class="w-full flex items-center justify-between py-2 text-gray-700 hover:text-primary text-left">
+                        Soins
+                        <svg class="w-4 h-4 shrink-0 transition-transform" :class="{ 'rotate-180': servicesOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="servicesOpen" x-transition class="pl-4">
+                        <a href="hypnose-troyes.html" class="block py-2 text-gray-600 hover:text-primary">Hypnose</a>
+                        <a href="magnetiseur-troyes.html" class="block py-2 text-gray-600 hover:text-primary">Magnétisme</a>
+                        <a href="arret-tabac-troyes.html" class="block py-2 text-gray-600 hover:text-primary">Arrêt tabac</a>
+                    </div>
+                </div>
+                <a href="#methode" class="block py-2 text-gray-700 hover:text-primary">La méthode</a>
+                <a href="#temoignages" class="block py-2 text-gray-700 hover:text-primary">Témoignages</a>
+                <a href="#tarifs" class="block py-2 text-gray-700 hover:text-primary">Tarifs</a>
+                <a href="faq.html" class="block py-2 text-gray-700 hover:text-primary">FAQ</a>
+                <a href="blog/hypnotherapeute-troyes-choisir.html" class="block py-2 text-gray-700 hover:text-primary">Blog</a>
+                <a href="#contact" class="block mt-4 bg-primary text-white px-6 py-3 rounded-full text-center font-medium">
+                    Réserver
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-accent via-white to-accent/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
+                <!-- Left Column -->
+                <div class="space-y-8" x-data="{ 
+                    showFirst: false, 
+                    typedText: '',
+                    texts: ['en 1 séance', 'définitivement', 'pour vivre de nouveau'],
+                    currentTextIndex: 0,
+                    showCursor: true,
+                    isTyping: false,
+                    isDeleting: false,
+                    cursorInterval: null,
+                    init() {
+                        setTimeout(() => this.showFirst = true, 100);
+                        setTimeout(() => this.startTyping(), 600);
+                        this.cursorInterval = setInterval(() => this.showCursor = !this.showCursor, 530);
+                    },
+                    startTyping() {
+                        const currentText = this.texts[this.currentTextIndex];
+                        
+                        if (!this.isDeleting && !this.isTyping) {
+                            // Typing
+                            this.isTyping = true;
+                            let index = 0;
+                            const typeInterval = setInterval(() => {
+                                if (index < currentText.length) {
+                                    this.typedText += currentText[index];
+                                    index++;
+                                } else {
+                                    clearInterval(typeInterval);
+                                    this.isTyping = false;
+                                    // Wait 2 seconds before deleting
+                                    setTimeout(() => this.startDeleting(), 2000);
+                                }
+                            }, 100);
+                        }
+                    },
+                    startDeleting() {
+                        this.isDeleting = true;
+                        const deleteInterval = setInterval(() => {
+                            if (this.typedText.length > 0) {
+                                this.typedText = this.typedText.slice(0, -1);
+                            } else {
+                                clearInterval(deleteInterval);
+                                this.isDeleting = false;
+                                // Move to next text
+                                this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
+                                // Wait 500ms before typing next
+                                setTimeout(() => this.startTyping(), 500);
+                            }
+                        }, 50);
+                    }
+                }">
+                    <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                        ✨ Méthode douce et naturelle
+                    </div>
+
+                    <h1 class="text-5xl md:text-6xl font-serif font-bold text-secondary leading-tight">
+                        <span :class="showFirst ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'"
+                            class="inline-block transition-all duration-700 ease-out">
+                            Libérez-vous du tabac
+                        </span>
+                        <br>
+                        <span class="inline-block text-primary">
+                            <span x-text="typedText"></span><span :class="showCursor ? 'opacity-100' : 'opacity-0'"
+                                class="inline-block w-0.5 h-[1em] bg-primary ml-1 align-middle transition-opacity duration-300"></span>
+                        </span>
+                    </h1>
+
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Magnétisme + Hypnose | <span data-stat="tauxReussite"></span> de réussite<br>
+                        Sans manque, sans stress, sans médicaments
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Je vous accompagne avec douceur pour arrêter de fumer, apaiser votre stress et
+                        retrouver un sommeil réparateur. Cabinet à Saint-Germain (Troyes), séances d'hypnose
+                        et magnétisme adaptées à vos besoins. Résultats rapides et durables.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact"
+                            class="bg-primary text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition font-medium text-center text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            Réserver ma séance gratuite (15min)
+                        </a>
+                        <a href="#methode"
+                            class="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-white transition font-medium text-center text-lg">
+                            Découvrir la méthode
+                        </a>
+                    </div>
+
+                    <!-- Social Proof -->
+                    <div class="flex items-center gap-6 pt-4">
+                        <div class="flex -space-x-2">
+                            <img src="assets/images/avatar-marie-l-64.webp" alt="Client satisfait" width="40" height="40" loading="lazy" decoding="async" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                            <img src="assets/images/avatar-thomas-b-64.webp" alt="Client satisfait" width="40" height="40" loading="lazy" decoding="async" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                            <img src="assets/images/avatar-sophie-d-64.webp" alt="Client satisfait" width="40" height="40" loading="lazy" decoding="async" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                        </div>
+                        <div>
+                            <div class="flex text-yellow-400 text-sm">
+                                ★★★★★
+                            </div>
+                            <p class="text-sm text-gray-600"><span data-stat="nombreClients"></span> clients satisfaits</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Image -->
+                <div class="relative">
+                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.pexels.com/photos/247040/pexels-photo-247040.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Personne sereine en nature" 
+                            class="w-full h-full object-cover"
+                            loading="eager"
+                            decoding="async"
+                            fetchpriority="high">
+                    </div>
+                    <!-- Floating card -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
+                        <p class="text-4xl font-bold text-primary mb-1"><span data-stat="tauxReussite"></span></p>
+                        <p class="text-sm text-gray-600">de réussite<br>dès la 1ère séance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Agitation Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-serif font-bold text-secondary mb-6">
+                    Vous êtes épuisé(e) de...
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+                    <div class="text-4xl mb-4">😔</div>
+                    <h3 class="font-semibold text-lg mb-2">Fumer malgré vous</h3>
+                    <p class="text-gray-600">Votre volonté ne suffit plus face à cette dépendance qui vous contrôle</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+                    <div class="text-4xl mb-4">💸</div>
+                    <h3 class="font-semibold text-lg mb-2">Gaspiller 200€/mois</h3>
+                    <p class="text-gray-600">2 400€ par an qui partent en fumée, littéralement</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+                    <div class="text-4xl mb-4">😰</div>
+                    <h3 class="font-semibold text-lg mb-2">La honte et la culpabilité</h3>
+                    <p class="text-gray-600">Vous sentir faible devant vos proches et vos enfants</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+                    <div class="text-4xl mb-4">⚠️</div>
+                    <h3 class="font-semibold text-lg mb-2">Votre santé en danger</h3>
+                    <p class="text-gray-600">Chaque cigarette rapproche des maladies graves</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="methode" class="py-20 bg-gradient-to-br from-accent/30 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-serif font-bold text-secondary mb-6">
+                    Une méthode douce qui agit <span class="text-primary">à la source</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Plus qu'un simple sevrage, une libération profonde et durable
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Magnétisme</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">✓</span>
+                            Rééquilibre votre système nerveux
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">✓</span>
+                            Supprime l'envie physique de nicotine
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">✓</span>
+                            Détend profondément votre corps
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition border-2 border-primary">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Hypnose Ericksonienne</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">✓</span>
+                            Reprogramme les automatismes inconscients
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">✓</span>
+                            Libère les émotions cachées
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">✓</span>
+                            Transforme votre rapport au tabac
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Suivi Personnalisé</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">✓</span>
+                            Séances de suivi personalisées
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">✓</span>
+                            Support WhatsApp 7j/7
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">✓</span>
+                            Accompagnement jusqu'à votre libération totale
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Me / My Story Section -->
+    <section class="py-20 bg-gradient-to-br from-secondary/95 to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Column - Text Content -->
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">
+                        Bonjour,<br> je suis <span class="text-primary">Corinne Lacoste</span>
+                    </h2>
+                    <p class="text-xl text-white/80 mb-6">
+                        Arrêt du tabac par magnétisme & hypnose - accompagnement bienveillant
+                    </p>
+
+                    <div class="space-y-4 text-white/90">
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Mon rôle :</h3>
+                            <p>
+                                <strong>Vous apaiser et vous guider</strong>, simplement. J'utilise le
+                                <strong>magnétisme (et l'hypnose)</strong> pour <strong>calmer le stress</strong>,
+                                <strong>adoucir les envies</strong> et <strong>réconcilier le corps et
+                                    l'esprit</strong>. J'écoute sans juger. Je respecte votre rythme. Je ne pose pas de
+                                diagnostic médical et je ne remplace pas votre médecin. Je ne fais pas arrêter un
+                                traitement.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Mon travail est complémentaire :</h3>
+                            <p>
+                                Je vous aide à <strong>retrouver votre calme</strong> pour avancer vers une vie sans
+                                tabac. Cela est compliqué pour vous, surtout lorsque cela implique de faire face à des
+                                émotions profondes et des habitudes de longue date, mais il est temps de passer à
+                                l'action ! Ensemble, nous mettrons en place les <strong>stratégies</strong> nécessaires
+                                pour que vous puissiez enfin dire adieu à <strong>la cigarette</strong>, et bonjour à
+                                <strong>une nouvelle vie</strong>. Chaque personne est unique, et chaque parcours est
+                                différent.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="a-propos.html"
+                            class="inline-flex items-center gap-2 bg-primary text-white px-6 py-4 rounded-full hover:bg-opacity-90 transition font-medium text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 whitespace-nowrap">
+                            <span>En savoir plus sur mon parcours</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column - Photo -->
+                <div class="relative">
+                    <div class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+                        <picture>
+                            <source srcset="assets/images/photo-corrine.avif" type="image/avif">
+                            <source srcset="assets/images/photo-corrine.webp" type="image/webp">
+                            <img src="assets/images/photo-corrine.jpg"
+                                alt="Corinne Lacoste, magnétiseuse spécialisée dans l'arrêt du tabac"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                                decoding="async"
+                                width="600"
+                                height="800">
+                        </picture>
+                    </div>
+                    <!-- Decorative element -->
+                    <div class="absolute -bottom-6 -left-6 bg-primary/20 w-32 h-32 rounded-full -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Can Help Section -->
+    <section class="py-20 bg-gradient-to-br from-accent/50 to-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-serif font-bold text-secondary mb-6">
+                    Comment je peux <span class="text-primary">vous aider.</span> <br><br> Mon Expertise :
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Category 1: Arrêt du tabac -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- ShieldCheck icon - protection/health -->
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Arrêt du tabac et sevrage tabagique</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Addictions au tabac, envies/compulsives</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Gestion du manque, prévention des rechutes</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 2: Stress & émotions -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- Heart icon -->
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Stress & émotions</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Stress, anxiété, nervosité</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Irritabilité liée au sevrage, apaisement émotionnel</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Poids</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 3: Sommeil & énergie -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 relative">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- Moon -->
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                        </svg>
+                        <!-- Z's above moon -->
+                        <div
+                            class="absolute -top-1 left-1/2 transform -translate-x-1/2 text-primary text-xs font-bold leading-none">
+                            <div>Z</div>
+                            <div class="-mt-1">Z</div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Sommeil & énergie</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Sommeil agité, fatigue, récupération</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Retrouver une énergie stable sans cigarette</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="temoignages" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-serif font-bold text-secondary mb-6">
+                    Ils ont réussi, <span class="text-primary">pourquoi pas vous ?</span>
+                </h2>
+                <div class="flex justify-center items-center gap-2 text-yellow-400 text-2xl mb-2">
+                    ★★★★★
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Corinne+Lacoste+7+rue+du+Printemps+Saint-Germain+10120" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="text-xl text-gray-600 hover:text-primary transition">
+                    <span data-stat="noteGoogle"></span>/5 sur Google (<span data-stat="nombreAvis"></span> avis)
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-accent/20 p-8 rounded-2xl">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "J'ai arrêté après 20 ans de tabac. Aucun manque, aucune frustration. Je n'arrive pas à croire
+                        que c'était si simple. Merci infiniment Corinne !"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="assets/images/avatar-marie-l-64.webp" alt="Marie L." width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover border-2 border-primary/20">
+                        <div>
+                            <p class="font-semibold">Marie L.</p>
+                            <p class="text-sm text-gray-600">42 ans, Lyon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-accent/20 p-8 rounded-2xl">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Sceptique au départ, mais le résultat est bluffant. 3 mois sans cigarette et je n'y pense même
+                        plus. Ma femme et mes enfants sont fiers de moi."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="assets/images/avatar-thomas-b-64.webp" alt="Thomas B." width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover border-2 border-secondary/20">
+                        <div>
+                            <p class="font-semibold">Thomas B.</p>
+                            <p class="text-sm text-gray-600">35 ans, Saint-Germain</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-accent/20 p-8 rounded-2xl">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "J'avais tout essayé : patchs, spray, livres... Rien ne marchait. Une seule séance avec Corinne
+                        et je suis libre. Incroyable mais vrai."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="assets/images/avatar-sophie-d-64.webp" alt="Sophie D." width="48" height="48" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover border-2 border-primary/20">
+                        <div>
+                            <p class="font-semibold">Sophie D.</p>
+                            <p class="text-sm text-gray-600">28 ans, Bar-sur-Aube</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://www.google.com/maps/search/?api=1&query=Corinne+Lacoste+7+rue+du+Printemps+Saint-Germain+10120"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="text-primary font-medium hover:underline">
+                    Voir tous les avis Google →
+                </a>
+                <a href="https://search.google.com/local/writereview?placeid=ChIJeVdQE_mZ7kcE7rpheOUlF8c"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-block mt-4 px-5 py-2 bg-primary text-white rounded-full text-sm font-medium hover:bg-primary/90 transition">
+                    ⭐ Laisser un avis Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zone d'intervention -->
+    <section class="py-16 bg-accent/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-8 text-center">
+                Cabinet à Troyes, accessible depuis toute l'Aube
+            </h2>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-secondary mb-4">📍 Comment venir ?</h3>
+                        <div class="space-y-3 text-gray-700">
+                            <p><strong>Depuis Troyes centre:</strong> 5 minutes</p>
+                            <p><strong>Depuis Sainte-Savine:</strong> 7 minutes</p>
+                            <p><strong>Depuis Romilly-sur-Seine:</strong> 25 minutes (A5)</p>
+                            <p><strong>Depuis Bar-sur-Aube:</strong> 35 minutes (D619)</p>
+                            <p><strong>Depuis Saint-Dizier (52):</strong> 45 minutes</p>
+                            <p><strong>Depuis Épernay (51):</strong> 1h (A26)</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-secondary mb-4">🅿️ Accès pratique</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>• Parking gratuit devant le cabinet</li>
+                            <li>• À 8 min de McArthur Glen (shopping)</li>
+                            <li>• Arrêt de bus ligne 5 à 200m</li>
+                            <li>• Accessible en transport en commun</li>
+                        </ul>
+
+                        <div class="mt-6 bg-primary/10 p-4 rounded-lg">
+                            <p class="text-sm text-gray-800">
+                                💡 <strong>Astuce :</strong> Profitez de votre venue pour visiter
+                                le centre historique de Troyes ou faire du shopping à McArthur Glen !
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="tarifs" class="py-20 bg-gradient-to-br from-secondary to-secondary/90 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-serif font-bold mb-6">
+                    Tarif unique, <span class="text-primary">sans surprise</span>
+                </h2>
+                <p class="text-xl text-white/80">
+                    Un investissement dans votre santé et votre liberté
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Main Service - Tabac -->
+                <div class="bg-white text-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl mb-8">
+                    <div class="text-center mb-8">
+                        <p class="text-5xl font-bold text-secondary mb-2" data-price="tabac"></p>
+                        <p class="text-gray-600 font-medium">Tabac (<span data-duration="tabac"></span>. Arrêt en une séance)</p>
+                        <p class="text-sm text-gray-500 mt-2">sous hypnose avec magnétisme</p>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary text-xl">✓</span>
+                            <p><strong>Durée :</strong> 1h à 1h30 de thérapie personnalisée</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary text-xl">✓</span>
+                            <p><strong>Garantie :</strong> Séances de suivi personalisées</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary text-xl">✓</span>
+                            <p><strong>Paiement :</strong> CB, espèces, Chèques acceptés</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary text-xl">✓</span>
+                            <p><strong>Lieu :</strong> Cabinet à Saint-Germain</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-accent/50 p-6 rounded-xl mb-8">
+                        <p class="text-center text-sm mb-4">
+                            💰 <strong>Remboursé par certaines mutuelles</strong><br>
+                            Demandez votre attestation après la séance
+                        </p>
+                        <div class="border-t border-gray-300/30 pt-4 mt-4">
+                            <p class="text-center text-xs text-gray-600">
+                                <strong class="text-gray-700">Calcul simple :</strong> Si vous fumez 1 paquet/jour à <span data-calc="prixPaquetJour"></span>,<br>
+                                cette séance est rentabilisée en <span data-calc="joursRentabilisation"></span> jours. Ensuite, c'est <span data-calc="economiesMensuelle"></span> d'économies par mois.
+                            </p>
+                        </div>
+                    </div>
+
+                    <a href="#contact"
+                        class="block w-full bg-primary text-white text-center px-8 py-4 rounded-full hover:bg-opacity-90 transition font-medium text-lg shadow-lg">
+                        Réserver ma séance maintenant
+                    </a>
+
+                    <p class="text-center text-sm text-gray-500 mt-6">
+                        🔒 Paiement sécurisé • Annulation gratuite 24h avant
+                    </p>
+                </div>
+
+                <!-- Other Services Link -->
+                <div class="text-center mt-8">
+                    <p class="text-white/90 mb-4">
+                        Je propose également d'autres services de magnétisme et d'hypnose
+                    </p>
+                    <a href="soins.html"
+                        class="inline-block text-white border-2 border-white/50 hover:border-white hover:bg-white/10 px-6 py-3 rounded-full transition font-medium">
+                        Découvrir tous mes services →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Quick Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-secondary mb-6">
+                    Questions fréquentes
+                </h2>
+            </div>
+
+            <div class="space-y-4" x-data="{ openFaq: null }">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button @click="openFaq = openFaq === 1 ? null : 1"
+                        class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <span class="font-semibold">Est-ce que ça marche vraiment ?</span>
+                        <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': openFaq === 1}"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div x-show="openFaq === 1" x-transition class="px-6 pb-4">
+                        <p class="text-gray-600">
+                            Oui. <strong><span data-stat="tauxReussite"></span>% des clients arrêtent dès la 1ère séance</strong>. La combinaison magnétisme
+                            + hypnose agit sur le plan physique (addiction) et psychologique (habitudes). Les résultats
+                            sont mesurables et durables.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button @click="openFaq = openFaq === 2 ? null : 2"
+                        class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <span class="font-semibold">Et si je rechute ?</span>
+                        <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': openFaq === 2}"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div x-show="openFaq === 2" x-transition class="px-6 pb-4">
+                        <p class="text-gray-600">
+                            2 séances de suivi sont <strong>incluses gratuitement</strong> dans votre tarif. Vous pouvez
+                            également me contacter par WhatsApp en cas de moment difficile. Je vous accompagne jusqu'à
+                            votre libération totale.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button @click="openFaq = openFaq === 3 ? null : 3"
+                        class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <span class="font-semibold">C'est douloureux ou effrayant ?</span>
+                        <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': openFaq === 3}"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div x-show="openFaq === 3" x-transition class="px-6 pb-4">
+                        <p class="text-gray-600">
+                            Absolument pas. Le magnétisme = <strong>zéro douleur</strong>, juste de la relaxation
+                            profonde. L'hypnose ericksonienne est douce, vous restez conscient(e) et en contrôle. C'est
+                            un moment apaisant.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button @click="openFaq = openFaq === 4 ? null : 4"
+                        class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <span class="font-semibold">Combien de temps dure l'effet ?</span>
+                        <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': openFaq === 4}"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div x-show="openFaq === 4" x-transition class="px-6 pb-4">
+                        <p class="text-gray-600">
+                            Les résultats sont <strong>durables</strong>. Nous ne créons pas une simple "pause" mais une
+                            transformation profonde de votre rapport au tabac. La majorité des clients ne refument plus
+                            après 6 mois.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="faq.html" class="text-primary font-medium hover:underline text-lg">
+                    Voir toutes les questions →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Booking Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-accent to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-serif font-bold text-secondary mb-6">
+                    Prêt(e) à <span class="text-primary">respirer librement</span> ?
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Réservez votre appel découverte gratuit de 15 minutes
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Left Column - Google Maps -->
+                <div class="space-y-6">
+                    <!-- Google Maps Embed -->
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl" style="padding-bottom: 75%; height: 0;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2293.4143369499166!2d4.026241175758206!3d48.252349043164884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ee99f913505779%3A0xc71725e5e618baec!2sCorinne%20LACOSTE%20-%20Magn%C3%A9tiseuse%20%C3%A0%20Saint-Germain%20(Troyes)!5e1!3m2!1sfr!2sfr!4v1770580090550!5m2!1sfr!2sfr" 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localisation du cabinet de Corinne Lacoste à Saint-Germain">
+                        </iframe>
+                    </div>
+                    
+                    <a href="https://www.google.com/maps/dir//Corinne+LACOSTE+-+Magn%C3%A9tiseuse+%C3%A0+Saint-Germain+(Troyes)/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x47ee99f913505779:0xc71725e5e618baec" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="block w-full text-center bg-primary text-white px-6 py-4 rounded-xl hover:bg-opacity-90 transition font-bold shadow-lg">
+                        📍 Obtenir l'itinéraire
+                    </a>
+
+                    <div class="bg-accent/50 p-6 rounded-xl">
+                        <p class="text-sm text-gray-700 text-center">
+                            ⭐ <strong>4.9/5 sur Google</strong> (35+ avis)<br>
+                            Cabinet à Saint-Germain (proche de Troyes)<br>
+                            Parking gratuit à proximité
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column - Calendly Embed -->
+                <div class="bg-white p-8 rounded-3xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-6">📅 Réservez votre séance</h3>
+
+                    <div class="mb-4 text-center">
+                        <div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-xs font-bold">
+                            ⏱️ <span data-duration="tabac"></span> • 💰 <span data-price="tabac"></span>
+                        </div>
+                    </div>
+
+                    <!-- Widget Calendly (URL injectée par config, comme hypnose-troyes) -->
+                    <div class="calendly-inline-widget rounded-2xl overflow-hidden w-full"
+                        data-calendly-url
+                        data-url="https://calendly.com/corinnelacoste/appel?hide_gdpr_banner=1"
+                        style="min-width:320px;height:700px"></div>
+
+                    <!-- Contact Info -->
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center gap-3 text-gray-600">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span data-contact="telephone"></span>
+                        </div>
+
+                        <div class="flex items-center gap-3 text-gray-600">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>7 rue du Printemps, 10120 Saint-Germain</span>
+                        </div>
+
+                        <div class="flex items-center gap-3 text-gray-600">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span data-contact="horaires"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Corinne Lacoste</h3>
+                    <p class="text-white/70 text-sm">
+                        Magnétiseuse diplômée<br>
+                        Spécialiste sevrage tabagique
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="index.html" class="hover:text-primary transition">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-primary transition">À propos</a></li>
+                        <li><a href="hypnose-troyes.html" class="hover:text-primary transition">Hypnose</a></li>
+                        <li><a href="magnetiseur-troyes.html" class="hover:text-primary transition">Magnétisme</a></li>
+                        <li><a href="arret-tabac-troyes.html" class="hover:text-primary transition">Arrêt tabac</a></li>
+                        <li><a href="soins.html" class="hover:text-primary transition">Tarifs</a></li>
+                        <li><a href="faq.html" class="hover:text-primary transition">FAQ</a></li>
+                        <li><a href="blog/hypnotherapeute-troyes-choisir.html" class="hover:text-primary transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Légal</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="mentions-legales.html" class="hover:text-primary transition">Mentions légales</a>
+                        </li>
+                        <li><a href="politique-confidentialite.html"
+                                class="hover:text-primary transition">Confidentialité</a></li>
+                        <li><a href="cgv.html" class="hover:text-primary transition">CGV</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li data-contact="telephone"></li>
+                        <li data-contact="adresse.rue"></li>
+                        <li><span data-contact="adresse.codePostal"></span> <span data-contact="adresse.ville"></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/50">
+                <p>© 2026 <span data-contact="nom"></span>. Tous droits réservés.</p>
+                <p class="mt-2">SIRET : <span data-contact="siret"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org LocalBusiness : injecté dynamiquement par config.min.js -->
+
+    <!-- Configuration centralisée des prix et infos -->
+    <script src="assets/js/config.min.js"></script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script src="assets/js/main.min.js"></script>
+    
+    <!-- Google Tag Manager - Chargé après le contenu principal pour améliorer les performances -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-MFK6BL36');
+                
+                // Google tag (gtag.js) - chargé après GTM
+                var gtagScript = document.createElement('script');
+                gtagScript.async = true;
+                gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-5KYCNEBXRX';
+                document.head.appendChild(gtagScript);
+                
+                gtagScript.onload = function() {
+                    gtag('js', new Date());
+                    gtag('config', 'G-5KYCNEBXRX');
+                };
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

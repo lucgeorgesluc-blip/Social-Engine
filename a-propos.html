@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Consent Mode v2 - Configuration par défaut (tous refusés) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      
+      // Configuration du consentement par défaut (RGPD)
+      gtag('consent', 'default', {
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500,
+      });
+      
+      // Vérifier si le consentement a déjà été donné
+      if (localStorage.getItem('consentGranted') === 'true') {
+        gtag('consent', 'update', {
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
+    <!-- Google tag (gtag.js) - Google Ads AW-17956035279 (Consent Mode géré ci-dessus) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956035279"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'AW-17956035279');
+    </script>
+    
+    <!-- Google Tag Manager - Chargé après le contenu principal pour améliorer les performances -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-MFK6BL36');
+                
+                // Google tag (gtag.js) - chargé après GTM
+                var gtagScript = document.createElement('script');
+                gtagScript.async = true;
+                gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-5KYCNEBXRX';
+                document.head.appendChild(gtagScript);
+                
+                gtagScript.onload = function() {
+                    gtag('js', new Date());
+                    gtag('config', 'G-5KYCNEBXRX');
+                };
+            }, 2000);
+        });
+    </script>
+    
+        <!-- Ahrefs Web Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="ZmVUUNMo9OUSVRurS/ikCw" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qui est Corinne Lacoste ? Magnétiseuse et hypnothérapeute à Troyes depuis 15+ ans. Formation, parcours, méthode combinée magnétisme + hypnose. Cabinet Saint-Germain (Aube).">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Corinne Lacoste | Magnétiseuse & Hypnothérapeute à Troyes">
+    <meta property="og:description" content="Magnétiseuse et hypnothérapeute à Troyes depuis 15+ ans. Méthode combinée magnétisme + hypnose. Cabinet Saint-Germain (Aube).">
+    <meta property="og:type" content="website">
+
+    <title>Corinne Lacoste | Magnétiseuse & Hypnothérapeute à Troyes</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+    <!-- Fonts (self-hosted) -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="preconnect" href="https://calendly.com">
+    <link rel="dns-prefetch" href="https://js.stripe.com">
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+
+    <!-- Tailwind CSS (built locally) -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="antialiased text-gray-800 bg-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFK6BL36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" x-data="{ mobileMenuOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold text-secondary">
+                        Corinne Lacoste
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Accueil</a>
+                    <a href="a-propos.html" class="text-primary font-medium">À propos</a>
+                    <a href="index.html#methode" class="text-gray-700 hover:text-primary transition">La méthode</a>
+                    <a href="index.html#temoignages" class="text-gray-700 hover:text-primary transition">Témoignages</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-primary transition">FAQ</a>
+                    <a href="blog/hypnotherapeute-troyes-choisir.html" class="text-gray-700 hover:text-primary transition">Blog</a>
+                    <a href="index.html#contact"
+                        class="bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition font-medium">
+                        Réserver
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button 
+                    @click="mobileMenuOpen = !mobileMenuOpen" 
+                    class="md:hidden p-2"
+                    aria-label="Ouvrir le menu de navigation"
+                    :aria-expanded="mobileMenuOpen">
+                    <span class="sr-only">Menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700">Accueil</a>
+                <a href="a-propos.html" class="block py-2 text-primary font-medium">À propos</a>
+                <a href="index.html#methode" class="block py-2 text-gray-700">La méthode</a>
+                <a href="index.html#temoignages" class="block py-2 text-gray-700">Témoignages</a>
+                <a href="faq.html" class="block py-2 text-gray-700">FAQ</a>
+                <a href="blog/hypnotherapeute-troyes-choisir.html" class="block py-2 text-gray-700 hover:text-primary">Blog</a>
+                <a href="index.html#contact" class="block mt-4 bg-primary text-white px-6 py-3 rounded-full text-center">
+                    Réserver
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-accent via-white to-accent/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold text-secondary mb-6">
+                    À propos de <span class="text-primary">Corinne Lacoste</span>
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Découvrez mon approche bienveillante pour vous accompagner vers une vie sans tabac
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mon Approche Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-serif font-bold text-secondary mb-6">
+                        Mon approche en tant que <span class="text-primary">thérapeute spécialisée</span>
+                    </h2>
+                </div>
+
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Si vous êtes ici, c'est probablement parce que vous cherchez un moyen de vous libérer de la dépendance au tabac. Vous avez déjà essayé de multiples méthodes, mais rien n'a fonctionné comme vous l'espériez. C'est là que j'interviens.
+                    </p>
+
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        En tant que thérapeute spécialisée dans l'accompagnement des personnes souhaitant arrêter de fumer, mon approche est différente. Je combine mon expérience dans le domaine des addictions avec une technique douce : le magnétisme et en complément l'hypnose.
+                    </p>
+
+                    <div class="bg-accent/30 p-8 rounded-2xl mb-8">
+                        <h3 class="text-2xl font-semibold text-secondary mb-4">Pourquoi les deux ?</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-primary mb-2">Le magnétisme</h4>
+                                <p class="text-gray-700">
+                                    Rééquilibre le système nerveux, revitalise l'organisme, calme les douleurs et favorise la cicatrisation. Il agit sur les affections nerveuses, fonctionnelles, chroniques, et inflammatoires.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary mb-2">L'hypnose</h4>
+                                <p class="text-gray-700">
+                                    Permet d'induire un état de conscience modifié pour un objectif de soin d'accompagnement pour le sevrage tabagique et autres.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Mon objectif est de vous accompagner à travers ce processus de transformation, en vous aidant à comprendre et à gérer les émotions et les comportements qui vous maintiennent dans cette dépendance.
+                    </p>
+
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Pourquoi cette approche ? Parce que je crois fermement que chacun peut se libérer du tabac en travaillant non seulement sur les aspects physiques de la dépendance, mais aussi sur les émotions sous-jacentes. En utilisant le magnétisme, j'apporte un soutien à votre corps et à votre esprit, pour vous aider à vous détendre, à réduire le stress, et à relâcher les tensions qui vous poussent vers la cigarette.
+                    </p>
+
+                    <p class="text-lg text-gray-700 leading-relaxed mt-6 font-medium text-secondary">
+                        Ensemble, nous allons construire un chemin vers une vie plus sereine, sans tabac.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quelques mots sur moi Section -->
+    <section class="py-20 bg-gradient-to-br from-accent/30 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Column - Photo -->
+                <div class="relative">
+                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                        <picture>
+                            <source srcset="assets/images/photo-corrine.avif" type="image/avif">
+                            <source srcset="assets/images/photo-corrine.webp" type="image/webp">
+                            <img src="assets/images/photo-corrine.jpg"
+                                alt="Corinne Lacoste, magnétiseuse spécialisée dans l'arrêt du tabac"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                                decoding="async"
+                                width="600"
+                                height="800">
+                        </picture>
+                    </div>
+                    <!-- Decorative element -->
+                    <div class="absolute -bottom-6 -right-6 bg-primary/20 w-32 h-32 rounded-full -z-10"></div>
+                </div>
+
+                <!-- Right Column - Text -->
+                <div>
+                    <h2 class="text-4xl font-serif font-bold text-secondary mb-8">
+                        Quelques mots <span class="text-primary">sur moi</span>
+                    </h2>
+
+                    <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                        <p>
+                            Je pense qu'il est important que vous en sachiez un peu plus sur moi avant que nous commencions ensemble ce parcours de transformation. Savoir qui je suis et comment je fonctionne peut vous aider à vous sentir plus à l'aise pour débuter cette démarche de libération de la dépendance.
+                        </p>
+
+                        <p>
+                            Native du Sud Ouest, enfant, je suis fascinée par l'idée de transformation. J'ai grandi en observant les liens entre nos émotions et nos comportements de par mon éducation dans une école privée laïque. Grande sensible, bienveillante, empathique et résiliente.
+                        </p>
+
+                        <p>
+                            À mon arrivée en Suisse à mes 20 ans, celle-ci m'a amenée à explorer des méthodes naturelles pour aider les gens à se reconnecter à eux-mêmes. De plus, j'y ai appris la Langue des Signes également au souci de m'ouvrir aux autres pendant 5 ans.
+                        </p>
+
+                        <p>
+                            Le magnétisme est rapidement devenu une évidence pour moi, un don que j'ai développé car il permet d'agir à un niveau subtil, tout en offrant un réel soulagement.
+                        </p>
+
+                        <p>
+                            Après avoir passé plusieurs années à approfondir mes connaissances et plus tard après la rencontre de Pascal Bescos, 30 ans d'expériences dans le métier qui m'a complémenté dans mon apprentissage notamment dans "le reboutage" et l'hypnose, j'ai décidé de me lancer.
+                        </p>
+
+                        <div class="bg-primary/5 p-6 rounded-2xl shadow-sm">
+                            <p class="text-secondary font-medium">
+                                Mon but est simple : aider les gens à retrouver leur liberté et à vivre sans les contraintes de la dépendance, tout en respectant leur rythme et leurs besoins. C'est un travail qui a du sens pour moi, car chaque personne que j'accompagne dans ce processus de libération me rappelle à quel point nous avons tous la capacité de changer et de retrouver notre bien-être.
+                            </p>
+                        </div>
+
+                        <p class="text-lg font-medium text-secondary">
+                            Je suis impatiente de vous rencontrer au cabinet et de faire un bout de chemin avec vous vers une vie sans tabac, plus calme, plus libre, et plus en harmonie avec vous-même.
+                        </p>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="mt-8">
+                        <a href="index.html#contact"
+                            class="inline-block bg-primary text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            Réserver votre séance
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-serif font-bold text-secondary mb-6">
+                    Mes <span class="text-primary">valeurs</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Ce qui guide mon approche thérapeutique
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-accent/20 p-8 rounded-2xl text-center">
+                    <div class="text-5xl mb-4">🤝</div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Bienveillance</h3>
+                    <p class="text-gray-700">
+                        Je suis à l'écoute du patient. J'apaise, je soulage, j'atténue. Je ne formule pas de diagnostic thérapeutique et je ne fais pas arrêter de traitement allopathique.
+                    </p>
+                </div>
+
+                <div class="bg-accent/20 p-8 rounded-2xl text-center">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Confidentialité</h3>
+                    <p class="text-gray-700">
+                        Je ne divulgue aucune conversation, je suis tenue au secret professionnel. Votre intimité et votre confiance sont sacrées.
+                    </p>
+                </div>
+
+                <div class="bg-accent/20 p-8 rounded-2xl text-center">
+                    <div class="text-5xl mb-4">✨</div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Honnêteté</h3>
+                    <p class="text-gray-700">
+                        Je me fais ambassadrice d'honnêteté, de non-jugement et de respect envers mon patient. Je ne surestime ni mes compétences, ni mes capacités.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations & Certifications -->
+    <section class="py-20 bg-gradient-to-br from-accent/30 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <h2 class="text-2xl font-semibold text-secondary mb-6">Formations &amp; Certifications</h2>
+                <div class="space-y-6">
+                    <div class="bg-accent/10 p-6 rounded-2xl">
+                        <h3 class="font-semibold text-secondary mb-2">Magnétisme &amp; hypnose</h3>
+                        <p class="text-gray-700 text-sm">D’octobre 2017 au 18 avril 2018</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Formateur :</strong> Pascal Bescos — expérience depuis mars 1997, formé par l’Institut International de Magnétologie Christian Louvet, adhérent à la GNOMA.</p>
+                    </div>
+                    <div class="bg-accent/10 p-6 rounded-2xl">
+                        <h3 class="font-semibold text-secondary mb-2">Formation continue</h3>
+                        <p class="text-gray-700 text-sm">Supervision régulière et actualisation des pratiques</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zone d'intervention -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-4xl font-serif font-bold text-secondary mb-6">
+                    Zone d'<span class="text-primary">intervention</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Cabinet à Saint-Germain (Troyes). À 8 min de McArthur Glen. Idéal pour combiner une séance avec une visite en région.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 text-gray-700">
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-100">Troyes</span>
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-100">Saint-Germain</span>
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-100">Romilly-sur-Seine</span>
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-100">Bar-sur-Aube</span>
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-100">Bar-sur-Seine</span>
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-100">Vendeuvre-sur-Barse</span>
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-100">Brienne-le-Château</span>
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-100">L’Aube (10)</span>
+            </div>
+            <p class="text-center text-gray-600 mt-6">
+                Vous venez de l’Aube ou des départements limitrophes ? Le cabinet est facilement accessible, avec <strong>parking gratuit</strong> à proximité.
+            </p>
+        </div>
+    </section>
+
+    <!-- Témoignages géolocalisés -->
+    <section class="py-20 bg-white" id="temoignages-proximite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-serif font-bold text-secondary mb-8 text-center">
+                Ils ont fait le chemin jusqu’à Troyes
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <blockquote class="bg-accent/20 p-6 rounded-2xl shadow-sm">
+                    <p class="text-gray-700 italic">« Je venais de Romilly. Une heure de route pour une vie sans tabac, ça valait le coup. Aujourd’hui je ne fume plus. »</p>
+                    <footer class="mt-3 text-secondary font-medium">— Marie, Romilly-sur-Seine</footer>
+                </blockquote>
+                <blockquote class="bg-accent/20 p-6 rounded-2xl shadow-sm">
+                    <p class="text-gray-700 italic">« Cabinet très accessible depuis Troyes, parking juste à côté. Séance arrêt tabac efficace. »</p>
+                    <footer class="mt-3 text-secondary font-medium">— Thomas, Troyes</footer>
+                </blockquote>
+            </div>
+            <p class="text-center mt-6">
+                <a href="index.html#temoignages" class="text-primary font-medium hover:underline">Voir tous les témoignages</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-secondary to-secondary/90 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-serif font-bold mb-6">
+                Prêt(e) à commencer <span class="text-primary">votre transformation</span> ?
+            </h2>
+            <p class="text-xl text-white/90 mb-8">
+                Réservez votre appel découverte gratuit de 15 minutes et découvrez comment je peux vous accompagner vers une vie sans tabac.
+            </p>
+            <a href="index.html#contact"
+                class="inline-block bg-primary text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                Réserver mon appel gratuit
+            </a>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Corinne Lacoste</h3>
+                    <p class="text-white/70 text-sm">
+                        Magnétiseuse diplômée<br>
+                        Spécialiste sevrage tabagique
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="index.html" class="hover:text-primary transition">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-primary transition">À propos</a></li>
+                        <li><a href="index.html#methode" class="hover:text-primary transition">La méthode</a></li>
+                        <li><a href="index.html#temoignages" class="hover:text-primary transition">Témoignages</a></li>
+                        <li><a href="faq.html" class="hover:text-primary transition">FAQ</a></li>
+                        <li><a href="blog/hypnotherapeute-troyes-choisir.html" class="hover:text-primary transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Légal</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="mentions-legales.html" class="hover:text-primary transition">Mentions légales</a>
+                        </li>
+                        <li><a href="politique-confidentialite.html"
+                                class="hover:text-primary transition">Confidentialité</a></li>
+                        <li><a href="cgv.html" class="hover:text-primary transition">CGV</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li data-contact="telephone"></li>
+                        <li>7 rue du Printemps</li>
+                        <li>10120 Saint-Germain</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/50">
+                <p>© 2026 Corinne Lacoste. Tous droits réservés.</p>
+                <p class="mt-2">SIRET : 839 303 773 00 015</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Corinne Lacoste",
+        "jobTitle": "Magnétiseuse - Thérapeute spécialisée sevrage tabagique",
+        "description": "Thérapeute spécialisée dans l'arrêt du tabac par magnétisme et hypnose à Saint-Germain",
+        "url": "https://magnetiseuse-lacoste-corinne.fr/",
+        "telephone": "+33695486060",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7 rue du Printemps",
+            "addressLocality": "Saint-Germain",
+            "postalCode": "10120",
+            "addressCountry": "FR"
+        },
+        "image": "https://magnetiseuse-lacoste-corinne.fr/assets/images/photo-corrine.webp",
+        "sameAs": []
+    }
+    </script>
+
+    <script src="assets/js/config.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>
+

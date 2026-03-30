@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Consent Mode v2 - Configuration par défaut (tous refusés) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      
+      // Configuration du consentement par défaut (RGPD)
+      gtag('consent', 'default', {
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500,
+      });
+      
+      // Vérifier si le consentement a déjà été donné
+      if (localStorage.getItem('consentGranted') === 'true') {
+        gtag('consent', 'update', {
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
+    <!-- Google tag (gtag.js) - Google Ads AW-17956035279 (Consent Mode géré ci-dessus) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956035279"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'AW-17956035279');
+    </script>
+    
+    <!-- Google Tag Manager - Chargé après le contenu principal pour améliorer les performances -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-MFK6BL36');
+                
+                // Google tag (gtag.js) - chargé après GTM
+                var gtagScript = document.createElement('script');
+                gtagScript.async = true;
+                gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-5KYCNEBXRX';
+                document.head.appendChild(gtagScript);
+                
+                gtagScript.onload = function() {
+                    gtag('js', new Date());
+                    gtag('config', 'G-5KYCNEBXRX');
+                };
+            }, 2000);
+        });
+    </script>
+    
+        <!-- Ahrefs Web Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="ZmVUUNMo9OUSVRurS/ikCw" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez tous les services de magnétisme et hypnose proposés par Corinne Lacoste à Saint-Germain : arrêt du tabac (120€), gestion du stress, troubles du sommeil, douleurs chroniques, allergies. Tarifs transparents de 45€ à 120€. Première consultation magnétisme adulte 80€. Cabinet proche de Troyes dans l'Aube.">
+    <title>Services & Tarifs 2026 | Magnétisme Hypnose | Corinne Lacoste Troyes</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+    <!-- Fonts (self-hosted) -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="preconnect" href="https://calendly.com">
+    <link rel="dns-prefetch" href="https://js.stripe.com">
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+
+    <!-- Tailwind CSS (built locally) -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="antialiased text-gray-800 bg-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFK6BL36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" x-data="{ mobileMenuOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold text-secondary">
+                        Corinne Lacoste
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Accueil</a>
+                    <a href="a-propos.html" class="text-gray-700 hover:text-primary transition">À propos</a>
+                    <a href="index.html#methode" class="text-gray-700 hover:text-primary transition">La méthode</a>
+                    <a href="index.html#temoignages" class="text-gray-700 hover:text-primary transition">Témoignages</a>
+                    <a href="index.html#tarifs" class="text-gray-700 hover:text-primary transition">Tarifs</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-primary transition">FAQ</a>
+                    <a href="blog/hypnotherapeute-troyes-choisir.html" class="text-gray-700 hover:text-primary transition">Blog</a>
+                    <a href="index.html#contact"
+                        class="bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition font-medium">
+                        Réserver
+                    </a>
+                </div>
+
+                <button 
+                    @click="mobileMenuOpen = !mobileMenuOpen" 
+                    class="md:hidden p-2"
+                    aria-label="Ouvrir le menu de navigation"
+                    :aria-expanded="mobileMenuOpen">
+                    <span class="sr-only">Menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700">Accueil</a>
+                <a href="a-propos.html" class="block py-2 text-gray-700">À propos</a>
+                <a href="index.html#methode" class="block py-2 text-gray-700">La méthode</a>
+                <a href="index.html#temoignages" class="block py-2 text-gray-700">Témoignages</a>
+                <a href="index.html#tarifs" class="block py-2 text-gray-700">Tarifs</a>
+                <a href="faq.html" class="block py-2 text-gray-700">FAQ</a>
+                <a href="blog/hypnotherapeute-troyes-choisir.html" class="block py-2 text-gray-700 hover:text-primary">Blog</a>
+                <a href="index.html#contact" class="block mt-4 bg-primary text-white px-6 py-3 rounded-full text-center">
+                    Réserver
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-accent via-white to-accent/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-secondary mb-6">
+                    Services et <span class="text-primary">Tarifs</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-12">
+                    Découvrez tous nos services de magnétisme et d'hypnose
+                </p>
+
+                <div class="space-y-8">
+                    <!-- Service 1: Tabac -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-primary">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h2 class="text-2xl font-serif font-bold text-secondary mb-2">
+                                    Tabac (1h. Arrêt en une séance)
+                                </h2>
+                                <p class="text-gray-600 italic">sous hypnose avec magnétisme</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-3xl font-bold text-primary" data-price="tabac"></p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            Séance complète pour l'arrêt du tabac en une seule séance. Durée : 1h à 1h30. 2 séances de suivi gratuites incluses si besoin.
+                        </p>
+                    </div>
+
+                    <!-- Service 2: Dépression, poids, stress -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="mb-4">
+                            <h2 class="text-2xl font-serif font-bold text-secondary mb-2">
+                                Dépression, poids, stress, anxiété, burn out
+                            </h2>
+                            <p class="text-gray-600 italic">sous hypnose avec magnétisme</p>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6 mt-6">
+                            <div class="flex justify-between items-center p-4 bg-accent/30 rounded-xl">
+                                <span class="text-gray-700 font-medium">Première consultation (<span data-duration="magnetisme_adulte"></span>)</span>
+                                <span class="text-2xl font-bold text-primary" data-price="tabac_adulte"></span>
+                            </div>
+                            <div class="flex justify-between items-center p-4 bg-accent/30 rounded-xl">
+                                <span class="text-gray-700 font-medium">Consultations suivantes (<span data-duration="magnetisme_enfant"></span>)</span>
+                                <span class="text-2xl font-bold text-primary" data-price="tabac_enfant"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Douleurs du dos -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h2 class="text-2xl font-serif font-bold text-secondary mb-2">
+                                    Douleurs du dos (<span data-duration="douleurs"></span>)
+                                </h2>
+                                <p class="text-gray-600 italic">sans manipulation, seulement étirements et magnétisme</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-3xl font-bold text-primary" data-price="douleurs"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: Réflexologie plantaire -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h2 class="text-2xl font-serif font-bold text-secondary mb-2">
+                                    Réflexologie plantaire (<span data-duration="douleurs"></span>)
+                                </h2>
+                                <p class="text-gray-600 italic">tendinite, entorse. Modelage et magnétisme</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-3xl font-bold text-primary" data-price="douleurs"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 5: Pierres chaudes -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h2 class="text-2xl font-serif font-bold text-secondary mb-2">
+                                    Pierres chaudes (<span data-duration="poids"></span>)
+                                </h2>
+                                <p class="text-gray-600 italic">modelage et magnétisme</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-3xl font-bold text-primary" data-price="poids"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 6: Zona, eczéma -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h2 class="text-2xl font-serif font-bold text-secondary mb-2">
+                                    Zona, eczéma (<span data-duration="allergies"></span>)
+                                </h2>
+                                <p class="text-gray-600 italic">magnétisme</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-3xl font-bold text-primary" data-price="allergies"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 7: Nourissons, enfants -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h2 class="text-2xl font-serif font-bold text-secondary mb-2">
+                                    Nourissons, enfants (<span data-duration="magnetisme_enfant"></span>)
+                                </h2>
+                                <p class="text-gray-600 italic">magnétisme</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-3xl font-bold text-primary" data-price="tabac_enfant"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 8: Consultation après rayons chimio -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h2 class="text-2xl font-serif font-bold text-secondary mb-2">
+                                    Consultation après rayons chimio (<span data-duration="cicatrisation"></span>)
+                                </h2>
+                                <p class="text-gray-600 italic">barreur de feu, magnétisme</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-3xl font-bold text-primary" data-price="cicatrisation"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Info -->
+                <div class="mt-12 bg-accent/30 rounded-2xl p-8">
+                    <h3 class="text-xl font-semibold text-secondary mb-4">Modalités de paiement</h3>
+                    <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                        <div>
+                            <p class="font-medium mb-2">Modes de paiement acceptés :</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Carte bancaire</li>
+                                <li>Espèces</li>
+                                <li>Chèque</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-medium mb-2">Remboursement :</p>
+                            <p class="text-sm">Certaines mutuelles peuvent prendre en charge tout ou partie des séances. Une facture peut être fournie sur demande.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="mt-12 text-center">
+                    <a href="index.html#contact"
+                        class="inline-block bg-primary text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Réserver une séance
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Corinne Lacoste</h3>
+                    <p class="text-white/70 text-sm">
+                        Magnétiseuse diplômée<br>
+                        Spécialiste sevrage tabagique
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="index.html" class="hover:text-primary transition">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-primary transition">À propos</a></li>
+                        <li><a href="index.html#methode" class="hover:text-primary transition">La méthode</a></li>
+                        <li><a href="index.html#temoignages" class="hover:text-primary transition">Témoignages</a></li>
+                        <li><a href="soins.html" class="hover:text-primary transition">Services</a></li>
+                        <li><a href="faq.html" class="hover:text-primary transition">FAQ</a></li>
+                        <li><a href="blog/hypnotherapeute-troyes-choisir.html" class="hover:text-primary transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Légal</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="mentions-legales.html" class="hover:text-primary transition">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-primary transition">Confidentialité</a></li>
+                        <li><a href="cgv.html" class="hover:text-primary transition">CGV</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li data-contact="telephone"></li>
+                        <li>7 rue du Printemps</li>
+                        <li>10120 Saint-Germain</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/50">
+                <p>© 2026 Corinne Lacoste. Tous droits réservés.</p>
+                <p class="mt-2">SIRET : 839 303 773 00 015</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Configuration centralisée des prix et infos -->
+    <script src="assets/js/config.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>
+

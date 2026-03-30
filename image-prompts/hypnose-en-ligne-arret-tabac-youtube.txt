@@ -1,0 +1,13 @@
+FICHIER IMAGE ATTENDU : assets/images/blog/hypnose-en-ligne-arret-tabac-youtube.webp
+TAILLE CIBLE : 800x450px, format WebP, qualité 85
+
+--- PROMPT IMAGE (à coller dans votre outil de génération) ---
+
+A person sitting alone on a dark sofa at night in a dim living room, watching a laptop screen showing a generic meditation video with a simple waveform or nature scene, the room is dark with only the cold blue-white glow of the screen illuminating a tired frustrated face in three-quarter profile, an empty coffee mug on the side table, a crumpled cigarette pack visible in the foreground slightly out of focus, wide interior cinematic shot, cold desaturated blue and grey color grading with deep shadows, moody atmospheric still, Sony Venice camera with 35mm lens, no identifiable logos or text on screen
+
+--- INSTRUCTIONS ---
+1. Générez l'image avec l'outil de votre choix (Midjourney, DALL-E, Firefly, Gemini...)
+2. Redimensionnez en 800x450px (crop centré)
+3. Convertissez en WebP qualité 85
+4. Renommez le fichier : hypnose-en-ligne-arret-tabac-youtube.webp
+5. Placez le fichier dans : E:/Site CL/assets/images/blog/

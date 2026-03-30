@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Consent Mode v2 - Configuration par défaut (tous refusés) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      
+      // Configuration du consentement par défaut (RGPD)
+      gtag('consent', 'default', {
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500,
+      });
+      
+      // Vérifier si le consentement a déjà été donné
+      if (localStorage.getItem('consentGranted') === 'true') {
+        gtag('consent', 'update', {
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
+    <!-- Google tag (gtag.js) - Google Ads AW-17956035279 (Consent Mode géré ci-dessus) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956035279"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'AW-17956035279');
+    </script>
+    
+    <!-- Google Tag Manager - Chargé après le contenu principal pour améliorer les performances -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-MFK6BL36');
+                
+                // Google tag (gtag.js) - chargé après GTM
+                var gtagScript = document.createElement('script');
+                gtagScript.async = true;
+                gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-5KYCNEBXRX';
+                document.head.appendChild(gtagScript);
+                
+                gtagScript.onload = function() {
+                    gtag('js', new Date());
+                    gtag('config', 'G-5KYCNEBXRX');
+                };
+            }, 2000);
+        });
+    </script>
+    
+        <!-- Ahrefs Web Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="ZmVUUNMo9OUSVRurS/ikCw" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conditions Générales de Vente du cabinet de Corinne Lacoste, magnétiseuse et hypnothérapeute à Saint-Germain (Troyes). Tarifs, modalités de paiement, politique d'annulation, remboursement, garanties sur les séances d'arrêt du tabac et soins énergétiques. Informations légales et contractuelles.">
+    <title>CGV - Conditions Générales | Cabinet Corinne Lacoste Saint-Germain</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+    <!-- Fonts (self-hosted) -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="preconnect" href="https://calendly.com">
+    <link rel="dns-prefetch" href="https://js.stripe.com">
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+
+    <!-- Tailwind CSS (built locally) -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="antialiased text-gray-800 bg-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFK6BL36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" x-data="{ mobileMenuOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold text-secondary">
+                        Corinne Lacoste
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Accueil</a>
+                    <a href="a-propos.html" class="text-gray-700 hover:text-primary transition">À propos</a>
+                    <a href="index.html#methode" class="text-gray-700 hover:text-primary transition">La méthode</a>
+                    <a href="index.html#temoignages" class="text-gray-700 hover:text-primary transition">Témoignages</a>
+                    <a href="index.html#tarifs" class="text-gray-700 hover:text-primary transition">Tarifs</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-primary transition">FAQ</a>
+                    <a href="blog/hypnotherapeute-troyes-choisir.html" class="text-gray-700 hover:text-primary transition">Blog</a>
+                    <a href="index.html#contact"
+                        class="bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition font-medium">
+                        Réserver
+                    </a>
+                </div>
+
+                <button 
+                    @click="mobileMenuOpen = !mobileMenuOpen" 
+                    class="md:hidden p-2"
+                    aria-label="Ouvrir le menu de navigation"
+                    :aria-expanded="mobileMenuOpen">
+                    <span class="sr-only">Menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700">Accueil</a>
+                <a href="a-propos.html" class="block py-2 text-gray-700">À propos</a>
+                <a href="index.html#methode" class="block py-2 text-gray-700">La méthode</a>
+                <a href="index.html#temoignages" class="block py-2 text-gray-700">Témoignages</a>
+                <a href="index.html#tarifs" class="block py-2 text-gray-700">Tarifs</a>
+                <a href="faq.html" class="block py-2 text-gray-700">FAQ</a>
+                <a href="blog/hypnotherapeute-troyes-choisir.html" class="block py-2 text-gray-700 hover:text-primary">Blog</a>
+                <a href="index.html#contact" class="block mt-4 bg-primary text-white px-6 py-3 rounded-full text-center">
+                    Réserver
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-accent via-white to-accent/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-secondary mb-8">
+                    Conditions Générales de Vente
+                </h1>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-8">
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">1. Objet</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Les présentes Conditions Générales de Vente (CGV) régissent les prestations de services proposées par Corinne Lacoste, magnétiseuse et thérapeute spécialisée dans l'arrêt du tabac par magnétisme et hypnose.
+                        </p>
+                        <div class="mt-4 space-y-2 text-gray-700">
+                            <p><strong>Corinne Lacoste</strong></p>
+                            <p>7 rue du Printemps, 10120 Saint-Germain, France</p>
+                            <p>Téléphone : <span data-contact="telephone"></span></p>
+                            <p>SIRET : 839 303 773 00 015</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">2. Prestations</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Les prestations proposées comprennent :
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li>Séances de magnétisme et d'hypnose pour l'arrêt du tabac</li>
+                            <li>Consultations pour dépression, poids, stress, anxiété, burn out</li>
+                            <li>Traitement des douleurs du dos</li>
+                            <li>Réflexologie plantaire</li>
+                            <li>Massage aux pierres chaudes</li>
+                            <li>Traitement du zona, eczéma</li>
+                            <li>Consultations pour nourissons et enfants</li>
+                            <li>Consultations après rayons chimio</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">3. Tarifs</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Les tarifs des prestations sont indiqués en euros TTC et sont valables pour l'année en cours. Les tarifs peuvent être modifiés à tout moment, mais restent applicables aux réservations déjà confirmées.
+                        </p>
+                        <div class="bg-accent/30 p-6 rounded-xl mt-4">
+                            <p class="text-sm text-gray-700">
+                                <strong>Tarifs principaux :</strong><br>
+                                • Tabac (1h, arrêt en une séance) : 120€<br>
+                                • Première consultation (1h) : 80€<br>
+                                • Consultations suivantes (30min) : 45€<br>
+                                • Pierres chaudes (1h) : 90€<br>
+                                • Autres prestations (30min) : 45€
+                            </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">4. Réservation</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            La réservation d'une séance peut être effectuée par téléphone, via le site internet ou par email. La réservation est confirmée uniquement après validation et, le cas échéant, après réception d'un acompte ou du paiement intégral.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">5. Paiement</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Le paiement s'effectue :
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li>Par carte bancaire</li>
+                            <li>Par espèces</li>
+                            <li>Par chèque</li>
+                            <li>Par virement bancaire (sur demande)</li>
+                        </ul>
+                        <p class="text-gray-700 leading-relaxed mt-4">
+                            Le paiement est généralement effectué le jour de la séance. Un acompte peut être demandé pour certaines prestations.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">6. Annulation et report</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Toute annulation ou report de rendez-vous doit être effectué au minimum 24 heures à l'avance. En cas d'annulation moins de 24 heures avant le rendez-vous ou d'absence non justifiée, la séance peut être facturée.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mt-4">
+                            En cas d'annulation de notre part, un nouveau rendez-vous vous sera proposé dans les meilleurs délais.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">7. Remboursement</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Certaines mutuelles peuvent prendre en charge tout ou partie des séances de magnétisme. Une facture peut être fournie sur demande pour présentation à votre mutuelle. Le remboursement dépend des conditions de votre contrat d'assurance.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mt-4">
+                            Aucun remboursement ne sera effectué pour les séances déjà réalisées, sauf cas de force majeure ou faute de notre part.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">8. Déroulement des séances</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Les séances se déroulent dans un cadre bienveillant et confidentiel. La durée des séances peut varier selon les besoins du client et la nature de la prestation. Le client s'engage à fournir des informations exactes concernant son état de santé et à respecter les conseils donnés.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">9. Limites de responsabilité</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Les prestations de magnétisme et d'hypnose sont des pratiques complémentaires qui ne se substituent pas à un traitement médical. Corinne Lacoste ne formule pas de diagnostic médical et ne remplace pas votre médecin traitant.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mt-4">
+                            Les résultats peuvent varier d'une personne à l'autre. Aucune garantie de résultat ne peut être donnée, chaque individu réagissant différemment aux techniques utilisées.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">10. Confidentialité</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Toutes les informations communiquées lors des séances sont strictement confidentielles et soumises au secret professionnel. Aucune information ne sera divulguée à des tiers sans votre consentement explicite, sauf obligation légale.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">11. Propriété intellectuelle</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Tous les contenus du site (textes, images, logos) sont la propriété de Corinne Lacoste et sont protégés par les lois sur la propriété intellectuelle. Toute reproduction sans autorisation est interdite.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">12. Droit de rétractation</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Conformément à la législation en vigueur, vous disposez d'un droit de rétractation de 14 jours pour les prestations de services, sauf si la prestation a été entièrement exécutée avec votre accord avant la fin du délai de rétractation.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">13. Litiges et médiation</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            En cas de litige, nous nous engageons à rechercher une solution amiable. À défaut d'accord, le litige sera porté devant les tribunaux compétents français.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">14. Acceptation des CGV</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Toute réservation ou commande implique l'acceptation sans réserve des présentes Conditions Générales de Vente.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold text-secondary mb-4">15. Contact</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Pour toute question concernant ces CGV, contactez-nous :
+                        </p>
+                        <div class="mt-4 space-y-2 text-gray-700">
+                            <p>Téléphone : <span data-contact="telephone"></span></p>
+                            <p>Adresse : 7 rue du Printemps, 10120 Saint-Germain, France</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Corinne Lacoste</h3>
+                    <p class="text-white/70 text-sm">
+                        Magnétiseuse diplômée<br>
+                        Spécialiste sevrage tabagique
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="index.html" class="hover:text-primary transition">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-primary transition">À propos</a></li>
+                        <li><a href="index.html#methode" class="hover:text-primary transition">La méthode</a></li>
+                        <li><a href="index.html#temoignages" class="hover:text-primary transition">Témoignages</a></li>
+                        <li><a href="faq.html" class="hover:text-primary transition">FAQ</a></li>
+                        <li><a href="blog/hypnotherapeute-troyes-choisir.html" class="hover:text-primary transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Légal</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="mentions-legales.html" class="hover:text-primary transition">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-primary transition">Confidentialité</a></li>
+                        <li><a href="cgv.html" class="hover:text-primary transition">CGV</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li data-contact="telephone"></li>
+                        <li>7 rue du Printemps</li>
+                        <li>10120 Saint-Germain</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/50">
+                <p>© 2026 Corinne Lacoste. Tous droits réservés.</p>
+                <p class="mt-2">SIRET : 839 303 773 00 015</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Configuration centralisée des prix et infos -->
+    <script src="assets/js/config.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>
+

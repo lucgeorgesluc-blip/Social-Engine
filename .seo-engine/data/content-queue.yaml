@@ -1,0 +1,185 @@
+# Content Queue — magnetiseuse-lacoste-corinne.fr
+last_updated: "2026-03-26"
+
+queue:
+
+  # ─── HAUTE PRIORITÉ — Pillar pages manquantes ───────────────────────────────
+
+  - id: "q_001"
+    title: "Magnétiseur Troyes : Guide Complet Magnétisme & Soins [2026]"
+    blog_type: "how-to"
+    content_type: "pillar"
+    cluster_id: "tc_magnetiseur_troyes"
+    target_keywords: ["magnétiseur Troyes", "magnétiseuse Troyes", "magnétisme Troyes"]
+    target_features: ["feat_magnetisme_adulte", "feat_combo_magnetisme_hypnose", "feat_formation_gnoma"]
+    unique_angle: "Seul guide local qui explique la différence magnétisme/hypnose ET montre les 45+ conditions traitées avec tarifs transparents — les concurrents n'ont pas cette profondeur"
+    priority: "high"
+    priority_reason: "Mot-clé principal 'magnétiseur Troyes' — aucun pillar dédié existant"
+    status: "done"
+    estimated_word_count: 3500
+    eeat_plan: "Témoignages patients Troyes + 15 ans expérience Corinne + formation GNOMA Pascal Bescos"
+    serp_analyzed: true
+    cannibalization_check: "passed"
+    notes: "DONE — Pillar = magnetiseur-troyes.html (page service, user confirmé 2026-03-27). Article cluster créé : arreter-fumer-troyes-methodes-locales-comparatif.html (SERP collecté via Chrome DevTools, angle local unique)."
+    depends_on: []
+    internal_link_targets: ["magnetiseur-troyes-arreter-fumer", "hypnotherapeute-troyes-choisir", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+
+  - id: "q_002"
+    title: "Magnétiseur Aube : Corinne Lacoste, Cabinet Saint-Germain [2026]"
+    blog_type: "how-to"
+    content_type: "pillar"
+    cluster_id: "tc_magnetiseur_aube"
+    target_keywords: ["magnétiseur Aube", "magnétiseur Aube 10", "magnétiseuse Aube"]
+    target_features: ["feat_magnetisme_adulte", "feat_zone_aube", "feat_arret_tabac_seance"]
+    unique_angle: "Guide local département Aube (10) avec villes précises et temps de trajet — les concurrents ne ciblent pas le département entier aussi explicitement"
+    priority: "high"
+    priority_reason: "Mot-clé secondaire important 'magnétiseur Aube' — seul article existant (magnetiseur-aube-arreter-fumer) trop ciblé tabac"
+    status: "done"
+    estimated_word_count: 2500
+    eeat_plan: "Carte/liste des villes Aube + témoignages patients de différentes villes du département"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "DONE — Pillar = magnetiseur-aube.html (page service existante, même pattern que tc_magnetiseur_troyes). Cluster article existant : magnetiseur-aube-arreter-fumer.html. Aucun nouvel article à créer."
+    depends_on: []
+    internal_link_targets: ["magnetiseur-aube-arreter-fumer", "arret-tabac-aube-methodes-naturelles-troyes"]
+
+  # ─── HAUTE PRIORITÉ — Comparatifs concurrents ───────────────────────────────
+
+  - id: "q_003"
+    title: "Corinne Lacoste vs Sébastien Geoffron : Quel Magnétiseur Choisir ?"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_magnetiseur_troyes"
+    target_keywords: ["Geoffron magnétiseur alternatif", "magnétiseur Troyes comparer"]
+    target_features: ["feat_combo_magnetisme_hypnose", "feat_suivi_gratuit", "feat_rdv_7_jours"]
+    unique_angle: "Comparatif objectif entre deux approches différentes (énergéticien vs magnétisme + hypnose combinés) avec critères concrets"
+    priority: "high"
+    priority_reason: "Concurrents peu actifs SEO — opportunité de capturer recherches comparatives"
+    status: "done"
+    estimated_word_count: 2000
+    eeat_plan: "Tableau comparatif objectif + expérience Corinne avec formation GNOMA"
+    serp_analyzed: true
+    cannibalization_check: "passed"
+    notes: "DONE 2026-03-29 — slug: magnetiseur-troyes-corinne-vs-geoffron. Données Geoffron vérifiées via Chrome DevTools (site réel). Pas d'arrêt tabac, pas d'hypnose chez Geoffron. Angle retenu: 'pour quel besoin choisir l'un ou l'autre'."
+    depends_on: ["q_001"]
+    internal_link_targets: ["hypnotherapeute-troyes-choisir", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+
+  # ─── PRIORITÉ MOYENNE — Clusters bien-être manquants ────────────────────────
+
+  - id: "q_004"
+    title: "Bien-être Naturel à Troyes : Magnétisme, Hypnose, Solutions [2026]"
+    blog_type: "how-to"
+    content_type: "pillar"
+    cluster_id: "tc_bien_etre_troyes"
+    target_keywords: ["bien-être naturel Troyes", "soins naturels Troyes", "thérapeute Troyes"]
+    target_features: ["feat_magnetisme_adulte", "feat_hypnose_ericksonienne", "feat_stress_anxiete", "feat_troubles_sommeil", "feat_perte_poids"]
+    unique_angle: "Vue d'ensemble des 8 problématiques traitées en un seul article — avec liens vers chaque cluster page spécifique"
+    priority: "cancelled"
+    priority_reason: "Hors stratégie — déviation thématique. Les piliers cibles sont arrêt tabac + magnétiseur Troyes. Un pilier bien-être général dilue l'autorité thématique."
+    status: "cancelled"
+    estimated_word_count: 3000
+    eeat_plan: "Stats : 85% réussite + 35 avis 4.9★ + témoignages multi-problématiques"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "ANNULÉ 2026-03-30 — stratégie réorientée : renforcer les piliers existants uniquement (arrêt tabac, magnétiseur Troyes, magnétiseur Aube, sevrage). Les articles bien-être déjà publiés restent mais pas de nouveau pilier."
+    depends_on: []
+    internal_link_targets: ["gestion-stress-troyes-magnetisme-hypnose", "troubles-sommeil-insomnie-troyes-solutions-naturelles", "perte-poids-hypnose-troyes-temoignages", "confiance-en-soi-hypnose-magnetisme-troyes", "douleurs-chroniques-magnetiseur-troyes-soulage"]
+
+  - id: "q_005"
+    title: "Burn-out : Magnétisme + Hypnose à Troyes [2026]"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_bien_etre_troyes"
+    target_keywords: ["burn-out Troyes", "récupération burn-out naturel", "burn-out magnétisme"]
+    target_features: ["feat_stress_anxiete", "feat_combo_magnetisme_hypnose"]
+    unique_angle: "Focus spécifique burn-out (vs stress générique) avec protocole en plusieurs séances — différent de gestion-stress déjà publié"
+    priority: "medium"
+    priority_reason: "Terme burn-out très recherché, non couvert spécifiquement"
+    status: "planned"
+    estimated_word_count: 2000
+    eeat_plan: "Témoignage patient en burn-out + protocole détaillé Corinne"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: ""
+    depends_on: []
+    internal_link_targets: ["gestion-stress-troyes-magnetisme-hypnose", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+
+  # ─── PRIORITÉ MOYENNE — Sevrage symptômes manquants ─────────────────────────
+
+  - id: "q_006"
+    title: "Prise de Poids Après Arrêt Tabac : Éviter de Grossir [Guide]"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_sevrage_symptomes"
+    target_keywords: ["prise de poids arrêt tabac éviter", "grossir arrêt tabac"]
+    target_features: ["feat_arret_tabac_seance", "feat_perte_poids"]
+    unique_angle: "DIFFÉRENT de 'arret-tabac-prise-poids-solutions' — ici focus prévention AVANT l'arrêt, pas solutions après. Angle : préparer son corps avant de stopper."
+    priority: "medium"
+    priority_reason: "Angle complémentaire non couvert"
+    status: "planned"
+    estimated_word_count: 1800
+    eeat_plan: "Données Corinne sur patients ayant préparé l'arrêt"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Vérifier différentiation avec arret-tabac-prise-poids-solutions"
+    depends_on: []
+    internal_link_targets: ["arret-tabac-prise-poids-solutions", "arreter-fumer-hypnose-prevenir-rechutes"]
+
+  # ─── PRIORITÉ BASSE — Features non couvertes ────────────────────────────────
+
+  - id: "q_007"
+    title: "Magnétisme pour les Enfants à Troyes : Que Soigner ? [Guide Parents]"
+    blog_type: "how-to"
+    content_type: "standalone"
+    cluster_id: ""
+    target_keywords: ["magnétisme enfant Troyes", "magnétiseur enfant Aube"]
+    target_features: ["feat_magnetisme_enfant", "feat_magnetisme_adulte"]
+    unique_angle: "Seul article ciblant les parents — conditions pédiatriques (coliques, troubles sommeil enfant, comportement) non couvertes dans le blog actuel"
+    priority: "low"
+    priority_reason: "Feature non couverte — audience secondaire parents"
+    status: "planned"
+    estimated_word_count: 1800
+    eeat_plan: "Témoignages parents + sécurité de la technique pour les enfants"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: ""
+    depends_on: []
+    internal_link_targets: ["tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+
+  - id: "q_008"
+    title: "Allergies et Eczéma : Le Magnétisme Peut-il Aider ? [Troyes]"
+    blog_type: "how-to"
+    content_type: "standalone"
+    cluster_id: ""
+    target_keywords: ["magnétisme allergies", "magnétiseur eczéma Troyes", "zona magnétisme"]
+    target_features: ["feat_allergies_eczema", "feat_magnetisme_adulte"]
+    unique_angle: "Seul article sur cette condition — segment de niche non couvert, peu de concurrence"
+    priority: "low"
+    priority_reason: "Feature disponible non documentée dans le blog"
+    status: "planned"
+    estimated_word_count: 1600
+    eeat_plan: "Résultats patients + mécanisme magnétique sur peau"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: ""
+    depends_on: []
+    internal_link_targets: ["tarifs-magnetiseur-hypnotherapeute-troyes-prix", "douleurs-chroniques-magnetiseur-troyes-soulage"]
+
+  - id: "q_009"
+    title: "Récupération après Chimio : Le Magnétisme (Barreur de Feu) à Troyes"
+    blog_type: "how-to"
+    content_type: "standalone"
+    cluster_id: ""
+    target_keywords: ["magnétisme post-chimiothérapie", "barreur de feu cancer Troyes"]
+    target_features: ["feat_post_chimio", "feat_magnetisme_adulte"]
+    unique_angle: "Technique spécifique 'barreur de feu' — unique différenciateur non couvert, niche haute valeur émotionnelle"
+    priority: "low"
+    priority_reason: "Feature unique non documentée — forte valeur E-E-A-T"
+    status: "planned"
+    estimated_word_count: 1800
+    eeat_plan: "Témoignage patient en récupération + explication technique barreur de feu"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Attention : ne jamais promettre de 'guérison' du cancer — accompagnement récupération uniquement"
+    depends_on: []
+    internal_link_targets: ["tarifs-magnetiseur-hypnotherapeute-troyes-prix"]

@@ -1,0 +1,36 @@
+# robots.txt — magnetiseuse-lacoste-corinne.fr
+# Mise à jour : 2026-03-26
+
+User-agent: *
+Allow: /
+
+# Bloquer les dossiers de backup et logs uniquement
+Disallow: /backup/
+Disallow: /logs/
+Disallow: /test-config.html
+
+# Autoriser toutes les ressources (CSS, JS, fonts, images)
+Allow: /assets/
+Allow: /api/
+
+# Crawlers IA search — accès explicite
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap
+Sitemap: https://www.magnetiseuse-lacoste-corinne.fr/sitemap.xml

@@ -1,0 +1,219 @@
+/* Custom styles for v2 site */
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state for sections to prevent flash */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: none;
+}
+
+/* First section (hero) should be visible immediately */
+section:first-of-type {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effects for cards */
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D4A574;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c49464;
+}
+
+/* Floating animation for hero elements */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, #D4A574 0%, #2C5F4F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Loading skeleton for Calendly */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* CTA button pulse effect */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(212, 165, 116, 0);
+    }
+}
+
+.pulse-on-hover:hover {
+    animation: pulse 2s infinite;
+}
+
+/* Star rating custom style */
+.star-rating {
+    color: #fbbf24;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Mobile menu smooth transition */
+.mobile-menu-enter {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #D4A574;
+    outline-offset: 2px;
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Improved contrast for buttons and footer */
+.bg-primary {
+    background-color: #C73E1F !important; /* Plus sombre pour meilleur contraste */
+}
+
+.bg-secondary {
+    background-color: #1F4A3D !important; /* Plus sombre pour meilleur contraste */
+}
+
+/* Footer text contrast improvements */
+footer.bg-secondary {
+    color: #FFFFFF !important;
+}
+
+footer.bg-secondary a {
+    color: #F4E8D8 !important; /* Couleur plus claire pour meilleur contraste */
+}
+
+footer.bg-secondary a:hover {
+    color: #D4A574 !important;
+}
+
+/* Cookie banner button contrast */
+#consent-accept {
+    background-color: #C73E1F !important; /* Plus sombre */
+    color: #FFFFFF !important;
+}
+
+/* Ensure text in footer has sufficient contrast */
+footer p,
+footer li {
+    color: #E8E8E8 !important;
+}
+
+/* Print styles */
+@media print {
+    nav,
+    footer,
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Dark mode support (future-proofing) */
+@media (prefers-color-scheme: dark) {
+    /* Will implement if needed */
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

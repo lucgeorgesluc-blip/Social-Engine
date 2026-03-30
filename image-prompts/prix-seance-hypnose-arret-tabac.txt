@@ -1,0 +1,13 @@
+FICHIER IMAGE ATTENDU : assets/images/blog/prix-seance-hypnose-arret-tabac.webp
+TAILLE CIBLE : 800x450px, format WebP, qualité 85
+
+--- PROMPT IMAGE (à coller dans votre outil de génération) ---
+
+An open minimalist slim wallet with several euro banknotes neatly fanned out visible inside, placed beside a small elegant business card on a clean white wooden desk, a single white peony in a thin glass vase softly blurred in the background, natural diffused window light from the right side creating soft even illumination, flat lay overhead composition with slight angle, muted Scandinavian color palette with warm cream ivory and sage green tones, shot on Canon R5 with 50mm f/1.8 lens, lifestyle product photography with subtle depth of field, no branding or text visible
+
+--- INSTRUCTIONS ---
+1. Générez l'image avec l'outil de votre choix (Midjourney, DALL-E, Firefly, Gemini...)
+2. Redimensionnez en 800x450px (crop centré)
+3. Convertissez en WebP qualité 85
+4. Renommez le fichier : prix-seance-hypnose-arret-tabac.webp
+5. Placez le fichier dans : E:/Site CL/assets/images/blog/

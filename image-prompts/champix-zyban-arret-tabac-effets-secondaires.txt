@@ -1,0 +1,13 @@
+FICHIER IMAGE ATTENDU : assets/images/blog/champix-zyban-arret-tabac-effets-secondaires.webp
+TAILLE CIBLE : 800x450px, format WebP, qualité 85
+
+--- PROMPT IMAGE (à coller dans votre outil de génération) ---
+
+A blister pack of white prescription pills partially opened on a clean white marble surface, several tablets spilling out beside a single broken cigarette, soft clinical overhead lighting with subtle shadows, 45-degree hero angle, muted neutral palette with a hint of cold blue, shallow depth of field isolating the pills in sharp focus against a softly blurred background, minimal pharmaceutical product photography style, shot on Sony A7R IV with 90mm macro lens, Apple product photography aesthetic, no text or labels visible on the packaging
+
+--- INSTRUCTIONS ---
+1. Générez l'image avec l'outil de votre choix (Midjourney, DALL-E, Firefly, Gemini...)
+2. Redimensionnez en 800x450px (crop centré)
+3. Convertissez en WebP qualité 85
+4. Renommez le fichier : champix-zyban-arret-tabac-effets-secondaires.webp
+5. Placez le fichier dans : E:/Site CL/assets/images/blog/

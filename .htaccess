@@ -1,0 +1,136 @@
+# .htaccess pour corinnelacoste.fr
+# Compression GZIP activée
+# Mise à jour : 2026-02-09
+
+# ========================================
+# COMPRESSION GZIP
+# ========================================
+<IfModule mod_deflate.c>
+    # Compresser les fichiers texte
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/shtml
+    AddOutputFilterByType DEFLATE text/css
+    
+    # Compresser les fichiers XML
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    
+    # Compresser les fichiers JavaScript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE text/javascript
+    
+    # Compresser les fichiers JSON
+    AddOutputFilterByType DEFLATE application/json
+    
+    # Compresser les fichiers SVG
+    AddOutputFilterByType DEFLATE image/svg+xml
+    
+    # Ne pas compresser les images déjà compressées
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+</IfModule>
+
+# ========================================
+# CACHE BROWSER (Performance)
+# ========================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # CSS et JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # Fonts
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    
+    # HTML (pas de cache pour le contenu dynamique)
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# ========================================
+# SÉCURITÉ
+# ========================================
+# Protéger les fichiers sensibles
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Désactiver l'affichage des répertoires
+Options -Indexes
+
+# ========================================
+# REDIRECTIONS 301 (URLs optimisées SEO)
+# ========================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Forcer www (éviter dilution SEO : une seule version du domaine)
+    RewriteCond %{HTTP_HOST} ^magnetiseuse-lacoste-corinne\.fr$ [NC]
+    RewriteRule ^(.*)$ https://www.magnetiseuse-lacoste-corinne.fr/$1 [R=301,L]
+
+    # Ancienne landing tabac → nouvelle URL canonique
+    RewriteRule ^landing-tabac\.html$ arret-tabac-troyes.html [R=301,L]
+</IfModule>
+
+# ========================================
+# REDIRECTIONS HTTPS (si SSL activé)
+# ========================================
+# Décommenter si tu as un certificat SSL
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# ========================================
+# PERFORMANCE
+# ========================================
+# Activer KeepAlive (si supporté)
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+    
+    # ========================================
+    # HEADERS DE SÉCURITÉ
+    # ========================================
+    
+    # Content Security Policy (CSP) - Protection XSS
+    # Note: Ajustez selon vos besoins réels
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://www.googletagmanager.com https://js.stripe.com https://assets.calendly.com https://cdn.jsdelivr.net https://analytics.ahrefs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.calendly.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: http:; connect-src 'self' https:; frame-src https://www.googletagmanager.com https://calendly.com https://www.google.com;"
+    
+    # HTTP Strict Transport Security (HSTS) - Force HTTPS
+    # Décommenter si SSL est activé
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # X-Frame-Options - Protection clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Cross-Origin-Opener-Policy - Isolation d'origine
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    
+    # X-Content-Type-Options - Empêche le MIME-sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy - Contrôle des informations de référent
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permissions Policy (anciennement Feature Policy)
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+

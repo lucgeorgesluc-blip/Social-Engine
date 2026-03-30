@@ -1,0 +1,1262 @@
+# Content Map — magnetiseuse-lacoste-corinne.fr
+last_updated: "2026-03-28"
+
+blogs:
+  - slug: "arreter-fumer-troyes-methodes-locales-comparatif"
+    title: "Arrêter de Fumer à Troyes : 5 Méthodes Locales Comparées [2026]"
+    file_path: "blog/arreter-fumer-troyes-methodes-locales-comparatif.html"
+    status: "published"
+    published_date: "2026-03-27"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "arrêter fumer Troyes méthodes locales"
+        search_volume: 0
+        is_primary: true
+      - keyword: "méthode arrêt tabac Troyes"
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "méthode principale comparée aux 4 autres"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "avantage clé : 1 séance vs 2-10 ailleurs"
+      - feature_id: "feat_suivi_gratuit"
+        context: "2 séances gratuites incluses — différenciateur"
+      - feature_id: "feat_zone_aube"
+        context: "Saint-Germain 5min Troyes"
+    competitors_mentioned:
+      - competitor_id: "comp_francoise_tellier"
+      - competitor_id: "comp_alexis_dilegami"
+      - competitor_id: "comp_sophrologie"
+      - competitor_id: "comp_patchs_nicotine"
+    internal_links_to:
+      - "hypnose-arret-tabac-troyes"
+      - "magnetiseur-troyes-arreter-fumer"
+      - "magnetisme-hypnose-arreter-fumer-comparatif"
+      - "arret-tabac-troyes.html"
+      - "magnetiseur-troyes.html"
+    internal_links_from: []
+    word_count: 1928
+    has_eeat_signals: true
+    needs_update_reason: ""
+    notes: "Unique angle : comparatif LOCAL praticiens Troyes. SERP data: Corinne ~6e sur 'magnétiseur Troyes', 2x sur 'hypnose arrêt tabac Troyes'. Concurrent principal arrêt tabac: Françoise TELLIER (2 séances ATH). Corinne: 1 séance combo."
+
+  - slug: "allen-carr-arreter-fumer-livre-avis"
+    title: "Livre Allen Carr Arrêt Tabac : Avis, Efficacité, vs Hypnose [2026]"
+    file_path: "blog/allen-carr-arreter-fumer-livre-avis.html"
+    status: "published"
+    published_date: "2026-03-23"
+    blog_type: "review"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "allen carr arrêter fumer avis"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "comparatif avec méthode Allen Carr"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "alternative présentée"
+    competitors_mentioned:
+      - competitor_id: "comp_allen_carr"
+    internal_links_to: ["arret-tabac-par-hypnose-avis-temoignages", "hypnose-pour-arret-du-tabac-guide-complet", "substituts-nicotiniques-comparatif-efficacite"]
+    internal_links_from: []
+    word_count: 1700
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arret-tabac-par-hypnose-avis-temoignages"
+    title: "Hypnose Arrêt Tabac Avis : 15 Témoignages Réels [2026]"
+    file_path: "blog/arret-tabac-par-hypnose-avis-temoignages.html"
+    status: "published"
+    published_date: "2026-03-20"
+    blog_type: "testimonial"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "avis hypnose arrêt tabac témoignages"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "témoignages patients"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "méthode décrite"
+    competitors_mentioned: []
+    internal_links_to: ["acupuncture-arret-tabac-efficacite-avis", "arret-tabac-patch-meilleurs-comparatif", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "hypnose-pour-arret-du-tabac-guide-complet", "magnetisme-arret-tabac-troyes-temoignages"]
+    internal_links_from: ["allen-carr-arreter-fumer-livre-avis"]
+    word_count: 2063
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "substituts-nicotiniques-comparatif-efficacite"
+    title: "Substituts Nicotiniques : Comparatif Complet, Efficacité, Prix [2026]"
+    file_path: "blog/substituts-nicotiniques-comparatif-efficacite.html"
+    status: "published"
+    published_date: "2026-03-21"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "substituts nicotiniques comparatif efficacité"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "comparatif vs substituts"
+    competitors_mentioned:
+      - competitor_id: "comp_patchs_nicotine"
+    internal_links_to: ["acupuncture-arret-tabac-efficacite-avis", "arreter-fumer-patchs-gommes-hypnose-comparatif", "arret-tabac-patch-meilleurs-comparatif", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "hypnose-pour-arret-du-tabac-guide-complet"]
+    internal_links_from: ["allen-carr-arreter-fumer-livre-avis"]
+    word_count: 1931
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arret-tabac-patch-meilleurs-comparatif"
+    title: "Patchs Anti-Tabac : Meilleurs Patchs 2026, Efficacité vs Hypnose"
+    file_path: "blog/arret-tabac-patch-meilleurs-comparatif.html"
+    status: "published"
+    published_date: "2026-03-19"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "meilleurs patchs arrêt tabac"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "comparatif"
+    competitors_mentioned:
+      - competitor_id: "comp_patchs_nicotine"
+    internal_links_to: ["acupuncture-arret-tabac-efficacite-avis", "arreter-fumer-patchs-gommes-hypnose-comparatif", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "hypnose-pour-arret-du-tabac-guide-complet", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+    internal_links_from: ["arret-tabac-par-hypnose-avis-temoignages", "substituts-nicotiniques-comparatif-efficacite"]
+    word_count: 1651
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "acupuncture-arret-tabac-efficacite-avis"
+    title: "Acupuncture pour Arrêter de Fumer : Efficacité, Points, Avis [2026]"
+    file_path: "blog/acupuncture-arret-tabac-efficacite-avis.html"
+    status: "published"
+    published_date: "2026-03-18"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "acupuncture arrêt tabac efficacité"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "comparatif vs acupuncture"
+    competitors_mentioned:
+      - competitor_id: "comp_acupuncture"
+    internal_links_to: ["arreter-fumer-patchs-gommes-hypnose-comparatif", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "hypnose-pour-arret-du-tabac-guide-complet", "magnetisme-arret-tabac-troyes-temoignages", "magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+    internal_links_from: ["arret-tabac-par-hypnose-avis-temoignages", "arret-tabac-patch-meilleurs-comparatif", "substituts-nicotiniques-comparatif-efficacite"]
+    word_count: 1487
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "tarifs-magnetiseur-hypnotherapeute-troyes-prix"
+    title: "Tarifs Magnétiseur & Hypnothérapeute Troyes [2026]"
+    file_path: "blog/tarifs-magnetiseur-hypnotherapeute-troyes-prix.html"
+    status: "published"
+    published_date: "2026-03-16"
+    blog_type: "review"
+    content_type: "standalone"
+    cluster_id: ""
+    target_keywords:
+      - keyword: "tarifs magnétiseur hypnothérapeute Troyes"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "tarif détaillé"
+      - feature_id: "feat_magnetisme_adulte"
+        context: "tarif"
+      - feature_id: "feat_hypnose_ericksonienne"
+        context: "tarif"
+    competitors_mentioned: []
+    internal_links_to: ["arreter-fumer-patchs-gommes-hypnose-comparatif", "confiance-en-soi-hypnose-magnetisme-troyes", "cout-arret-tabac-combien-budget-prevoir", "douleurs-chroniques-magnetiseur-troyes-soulage", "gestion-stress-troyes-magnetisme-hypnose", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "hypnose-ericksonienne-vs-classique-differences", "magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif", "perte-poids-hypnose-troyes-temoignages"]
+    internal_links_from: ["acupuncture-arret-tabac-efficacite-avis", "arret-tabac-patch-meilleurs-comparatif"]
+    word_count: 1167
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "hypnose-ericksonienne-vs-classique-differences"
+    title: "Hypnose Ericksonienne vs Classique : Différences [2026]"
+    file_path: "blog/hypnose-ericksonienne-vs-classique-differences.html"
+    status: "published"
+    published_date: "2026-03-15"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_magnetiseur_troyes"
+    target_keywords:
+      - keyword: "hypnose ericksonienne vs classique différences"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_hypnose_ericksonienne"
+        context: "explication différences"
+    competitors_mentioned: []
+    internal_links_to: ["confiance-en-soi-hypnose-magnetisme-troyes", "gestion-stress-troyes-magnetisme-hypnose", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "methode-hypnose-arret-tabac", "perte-poids-hypnose-troyes-temoignages", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+    internal_links_from: ["tarifs-magnetiseur-hypnotherapeute-troyes-prix", "hypnose-pour-arret-du-tabac-guide-complet"]
+    word_count: 1412
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif"
+    title: "Magnétisme vs Reiki vs Sophrologie Troyes : Comparatif [2026]"
+    file_path: "blog/magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif.html"
+    status: "published"
+    published_date: "2026-03-14"
+    blog_type: "comparison"
+    content_type: "standalone"
+    cluster_id: ""
+    target_keywords:
+      - keyword: "magnétisme vs reiki vs sophrologie Troyes"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_magnetisme_adulte"
+        context: "comparatif"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "avantage"
+    competitors_mentioned:
+      - competitor_id: "comp_reiki"
+      - competitor_id: "comp_sophrologie"
+    internal_links_to: ["arreter-fumer-patchs-gommes-hypnose-comparatif", "arreter-fumer-sans-medicaments-methodes-naturelles", "confiance-en-soi-hypnose-magnetisme-troyes", "douleurs-chroniques-magnetiseur-troyes-soulage", "gestion-stress-troyes-magnetisme-hypnose", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "perte-poids-hypnose-troyes-temoignages", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+    internal_links_from: ["acupuncture-arret-tabac-efficacite-avis", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+    word_count: 1423
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "douleurs-chroniques-magnetiseur-troyes-soulage"
+    title: "Douleurs Chroniques : Magnétiseur Troyes Soulage [2026]"
+    file_path: "blog/douleurs-chroniques-magnetiseur-troyes-soulage.html"
+    status: "published"
+    published_date: "2026-03-13"
+    blog_type: "testimonial"
+    content_type: "cluster"
+    cluster_id: "tc_bien_etre_troyes"
+    target_keywords:
+      - keyword: "douleurs chroniques magnétiseur Troyes"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_douleurs_chroniques"
+        context: "principale"
+      - feature_id: "feat_magnetisme_adulte"
+        context: "technique"
+    competitors_mentioned: []
+    internal_links_to: ["confiance-en-soi-hypnose-magnetisme-troyes", "gestion-stress-troyes-magnetisme-hypnose", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+    internal_links_from: ["magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+    word_count: 1465
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "confiance-en-soi-hypnose-magnetisme-troyes"
+    title: "Confiance en Soi : Magnétisme + Hypnose Troyes [2026]"
+    file_path: "blog/confiance-en-soi-hypnose-magnetisme-troyes.html"
+    status: "published"
+    published_date: "2026-03-12"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_bien_etre_troyes"
+    target_keywords:
+      - keyword: "confiance en soi hypnose Troyes"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_confiance_soi"
+        context: "principale"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "technique"
+    competitors_mentioned: []
+    internal_links_to: ["gestion-stress-troyes-magnetisme-hypnose", "perte-poids-hypnose-troyes-temoignages", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+    internal_links_from: ["magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif", "tarifs-magnetiseur-hypnotherapeute-troyes-prix", "hypnose-ericksonienne-vs-classique-differences", "douleurs-chroniques-magnetiseur-troyes-soulage"]
+    word_count: 1221
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "perte-poids-hypnose-troyes-temoignages"
+    title: "Perte de Poids par Hypnose à Troyes : Témoignages [2026]"
+    file_path: "blog/perte-poids-hypnose-troyes-temoignages.html"
+    status: "published"
+    published_date: "2026-03-11"
+    blog_type: "testimonial"
+    content_type: "cluster"
+    cluster_id: "tc_bien_etre_troyes"
+    target_keywords:
+      - keyword: "perte poids hypnose Troyes"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_perte_poids"
+        context: "principale"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "technique"
+    competitors_mentioned: []
+    internal_links_to: ["arret-tabac-prise-poids-solutions", "gestion-stress-troyes-magnetisme-hypnose", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+    internal_links_from: ["confiance-en-soi-hypnose-magnetisme-troyes", "magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+    word_count: 1511
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "troubles-sommeil-insomnie-troyes-solutions-naturelles"
+    title: "Troubles du Sommeil Troyes : Solutions Naturelles [2026]"
+    file_path: "blog/troubles-sommeil-insomnie-troyes-solutions-naturelles.html"
+    status: "published"
+    published_date: "2026-03-10"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_bien_etre_troyes"
+    target_keywords:
+      - keyword: "troubles sommeil Troyes solutions naturelles"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_troubles_sommeil"
+        context: "principale"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "technique"
+    competitors_mentioned: []
+    internal_links_to: ["fatigue-arret-tabac-combien-temps", "gestion-stress-troyes-magnetisme-hypnose", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "hypnose-troyes-stress-naturellement", "insomnie-arret-tabac-combien-temps"]
+    internal_links_from: ["confiance-en-soi-hypnose-magnetisme-troyes", "douleurs-chroniques-magnetiseur-troyes-soulage", "magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif", "perte-poids-hypnose-troyes-temoignages"]
+    word_count: 1330
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "gestion-stress-troyes-magnetisme-hypnose"
+    title: "Gestion du Stress à Troyes : Magnétisme + Hypnose [2026]"
+    file_path: "blog/gestion-stress-troyes-magnetisme-hypnose.html"
+    status: "published"
+    published_date: "2026-03-09"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_bien_etre_troyes"
+    target_keywords:
+      - keyword: "gestion stress Troyes magnétisme hypnose"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_stress_anxiete"
+        context: "principale"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "technique"
+    competitors_mentioned: []
+    internal_links_to: ["hypnose-arret-tabac-cabinet-saint-germain-troyes", "hypnose-troyes-stress-naturellement", "hypnotherapeute-troyes-choisir"]
+    internal_links_from: ["confiance-en-soi-hypnose-magnetisme-troyes", "douleurs-chroniques-magnetiseur-troyes-soulage", "magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif", "perte-poids-hypnose-troyes-temoignages", "tarifs-magnetiseur-hypnotherapeute-troyes-prix", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+    word_count: 1512
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arret-tabac-aube-methodes-naturelles-troyes"
+    title: "Arrêt Tabac Naturel dans l'Aube : Méthodes Naturelles Troyes [2026]"
+    file_path: "blog/arret-tabac-aube-methodes-naturelles-troyes.html"
+    status: "published"
+    published_date: "2026-03-05"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_magnetiseur_aube"
+    target_keywords:
+      - keyword: "arrêt tabac naturel Aube Troyes"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "principale"
+      - feature_id: "feat_zone_aube"
+        context: "localisation"
+    competitors_mentioned:
+      - competitor_id: "comp_acupuncture"
+      - competitor_id: "comp_sophrologie"
+    internal_links_to: ["hypnotherapeute-troyes-choisir"]
+    internal_links_from: ["guide-complet-arret-tabac-troyes"]
+    word_count: 1437
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "hypnose-arret-tabac-cabinet-saint-germain-troyes"
+    title: "Hypnose Arrêt Tabac à Troyes : Cabinet Saint-Germain [2026]"
+    file_path: "blog/hypnose-arret-tabac-cabinet-saint-germain-troyes.html"
+    status: "published"
+    published_date: "2026-03-04"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "hypnose arrêt tabac cabinet Troyes Saint-Germain"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "principale"
+      - feature_id: "feat_zone_aube"
+        context: "localisation"
+    competitors_mentioned: []
+    internal_links_to: ["hypnotherapeute-troyes-choisir"]
+    internal_links_from: ["arret-tabac-par-hypnose-avis-temoignages", "douleurs-chroniques-magnetiseur-troyes-soulage", "gestion-stress-troyes-magnetisme-hypnose", "perte-poids-hypnose-troyes-temoignages", "substituts-nicotiniques-comparatif-efficacite", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+    word_count: 1457
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "magnetisme-arret-tabac-troyes-temoignages"
+    title: "Témoignages Arrêt Tabac Troyes : Magnétisme + Hypnose [2026]"
+    file_path: "blog/magnetisme-arret-tabac-troyes-temoignages.html"
+    status: "published"
+    published_date: "2026-03-03"
+    blog_type: "testimonial"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "témoignages arrêt tabac Troyes magnétisme"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "témoignages"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "technique"
+    competitors_mentioned: []
+    internal_links_to: ["magnetiseur-troyes.html", "hypnotherapeute-troyes-choisir"]
+    internal_links_from: ["arret-tabac-par-hypnose-avis-temoignages", "acupuncture-arret-tabac-efficacite-avis"]
+    word_count: 1725
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "rechute-arret-tabac-que-faire-immediatement"
+    title: "Rechute Arrêt Tabac : Que Faire Immédiatement ? [Plan d'Action]"
+    file_path: "blog/rechute-arret-tabac-que-faire-immediatement.html"
+    status: "published"
+    published_date: "2026-03-02"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_sevrage_symptomes"
+    target_keywords:
+      - keyword: "rechute arrêt tabac que faire"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "solution urgence"
+    competitors_mentioned: []
+    internal_links_to: ["arreter-fumer-hypnose-prevenir-rechutes"]
+    internal_links_from: []
+    word_count: 1779
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "cout-arret-tabac-combien-budget-prevoir"
+    title: "Coût Arrêt Tabac : Combien Ça Coûte Vraiment ? [Comparatif 2026]"
+    file_path: "blog/cout-arret-tabac-combien-budget-prevoir.html"
+    status: "published"
+    published_date: "2026-03-01"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "coût arrêt tabac budget méthodes"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "comparatif prix"
+    competitors_mentioned:
+      - competitor_id: "comp_patchs_nicotine"
+      - competitor_id: "comp_e_cigarette"
+    internal_links_to: ["arreter-fumer-patchs-gommes-hypnose-comparatif"]
+    internal_links_from: ["guide-complet-arret-tabac-troyes", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+    word_count: 1461
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "applications-arret-tabac-avis-vs-hypnose"
+    title: "Applications Arrêt Tabac : Avis + Pourquoi l'Hypnose Fonctionne Mieux"
+    file_path: "blog/applications-arret-tabac-avis-vs-hypnose.html"
+    status: "published"
+    published_date: "2026-02-28"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "applications arrêt tabac avis Kwit Smokefree"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "comparatif vs apps"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: ["guide-complet-arret-tabac-troyes"]
+    word_count: 1871
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arret-tabac-prise-poids-solutions"
+    title: "Arrêt Tabac et Prise de Poids : 9 Solutions Naturelles [2026]"
+    file_path: "blog/arret-tabac-prise-poids-solutions.html"
+    status: "published"
+    published_date: "2026-02-27"
+    blog_type: "listicle"
+    content_type: "cluster"
+    cluster_id: "tc_sevrage_symptomes"
+    target_keywords:
+      - keyword: "arrêt tabac prise de poids solutions"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "solution"
+      - feature_id: "feat_perte_poids"
+        context: "solution complémentaire"
+    competitors_mentioned: []
+    internal_links_to: ["arreter-fumer-hypnose-prevenir-rechutes", "fatigue-arret-tabac-combien-temps"]
+    internal_links_from: ["arret-tabac-timeline-jour-par-jour", "guide-complet-arret-tabac-troyes", "perte-poids-hypnose-troyes-temoignages"]
+    word_count: 1647
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arreter-fumer-patchs-gommes-hypnose-comparatif"
+    title: "Arrêter de Fumer : Patchs, Gommes ou Hypnose + Magnétisme ?"
+    file_path: "blog/arreter-fumer-patchs-gommes-hypnose-comparatif.html"
+    status: "published"
+    published_date: "2026-02-22"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "patchs gommes vs hypnose magnétisme arrêt tabac"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "comparatif"
+    competitors_mentioned:
+      - competitor_id: "comp_patchs_nicotine"
+      - competitor_id: "comp_e_cigarette"
+    internal_links_to: []
+    internal_links_from: ["cout-arret-tabac-combien-budget-prevoir", "magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+    word_count: 1777
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arreter-fumer-hypnose-prevenir-rechutes"
+    title: "Arrêter de Fumer et Hypnose : Prévenir les Rechutes [Guide 2026]"
+    file_path: "blog/arreter-fumer-hypnose-prevenir-rechutes.html"
+    status: "published"
+    published_date: "2026-02-21"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "hypnose prévenir rechutes arrêt tabac"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "prévention rechutes"
+      - feature_id: "feat_suivi_gratuit"
+        context: "suivi post-séance"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: ["arret-tabac-prise-poids-solutions", "arret-tabac-timeline-jour-par-jour", "rechute-arret-tabac-que-faire-immediatement"]
+    word_count: 2022
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "magnetiseur-arret-tabac-pres-de-moi"
+    title: "Magnétiseur arrêt tabac près de chez moi : où le trouver, prix, avis"
+    file_path: "blog/magnetiseur-arret-tabac-pres-de-moi.html"
+    status: "published"
+    published_date: "2026-02-15"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "magnétiseur arrêt tabac près de moi"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "principale"
+      - feature_id: "feat_zone_aube"
+        context: "localisation"
+    competitors_mentioned: []
+    internal_links_to: ["hypnotherapeute-troyes-choisir"]
+    internal_links_from: []
+    word_count: 1930
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "hypnose-troyes-stress-naturellement"
+    title: "Hypnose à Troyes : Soulager le Stress Naturellement [Sans Médicaments]"
+    file_path: "blog/hypnose-troyes-stress-naturellement.html"
+    status: "published"
+    published_date: "2026-02-22"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_bien_etre_troyes"
+    target_keywords:
+      - keyword: "hypnose stress Troyes naturellement"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_stress_anxiete"
+        context: "principale"
+      - feature_id: "feat_hypnose_ericksonienne"
+        context: "technique"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: ["gestion-stress-troyes-magnetisme-hypnose", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+    word_count: 1571
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "magnetiseur-troyes-arreter-fumer"
+    title: "Magnétiseur à Troyes pour Arrêter de Fumer : Méthode Douce & Efficace"
+    file_path: "blog/magnetiseur-troyes-arreter-fumer.html"
+    status: "published"
+    published_date: "2026-02-21"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_magnetiseur_troyes"
+    target_keywords:
+      - keyword: "magnétiseur Troyes arrêt tabac"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "principale"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "méthode"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1748
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "magnetiseur-aube-arreter-fumer"
+    title: "Magnétiseur dans l'Aube pour Arrêter de Fumer : Consultations à Troyes"
+    file_path: "blog/magnetiseur-aube-arreter-fumer.html"
+    status: "published"
+    published_date: "2026-02-21"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_magnetiseur_aube"
+    target_keywords:
+      - keyword: "magnétiseur Aube arrêt tabac"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "principale"
+      - feature_id: "feat_zone_aube"
+        context: "zone couverte"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1586
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "methode-hypnose-arret-tabac"
+    title: "Comment la Méthode Hypnose Agit pour Arrêter de Fumer [Guide 2026]"
+    file_path: "blog/methode-hypnose-arret-tabac.html"
+    status: "published"
+    published_date: "2026-02-20"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "méthode hypnose arrêt tabac comment ça marche"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_hypnose_ericksonienne"
+        context: "explication méthode"
+      - feature_id: "feat_arret_tabac_seance"
+        context: "application"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: ["hypnose-ericksonienne-vs-classique-differences"]
+    word_count: 1891
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "hypnose-arret-tabac-troyes"
+    title: "Hypnose pour Arrêter de Fumer à Troyes : Résultats en 1-3 Séances"
+    file_path: "blog/hypnose-arret-tabac-troyes.html"
+    status: "published"
+    published_date: "2026-02-20"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "hypnose arrêt tabac Troyes"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "principale"
+      - feature_id: "feat_hypnose_ericksonienne"
+        context: "technique"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 2487
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arret-tabac-peau-combien-temps-bienfaits"
+    title: "Arrêt du Tabac et Peau : Combien de Temps ? Bienfaits"
+    file_path: "blog/arret-tabac-peau-combien-temps-bienfaits.html"
+    status: "published"
+    published_date: "2026-04-04"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_sevrage_symptomes"
+    target_keywords:
+      - keyword: "arrêt tabac peau bienfaits combien de temps"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "solution"
+    competitors_mentioned: []
+    internal_links_to: ["arret-tabac-troyes.html", "magnetiseur-troyes.html", "insomnie-arret-tabac-combien-temps"]
+    internal_links_from: []
+    word_count: 927
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arret-tabac-deprime-combien-temps"
+    title: "Arrêt du Tabac et Déprime : Combien de Temps ?"
+    file_path: "blog/arret-tabac-deprime-combien-temps.html"
+    status: "published"
+    published_date: "2026-03-28"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_sevrage_symptomes"
+    target_keywords:
+      - keyword: "arrêt tabac déprime combien de temps"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "solution"
+      - feature_id: "feat_stress_anxiete"
+        context: "connexe"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1009
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "temoignage-arret-tabac-hypnose-troyes-paul"
+    title: "Comment Paul a Arrêté de Fumer en 1 Séance d'Hypnose à Troyes"
+    file_path: "blog/temoignage-arret-tabac-hypnose-troyes-paul.html"
+    status: "published"
+    published_date: "2026-03-21"
+    blog_type: "testimonial"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "témoignage arrêt tabac hypnose Troyes"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "témoignage direct"
+    competitors_mentioned:
+      - competitor_id: "comp_patchs_nicotine"
+    internal_links_to: ["arret-tabac-troyes.html"]
+    internal_links_from: []
+    word_count: 1078
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arreter-fumer-sans-substituts-methodes-naturelles"
+    title: "Arrêter de Fumer Sans Substituts : 7 Méthodes Naturelles"
+    file_path: "blog/arreter-fumer-sans-substituts-methodes-naturelles.html"
+    status: "published"
+    published_date: "2026-03-14"
+    blog_type: "listicle"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "arrêter fumer sans substituts méthodes naturelles"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "méthode recommandée"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "technique"
+    competitors_mentioned:
+      - competitor_id: "comp_acupuncture"
+    internal_links_to: ["hypnose-troyes.html", "magnetiseur-troyes.html", "arret-tabac-troyes.html", "a-propos.html"]
+    internal_links_from: ["arreter-fumer-sans-medicaments-methodes-naturelles"]
+    word_count: 1081
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "insomnie-arret-tabac-combien-temps"
+    title: "Insomnie Après l'Arrêt du Tabac : Combien de Temps + Solutions"
+    file_path: "blog/insomnie-arret-tabac-combien-temps.html"
+    status: "published"
+    published_date: "2026-03-07"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_sevrage_symptomes"
+    target_keywords:
+      - keyword: "insomnie arrêt tabac combien de temps"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_troubles_sommeil"
+        context: "solution"
+      - feature_id: "feat_arret_tabac_seance"
+        context: "contexte"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: ["arret-tabac-peau-combien-temps-bienfaits", "arret-tabac-timeline-jour-par-jour", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+    word_count: 1082
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "magnetisme-hypnose-arreter-fumer-comparatif"
+    title: "Magnétisme ou Hypnose pour Arrêter de Fumer ? [Comparatif 2026]"
+    file_path: "blog/magnetisme-hypnose-arreter-fumer-comparatif.html"
+    status: "published"
+    published_date: "2026-02-28"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "magnétisme ou hypnose arrêt tabac comparatif"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_magnetisme_adulte"
+        context: "comparatif"
+      - feature_id: "feat_hypnose_ericksonienne"
+        context: "comparatif"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "recommandation finale"
+    competitors_mentioned: []
+    internal_links_to: ["arret-tabac-troyes.html", "magnetiseur-troyes.html", "hypnose-troyes.html"]
+    internal_links_from: []
+    word_count: 1396
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "irritabilite-arret-tabac-combien-temps"
+    title: "Irritabilité Après l'Arrêt du Tabac : Durée & 5 Techniques"
+    file_path: "blog/irritabilite-arret-tabac-combien-temps.html"
+    status: "published"
+    published_date: "2026-02-21"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_sevrage_symptomes"
+    target_keywords:
+      - keyword: "irritabilité arrêt tabac combien de temps"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "solution"
+      - feature_id: "feat_stress_anxiete"
+        context: "connexe"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: ["arret-tabac-timeline-jour-par-jour"]
+    word_count: 1473
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "fatigue-arret-tabac-combien-temps"
+    title: "Fatigue Après l'Arrêt du Tabac : Combien de Temps ? [7 Solutions]"
+    file_path: "blog/fatigue-arret-tabac-combien-temps.html"
+    status: "published"
+    published_date: "2026-02-14"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_sevrage_symptomes"
+    target_keywords:
+      - keyword: "fatigue arrêt tabac combien de temps solutions"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "solution"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: ["arret-tabac-prise-poids-solutions", "arret-tabac-timeline-jour-par-jour", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
+    word_count: 1355
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "hypnotherapeute-troyes-choisir"
+    title: "Hypnothérapeute à Troyes : Comment Choisir le Bon Praticien ?"
+    file_path: "blog/hypnotherapeute-troyes-choisir.html"
+    status: "published"
+    published_date: "2026-02-13"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_magnetiseur_troyes"
+    target_keywords:
+      - keyword: "hypnothérapeute Troyes choisir"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_hypnose_ericksonienne"
+        context: "critères sélection"
+      - feature_id: "feat_formation_gnoma"
+        context: "formation de référence"
+    competitors_mentioned: []
+    internal_links_to: ["hypnose-troyes.html", "magnetiseur-troyes.html", "arret-tabac-troyes.html"]
+    internal_links_from: ["arret-tabac-aube-methodes-naturelles-troyes", "gestion-stress-troyes-magnetisme-hypnose", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "magnetisme-arret-tabac-troyes-temoignages", "magnetiseur-arret-tabac-pres-de-moi"]
+    word_count: 1243
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arreter-fumer-sans-medicaments-methodes-naturelles"
+    title: "Arrêter de Fumer Sans Médicaments : 8 Méthodes Naturelles [2026]"
+    file_path: "blog/arreter-fumer-sans-medicaments-methodes-naturelles.html"
+    status: "published"
+    published_date: "2026-03-05"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "arrêter fumer sans médicaments méthodes naturelles"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "méthode principale"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "technique"
+    competitors_mentioned:
+      - competitor_id: "comp_acupuncture"
+      - competitor_id: "comp_sophrologie"
+    internal_links_to: ["hypnotherapeute-troyes-choisir"]
+    internal_links_from: ["magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif"]
+    word_count: 1662
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "arret-tabac-timeline-jour-par-jour"
+    title: "Arrêt Tabac : Que Se Passe-t-il Jour par Jour ? [Calendrier 2026]"
+    file_path: "blog/arret-tabac-timeline-jour-par-jour.html"
+    status: "published"
+    published_date: "2026-03-08"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_sevrage_symptomes"
+    target_keywords:
+      - keyword: "arrêt tabac timeline jour par jour"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "solution proposée"
+    competitors_mentioned: []
+    internal_links_to: ["arreter-fumer-hypnose-prevenir-rechutes", "arret-tabac-prise-poids-solutions", "fatigue-arret-tabac-combien-temps", "insomnie-arret-tabac-combien-temps", "irritabilite-arret-tabac-combien-temps"]
+    internal_links_from: []
+    word_count: 1900
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "guide-complet-arret-tabac-troyes"
+    title: "Guide Complet Arrêt Tabac à Troyes : Tout Savoir [2026]"
+    file_path: "blog/guide-complet-arret-tabac-troyes.html"
+    status: "published"
+    published_date: "2026-03-10"
+    blog_type: "how-to"
+    content_type: "pillar"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "guide arrêt tabac Troyes"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "pilier du guide"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "méthode principale"
+      - feature_id: "feat_zone_aube"
+        context: "localisation"
+    competitors_mentioned: []
+    internal_links_to: ["applications-arret-tabac-avis-vs-hypnose", "arreter-fumer-hypnose-prevenir-rechutes", "arreter-fumer-patchs-gommes-hypnose-comparatif", "arret-tabac-aube-methodes-naturelles-troyes", "arret-tabac-prise-poids-solutions", "cout-arret-tabac-combien-budget-prevoir", "fatigue-arret-tabac-combien-temps", "hypnose-arret-tabac-cabinet-saint-germain-troyes", "insomnie-arret-tabac-combien-temps"]
+    internal_links_from: []
+    word_count: 1992
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "hypnose-pour-arret-du-tabac-guide-complet"
+    title: "Hypnose pour Arrêt du Tabac : Guide Complet [2026]"
+    file_path: "blog/hypnose-pour-arret-du-tabac-guide-complet.html"
+    status: "published"
+    published_date: "2026-03-17"
+    blog_type: "how-to"
+    content_type: "pillar"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "hypnose arrêt tabac guide complet"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_hypnose_ericksonienne"
+        context: "guide complet"
+      - feature_id: "feat_arret_tabac_seance"
+        context: "application principale"
+    competitors_mentioned: []
+    internal_links_to: ["hypnose-arret-tabac-cabinet-saint-germain-troyes", "hypnose-ericksonienne-vs-classique-differences", "magnetisme-vs-reiki-vs-sophrologie-troyes-comparatif", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+    internal_links_from: ["acupuncture-arret-tabac-efficacite-avis", "allen-carr-arreter-fumer-livre-avis", "arret-tabac-patch-meilleurs-comparatif", "arret-tabac-par-hypnose-avis-temoignages", "substituts-nicotiniques-comparatif-efficacite"]
+    word_count: 2820
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "cigarette-electronique-arreter-fumer-efficacite"
+    title: "Cigarette Électronique Arrêt Tabac : Efficacité, Dangers vs Hypnose"
+    file_path: "blog/cigarette-electronique-arreter-fumer-efficacite.html"
+    status: "published"
+    published_date: "2026-03-24"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "cigarette électronique arrêt tabac efficacité"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "alternative recommandée"
+    competitors_mentioned:
+      - competitor_id: "comp_e_cigarette"
+    internal_links_to: ["hypnose-arret-tabac-cabinet-saint-germain-troyes", "hypnose-pour-arret-du-tabac-guide-complet", "substituts-nicotiniques-comparatif-efficacite"]
+    internal_links_from: []
+    word_count: 1433
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "auriculotherapie-arret-tabac"
+    title: "Auriculothérapie pour Arrêter de Fumer : Points Oreille, Efficacité, vs Hypnose [2026]"
+    file_path: "blog/auriculotherapie-arret-tabac.html"
+    status: "published"
+    published_date: "2026-03-26"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "auriculothérapie arrêt tabac"
+        search_volume: 0
+        is_primary: true
+      - keyword: "points oreille arrêt tabac"
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "alternative comparée : 85% vs 30-35% auriculothérapie"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "avantage vs acupuncture oreille"
+    competitors_mentioned:
+      - competitor_id: "comp_acupuncture"
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1420
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "champix-zyban-arret-tabac-effets-secondaires"
+    title: "Champix et Zyban pour Arrêter de Fumer : Effets Secondaires, Efficacité, Comparatif [2026]"
+    file_path: "blog/champix-zyban-arret-tabac-effets-secondaires.html"
+    status: "published"
+    published_date: "2026-03-26"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "champix zyban arrêt tabac"
+        search_volume: 0
+        is_primary: true
+      - keyword: "effets secondaires Champix"
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "alternative sans effets secondaires : 85% vs 50-60% Champix"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "présentée comme alternative naturelle"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 2004
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "combien-seances-hypnose-arreter-fumer"
+    title: "Combien de Séances d'Hypnose pour Arrêter de Fumer ? Protocole Détaillé [2026]"
+    file_path: "blog/combien-seances-hypnose-arreter-fumer.html"
+    status: "published"
+    published_date: "2026-03-26"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "combien séances hypnose arrêter fumer"
+        search_volume: 0
+        is_primary: true
+      - keyword: "nombre séances hypnose arrêt tabac"
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "protocole détaillé : 50% arrêt en 1 séance, 35% en 2 séances"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "description complète du déroulé de séance"
+      - feature_id: "feat_suivi_gratuit"
+        context: "séances de rappel en cas de rechute"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 2113
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "gommes-nicorette-arret-tabac-efficacite"
+    title: "Gommes Nicorette Arrêt Tabac : Dosages, Efficacité Réelle, Prix et Comparatif [2026]"
+    file_path: "blog/gommes-nicorette-arret-tabac-efficacite.html"
+    status: "published"
+    published_date: "2026-03-26"
+    blog_type: "review"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "gommes nicorette arrêt tabac efficacité"
+        search_volume: 0
+        is_primary: true
+      - keyword: "nicorette dosage arrêt tabac"
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "alternative comparée : 85% vs 15-20% Nicorette"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "présentée comme alternative sans rechute"
+    competitors_mentioned:
+      - competitor_id: "comp_patchs_nicotine"
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1431
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "hypnose-en-ligne-arret-tabac-youtube"
+    title: "Hypnose en Ligne pour Arrêter de Fumer : YouTube, Applis — Ça Marche ? [2026]"
+    file_path: "blog/hypnose-en-ligne-arret-tabac-youtube.html"
+    status: "published"
+    published_date: "2026-03-26"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "hypnose en ligne arrêt tabac YouTube"
+        search_volume: 0
+        is_primary: true
+      - keyword: "hypnose youtube arrêter fumer"
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "cabinet physique : 85% vs vidéo en ligne 5-10%"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "présence physique nécessaire pour le magnétisme"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 2011
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "livres-hypnose-arret-tabac-classement"
+    title: "Meilleurs Livres Hypnose Arrêt Tabac : Classement, Avis et Limites [2026]"
+    file_path: "blog/livres-hypnose-arret-tabac-classement.html"
+    status: "published"
+    published_date: "2026-03-26"
+    blog_type: "review"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "livres hypnose arrêt tabac"
+        search_volume: 0
+        is_primary: true
+      - keyword: "meilleur livre arrêter fumer hypnose"
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "cabinet : 85% vs livres 5-15%"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "limite des livres : pas de magnétisme possible"
+    competitors_mentioned:
+      - competitor_id: "comp_allen_carr"
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 2455
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "prix-seance-hypnose-arret-tabac"
+    title: "Prix Séance Hypnose Arrêt Tabac : Tarifs 2026, Remboursement, ROI"
+    file_path: "blog/prix-seance-hypnose-arret-tabac.html"
+    status: "published"
+    published_date: "2026-03-26"
+    blog_type: "how-to"
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords:
+      - keyword: "prix séance hypnose arrêt tabac"
+        search_volume: 0
+        is_primary: true
+      - keyword: "tarif hypnose arrêter fumer"
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "tarifs cabinet Troyes, ROI vs 2000€/an cigarettes"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "2 méthodes en 1 séance = meilleur ROI"
+    competitors_mentioned: []
+    internal_links_to: ["tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+    internal_links_from: []
+    word_count: 1900
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "spray-nicotine-arret-tabac-avis"
+    title: "Spray Nicotine Arrêt Tabac : Avis, Efficacité, Dosages et Comparatif [2026]"
+    file_path: "blog/spray-nicotine-arret-tabac-avis.html"
+    status: "published"
+    published_date: "2026-03-26"
+    blog_type: "review"
+    content_type: "cluster"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "spray nicotine arrêt tabac"
+        search_volume: 0
+        is_primary: true
+      - keyword: "nicorette quickmist avis"
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "alternative comparée : 85% vs 15-20% spray"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "traite l'addiction à la source vs substitut nicotinique"
+    competitors_mentioned:
+      - competitor_id: "comp_patchs_nicotine"
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 2538
+    has_eeat_signals: true
+    needs_update_reason: ""

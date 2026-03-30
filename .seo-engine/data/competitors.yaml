@@ -1,0 +1,255 @@
+# Competitors Data — magnetiseuse-lacoste-corinne.fr
+last_updated: "2026-03-29"
+last_verified: "2026-03-29"
+
+competitors:
+  - id: "comp_karine_durst"
+    name: "Karine DURST"
+    website: "https://www.facebook.com/share/g/15jWHvrsvT/"
+    category: "Magnétiseur local — Troyes/Aube"
+    pricing_model: "unknown"
+    strengths: "Présence Facebook/communauté locale"
+    weaknesses: "Pas de site web propre — visibilité Google limitée"
+    notes: "Présence uniquement sur Facebook. Pas de site indexable."
+
+  - id: "comp_geoffron"
+    name: "Sébastien Geoffron"
+    website: "https://www.geoffron-magnetiseur-energeticien.fr/"
+    category: "Magnétiseur énergéticien — Saint-Julien-les-Villas (Troyes)"
+    location: "21 rue Gambetta, Saint-Julien-les-Villas 10800"
+    phone: "06 50 98 22 90"
+    last_verified: "2026-03-29"
+    services:
+      - "Magnétisme (séance 40€)"
+      - "Soins énergétiques mental + physique (50€)"
+      - "Rééquilibrage énergétique / chakras"
+      - "Radiesthésie"
+      - "Lithothérapie"
+      - "Magnétisme à distance (sur photo)"
+    no_services:
+      - "Hypnose — aucune"
+      - "Arrêt tabac — non mentionné"
+      - "Suivi post-séance"
+    horaires: "Lundi-vendredi 14h-19h uniquement"
+    deplacement: "Rayon 30km autour de Troyes"
+    pricing_model: "low-cost généraliste (40-50€)"
+    strengths:
+      - "Tarif très bas (40-50€ vs 80-120€ Corinne)"
+      - "Se déplace à domicile dans rayon 30km"
+      - "Magnétisme à distance proposé"
+    weaknesses:
+      - "Pas d'hypnose — approche limitée"
+      - "Pas spécialisé arrêt tabac"
+      - "Horaires restreints (14h-19h semaine)"
+      - "Site très peu de contenu — SEO faible"
+      - "Aucune formation certifiée mentionnée"
+      - "Pas d'avis clients visibles"
+    notes: "Positionnement bien-être général (chakras, énergie) vs spécialisation arrêt tabac Corinne. Prix bas = segment différent. Pas concurrent direct sur arrêt tabac."
+
+  - id: "comp_francoise_tellier"
+    name: "Françoise TELLIER — Hypnose & Sens"
+    website: "https://www.hypnose-et-sens.fr/"
+    category: "Hypnothérapeute arrêt tabac — Essoyes (Aube)"
+    pricing_model: "2 séances"
+    strengths: "Seul membre réseau ATH (Arrêt Tabac Hypnose) dans l'Aube. Spécialiste déclarée arrêt tabac. Site bien structuré. Cabinet à Essoyes."
+    weaknesses: "2 séances minimum (coût double). Hypnose seule, pas de magnétisme. Cabinet à 45min de Troyes. ~1262 mots sur page arrêt tabac."
+    notes: "Vérifiée 2026-03-27. Positionnement: '2 séances à 1 semaine d'écart'. Angle Corinne: 1 séance combo unique."
+    last_verified: "2026-03-27"
+
+  - id: "comp_alexis_dilegami"
+    name: "Alexis DI LEGAMI — L'aum De Ton Éveil"
+    website: "https://www.magnetiseur-troyes.fr/"
+    category: "Magnétiseur — Saint-Germain (même rue que Corinne)"
+    pricing_model: "unknown"
+    strengths: "Nom de domaine 'magnetiseur-troyes.fr' fort SEO. Même zone géographique (31 rue du Printemps, Saint-Germain)."
+    weaknesses: "Site très mince (368 mots). Pas spécialisé arrêt tabac. Angles voyance/médium peu professionnels. Pas de témoignages visibles."
+    notes: "Vérifiée 2026-03-27. Formation école LUCAS. Fait aussi voyance et médiumité — angle très différent de Corinne."
+    last_verified: "2026-03-27"
+
+  - id: "comp_abchypnose"
+    name: "Denise Prugnot — ABC Hypnose Troyes"
+    website: "https://www.abchypnose-troyes.com/"
+    category: "Hypnothérapeute — Troyes"
+    pricing_model: "unknown"
+    strengths: "Cabinet en ville de Troyes. Hypnothérapeute certifiée."
+    weaknesses: "Non vérifié en détail"
+    notes: "Repérée dans SERP 'hypnose arrêt tabac Troyes' (2026-03-27). Non vérifiée en détail."
+    last_verified: "2026-03-27"
+
+  - id: "comp_julie_lafitte"
+    name: "Julie Lafitte"
+    website: "https://www.julie-lafitte-magnetisme.com/"
+    category: "Magnétiseur — région"
+    pricing_model: "unknown"
+    strengths: "Site web professionnel"
+    weaknesses: "Non vérifié"
+    notes: "Pas encore vérifié."
+
+  # Concurrents indirects (méthodes alternatives) — mentionnés dans les articles
+  - id: "comp_patchs_nicotine"
+    name: "Substituts nicotiniques (patchs, gommes)"
+    website: ""
+    category: "Méthode arrêt tabac — pharmacie"
+    pricing_model: "produit"
+    strengths: "Remboursement partiel SS, disponibilité immédiate"
+    weaknesses: "15-20% efficacité réelle, 80% rechute, multi-semaines"
+    notes: "Données issues des articles blog (confidence: from_blog)"
+
+  - id: "comp_acupuncture"
+    name: "Acupuncture arrêt tabac"
+    website: ""
+    category: "Méthode arrêt tabac — médecine douce"
+    pricing_model: "séances multiples"
+    strengths: "Reconnaissance partielle médicale, points oreille bien documentés"
+    weaknesses: "30-40% efficacité, 5-10 séances nécessaires (250-800€)"
+    notes: "Données issues des articles blog (confidence: from_blog)"
+
+  - id: "comp_allen_carr"
+    name: "Méthode Allen Carr (livre)"
+    website: ""
+    category: "Méthode arrêt tabac — livre/programme"
+    pricing_model: "produit livre ~15€"
+    strengths: "Prix très bas, accessible partout"
+    weaknesses: "5-10% efficacité réelle, 90% rechute"
+    notes: "Données issues des articles blog (confidence: from_blog)"
+
+  - id: "comp_e_cigarette"
+    name: "Cigarette électronique"
+    website: ""
+    category: "Substitut tabac"
+    pricing_model: "consommable"
+    strengths: "Réduction du tabac classique"
+    weaknesses: "10-15% arrêt réel, double addiction pour 40%, 85% rechute"
+    notes: "Données issues des articles blog (confidence: from_blog)"
+
+  - id: "comp_reiki"
+    name: "Reiki"
+    website: ""
+    category: "Médecine douce — énergie"
+    pricing_model: "séances"
+    strengths: "Bien-être général, relaxation profonde"
+    weaknesses: "50% efficacité selon article comparatif, moins ciblé arrêt tabac"
+    notes: "Données issues des articles blog (confidence: from_blog)"
+
+  - id: "comp_sophrologie"
+    name: "Sophrologie"
+    website: ""
+    category: "Médecine douce — mental"
+    pricing_model: "séances multiples"
+    strengths: "Gestion stress reconnue, accessible"
+    weaknesses: "40% efficacité, travail long terme nécessaire"
+    notes: "Données issues des articles blog (confidence: from_blog)"
+
+feature_matrix:
+  - feature_id: "feat_arret_tabac_seance"
+    our_project:
+      supported: true
+      details: "1-3 séances, 85% réussite 1ère séance, 120€/séance, combo magnétisme + hypnose"
+      tier: "standard"
+    competitors:
+      comp_karine_durst:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_geoffron:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_julie_lafitte:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_suivi_gratuit"
+    our_project:
+      supported: true
+      details: "2 séances de suivi gratuites incluses avec arrêt tabac"
+      tier: "standard"
+    competitors:
+      comp_karine_durst:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+      comp_geoffron:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+      comp_julie_lafitte:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_combo_magnetisme_hypnose"
+    our_project:
+      supported: true
+      details: "Combinaison unique magnétisme + hypnose ericksonienne en une séance"
+      tier: "standard"
+    competitors:
+      comp_karine_durst:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+      comp_geoffron:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+      comp_julie_lafitte:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_rdv_7_jours"
+    our_project:
+      supported: true
+      details: "RDV disponible sous 7 jours"
+      tier: "standard"
+    competitors:
+      comp_karine_durst:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+      comp_geoffron:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+      comp_julie_lafitte:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_magnetisme_enfant"
+    our_project:
+      supported: true
+      details: "45€, 30min, enfants <12 ans et nourrissons"
+      tier: "standard"
+    competitors:
+      comp_karine_durst:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+      comp_geoffron:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""
+      comp_julie_lafitte:
+        supported: null
+        details: ""
+        confidence: "unverified"
+        last_verified: ""

@@ -1,0 +1,126 @@
+# Blog Structures — magnetiseuse-lacoste-corinne.fr
+# Structures par type d'article avec points d'injection E-E-A-T
+
+structures:
+
+  comparison:
+    voice: "Analyste objectif — données avant opinions, respectueux des concurrents"
+    target_length: "2000-3000 mots"
+    sections:
+      - name: "Introduction"
+        notes: "Poser le dilemme du lecteur (ex: 'Vous hésitez entre X et Y ?'). E-E-A-T : stat dès l'intro."
+      - name: "Présentation de [Méthode A] — forces d'abord"
+        notes: "Commencer par les avantages de la méthode concurrente. Objectivité = crédibilité."
+      - name: "Limites de [Méthode A]"
+        notes: "Données vérifiables uniquement. Confidence check dans competitors.yaml."
+      - name: "Présentation de [Magnétisme + Hypnose]"
+        notes: "E-E-A-T : témoignage ou métrique ici (85% réussite, 35 avis 4.9★)."
+      - name: "Tableau comparatif"
+        notes: "Prix, durée, taux de réussite, nombre séances, remboursement. HTML table."
+      - name: "Pour qui chaque méthode est adaptée"
+        notes: "Nuancer — ne pas dire que le concurrent est nul pour tout le monde."
+      - name: "FAQ"
+        notes: "Minimum 4 questions des People Also Ask Google."
+      - name: "Conclusion + CTA"
+        notes: "E-E-A-T final : expérience Corinne. CTA soft vers Calendly."
+
+  listicle:
+    voice: "Curateur utile — chaque point apporte quelque chose de concret"
+    target_length: "2500-4000 mots"
+    sections:
+      - name: "Introduction"
+        notes: "Expliquer pourquoi cette liste existe. E-E-A-T : context expert de Corinne."
+      - name: "Liste numérotée (7-10 points)"
+        notes: "Chaque point : titre H3, description, pourquoi ça marche, pour qui. Pas de remplissage."
+      - name: "Notre recommandation"
+        notes: "Synthèse — quel combo de méthodes est le plus efficace. E-E-A-T ici."
+      - name: "FAQ"
+        notes: "3-5 questions."
+      - name: "Conclusion + CTA"
+
+  tutorial:
+    voice: "Professeur patient — 'je', expérience personnelle, étapes claires"
+    target_length: "1500-2500 mots"
+    sections:
+      - name: "Introduction"
+        notes: "E-E-A-T dès l'intro : 'En 15 ans de pratique, j'ai remarqué que...' ou témoignage."
+      - name: "Comprendre [le sujet] — pourquoi ça se passe"
+        notes: "Mécanisme simple, pas de jargon médical."
+      - name: "Comment fonctionne [la méthode]"
+        notes: "Étapes concrètes. Expérience de Corinne en cabinet."
+      - name: "Ce que vous pouvez attendre"
+        notes: "Timeline honnête, résultats réalistes. E-E-A-T : témoignage ou stat ici."
+      - name: "Questions à poser avant de choisir"
+        notes: "Qualifier le besoin du lecteur."
+      - name: "FAQ"
+      - name: "Conclusion + CTA"
+
+  how_to:
+    voice: "Résolveur de problèmes — direct, actionnable, empathique"
+    target_length: "1200-2000 mots"
+    sections:
+      - name: "Introduction"
+        notes: "Valider la douleur du lecteur avant de proposer une solution."
+      - name: "Comprendre pourquoi [le problème] arrive"
+        notes: "Rassurer : c'est normal. Explication simple."
+      - name: "Étape 1, 2, 3... (solutions concrètes)"
+        notes: "Actions immédiates d'abord. Magnétisme/hypnose = une solution parmi d'autres au début, présentée progressivement."
+      - name: "Quand consulter un professionnel"
+        notes: "E-E-A-T : seuils clairs. 'Si le problème persiste plus de X semaines...'"
+      - name: "FAQ"
+      - name: "Conclusion + CTA"
+
+  review:
+    voice: "Critique honnête — admettre les limites, ne pas être promotionnel"
+    target_length: "2000-3000 mots"
+    sections:
+      - name: "Introduction"
+        notes: "Posture honnête : 'Je vais vous donner mon avis objectif de praticienne.'"
+      - name: "Ce que [méthode/produit] promet"
+        notes: "Reprendre les arguments officiels sans sarcasme."
+      - name: "Ce qui fonctionne réellement"
+        notes: "E-E-A-T : données études + expérience cabinet."
+      - name: "Les limites et inconvénients"
+        notes: "Honnêteté totale — y compris sur magnétisme/hypnose si pertinent."
+      - name: "Pour qui c'est adapté"
+        notes: "Nuancer l'audience."
+      - name: "Alternatives"
+        notes: "Présenter magnétisme + hypnose comme option complémentaire, pas de remplacement systématique."
+      - name: "FAQ"
+      - name: "Conclusion + CTA"
+
+  testimonial:
+    voice: "Narrateur bienveillant — histoire vraie, résultats concrets, pas de survente"
+    target_length: "1500-3000 mots"
+    sections:
+      - name: "Introduction"
+        notes: "Présenter le patient (prénom, âge, durée problème). E-E-A-T dès la 1ère ligne."
+      - name: "Situation avant"
+        notes: "Détails concrets : 20 cigarettes/jour depuis 15 ans, essayé patchs 3 fois."
+      - name: "Pourquoi choisir magnétisme + hypnose"
+        notes: "Parcours de décision du patient — aller-retour honnête."
+      - name: "La ou les séances"
+        notes: "Déroulement réel. Corinne peut décrire ce qu'elle a fait (sans prétention médicale)."
+      - name: "Résultats — avec honnêteté"
+        notes: "Timeline précise. Rechutes éventuelles et comment gérées. Pas d'exagération."
+      - name: "Situation maintenant"
+        notes: "Impact sur la vie quotidienne."
+      - name: "FAQ"
+        notes: "Questions que se posent les lecteurs après avoir lu ce témoignage."
+      - name: "Conclusion + CTA"
+        notes: "Invitation à un appel découverte."
+
+  thought_leadership:
+    voice: "Experte qui prend position — opinions claires, pas de 'ça dépend' sur tout"
+    target_length: "1500-2500 mots"
+    sections:
+      - name: "Introduction — la thèse"
+        notes: "Énoncer clairement la position dès l'intro. Pas de ménagement."
+      - name: "Pourquoi cette thèse est vraie"
+        notes: "Arguments + données. E-E-A-T : expérience terrain Corinne."
+      - name: "Les objections courantes (et les réponses)"
+        notes: "Anticiper les contre-arguments — les traiter honnêtement."
+      - name: "Implications pratiques"
+        notes: "Ce que ça change pour le lecteur."
+      - name: "Conclusion — appel à l'action"
+        notes: "CTA plus assertif ici — 'Si vous êtes prêt à essayer...'"

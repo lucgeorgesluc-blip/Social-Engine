@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Consent Mode v2 - Configuration par défaut (tous refusés) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      
+      // Configuration du consentement par défaut (RGPD)
+      gtag('consent', 'default', {
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500,
+      });
+      
+      // Vérifier si le consentement a déjà été donné
+      if (localStorage.getItem('consentGranted') === 'true') {
+        gtag('consent', 'update', {
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
+    <!-- Google tag (gtag.js) - Google Ads AW-17956035279 (Consent Mode géré ci-dessus) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956035279"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'AW-17956035279');
+    </script>
+    
+    <!-- Google Tag Manager - Chargé après le contenu principal pour améliorer les performances -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-MFK6BL36');
+                
+                // Google tag (gtag.js) - chargé après GTM
+                var gtagScript = document.createElement('script');
+                gtagScript.async = true;
+                gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-5KYCNEBXRX';
+                document.head.appendChild(gtagScript);
+                
+                gtagScript.onload = function() {
+                    gtag('js', new Date());
+                    gtag('config', 'G-5KYCNEBXRX');
+                };
+            }, 2000);
+        });
+    </script>
+    
+        <!-- Ahrefs Web Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="ZmVUUNMo9OUSVRurS/ikCw" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Questions fréquentes sur l'hypnose et le magnétisme à Troyes : tarifs, séances, remboursement, efficacité. Réponses claires par Corinne Lacoste.">
+    <title>FAQ : Hypnose & Magnétisme à Troyes | Corinne Lacoste</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    
+    <!-- Fonts (self-hosted) -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="preconnect" href="https://calendly.com">
+    <link rel="dns-prefetch" href="https://js.stripe.com">
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+    
+    <!-- Tailwind CSS (built locally) -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased text-gray-800 bg-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFK6BL36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation (same as index) -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" x-data="{ mobileMenuOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold text-secondary">
+                        Corinne Lacoste
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#methode" class="text-gray-700 hover:text-primary transition">La méthode</a>
+                    <a href="index.html#temoignages" class="text-gray-700 hover:text-primary transition">Témoignages</a>
+                    <a href="index.html#tarifs" class="text-gray-700 hover:text-primary transition">Tarifs</a>
+                    <a href="faq.html" class="text-primary font-medium">FAQ</a>
+                    <a href="blog/hypnotherapeute-troyes-choisir.html" class="text-gray-700 hover:text-primary transition">Blog</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition font-medium">
+                        Réserver
+                    </a>
+                </div>
+                
+                <button 
+                    @click="mobileMenuOpen = !mobileMenuOpen" 
+                    class="md:hidden p-2"
+                    aria-label="Ouvrir le menu de navigation"
+                    :aria-expanded="mobileMenuOpen">
+                    <span class="sr-only">Menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html#methode" class="block py-2 text-gray-700">La méthode</a>
+                <a href="index.html#temoignages" class="block py-2 text-gray-700">Témoignages</a>
+                <a href="index.html#tarifs" class="block py-2 text-gray-700">Tarifs</a>
+                <a href="faq.html" class="block py-2 text-primary font-medium">FAQ</a>
+                <a href="blog/hypnotherapeute-troyes-choisir.html" class="block py-2 text-gray-700 hover:text-primary">Blog</a>
+                <a href="index.html#contact" class="block mt-4 bg-primary text-white px-6 py-3 rounded-full text-center">
+                    Réserver
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-accent to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-serif font-bold text-secondary mb-6">
+                Questions <span class="text-primary">Fréquentes</span>
+            </h1>
+            <p class="text-xl text-gray-600">
+                Toutes les réponses à vos questions sur l'arrêt du tabac par magnétisme et hypnose
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Category: Méthode -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-serif font-bold text-secondary mb-8">
+                    🔬 La méthode
+                </h2>
+                
+                <div class="space-y-4" x-data="{ open: null }">
+                    <!-- Q1 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="open = open === 1 ? null : 1" 
+                                class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                            <span class="font-semibold text-lg">Est-ce que ça marche vraiment ?</span>
+                            <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 1}" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open === 1" x-transition class="px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                <strong>Oui, absolument.</strong> 85% de mes clients arrêtent de fumer dès la première séance. La combinaison magnétisme + hypnose agit sur deux plans :
+                            </p>
+                            <ul class="mt-4 space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <strong>Physique :</strong> Le magnétisme rééquilibre votre système nerveux et supprime l'envie de nicotine
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">•</span>
+                                    <strong>Psychologique :</strong> L'hypnose reprogramme les automatismes inconscients liés au tabac
+                                </li>
+                            </ul>
+                            <p class="mt-4 text-gray-600">
+                                Les résultats sont mesurables : mes clients ne ressentent ni manque, ni stress après la séance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="open = open === 2 ? null : 2" 
+                                class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                            <span class="font-semibold text-lg">J'ai déjà tout essayé (patchs, Champix, etc). Pourquoi cette fois serait différent ?</span>
+                            <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 2}" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open === 2" x-transition class="px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                C'est <strong>LA</strong> question que me posent 80% de mes nouveaux clients. <br> Voici pourquoi ma méthode est différente :
+                            </p>
+                            <div class="mt-4 bg-gray-50 p-4 rounded-lg">
+                                <p class="text-sm font-semibold text-secondary mb-2">Les méthodes classiques :</p>
+                                <ul class="space-y-1 text-sm text-gray-600">
+                                    <li>❌ Patchs/gommes : traitent uniquement le symptôme physique</li>
+                                    <li>❌ Médicaments : effets secondaires, ne changent pas le mental</li>
+                                    <li>❌ Volonté seule : épuisante, taux d'échec de 95%</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 bg-primary/10 p-4 rounded-lg">
+                                <p class="text-sm font-semibold text-secondary mb-2">Ma méthode :</p>
+                                <ul class="space-y-1 text-sm text-gray-600">
+                                    <li>✅ Agit sur le corps ET l'esprit simultanément</li>
+                                    <li>✅ Supprime l'envie à la source (pas juste la gérer)</li>
+                                    <li>✅ Zéro effet secondaire, zéro médicament</li>
+                                    <li>✅ Transformation profonde et durable</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="open = open === 3 ? null : 3" 
+                                class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                            <span class="font-semibold text-lg">C'est douloureux ou effrayant ?</span>
+                            <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 3}" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open === 3" x-transition class="px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                <strong>Absolument pas.</strong> C'est même tout l'inverse :
+                            </p>
+                            <ul class="mt-4 space-y-3 text-gray-600">
+                                <li>
+                                    <strong>Le magnétisme :</strong> Zéro douleur. Vous restez allongé(e) pendant que je place mes mains au-dessus de votre corps. La plupart des clients s'endorment tellement c'est relaxant.
+                                </li>
+                                <li>
+                                    <strong>L'hypnose ericksonienne :</strong> C'est une hypnose douce, conversationnelle. Vous restez conscient(e) et en contrôle à 100%. Pas de "claquement de doigts" comme au cinéma ou avec Messmer. C'est comme une méditation guidée profonde.
+                                </li>
+                            </ul>
+                            <p class="mt-4 text-primary font-medium">
+                                💬 Témoignage : "Je pensais que l'hypnose allait être bizarre. En fait, c'était tellement apaisant que j'ai oublié que je venais pour arrêter de fumer !" - Marie, 42 ans
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Résultats -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-serif font-bold text-secondary mb-8">
+                    📊 Les résultats
+                </h2>
+                
+                <div class="space-y-4" x-data="{ open: null }">
+                    <!-- Q4 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="open = open === 4 ? null : 4" 
+                                class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                            <span class="font-semibold text-lg">Combien de temps dure l'effet ?</span>
+                            <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 4}" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open === 4" x-transition class="px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                <strong>Les résultats sont durables.</strong> Nous ne créons pas une simple "pause" temporaire, mais une transformation profonde de votre rapport au tabac.
+                            </p>
+                            <div class="bg-accent/30 p-4 rounded-lg">
+                                <p class="font-semibold text-secondary mb-2">Statistiques de mes clients :</p>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li>• <strong>85%</strong> arrêtent dès la 1ère séance</li>
+                                    <li>• <strong>78%</strong> ne refument plus après 6 mois</li>
+                                    <li>• <strong>92%</strong> recommandent la méthode à leurs proches</li>
+                                </ul>
+                            </div>
+                            <p class="mt-4 text-gray-600">
+                                <strong>Important :</strong> Je ne suis pas magicienne. Votre engagement et votre volonté restent essentiels. Mais ma méthode vous donne les outils pour que cette volonté suffise enfin.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="open = open === 5 ? null : 5" 
+                                class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                            <span class="font-semibold text-lg">Et si je rechute ?</span>
+                            <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 5}" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open === 5" x-transition class="px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Si vous sentez une envie revenir, vous pouvez me rappeler sur mon numéro pour faire une séance de suivi. Les séances de suivi sont payantes.
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                De plus, vous pouvez me contacter par <strong>WhatsApp 7j/7</strong> en cas de moment difficile. Je vous réponds rapidement avec des conseils personnalisés.
+                            </p>
+                            <div class="bg-primary/10 p-4 rounded-lg">
+                                <p class="text-sm">
+                                    <strong>Mon engagement :</strong> Je ne vous abandonne pas après la séance. Votre liberté est mon objectif, et je vous accompagne jusqu'à ce que ce soit acquis. <strong>Cela est bien dans vos mains avec vos efforts</strong>, sous réserve que vous écoutiez mes conseils et ce dont nous allons discuter lors de la séance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="open = open === 6 ? null : 6" 
+                                class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                            <span class="font-semibold text-lg">Combien de séances faut-il ?</span>
+                            <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 6}" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open === 6" x-transition class="px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed">
+                                <strong>En principe, une seule séance suffit.</strong> 85% de mes clients arrêtent de fumer après cette unique séance de 1h à 1h30.
+                            </p>
+                            <p class="mt-4 text-gray-600">
+                                Cependant, <strong>cela dépend de vous</strong> : votre historique avec le tabac, votre état émotionnel, votre environnement. C'est pourquoi je propose systématiquement une séance de suivi à une semaine d'intervalle pour sécuriser votre résultat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Pratique -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-serif font-bold text-secondary mb-8">
+                    📍 Informations pratiques
+                </h2>
+                
+                <div class="space-y-4" x-data="{ open: null }">
+                    <!-- Q7 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="open = open === 7 ? null : 7" 
+                                class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                            <span class="font-semibold text-lg">Quels sont vos tarifs ?</span>
+                            <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 7}" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open === 7" x-transition class="px-6 pb-5">
+                            <div class="bg-secondary/5 p-6 rounded-lg mb-4">
+                                <p class="text-3xl font-bold text-secondary mb-2" data-price="tabac"></p>
+                                <p class="text-sm text-gray-600">Séance complète (<span data-duration="tabac"></span>)</p>
+                            </div>
+                            <p class="text-gray-600 mb-4"><strong>Ce qui est inclus :</strong></p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">✓</span>
+                                    Magnétisme + Hypnose personnalisée
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">✓</span>
+                                    Séances de suivi personalisées
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">✓</span>
+                                    Support WhatsApp 7j/7
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary mr-2">✓</span>
+                                    Attestation pour mutuelle
+                                </li>
+                            </ul>
+                            <p class="mt-4 text-sm text-gray-500">
+                                💳 Paiement : CB, espèces, Chèques acceptés
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="open = open === 8 ? null : 8" 
+                                class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                            <span class="font-semibold text-lg">Est-ce remboursé par les mutuelles ?</span>
+                            <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 8}" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open === 8" x-transition class="px-6 pb-5">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                La sécurité sociale ne rembourse pas le magnétisme, <strong>mais certaines mutuelles oui</strong>.
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                Je vous fournis une <strong>facture détaillée</strong> après la séance que vous pouvez soumettre à votre mutuelle. De plus en plus de mutuelles remboursent les médecines douces (souvent 30 à 50€ par séance).
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                💡 Astuce : Contactez votre mutuelle avant la séance pour connaître leur politique de remboursement pour le magnétisme/hypnose.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="open = open === 9 ? null : 9" 
+                                class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                            <span class="font-semibold text-lg">Où se déroule la séance ?</span>
+                            <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 9}" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open === 9" x-transition class="px-6 pb-5">
+                            <p class="text-gray-600 mb-4">
+                                <ul class="space-y-2 text-gray-600">
+                                    <li>📍 <span data-contact="adresse.rue"></span>, <span data-contact="adresse.codePostal"></span> <span data-contact="adresse.ville"></span></li>
+                                    <li>📍 Parking gratuit disponible</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-2xl text-center">
+                <h3 class="text-2xl font-serif font-bold text-secondary mb-4">
+                    Vous avez d'autres questions ?
+                </h3>
+                <p class="text-gray-600 mb-6">
+                    Réservez votre appel découverte gratuit de 15 minutes.<br>
+                    Je réponds à toutes vos interrogations personnellement.
+                </p>
+                <a href="index.html#contact" class="inline-block bg-primary text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition font-medium text-lg shadow-lg">
+                    Réserver mon appel gratuit
+                </a>
+                <p class="text-sm text-gray-500 mt-4">
+                    Ou appelez directement : <strong><span data-contact="telephone"></span></strong>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer (same as index) -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Corinne Lacoste</h3>
+                    <p class="text-white/70 text-sm">
+                        Magnétiseuse diplômée<br>
+                        Spécialiste sevrage tabagique
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="index.html#methode" class="hover:text-primary transition">La méthode</a></li>
+                        <li><a href="index.html#temoignages" class="hover:text-primary transition">Témoignages</a></li>
+                        <li><a href="index.html#tarifs" class="hover:text-primary transition">Tarifs</a></li>
+                        <li><a href="faq.html" class="hover:text-primary transition">FAQ</a></li>
+                        <li><a href="blog/hypnotherapeute-troyes-choisir.html" class="hover:text-primary transition">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Légal</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="mentions-legales.html" class="hover:text-primary transition">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-primary transition">Confidentialité</a></li>
+                        <li><a href="cgv.html" class="hover:text-primary transition">CGV</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li data-contact="telephone"></li>
+                        <li>7 rue du Printemps</li>
+                        <li>10120 Saint-Germain</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/50">
+                <p>© 2026 <span data-contact="nom"></span>. Tous droits réservés.</p>
+                <p class="mt-2">SIRET : <span data-contact="siret"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Configuration centralisée des prix et infos -->
+    <script src="assets/js/config.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+</body>
+</html>

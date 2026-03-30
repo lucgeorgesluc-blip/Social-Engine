@@ -2,6 +2,9 @@
 node_modules/
 autopilot/node_modules/
 
+# Autopilot app — has its own repo (SEO-Autopilot)
+autopilot/
+
 # Environment (secrets)
 autopilot/.env
 .env
@@ -16,3 +19,9 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Claude Code settings
+.claude/
+
+# Nested git repos
+claude-seo/

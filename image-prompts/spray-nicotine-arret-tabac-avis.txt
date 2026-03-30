@@ -1,0 +1,13 @@
+FICHIER IMAGE ATTENDU : assets/images/blog/spray-nicotine-arret-tabac-avis.webp
+TAILLE CIBLE : 800x450px, format WebP, qualité 85
+
+--- PROMPT IMAGE (à coller dans votre outil de génération) ---
+
+A small sleek white nicotine mouth spray bottle held upright by a manicured female hand with light pink nails, the bottle is minimal and modern with a simple pump top, placed on a clean white polished marble surface with a soft reflection visible, a single snapped cigarette lying nearby slightly out of focus suggesting cessation, clinical yet elegant pharmaceutical product photography, soft diffused tent lighting from above with no harsh shadows creating an even bright high-key look, straight-on hero angle, bright pure white palette with very subtle warm accents, pin-sharp product focus, Bang and Olufsen clean minimalist aesthetic, no brand name text visible
+
+--- INSTRUCTIONS ---
+1. Générez l'image avec l'outil de votre choix (Midjourney, DALL-E, Firefly, Gemini...)
+2. Redimensionnez en 800x450px (crop centré)
+3. Convertissez en WebP qualité 85
+4. Renommez le fichier : spray-nicotine-arret-tabac-avis.webp
+5. Placez le fichier dans : E:/Site CL/assets/images/blog/

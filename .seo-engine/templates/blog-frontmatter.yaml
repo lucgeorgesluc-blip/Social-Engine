@@ -1,0 +1,94 @@
+# Template Frontmatter Blog — Static HTML (magnetiseuse-lacoste-corinne.fr)
+# Appliquer dans le <head> de chaque article blog HTML
+
+html_head_template: |
+  <!-- SEO Meta Tags -->
+  <title>{title} | Corinne Lacoste — Magnétiseuse Troyes</title>
+  <!-- RÈGLE : title total ≤ 60 chars. Compter : "{title} | Corinne Lacoste — Magnétiseuse Troyes" -->
+
+  <meta name="description" content="{description}">
+  <!-- RÈGLE : description ≤ 160 chars. Inclure mot-clé principal + CTA implicite -->
+
+  <link rel="canonical" href="https://www.magnetiseuse-lacoste-corinne.fr/blog/{slug}.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{description}">
+  <meta property="og:url" content="https://www.magnetiseuse-lacoste-corinne.fr/blog/{slug}.html">
+  <meta property="og:image" content="https://www.magnetiseuse-lacoste-corinne.fr/assets/images/blog/{slug}.webp">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{title}">
+  <meta name="twitter:description" content="{description}">
+  <meta name="twitter:image" content="https://www.magnetiseuse-lacoste-corinne.fr/assets/images/blog/{slug}.webp">
+
+schema_article: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{title}",
+    "description": "{description}",
+    "url": "https://www.magnetiseuse-lacoste-corinne.fr/blog/{slug}.html",
+    "datePublished": "{date_iso}",
+    "dateModified": "{date_iso}",
+    "author": {
+      "@type": "Person",
+      "name": "Corinne Lacoste",
+      "url": "https://www.magnetiseuse-lacoste-corinne.fr/a-propos.html",
+      "jobTitle": "Magnétiseuse & Hypnothérapeute"
+    },
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "Corinne Lacoste — Magnétiseuse & Hypnothérapeute",
+      "url": "https://www.magnetiseuse-lacoste-corinne.fr",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.magnetiseuse-lacoste-corinne.fr/assets/images/favicon.svg"
+      }
+    },
+    "image": "https://www.magnetiseuse-lacoste-corinne.fr/assets/images/blog/{slug}.webp",
+    "mainEntityOfPage": "https://www.magnetiseuse-lacoste-corinne.fr/blog/{slug}.html"
+  }
+  </script>
+
+schema_faqpage: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "{question_1}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{answer_1}"
+        }
+      }
+    ]
+  }
+  </script>
+
+config_js_entry: |
+  // Ajouter EN PREMIÈRE POSITION de SITE_CONFIG.blog dans config.js :
+  {
+      slug: "{slug}",
+      title: "{title}",
+      description: "{description}",
+      date: "{date_iso}"
+  },
+
+rules:
+  - "title (balise <title> complète) : ≤ 60 chars"
+  - "meta description : ≤ 160 chars"
+  - "slug : ≤ 6 mots kebab-case"
+  - "canonical : toujours https://www.magnetiseuse-lacoste-corinne.fr/blog/{slug}.html"
+  - "image : assets/images/blog/{slug}.webp (pas .png, pas .jpg)"
+  - "JAMAIS de montant en dur — utiliser data-price='tabac' (ou autre slug pricing)"
+  - "Ne JAMAIS mentionner rTMS"
+  - "Ajouter en TÊTE de SITE_CONFIG.blog dans config.js puis régénérer config.min.js"
+  - "Ajouter URL dans sitemap.xml"

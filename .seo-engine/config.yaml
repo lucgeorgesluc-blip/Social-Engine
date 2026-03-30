@@ -1,0 +1,140 @@
+# SEO Content Engine — Project Configuration
+# Auto-generated le 2026-03-26. Modifier ce fichier à tout moment.
+
+project:
+  name: "magnetiseuse-lacoste-corinne.fr"
+  tagline: "Magnétiseuse & Hypnothérapeute à Troyes — Arrêt tabac en 1 séance"
+  description: "Cabinet de magnétisme et hypnothérapie de Corinne Lacoste à Saint-Germain (Troyes). Spécialiste arrêt tabac, gestion du stress, troubles du sommeil, douleurs chroniques, confiance en soi."
+  website: "https://www.magnetiseuse-lacoste-corinne.fr"
+  target_audience:
+    primary: "Adultes fumeurs voulant arrêter de fumer dans l'Aube (Troyes et alentours)"
+    secondary: "Personnes cherchant des solutions naturelles pour stress, sommeil, douleurs, poids"
+    technical_level: "beginner"
+
+author:
+  name: "Corinne Lacoste"
+  title: "Magnétiseuse & Hypnothérapeute"
+  bio: "Formée par Pascal Bescos (30 ans d'expérience, GNOMA) d'octobre 2017 à avril 2018. 15+ ans de pratique. Cabinet à Saint-Germain, Troyes."
+  website: "https://www.magnetiseuse-lacoste-corinne.fr"
+  social_links: {}
+
+trust_signals:
+  review_links:
+    google_write: "https://search.google.com/local/writereview?placeid=ChIJeVdQE_mZ7kcE7rpheOUlF8c"
+    google_maps: "https://www.google.com/maps/search/?api=1&query=Corinne+Lacoste+7+rue+du+Printemps+Saint-Germain+10120"
+    trustpilot: ""
+    capterra: ""
+    product_hunt: ""
+    rightfeature: ""
+    canny: ""
+    other: []
+  testimonials:
+    - name: "Paul"
+      age: 45
+      result: "Arrêt tabac en 1 séance après 20 ans de cigarette"
+      blog_slug: "temoignage-arret-tabac-hypnose-troyes-paul"
+    - name: "Marie L."
+      result: "Arrêt tabac réussi, magnétisme + hypnose"
+    - name: "Thomas B."
+      result: "Résultats dès la 1ère séance"
+  metrics:
+    - "35 avis Google 4.9★"
+    - "85% taux de réussite arrêt tabac à la 1ère séance"
+    - "15+ ans d'expérience"
+    - "2 séances de suivi gratuites incluses"
+    - "RDV disponible sous 7 jours"
+
+cms:
+  type: "static-html"
+  blog_directory: "blog/"
+  docs_directory: ""
+  frontmatter_format: "html-meta"
+  date_format: "YYYY-MM-DD"
+  slug_style: "kebab-case"
+  slug_max_words: 6
+  image_directory: "assets/images/blog/"
+  config_js: "assets/js/config.js"
+  config_min_js: "assets/js/config.min.js"
+  frontmatter_schema:
+    required:
+      - title (balise <title>)
+      - meta description (<meta name="description">)
+      - canonical (<link rel="canonical">)
+      - slug (nom du fichier)
+    optional:
+      - og:title
+      - og:description
+      - og:image
+      - JSON-LD Schema (Article ou FAQPage)
+      - date (dans config.js SITE_CONFIG.blog)
+
+competitors:
+  - name: "Karine DURST"
+    website: "https://www.facebook.com/share/g/15jWHvrsvT/"
+    id: "comp_karine_durst"
+    notes: "Présence Facebook uniquement — pas de site propre détecté"
+  - name: "Sébastien Geoffron"
+    website: "https://www.geoffron-magnetiseur-energeticien.fr/"
+    id: "comp_geoffron"
+    notes: "Magnétiseur énergéticien — site professionnel"
+  - name: "Julie Lafitte"
+    website: "https://www.julie-lafitte-magnetisme.com/"
+    id: "comp_julie_lafitte"
+    notes: "Magnétisme — site professionnel"
+
+seo:
+  primary_topics:
+    - "magnétiseur Troyes"
+    - "magnétiseur Aube"
+    - "magnétiseur arrêt tabac"
+    - "hypnose arrêt tabac Troyes"
+    - "bien-être naturel Troyes"
+  brand_terms:
+    - "Corinne Lacoste"
+    - "magnetiseuse-lacoste-corinne"
+    - "magnétiseuse Troyes"
+  avoid_terms:
+    - "rTMS"
+    - "remboursé Sécurité Sociale"
+    - "médical"
+    - "diagnostic"
+    - "guérison"
+  target_regions:
+    - "Troyes"
+    - "Aube (10)"
+    - "Saint-Germain"
+    - "Romilly-sur-Seine"
+    - "Bar-sur-Aube"
+    - "Bar-sur-Seine"
+  language: "fr"
+
+content:
+  min_word_count: 1500
+  max_word_count: 4000
+  default_author: "Corinne Lacoste"
+  tone: "professionnel-chaleureux"
+  include_faq: true
+  include_toc: true
+  cta_text: "Prendre RDV avec Corinne"
+  cta_url: "https://calendly.com/corinnelacoste/appel"
+  max_posts_per_month: 4
+  requires_human_review: true
+  language: "fr"
+  note_prices: "Toujours utiliser data-price='tabac' (ou autre slug) — JAMAIS de montant en dur"
+
+technical_seo:
+  meta_description_max_chars: 160
+  title_tag_max_chars: 60
+  image_alt_text_required: true
+  canonical_url_pattern: "https://www.magnetiseuse-lacoste-corinne.fr/blog/{slug}.html"
+  image_format: "webp"
+  schema_types:
+    blog: "Article"
+    faq: "FAQPage"
+    local: "HealthAndBeautyBusiness"
+
+integrations:
+  seo_tool: "none"
+  analytics: "Google Analytics 4 (G-5KYCNEBXRX) + GTM (GTM-MFK6BL36)"
+  search_console: true
+  ahrefs: true

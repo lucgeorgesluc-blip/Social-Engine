@@ -15,7 +15,7 @@ into a scheduled cron service on Render and ships to production.
 - [ ] **Phase 3: Image Generation** — @google/genai integration, sharp processing, graceful fallback
 - [ ] **Phase 4: SFTP Deploy + GSC Ping** — atomic 5-file deploy, retry logic, GSC URL Inspection, state file
 - [ ] **Phase 5: Telegram Approval Bot** — telegraf webhook, approve/edit inline buttons, edit prompt loop, error alerts
-- [ ] **Phase 6: Dashboard Backend** — Express API routes, GSC Search Analytics, SSE endpoint, auth middleware
+- [x] **Phase 6: Dashboard Backend** — Express API routes, GSC Search Analytics, SSE endpoint, auth middleware (completed 2026-03-30)
 - [ ] **Phase 7: Dashboard Frontend** — Mac-app dark UI, Alpine.js + Tailwind, queue/rankings/link-tree/pipeline views
 - [ ] **Phase 8: Cron Orchestrator + Production** — cron wiring, render.yaml, smoke test, README
 
@@ -154,10 +154,10 @@ Plans:
   4. `GET /api/pipeline-status` returns current step name, timestamp, and history — and `GET /api/events` (SSE) pushes updates in real time when pipeline state changes
   5. `POST /login` with correct credentials sets a session cookie and redirects to dashboard; all `/api/*` and `/dashboard` routes return 401 without a valid session
   6. A pending-approval badge count is available via `/api/articles?status=pending` for the nav indicator
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 Plans:
-- [ ] 06-01-PLAN.md — Auth middleware, activity-logger module, run.js+bot.js instrumentation, Wave 0 test stubs
-- [ ] 06-02-PLAN.md — GSC rankings module, all API routes (articles/rankings/links/pipeline-status/events/activity/stats/approve), server.js wiring, .env.example
+- [x] 06-01-PLAN.md — Auth middleware, activity-logger module, run.js+bot.js instrumentation, Wave 0 test stubs
+- [x] 06-02-PLAN.md — GSC rankings module, all API routes (articles/rankings/links/pipeline-status/events/activity/stats/approve), server.js wiring, .env.example
 
 ### Phase 7: Dashboard Frontend
 **Goal**: The dashboard is a functional Mac-app dark UI where Corinne (or the site manager) can view the article queue, inspect keyword rankings, explore the internal link tree, and watch the pipeline stepper in real time
@@ -204,6 +204,6 @@ Plans:
 | 3. Image Generation | 1/2 | Planning complete | - |
 | 4. SFTP Deploy + GSC Ping | 0/2 | Planning complete | - |
 | 5. Telegram Approval Bot | 0/2 | Planning complete | - |
-| 6. Dashboard Backend | 1/2 | In Progress | - |
+| 6. Dashboard Backend | 2/2 | Complete   | 2026-03-30 |
 | 7. Dashboard Frontend | 0/2 | Planning complete | - |
 | 8. Cron Orchestrator + Production | 0/2 | Planning complete | - |

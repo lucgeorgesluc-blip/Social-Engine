@@ -1,5 +1,15 @@
 # Changelog — SEO Content Engine
 
+## 2026-03-30 — DataForSEO SERP data — q_006 à q_009
+**Action:** Requêtes Google Ads search volume via DataForSEO API pour tous les mots-clés des items q_006–q_009
+**Résultats clés :**
+- `barreur de feu` = **1600/mois** (LOW competition, CPC 0.97€) — seul mot-clé à fort volume
+- `magnétisme eczéma` = 10/mois (LOW), `zona magnétisme` = 10/mois (LOW)
+- Tous les autres mots-clés < 10/mois France
+**Modifications :**
+- content-queue.yaml : `serp_analyzed: true` + bloc `serp_data` pour q_006, q_007, q_008, q_009
+- q_009 : priorité upgradée `low → medium`, title recentré sur "Barreur de Feu", target_keywords mis à jour
+
 ## 2026-03-28 — Audit blog/ : 8 articles manquants enregistrés
 **Action:** Comparaison blog/ (51 fichiers) vs content-map.yaml (43 slugs) → 8 articles absents du moteur
 **Articles ajoutés à content-map.yaml + topic-clusters.yaml :**
@@ -53,3 +63,7 @@
 - `CLAUDE.md` (mis à jour — section SEO Content Engine ajoutée)
 **Summary:** Moteur SEO initialisé depuis scan de 42 articles blog, 6 pages service, config.js. 5 clusters topic identifiés. 4 pillar pages en attente de données SERP.
 **Triggered by:** user
+- 2026-03-30 — Pipeline: drafted "prise-de-poids-apres-arret-tabac-eviter-de-grossir-guide" (Prise de Poids Après Arrêt Tabac : Éviter de Grossir [Guide])
+- 2026-03-30 — Pipeline: drafted "barreur-de-feu-a-troyes-recuperation-apres-chimio-avec-le-ma" (Barreur de Feu à Troyes : Récupération après Chimio avec le Magnétisme)
+- 2026-03-30 — Pipeline: drafted "magnetisme-pour-les-enfants-a-troyes-que-soigner-guide-parent" (Magnétisme pour les Enfants à Troyes : Que Soigner ? [Guide Parents])
+- 2026-03-30 — Pipeline: drafted "allergies-et-eczema-le-magnetisme-peut-il-aider-troyes" (Allergies et Eczéma : Le Magnétisme Peut-il Aider ? [Troyes])

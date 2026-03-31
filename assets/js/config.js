@@ -143,6 +143,30 @@ const SITE_CONFIG = {
     // ========================================
     blog: [
         {
+            slug: "allergies-et-eczema-le-magnetisme-peut-il-aider-troyes",
+            title: "Allergies et Eczéma : Le Magnétisme Peut-il Aider ? [Troyes]",
+            description: "Magnétisme pour allergies, eczéma et zona à Troyes : comment ça marche, résultats patients, séances <span data-meta-price='allergies'>{{price}}</span>€. Cabinet Saint-Germain.",
+            date: "2026-03-30"
+        },
+        {
+            slug: "magnetisme-pour-les-enfants-a-troyes-que-soigner-guide-parent",
+            title: "Magnétisme pour les Enfants à Troyes : Que Soigner ? [Guide Parents]",
+            description: "Guide complet du magnétisme pour enfants à Troyes : coliques, troubles du sommeil, comportement. Sécuritaire, doux, adapté aux tout-petits. Cabinet Saint-Germain.",
+            date: "2026-03-30"
+        },
+        {
+            slug: "barreur-de-feu-a-troyes-recuperation-apres-chimio-avec-le-ma",
+            title: "Barreur de Feu à Troyes : Récupération après Chimio avec le Magnétisme",
+            description: "Barreur de feu à Troyes pour soulager les brûlures de radiothérapie et accompagner la récupération post-chimiothérapie. Cabinet de magnétisme Corinne Lacoste.",
+            date: "2026-03-30"
+        },
+                {
+            slug: "burn-out-magnetisme-hypnose-troyes",
+            title: "Burn-out à Troyes : Magnétisme et Hypnose pour Sortir de l'Épuisement",
+            description: "Burn-out professionnel : comment la combinaison magnétisme + hypnose ericksonienne aide à récupérer. Protocole, témoignages et prise de RDV à Troyes.",
+            date: "2026-03-30"
+        },
+        {
             slug: "magnetiseur-troyes-corinne-vs-geoffron",
             title: "Corinne Lacoste vs Geoffron : Quel Magnétiseur à Troyes Choisir ?",
             description: "Deux magnétiseurs à Troyes : approches, tarifs et spécialisations comparés. Corinne Lacoste (arrêt tabac + hypnose) vs Sébastien Geoffron (bien-être énergétique).",

@@ -1260,3 +1260,27 @@ blogs:
     word_count: 2538
     has_eeat_signals: true
     needs_update_reason: ""
+  - slug: "prise-de-poids-apres-arret-tabac-eviter-de-grossir-guide"
+    title: "Prise de Poids Après Arrêt Tabac : Éviter de Grossir [Guide]"
+    status: "drafted"
+    target_keywords: ["prise de poids arrêt tabac éviter", "grossir arrêt tabac"]
+    cluster_id: "tc_sevrage_symptomes"
+    date: "2026-03-30"
+  - slug: "barreur-de-feu-a-troyes-recuperation-apres-chimio-avec-le-ma"
+    title: "Barreur de Feu à Troyes : Récupération après Chimio avec le Magnétisme"
+    status: "drafted"
+    target_keywords: ["barreur de feu", "barreur de feu cancer Troyes", "magnétisme post-chimiothérapie"]
+    cluster_id: ""
+    date: "2026-03-30"
+  - slug: "magnetisme-pour-les-enfants-a-troyes-que-soigner-guide-parent"
+    title: "Magnétisme pour les Enfants à Troyes : Que Soigner ? [Guide Parents]"
+    status: "drafted"
+    target_keywords: ["magnétisme enfant Troyes", "magnétiseur enfant Aube"]
+    cluster_id: ""
+    date: "2026-03-30"
+  - slug: "allergies-et-eczema-le-magnetisme-peut-il-aider-troyes"
+    title: "Allergies et Eczéma : Le Magnétisme Peut-il Aider ? [Troyes]"
+    status: "drafted"
+    target_keywords: ["magnétisme allergies", "magnétiseur eczéma Troyes", "zona magnétisme"]
+    cluster_id: ""
+    date: "2026-03-30"

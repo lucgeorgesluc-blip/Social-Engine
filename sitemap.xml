@@ -57,6 +57,24 @@
 
     <!-- Articles blog (priorité moyenne) -->
     <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/allergies-et-eczema-le-magnetisme-peut-il-aider-troyes.html</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/magnetisme-pour-les-enfants-a-troyes-que-soigner-guide-parent.html</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/barreur-de-feu-a-troyes-recuperation-apres-chimio-avec-le-ma.html</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+        <url>
         <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/auriculotherapie-arret-tabac.html</loc>
         <lastmod>2026-03-26</lastmod>
         <changefreq>monthly</changefreq>
@@ -325,6 +343,13 @@
         <lastmod>2026-02-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/burn-out-magnetisme-hypnose-troyes.html</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
     <url>

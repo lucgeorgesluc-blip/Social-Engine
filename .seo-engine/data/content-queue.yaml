@@ -86,21 +86,21 @@ queue:
     internal_link_targets: ["gestion-stress-troyes-magnetisme-hypnose", "troubles-sommeil-insomnie-troyes-solutions-naturelles", "perte-poids-hypnose-troyes-temoignages", "confiance-en-soi-hypnose-magnetisme-troyes", "douleurs-chroniques-magnetiseur-troyes-soulage"]
 
   - id: "q_005"
-    title: "Burn-out : Magnétisme + Hypnose à Troyes [2026]"
+    title: "Burn-out à Troyes : Magnétisme et Hypnose pour Sortir de l'Épuisement"
     blog_type: "tutorial"
     content_type: "cluster"
-    cluster_id: "tc_bien_etre_troyes"
+    cluster_id: "tc_magnetiseur_troyes"
     target_keywords: ["burn-out Troyes", "récupération burn-out naturel", "burn-out magnétisme"]
     target_features: ["feat_stress_anxiete", "feat_combo_magnetisme_hypnose"]
     unique_angle: "Focus spécifique burn-out (vs stress générique) avec protocole en plusieurs séances — différent de gestion-stress déjà publié"
     priority: "medium"
     priority_reason: "Terme burn-out très recherché, non couvert spécifiquement"
-    status: "planned"
+    status: "done"
     estimated_word_count: 2000
     eeat_plan: "Témoignage patient en burn-out + protocole détaillé Corinne"
     serp_analyzed: false
     cannibalization_check: "passed"
-    notes: ""
+    notes: "DONE 2026-03-30 — slug: burn-out-magnetisme-hypnose-troyes. Cluster: tc_magnetiseur_troyes (corrigé, q_004 annulé). Uploadé SFTP."
     depends_on: []
     internal_link_targets: ["gestion-stress-troyes-magnetisme-hypnose", "troubles-sommeil-insomnie-troyes-solutions-naturelles"]
 
@@ -119,7 +119,18 @@ queue:
     status: "planned"
     estimated_word_count: 1800
     eeat_plan: "Données Corinne sur patients ayant préparé l'arrêt"
-    serp_analyzed: false
+    serp_analyzed: true
+    serp_data:
+      source: "DataForSEO Google Ads — 2026-03-30"
+      location: "France (2250)"
+      keywords_volumes:
+        - keyword: "prise de poids arrêt tabac éviter"
+          volume: "<10"
+        - keyword: "grossir arrêt tabac"
+          volume: "<10"
+        - keyword: "arrêt tabac prise de poids"
+          volume: "<10"
+      note: "Volume très faible sur le marché FR — article justifié par angle longue traîne + différenciation vs article existant arret-tabac-prise-poids-solutions"
     cannibalization_check: "passed"
     notes: "Vérifier différentiation avec arret-tabac-prise-poids-solutions"
     depends_on: []
@@ -137,10 +148,23 @@ queue:
     unique_angle: "Seul article ciblant les parents — conditions pédiatriques (coliques, troubles sommeil enfant, comportement) non couvertes dans le blog actuel"
     priority: "low"
     priority_reason: "Feature non couverte — audience secondaire parents"
-    status: "planned"
+    status: "drafted"
     estimated_word_count: 1800
     eeat_plan: "Témoignages parents + sécurité de la technique pour les enfants"
-    serp_analyzed: false
+    serp_analyzed: true
+    serp_data:
+      source: "DataForSEO Google Ads — 2026-03-30"
+      location: "France (2250)"
+      keywords_volumes:
+        - keyword: "magnétisme enfant Troyes"
+          volume: "<10"
+        - keyword: "magnétiseur enfant Aube"
+          volume: "<10"
+        - keyword: "magnétisme enfant"
+          volume: "<10"
+        - keyword: "magnétisme bébé"
+          volume: "<10"
+      note: "Niche longue traîne — volume très faible mais audience ciblée (parents). Justification reste la couverture de feature feat_magnetisme_enfant non documentée."
     cannibalization_check: "passed"
     notes: ""
     depends_on: []
@@ -156,30 +180,62 @@ queue:
     unique_angle: "Seul article sur cette condition — segment de niche non couvert, peu de concurrence"
     priority: "low"
     priority_reason: "Feature disponible non documentée dans le blog"
-    status: "planned"
+    status: "drafted"
     estimated_word_count: 1600
     eeat_plan: "Résultats patients + mécanisme magnétique sur peau"
-    serp_analyzed: false
+    serp_analyzed: true
+    serp_data:
+      source: "DataForSEO Google Ads — 2026-03-30"
+      location: "France (2250)"
+      keywords_volumes:
+        - keyword: "magnétisme allergies"
+          volume: "<10"
+        - keyword: "magnétisme eczéma"
+          volume: 10
+          competition: "LOW"
+          cpc: 0.62
+        - keyword: "zona magnétisme"
+          volume: 10
+          competition: "LOW"
+          cpc: null
+        - keyword: "magnétisme allergie"
+          volume: "<10"
+      note: "Volume global faible — eczéma et zona ont 10/mois chacun, compétition LOW. Bon angle niche à faible concurrence."
     cannibalization_check: "passed"
     notes: ""
     depends_on: []
     internal_link_targets: ["tarifs-magnetiseur-hypnotherapeute-troyes-prix", "douleurs-chroniques-magnetiseur-troyes-soulage"]
 
   - id: "q_009"
-    title: "Récupération après Chimio : Le Magnétisme (Barreur de Feu) à Troyes"
+    title: "Barreur de Feu à Troyes : Accompagner la Chimio après un Cancer du Tabac"
     blog_type: "how-to"
-    content_type: "standalone"
-    cluster_id: ""
-    target_keywords: ["magnétisme post-chimiothérapie", "barreur de feu cancer Troyes"]
-    target_features: ["feat_post_chimio", "feat_magnetisme_adulte"]
-    unique_angle: "Technique spécifique 'barreur de feu' — unique différenciateur non couvert, niche haute valeur émotionnelle"
-    priority: "low"
-    priority_reason: "Feature unique non documentée — forte valeur E-E-A-T"
-    status: "planned"
-    estimated_word_count: 1800
-    eeat_plan: "Témoignage patient en récupération + explication technique barreur de feu"
-    serp_analyzed: false
+    content_type: "cluster"
+    cluster_id: "tc_arret_tabac"
+    target_keywords: ["barreur de feu", "barreur de feu cancer tabac", "magnétisme récupération chimio"]
+    target_features: ["feat_post_chimio", "feat_magnetisme_adulte", "feat_arret_tabac_seance"]
+    unique_angle: "Fil narratif tabac → cancer → chimio → barreur de feu. Corinne accompagne TOUT le parcours : arrêter de fumer EN AMONT, et soutenir la récupération chimio si cancer du tabac déjà déclaré. Unique sur le SERP."
+    priority: "medium"
+    priority_reason: "UPGRADE low→medium — 'barreur de feu' = 1600/mois France (DataForSEO 2026-03-30), LOW compétition. Rattaché au cluster tc_arret_tabac via lien tabac→cancer."
+    status: "drafted"
+    estimated_word_count: 1900
+    eeat_plan: "Témoignage patient fumeur ayant développé un cancer + technique barreur de feu expliquée + avertissement médical clair"
+    serp_analyzed: true
+    serp_data:
+      source: "DataForSEO Google Ads — 2026-03-30"
+      location: "France (2250)"
+      keywords_volumes:
+        - keyword: "barreur de feu"
+          volume: 1600
+          competition: "LOW"
+          cpc: 0.97
+        - keyword: "barreur de feu cancer"
+          volume: "<10"
+        - keyword: "barreur de feu chimiothérapie"
+          volume: "<10"
+        - keyword: "magnétisme post-chimiothérapie"
+          volume: "<10"
+      note: "'barreur de feu' = seul mot-clé à volume réel. Angle tabac→cancer le rattache au cluster principal."
     cannibalization_check: "passed"
-    notes: "Attention : ne jamais promettre de 'guérison' du cancer — accompagnement récupération uniquement"
+    notes: "JAMAIS promettre guérison du cancer. Le magnétisme = accompagnement complémentaire UNIQUEMENT. Avertissement médical obligatoire dans le contenu."
     depends_on: []
-    internal_link_targets: ["tarifs-magnetiseur-hypnotherapeute-troyes-prix"]
+    internal_link_targets: ["arreter-fumer-troyes-methodes-locales-comparatif", "tarifs-magnetiseur-hypnotherapeute-troyes-prix"]

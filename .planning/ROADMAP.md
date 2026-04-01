@@ -246,10 +246,11 @@ Plans:
 - `state/audit-results.json` — full audit output, all slugs
 - `state/audit-status.json` — last trigger metadata
 
-**Plans:** 1/2 plans executed
+**Plans:** 2/3 plans executed
 Plans:
 - [x] 10-01-PLAN.md — `detectCannibalization` module (Jaccard + cluster_id first pass + French stopwords) + unit tests
 - [ ] 10-02-PLAN.md — `fs.watch` ranking trigger (150 ms debounce), `GET /api/audit` + `GET /api/audit/:slug` routes, server.js wiring
+- [ ] 10-03-PLAN.md — Gap closure: flat audit-status.json schema (ROADMAP SC5) + fix audit-results.json naming typo
 
 ### Phase 11: Patch Generator + Validator + Apply
 **Goal**: Given an audit result, the system generates a valid HTML patch via Claude API, validates it passes 8 safety checks, and applies it through the existing SFTP deploy flow with a timestamped backup and one-command rollback

@@ -8,6 +8,11 @@ production-ready autonomous pipeline. Phases 1-4 build the core pipeline
 control layer (Telegram approval bot + web dashboard). Phase 8 wires everything
 into a scheduled cron service on Render and ships to production.
 
+Phases 9-12 add the SEO Page Audit & Auto-Patch milestone (v1.48.0): automated
+health scoring for every HTML page, cannibalization detection, ranking-drop
+triggers, AI-generated patches with validation and SFTP rollback, and a new
+Audit SEO tab in the existing dashboard.
+
 ## Phases
 
 - [ ] **Phase 1: Foundation & Scaffolding** — autopilot/ folder, deps, config loader, skeleton Express server
@@ -18,6 +23,10 @@ into a scheduled cron service on Render and ships to production.
 - [x] **Phase 6: Dashboard Backend** — Express API routes, GSC Search Analytics, SSE endpoint, auth middleware (completed 2026-03-30)
 - [x] **Phase 7: Dashboard Frontend** — Mac-app dark UI, Alpine.js + Tailwind, queue/rankings/link-tree/pipeline views (completed 2026-03-30)
 - [ ] **Phase 8: Cron Orchestrator + Production** — cron wiring, render.yaml, smoke test, README
+- [ ] **Phase 9: Audit Foundation** — page inventory, signal extractor, health scorer, state/page-audit.json
+- [ ] **Phase 10: Cannibalization + Ranking Trigger** — Jaccard cannibalizer, fs.watch ranking trigger, audit API routes
+- [ ] **Phase 11: Patch Generator + Validator + Apply** — Claude patch generation, 8-check validator, SFTP apply + backup + rollback
+- [ ] **Phase 12: Dashboard Audit Tab** — Audit SEO tab, health grid, chutes alerts, patch preview, approve/reject flow
 
 ## Phase Details
 
@@ -198,6 +207,93 @@ Plans:
 
 **Render scheduler note:** Schedule is UTC. `"0 7 * * *"` = 08:00 Paris in winter (CET), 09:00 in summer (CEST) — a one-hour seasonal drift is acceptable for a daily blog pipeline.
 
+### Phase 9: Audit Foundation
+**Goal**: Every HTML page on the site can be inventoried and scored for SEO health before any suggestion or patch logic runs — the system always knows what pages exist and their current signal state
+**Complexity**: M
+**Depends on**: Phase 6 (config loader, pino logger already wired)
+**Requirements**: F4.1, F4.2, F4.3
+**Success Criteria** (what must be TRUE):
+  1. Calling `buildPageInventory()` from any module returns a slug-keyed list of all HTML pages under `blog/`, root service pages, and index — with file path and last-modified date — without requiring any other module to be initialised first
+  2. `extractPageSignals(slug)` returns a structured object containing: title tag, meta description, canonical URL, H1 count, JSON-LD types found (scanning the full file, not head-only), `data-price` usage, internal link count, and image alt coverage
+  3. `scorePageHealth(signals)` produces a numeric score 0–100 and a `issues[]` array where each issue has a `code`, `severity` (critical/warning/info), and human-readable `message` in French
+  4. After a full scan, `state/page-audit.json` is written with one entry per slug containing `score`, `issues`, `lastScanned` timestamp — and the file is valid JSON that can be read back without errors
+  5. Running the scanner twice on an unchanged page produces identical scores (deterministic output)
+
+**New dependency:** `cheerio` — install via `npm install cheerio` inside `autopilot/`. No other new packages required.
+
+**Key constraint:** JSON-LD scanning must parse the full HTML file (both `<head>` and `<body>`). The production site places some schemas in `<body>` — a head-only scan will miss them and produce incorrect scores.
+
+**Plans:** 2 plans
+Plans:
+- [ ] 09-01-PLAN.md — `buildPageInventory`, `extractPageSignals`, `scorePageHealth` pure modules + unit tests
+- [ ] 09-02-PLAN.md — Full-site scanner, `state/page-audit.json` writer, pino logging, integration test
+
+### Phase 10: Cannibalization + Ranking Trigger
+**Goal**: The system automatically detects keyword-cannibalizing page pairs and triggers a fresh audit when any tracked keyword drops 5 or more positions — connecting the existing ranking history to the audit engine
+**Complexity**: M
+**Depends on**: Phase 9
+**Requirements**: F4.4, F4.5
+**Success Criteria** (what must be TRUE):
+  1. `detectCannibalization()` returns all page pairs that share two or more normalised French tokens (accent-stripped, stopwords removed), with a Jaccard similarity score ≥ 0.15, and groups pairs that share the same `cluster_id` from `content-map.yaml` ahead of cross-cluster pairs
+  2. When `state/live-rankings-history.json` is updated with a keyword that dropped ≥ 5 positions relative to its previous entry, the watcher triggers `runAudit(affectedSlugs)` within 150 ms — using `fs.watch` + debounce, the same pattern as the existing SSE watcher in Phase 6
+  3. `GET /api/audit` returns the full `state/audit-results.json` payload (all slugs, scores, issues, cannibalization pairs) behind the existing session auth middleware
+  4. `GET /api/audit/:slug` returns the single-page audit record for that slug, or 404 if the slug is not in the inventory
+  5. After a ranking-drop trigger, `state/audit-status.json` records `{ triggeredAt, triggerKeyword, positionBefore, positionAfter, slugsScanned, completedAt }` so the dashboard can display what caused the last audit run
+
+**Cannibalization algorithm:** Jaccard on accent-normalised French tokens. Accent normalisation: `NFD + strip combining chars`. Stopwords list (French): a minimal set covering articles, prepositions, and common verbs — stored in `autopilot/config/fr-stopwords.js`. `cluster_id` first-pass from `content-map.yaml` reduces false positives between unrelated clusters.
+
+**State files created in this phase:**
+- `state/audit-results.json` — full audit output, all slugs
+- `state/audit-status.json` — last trigger metadata
+
+**Plans:** 2 plans
+Plans:
+- [ ] 10-01-PLAN.md — `detectCannibalization` module (Jaccard + cluster_id first pass + French stopwords) + unit tests
+- [ ] 10-02-PLAN.md — `fs.watch` ranking trigger (150 ms debounce), `GET /api/audit` + `GET /api/audit/:slug` routes, server.js wiring
+
+### Phase 11: Patch Generator + Validator + Apply
+**Goal**: Given an audit result, the system generates a valid HTML patch via Claude API, validates it passes 8 safety checks, and applies it through the existing SFTP deploy flow with a timestamped backup and one-command rollback
+**Complexity**: L
+**Depends on**: Phase 9, Phase 10
+**Requirements**: F4.6, F4.7, F4.8
+**Success Criteria** (what must be TRUE):
+  1. `generatePatch(slug, issues)` calls the Claude API with the page HTML + issues list and returns a patched HTML string — estimated cost ≤ $0.01 per page; cost is logged to `autopilot/logs/cost.jsonl`
+  2. `validatePatch(original, patched)` runs 8 checks and returns `{ valid: boolean, failedChecks: string[] }` — the 8 checks are: valid JSON-LD, exactly one canonical tag, no Alpine.js `x-data` attribute removed, idempotent (applying patch twice produces same output), no hard-coded euro amounts, `data-price` attribute preserved where present, no rTMS mention introduced, and UTF-8 encoding preserved
+  3. Pages on the `never-auto-apply` list (configurable in `autopilot/config/audit-config.js`) are blocked before the patch reaches the approval queue — an attempt logs a warning and returns without calling the Claude API
+  4. `POST /api/audit/:slug/apply` (authenticated) validates the patch, writes a backup to `state/backups/[slug]-[timestamp].html`, calls the existing deploy-orchestrator with the patched file, then re-runs `extractPageSignals` + `scorePageHealth` and updates `state/page-audit.json` with the new score
+  5. If the SFTP deploy fails, the original file is restored from backup automatically and `state/page-audit.json` is not updated — the apply endpoint returns a 500 with `{ error, backupPath }`
+
+**Claude API usage:** Patch generation uses `claude-sonnet-4-6` (same model as article generation). Prompt includes: original HTML (full), issues array, and a strict instruction to return only valid HTML with no commentary. Response is streamed to a string buffer — not parsed as JSON.
+
+**Pre-patch validation is a reusable module** (`autopilot/audit/patch-validator.js`) — callable independently of the apply flow for testing.
+
+**Plans:** 2 plans
+Plans:
+- [ ] 11-01-PLAN.md — `generatePatch` module (Claude API + prompt builder + cost logger), `validatePatch` module (8 checks), `never-auto-apply` enforcement + unit tests
+- [ ] 11-02-PLAN.md — `POST /api/audit/:slug/apply` route, backup writer, deploy-orchestrator wiring, re-scan after apply, rollback on SFTP failure + integration tests
+
+### Phase 12: Dashboard Audit Tab
+**Goal**: The site manager can see all page health scores, get alerted on ranking drops that triggered an audit, drill into any page's issues, preview a generated patch, and approve or reject it — all from a new tab in the existing dashboard without leaving the browser
+**Complexity**: M
+**Depends on**: Phase 11
+**Requirements**: F4.9
+**Success Criteria** (what must be TRUE):
+  1. An "Audit SEO" tab appears in the existing Alpine.js sidebar between the Rankings and Link Tree tabs — clicking it shows the audit view without a page reload, and the tab is highlighted when the last audit detected any critical issues
+  2. The master health grid displays one row per page with: slug, SEO score (color-coded: ≥80 green, 60–79 amber, <60 red), issue count by severity, and last-scanned timestamp — the grid updates automatically via SSE when a new audit completes
+  3. Clicking a row expands a drill-down panel listing all issues for that page with severity badges and French-language messages, and a "Générer un patch" button that calls `POST /api/audit/:slug/patch` and shows a loading state while the Claude API runs
+  4. The "Chutes" section at the top of the audit tab lists ranking-drop events from `state/audit-status.json` — each entry shows the keyword, position before/after, and the slugs that were re-scanned as a result
+  5. When a patch exists for a slug (`pendingPatch` field in `state/page-audit.json`), the drill-down panel shows a syntax-highlighted HTML preview of the diff, and Approve / Reject buttons — Approve calls `POST /api/audit/:slug/apply`, Reject clears `pendingPatch`, both update the UI without a full reload
+
+**Design constraints:** Dark Mac-app aesthetic matching the existing dashboard — navy `#0d1117` background, `#161b22` card surfaces, `border-radius: 12px`, blue accents `#3b82f6`. No new CSS framework or library — extend existing Tailwind utility classes only. The `avgSeoScore` field already declared in the dashboard stats row is populated by this phase.
+
+**Alpine.js pattern:** Drill-down uses `selectedAuditSlug` toggle (set slug on row click, clear on close) — same pattern as the existing article queue detail panel. SSE reuse: audit tab listens on the existing `GET /api/events` stream for `{ type: 'audit-complete' }` events.
+
+**Plans:** 2 plans
+Plans:
+- [ ] 12-01-PLAN.md — Static "Audit SEO" tab structure, master health grid (Alpine.js data binding, color coding, SSE refresh), "Chutes" alert section
+- [ ] 12-02-PLAN.md — Drill-down panel (issue list + severity badges), patch preview (syntax highlight), Approve/Reject flow, `avgSeoScore` stat population
+**UI hint**: yes
+
 ## Progress
 
 | Phase | Plans Complete | Status | Completed |
@@ -210,3 +306,7 @@ Plans:
 | 6. Dashboard Backend | 2/2 | Complete   | 2026-03-30 |
 | 7. Dashboard Frontend | 2/2 | Complete   | 2026-03-30 |
 | 8. Cron Orchestrator + Production | 0/2 | Planning complete | - |
+| 9. Audit Foundation | 0/2 | Not started | - |
+| 10. Cannibalization + Ranking Trigger | 0/2 | Not started | - |
+| 11. Patch Generator + Validator + Apply | 0/2 | Not started | - |
+| 12. Dashboard Audit Tab | 0/2 | Not started | - |

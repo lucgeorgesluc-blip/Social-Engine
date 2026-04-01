@@ -1,5 +1,19 @@
 # Corinne SEO Autopilot
 
+## Current Milestone: v1.48.0 — SEO Page Audit & Auto-Patch
+
+**Goal:** L'autopilot détecte les pages faibles (schema manquant, contenu fin, cannibalisation) quand un ranking chute, génère un patch HTML ciblé, et le déploie après validation — sans jamais proposer de créer une page qui existe déjà.
+
+**Target features:**
+- Page Scanner — inventaire complet des HTML + extraction signaux SEO (schema, mots, FAQ, avis, liens)
+- Audit Engine — scoring 100pts, détection cannibalisation, pages orphelines
+- Ranking Trigger — chute ≥5 positions → audit auto + déclenchement manuel
+- Patch Generator — Claude API génère le HTML corrigé (schema, FAQ) avec liste "never auto-apply"
+- Apply Flow — validation pre-patch → Corinne approuve → commit + SFTP (réutilise deploy-orchestrator)
+- Dashboard Audit Tab — health scores, alertes chutes, drill-down par page, boutons approve/reject
+
+---
+
 ## What This Is
 
 A daily autonomous agent + web dashboard that automatically drafts, images, and deploys SEO blog articles for magnetiseuse-lacoste-corinne.fr. Built in `autopilot/` (subfolder of the existing static site repo). The system reads the existing `.seo-engine/` data files as context, calls the Claude API to generate articles, notifies the site owner (Corinne) via Telegram for approval, then deploys to production SFTP and pings Google Search Console — all without manual intervention.

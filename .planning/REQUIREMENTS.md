@@ -247,4 +247,126 @@ SITE_BASE_PATH=/path/to/site-cl   # absolute path to E:/Site CL on server
 
 ---
 
+---
+
+## F4 — SEO Page Audit & Auto-Patch *(v1.48.0)*
+
+### F4.1 Page Inventory (fix original bug)
+- `buildPageInventory()` runs as **step 0** of every audit and suggestion pipeline — before any file is read, compared, or queried
+- Scans all `.html` files under `SITE_BASE_PATH` (excludes `node_modules`, `backup`, `logs`)
+- Normalises slugs: strips `.html` extension, strips `blog/` prefix → produces canonical slug map
+- Exposes `pageExists(slug)` → `boolean` — any suggestion module MUST call this before proposing to create a page
+- Output stored in `state/page-inventory.json` (slug → file path + last modified)
+
+### F4.2 Signal Extractor
+- For each HTML file in inventory, extracts:
+  - Schema types present (all `@type` values from all JSON-LD blocks, full-file scan — not head-only)
+  - JSON-LD validity (must `JSON.parse()` without error)
+  - Word count of visible content (body text, excluding nav/header/footer/script/style), threshold ≥ 400
+  - H1 text (first occurrence)
+  - Meta description text + length
+  - Canonical URL (presence + value)
+  - FAQ item count (FAQPage schema mainEntity array length)
+  - Review/testimonial signals (presence of review-text containers or AggregateRating in schema)
+  - Internal links: in-count (pages linking to this slug) + out-count (links from this page to site pages)
+- Uses `cheerio` for DOM parsing (never regex for structural HTML)
+- Output per-page signals stored in `state/page-audit.json` (slug-keyed, includes `previousSignals` + `diff` vs last scan)
+
+### F4.3 Page Scorer
+- 100-point weighted health score per page:
+  - Schema presence (LocalBusiness or HealthAndBeautyBusiness): 25 pts
+  - Word count ≥ 400: 25 pts
+  - FAQPage schema present: 15 pts
+  - E-E-A-T signal (AggregateRating OR review container): 15 pts
+  - Internal links in ≥ 1: 10 pts
+  - Meta description 120–160 chars: 10 pts
+- Severity tiers: 🟢 ≥80 (healthy), 🟡 50–79 (warning), 🔴 <50 (critical)
+- Scores stored in `state/audit-results.json` alongside issues list
+
+### F4.4 Cannibalization Detector
+- First pass: pages sharing same `cluster_id` in `content-map.yaml` → flag as potential cannibalization pair
+- Second pass: Jaccard similarity on stop-word-cleaned, accent-normalised H1 + title tokens
+  - >0.85 = CRITICAL cannibalisation
+  - 0.60–0.85 = MEDIUM (monitor)
+- Uses French stop-word list (curated for this site's brand/geo tokens)
+- Output: list of cannibalising pairs with similarity score + recommendation
+
+### F4.5 Ranking Trigger
+- Watches `state/live-rankings-history.json` via `fs.watch` + 150ms debounce (extends existing `safeWatch` pattern)
+- Triggers audit when a tracked keyword drops ≥ 5 positions between two consecutive entries
+- Identifies the affected slug via `seo-keywords.csv` keyword → blog slug mapping
+- Stores trigger event in `state/audit-status.json` (running flag + last trigger reason)
+- Manual trigger: `POST /api/audit/run` (dashboard button + on-demand)
+
+### F4.6 Patch Generator
+- Generates HTML patch for detected issues via Claude API (claude-sonnet-4-6)
+- Auto-generatable patches (go to approval queue):
+  - Missing LocalBusiness/HealthAndBeautyBusiness schema (data sourced from `config.js` — no hard-coded values)
+  - Missing FAQPage schema (Claude generates Q&A from page content)
+  - Missing canonical tag
+- **Never-auto-apply list** (always routes to human review queue, never to approval flow):
+  - `aggregateRating` values (ratingValue, reviewCount) — risk of Google manual action
+  - Canonical URL changes (page already has a canonical)
+  - Title / H1 text changes
+  - `robots` meta tag changes
+  - Any patch touching more than one file simultaneously
+- Patch stored as `pendingPatch` field in `audit-results.json["pages"][slug]`
+
+### F4.7 Patch Validator
+- Pre-apply validation (reusable module, runs before local write AND as post-SFTP smoke test):
+  1. HTML structure parseable by cheerio without errors
+  2. All JSON-LD blocks in patched file pass `JSON.parse()`
+  3. Canonical tag count = 1 (no duplicates introduced)
+  4. No `x-data` attribute content modified (Alpine.js safety)
+  5. Patch is idempotent — re-applying produces identical result (no duplicate schema injection)
+  6. No new schema `@type` duplicates introduced
+  7. Word count did not decrease (patch does not remove content)
+  8. `data-price` pattern preserved (no hard-coded prices introduced)
+- On validation failure: reject patch, log specific failed checks, alert via dashboard (not auto-deploy)
+
+### F4.8 Apply Flow
+- `POST /api/audit/:slug/apply` → reads `pendingPatch` from `audit-results.json`
+- Runs F4.7 validator before any file write
+- Creates backup at `state/backups/[slug]-[timestamp].html` before patching
+- Applies patch via cheerio mutation → atomic write (`writeFileSync(tmp)` + `renameSync(tmp, htmlPath)`)
+- Triggers SFTP deploy via existing `deploy-orchestrator.js` (reuses exact same flow as article approval)
+- On success: clears `pendingPatch`, triggers re-scan (F4.2), updates `audit-results.json`
+- On SFTP error: restores backup, logs, alerts via dashboard — does NOT leave patched local file deployed
+
+### F4.9 Dashboard Audit Tab
+- New "Audit SEO" tab in existing sidebar (between Rankings and Link Tree)
+- Master grid view (when no page selected):
+  - Card per page: slug, health score badge (🟢🟡🔴), top issue summary, "issues count" chip
+  - "Chutes" alert section at top: pages that triggered a ranking drop event in last 7 days
+  - Sort by: score asc (worst first, default) / score desc / alphabetical
+  - "Run Audit" button → triggers `POST /api/audit/run`
+  - Running state: spinner + "Audit en cours..." replaces button while `audit-status.json` running flag is true
+- Drill-down panel (when page card clicked):
+  - Full signal breakdown: each scored dimension with ✅/⚠️/❌ + value
+  - Issues list with severity + explanation (e.g. "Schema LocalBusiness absent — présent sur magnetiseur-troyes.html")
+  - Pending patch preview (HTML diff-style view, syntax-highlighted)
+  - Approve / Reject patch buttons (same pattern as article approval)
+  - Cannibalization warning if detected (links to the competing page)
+- SSE updates: audit tab refreshes in real-time when audit run completes (extends existing `/api/events` stream)
+- Stats row `avgSeoScore` field populated from `audit-results.json` (field already exists in `index.html` line ~208)
+
+---
+
+## Traceability Matrix (v1.48.0 additions)
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| F4.1 — Page Inventory | Phase 9 | Planned |
+| F4.2 — Signal Extractor | Phase 9 | Planned |
+| F4.3 — Page Scorer | Phase 9 | Planned |
+| F4.4 — Cannibalisation Detector | Phase 10 | Planned |
+| F4.5 — Ranking Trigger | Phase 10 | Planned |
+| F4.6 — Patch Generator | Phase 11 | Planned |
+| F4.7 — Patch Validator | Phase 11 | Planned |
+| F4.8 — Apply Flow | Phase 11 | Planned |
+| F4.9 — Dashboard Audit Tab | Phase 12 | Planned |
+
+---
+
 *Generated: 2026-03-29 — Traceability added after roadmap creation*
+*Updated: 2026-04-01 — v1.48.0 SEO Audit requirements added*

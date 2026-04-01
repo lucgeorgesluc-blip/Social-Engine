@@ -289,9 +289,9 @@ Plans:
 
 **Alpine.js pattern:** Drill-down uses `selectedAuditSlug` toggle (set slug on row click, clear on close) — same pattern as the existing article queue detail panel. SSE reuse: audit tab listens on the existing `GET /api/events` stream for `{ type: 'audit-complete' }` events.
 
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 Plans:
-- [ ] 12-01-PLAN.md — Static "Audit SEO" tab structure, master health grid (Alpine.js data binding, color coding, SSE refresh), "Chutes" alert section
+- [x] 12-01-PLAN.md — Static "Audit SEO" tab structure, master health grid (Alpine.js data binding, color coding, SSE refresh), "Chutes" alert section
 - [ ] 12-02-PLAN.md — Drill-down panel (issue list + severity badges), patch preview (syntax highlight), Approve/Reject flow, `avgSeoScore` stat population
 **UI hint**: yes
 
@@ -310,4 +310,4 @@ Plans:
 | 9. Audit Foundation | 0/2 | Not started | - |
 | 10. Cannibalization + Ranking Trigger | 3/3 | Complete    | 2026-04-01 |
 | 11. Patch Generator + Validator + Apply | 2/2 | Complete   | 2026-04-01 |
-| 12. Dashboard Audit Tab | 0/2 | Not started | - |
+| 12. Dashboard Audit Tab | 1/2 | In Progress|  |

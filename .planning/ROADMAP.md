@@ -246,11 +246,11 @@ Plans:
 - `state/page-audit.json` — full audit output, all slugs (written by Phase 9 runner)
 - `state/audit-status.json` — last trigger metadata
 
-**Plans:** 2/3 plans executed
+**Plans:** 3/3 plans complete
 Plans:
 - [x] 10-01-PLAN.md — `detectCannibalization` module (Jaccard + cluster_id first pass + French stopwords) + unit tests
-- [ ] 10-02-PLAN.md — `fs.watch` ranking trigger (150 ms debounce), `GET /api/audit` + `GET /api/audit/:slug` routes, server.js wiring
-- [ ] 10-03-PLAN.md — Gap closure: flat audit-status.json schema (ROADMAP SC5) + fix audit-results.json naming typo
+- [x] 10-02-PLAN.md — `fs.watch` ranking trigger (150 ms debounce), `GET /api/audit` + `GET /api/audit/:slug` routes, server.js wiring
+- [x] 10-03-PLAN.md — Gap closure: flat audit-status.json schema (ROADMAP SC5) + fix audit-results.json naming typo
 
 ### Phase 11: Patch Generator + Validator + Apply
 **Goal**: Given an audit result, the system generates a valid HTML patch via Claude API, validates it passes 8 safety checks, and applies it through the existing SFTP deploy flow with a timestamped backup and one-command rollback
@@ -308,6 +308,6 @@ Plans:
 | 7. Dashboard Frontend | 2/2 | Complete   | 2026-03-30 |
 | 8. Cron Orchestrator + Production | 0/2 | Planning complete | - |
 | 9. Audit Foundation | 0/2 | Not started | - |
-| 10. Cannibalization + Ranking Trigger | 1/2 | In Progress|  |
+| 10. Cannibalization + Ranking Trigger | 3/3 | Complete | 2026-04-01 |
 | 11. Patch Generator + Validator + Apply | 0/2 | Not started | - |
 | 12. Dashboard Audit Tab | 0/2 | Not started | - |

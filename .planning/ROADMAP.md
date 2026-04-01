@@ -24,7 +24,7 @@ Audit SEO tab in the existing dashboard.
 - [x] **Phase 7: Dashboard Frontend** — Mac-app dark UI, Alpine.js + Tailwind, queue/rankings/link-tree/pipeline views (completed 2026-03-30)
 - [ ] **Phase 8: Cron Orchestrator + Production** — cron wiring, render.yaml, smoke test, README
 - [ ] **Phase 9: Audit Foundation** — page inventory, signal extractor, health scorer, state/page-audit.json
-- [ ] **Phase 10: Cannibalization + Ranking Trigger** — Jaccard cannibalizer, fs.watch ranking trigger, audit API routes
+- [x] **Phase 10: Cannibalization + Ranking Trigger** — Jaccard cannibalizer, fs.watch ranking trigger, audit API routes (completed 2026-04-01)
 - [ ] **Phase 11: Patch Generator + Validator + Apply** — Claude patch generation, 8-check validator, SFTP apply + backup + rollback
 - [ ] **Phase 12: Dashboard Audit Tab** — Audit SEO tab, health grid, chutes alerts, patch preview, approve/reject flow
 
@@ -308,6 +308,6 @@ Plans:
 | 7. Dashboard Frontend | 2/2 | Complete   | 2026-03-30 |
 | 8. Cron Orchestrator + Production | 0/2 | Planning complete | - |
 | 9. Audit Foundation | 0/2 | Not started | - |
-| 10. Cannibalization + Ranking Trigger | 3/3 | Complete | 2026-04-01 |
+| 10. Cannibalization + Ranking Trigger | 3/3 | Complete    | 2026-04-01 |
 | 11. Patch Generator + Validator + Apply | 0/2 | Not started | - |
 | 12. Dashboard Audit Tab | 0/2 | Not started | - |

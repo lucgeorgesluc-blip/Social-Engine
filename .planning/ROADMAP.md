@@ -225,8 +225,8 @@ Plans:
 
 **Plans:** 2 plans
 Plans:
-- [ ] 09-01-PLAN.md — `buildPageInventory`, `extractPageSignals`, `scorePageHealth` pure modules + unit tests
-- [ ] 09-02-PLAN.md — Full-site scanner, `state/page-audit.json` writer, pino logging, integration test
+- [x] 09-01-PLAN.md — `buildPageInventory`, `extractPageSignals`, `scorePageHealth` pure modules + unit tests
+- [x] 09-02-PLAN.md — Full-site scanner, `state/page-audit.json` writer, pino logging, integration test
 
 ### Phase 10: Cannibalization + Ranking Trigger
 **Goal**: The system automatically detects keyword-cannibalizing page pairs and triggers a fresh audit when any tracked keyword drops 5 or more positions — connecting the existing ranking history to the audit engine

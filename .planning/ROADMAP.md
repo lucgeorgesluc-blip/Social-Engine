@@ -246,9 +246,9 @@ Plans:
 - `state/audit-results.json` — full audit output, all slugs
 - `state/audit-status.json` — last trigger metadata
 
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 Plans:
-- [ ] 10-01-PLAN.md — `detectCannibalization` module (Jaccard + cluster_id first pass + French stopwords) + unit tests
+- [x] 10-01-PLAN.md — `detectCannibalization` module (Jaccard + cluster_id first pass + French stopwords) + unit tests
 - [ ] 10-02-PLAN.md — `fs.watch` ranking trigger (150 ms debounce), `GET /api/audit` + `GET /api/audit/:slug` routes, server.js wiring
 
 ### Phase 11: Patch Generator + Validator + Apply
@@ -307,6 +307,6 @@ Plans:
 | 7. Dashboard Frontend | 2/2 | Complete   | 2026-03-30 |
 | 8. Cron Orchestrator + Production | 0/2 | Planning complete | - |
 | 9. Audit Foundation | 0/2 | Not started | - |
-| 10. Cannibalization + Ranking Trigger | 0/2 | Not started | - |
+| 10. Cannibalization + Ranking Trigger | 1/2 | In Progress|  |
 | 11. Patch Generator + Validator + Apply | 0/2 | Not started | - |
 | 12. Dashboard Audit Tab | 0/2 | Not started | - |

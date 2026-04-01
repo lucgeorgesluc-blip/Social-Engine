@@ -28,6 +28,10 @@ Corinne approves one article per day from her phone and wakes up to a higher Goo
 
 - [x] Generates hero image via Gemini API → sharp → WebP 800×450 @q85 — *Validated in Phase 3: Image Generation*
 - [x] Graceful fallback: when Gemini API fails, article HTML strips the `<img>` tag — no broken image shown — *Validated in Phase 3: Image Generation*
+- [x] `buildPageInventory()` returns slug-keyed list of all 68 HTML pages with path + lastModified — *Validated in Phase 9: Audit Foundation*
+- [x] `extractPageSignals(slug)` parses full HTML (head+body) via cheerio, returns 19 fields including JSON-LD types, data-price, internal links, image alt coverage — *Validated in Phase 9: Audit Foundation*
+- [x] `scorePageHealth(signals)` produces deterministic 0–100 score with French-language issues array (code, severity, message) — *Validated in Phase 9: Audit Foundation*
+- [x] `runAudit()` persists `state/page-audit.json` with per-slug score/issues/lastScanned — *Validated in Phase 9: Audit Foundation*
 
 ### Active
 
@@ -137,4 +141,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-30 — Phase 3 (Image Generation) complete: generateImage() module with @google/genai + sharp, stripHeroImage() fallback, 78/78 tests passing*
+*Last updated: 2026-04-01 — Phase 9 (Audit Foundation) complete: buildPageInventory + extractPageSignals + scorePageHealth + runAudit, 68 pages inventoried, 41/41 tests passing*

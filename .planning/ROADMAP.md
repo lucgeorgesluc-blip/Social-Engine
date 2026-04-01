@@ -236,14 +236,14 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. `detectCannibalization()` returns all page pairs that share two or more normalised French tokens (accent-stripped, stopwords removed), with a Jaccard similarity score ≥ 0.15, and groups pairs that share the same `cluster_id` from `content-map.yaml` ahead of cross-cluster pairs
   2. When `state/live-rankings-history.json` is updated with a keyword that dropped ≥ 5 positions relative to its previous entry, the watcher triggers `runAudit(affectedSlugs)` within 150 ms — using `fs.watch` + debounce, the same pattern as the existing SSE watcher in Phase 6
-  3. `GET /api/audit` returns the full `state/audit-results.json` payload (all slugs, scores, issues, cannibalization pairs) behind the existing session auth middleware
+  3. `GET /api/audit` returns the full `state/page-audit.json` payload (all slugs, scores, issues, cannibalization pairs) behind the existing session auth middleware
   4. `GET /api/audit/:slug` returns the single-page audit record for that slug, or 404 if the slug is not in the inventory
   5. After a ranking-drop trigger, `state/audit-status.json` records `{ triggeredAt, triggerKeyword, positionBefore, positionAfter, slugsScanned, completedAt }` so the dashboard can display what caused the last audit run
 
 **Cannibalization algorithm:** Jaccard on accent-normalised French tokens. Accent normalisation: `NFD + strip combining chars`. Stopwords list (French): a minimal set covering articles, prepositions, and common verbs — stored in `autopilot/config/fr-stopwords.js`. `cluster_id` first-pass from `content-map.yaml` reduces false positives between unrelated clusters.
 
 **State files created in this phase:**
-- `state/audit-results.json` — full audit output, all slugs
+- `state/page-audit.json` — full audit output, all slugs (written by Phase 9 runner)
 - `state/audit-status.json` — last trigger metadata
 
 **Plans:** 2/3 plans executed

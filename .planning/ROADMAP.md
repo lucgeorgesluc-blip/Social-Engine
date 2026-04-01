@@ -26,7 +26,7 @@ Audit SEO tab in the existing dashboard.
 - [ ] **Phase 9: Audit Foundation** — page inventory, signal extractor, health scorer, state/page-audit.json
 - [x] **Phase 10: Cannibalization + Ranking Trigger** — Jaccard cannibalizer, fs.watch ranking trigger, audit API routes (completed 2026-04-01)
 - [x] **Phase 11: Patch Generator + Validator + Apply** — Claude patch generation, 8-check validator, SFTP apply + backup + rollback (completed 2026-04-01)
-- [ ] **Phase 12: Dashboard Audit Tab** — Audit SEO tab, health grid, chutes alerts, patch preview, approve/reject flow
+- [x] **Phase 12: Dashboard Audit Tab** — Audit SEO tab, health grid, chutes alerts, patch preview, approve/reject flow (completed 2026-04-01)
 
 ## Phase Details
 
@@ -289,10 +289,10 @@ Plans:
 
 **Alpine.js pattern:** Drill-down uses `selectedAuditSlug` toggle (set slug on row click, clear on close) — same pattern as the existing article queue detail panel. SSE reuse: audit tab listens on the existing `GET /api/events` stream for `{ type: 'audit-complete' }` events.
 
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 Plans:
 - [x] 12-01-PLAN.md — Static "Audit SEO" tab structure, master health grid (Alpine.js data binding, color coding, SSE refresh), "Chutes" alert section
-- [ ] 12-02-PLAN.md — Drill-down panel (issue list + severity badges), patch preview (syntax highlight), Approve/Reject flow, `avgSeoScore` stat population
+- [x] 12-02-PLAN.md — Drill-down panel (issue list + severity badges), patch preview (syntax highlight), Approve/Reject flow, `avgSeoScore` stat population
 **UI hint**: yes
 
 ## Progress
@@ -310,4 +310,4 @@ Plans:
 | 9. Audit Foundation | 0/2 | Not started | - |
 | 10. Cannibalization + Ranking Trigger | 3/3 | Complete    | 2026-04-01 |
 | 11. Patch Generator + Validator + Apply | 2/2 | Complete   | 2026-04-01 |
-| 12. Dashboard Audit Tab | 1/2 | In Progress|  |
+| 12. Dashboard Audit Tab | 2/2 | Complete   | 2026-04-01 |

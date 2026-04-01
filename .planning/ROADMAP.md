@@ -268,9 +268,9 @@ Plans:
 
 **Pre-patch validation is a reusable module** (`autopilot/audit/patch-validator.js`) — callable independently of the apply flow for testing.
 
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 Plans:
-- [ ] 11-01-PLAN.md — `generatePatch` module (Claude API + prompt builder + cost logger), `validatePatch` module (8 checks), `never-auto-apply` enforcement + unit tests
+- [x] 11-01-PLAN.md — `generatePatch` module (Claude API + prompt builder + cost logger), `validatePatch` module (8 checks), `never-auto-apply` enforcement + unit tests
 - [ ] 11-02-PLAN.md — `POST /api/audit/:slug/apply` route, backup writer, deploy-orchestrator wiring, re-scan after apply, rollback on SFTP failure + integration tests
 
 ### Phase 12: Dashboard Audit Tab
@@ -309,5 +309,5 @@ Plans:
 | 8. Cron Orchestrator + Production | 0/2 | Planning complete | - |
 | 9. Audit Foundation | 0/2 | Not started | - |
 | 10. Cannibalization + Ranking Trigger | 3/3 | Complete    | 2026-04-01 |
-| 11. Patch Generator + Validator + Apply | 0/2 | Not started | - |
+| 11. Patch Generator + Validator + Apply | 1/2 | In Progress|  |
 | 12. Dashboard Audit Tab | 0/2 | Not started | - |

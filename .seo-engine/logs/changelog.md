@@ -64,6 +64,6 @@
 **Summary:** Moteur SEO initialisé depuis scan de 42 articles blog, 6 pages service, config.js. 5 clusters topic identifiés. 4 pillar pages en attente de données SERP.
 **Triggered by:** user
 - 2026-03-30 — Pipeline: drafted "prise-de-poids-apres-arret-tabac-eviter-de-grossir-guide" (Prise de Poids Après Arrêt Tabac : Éviter de Grossir [Guide])
-- 2026-03-30 — Pipeline: drafted "barreur-de-feu-a-troyes-recuperation-apres-chimio-avec-le-ma" (Barreur de Feu à Troyes : Récupération après Chimio avec le Magnétisme)
-- 2026-03-30 — Pipeline: drafted "magnetisme-pour-les-enfants-a-troyes-que-soigner-guide-parent" (Magnétisme pour les Enfants à Troyes : Que Soigner ? [Guide Parents])
-- 2026-03-30 — Pipeline: drafted "allergies-et-eczema-le-magnetisme-peut-il-aider-troyes" (Allergies et Eczéma : Le Magnétisme Peut-il Aider ? [Troyes])
+- 2026-03-30 — Pipeline: drafted "barreur-feu-troyes-chimio-magnetisme" (Barreur de Feu à Troyes : Récupération après Chimio avec le Magnétisme)
+- 2026-03-30 — Pipeline: drafted "magnetisme-enfants-troyes-guide-parents" (Magnétisme pour les Enfants à Troyes : Que Soigner ? [Guide Parents])
+- 2026-03-30 — Pipeline: drafted "allergies-eczema-magnetisme-troyes" (Allergies et Eczéma : Le Magnétisme Peut-il Aider ? [Troyes])

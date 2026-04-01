@@ -86,3 +86,10 @@ None -- plan executed exactly as written.
 ## Known Stubs
 
 None -- all functionality is fully wired with no placeholder data.
+
+## Self-Check: PASSED
+
+- All 5 created/modified files exist
+- All 3 commits verified (e236186, dc83e19, e0aa778)
+- All 9 acceptance criteria grep checks pass
+- 14/14 unit tests + 5/5 integration tests green

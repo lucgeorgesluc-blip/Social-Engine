@@ -25,7 +25,7 @@ Audit SEO tab in the existing dashboard.
 - [ ] **Phase 8: Cron Orchestrator + Production** — cron wiring, render.yaml, smoke test, README
 - [ ] **Phase 9: Audit Foundation** — page inventory, signal extractor, health scorer, state/page-audit.json
 - [x] **Phase 10: Cannibalization + Ranking Trigger** — Jaccard cannibalizer, fs.watch ranking trigger, audit API routes (completed 2026-04-01)
-- [ ] **Phase 11: Patch Generator + Validator + Apply** — Claude patch generation, 8-check validator, SFTP apply + backup + rollback
+- [x] **Phase 11: Patch Generator + Validator + Apply** — Claude patch generation, 8-check validator, SFTP apply + backup + rollback (completed 2026-04-01)
 - [ ] **Phase 12: Dashboard Audit Tab** — Audit SEO tab, health grid, chutes alerts, patch preview, approve/reject flow
 
 ## Phase Details
@@ -268,10 +268,10 @@ Plans:
 
 **Pre-patch validation is a reusable module** (`autopilot/audit/patch-validator.js`) — callable independently of the apply flow for testing.
 
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 Plans:
 - [x] 11-01-PLAN.md — `generatePatch` module (Claude API + prompt builder + cost logger), `validatePatch` module (8 checks), `never-auto-apply` enforcement + unit tests
-- [ ] 11-02-PLAN.md — `POST /api/audit/:slug/apply` route, backup writer, deploy-orchestrator wiring, re-scan after apply, rollback on SFTP failure + integration tests
+- [x] 11-02-PLAN.md — `POST /api/audit/:slug/apply` route, backup writer, deploy-orchestrator wiring, re-scan after apply, rollback on SFTP failure + integration tests
 
 ### Phase 12: Dashboard Audit Tab
 **Goal**: The site manager can see all page health scores, get alerted on ranking drops that triggered an audit, drill into any page's issues, preview a generated patch, and approve or reject it — all from a new tab in the existing dashboard without leaving the browser
@@ -309,5 +309,5 @@ Plans:
 | 8. Cron Orchestrator + Production | 0/2 | Planning complete | - |
 | 9. Audit Foundation | 0/2 | Not started | - |
 | 10. Cannibalization + Ranking Trigger | 3/3 | Complete    | 2026-04-01 |
-| 11. Patch Generator + Validator + Apply | 1/2 | In Progress|  |
+| 11. Patch Generator + Validator + Apply | 2/2 | Complete   | 2026-04-01 |
 | 12. Dashboard Audit Tab | 0/2 | Not started | - |

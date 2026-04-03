@@ -216,7 +216,7 @@ queue:
     unique_angle: "Fil narratif tabac → cancer → chimio → barreur de feu. Corinne accompagne TOUT le parcours : arrêter de fumer EN AMONT, et soutenir la récupération chimio si cancer du tabac déjà déclaré. Unique sur le SERP."
     priority: "medium"
     priority_reason: "UPGRADE low→medium — 'barreur de feu' = 1600/mois France (DataForSEO 2026-03-30), LOW compétition. Rattaché au cluster tc_arret_tabac via lien tabac→cancer."
-    status: "drafted"
+    status: "published"
     estimated_word_count: 1900
     eeat_plan: "Témoignage patient fumeur ayant développé un cancer + technique barreur de feu expliquée + avertissement médical clair"
     serp_analyzed: true

@@ -1274,7 +1274,8 @@ blogs:
     date: "2026-03-30"
   - slug: "magnetisme-enfants-troyes-guide-parents"
     title: "Magnétisme pour les Enfants à Troyes : Que Soigner ? [Guide Parents]"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-03T21:27:59.749Z"
     target_keywords: ["magnétisme enfant Troyes", "magnétiseur enfant Aube"]
     cluster_id: ""
     date: "2026-03-30"

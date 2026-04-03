@@ -148,7 +148,7 @@ queue:
     unique_angle: "Seul article ciblant les parents — conditions pédiatriques (coliques, troubles sommeil enfant, comportement) non couvertes dans le blog actuel"
     priority: "low"
     priority_reason: "Feature non couverte — audience secondaire parents"
-    status: "drafted"
+    status: "published"
     estimated_word_count: 1800
     eeat_plan: "Témoignages parents + sécurité de la technique pour les enfants"
     serp_analyzed: true

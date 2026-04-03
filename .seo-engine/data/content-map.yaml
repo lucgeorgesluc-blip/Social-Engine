@@ -1268,7 +1268,8 @@ blogs:
     date: "2026-03-30"
   - slug: "barreur-feu-troyes-chimio-magnetisme"
     title: "Barreur de Feu à Troyes : Récupération après Chimio avec le Magnétisme"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-03T21:28:14.823Z"
     target_keywords: ["barreur de feu", "barreur de feu cancer Troyes", "magnétisme post-chimiothérapie"]
     cluster_id: ""
     date: "2026-03-30"

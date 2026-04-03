@@ -1269,6 +1269,7 @@ blogs:
   - slug: "barreur-feu-troyes-chimio-magnetisme"
     title: "Barreur de Feu à Troyes : Récupération après Chimio avec le Magnétisme"
     status: "published"
+    published_at: "2026-04-03T22:15:26.172Z"
     published_at: "2026-04-03T21:28:14.823Z"
     target_keywords: ["barreur de feu", "barreur de feu cancer Troyes", "magnétisme post-chimiothérapie"]
     cluster_id: ""
@@ -1289,7 +1290,7 @@ blogs:
     date: "2026-03-30"
   - slug: "prise-de-poids-apres-arret-tabac-eviter-de-grossir-guide"
     title: "Prise de Poids Après Arrêt Tabac : Éviter de Grossir [Guide]"
-    status: "drafted"
+    status: "published"
     target_keywords: ["prise de poids arrêt tabac éviter", "grossir arrêt tabac"]
     cluster_id: "tc_sevrage_symptomes"
     date: "2026-04-03"

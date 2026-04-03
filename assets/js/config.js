@@ -143,6 +143,12 @@ const SITE_CONFIG = {
     // ========================================
     blog: [
         {
+            slug: "prise-de-poids-apres-arret-tabac-eviter-de-grossir-guide",
+            title: "Prise de Poids Après Arrêt Tabac : Éviter de Grossir [Guide]",
+            description: "Découvrez comment préparer votre corps AVANT l'arrêt du tabac pour éviter la prise de poids. Stratégies nutritionnelles, métabolisme, témoignages Troyes.",
+            date: "2026-04-03"
+        },
+        {
             slug: "allergies-eczema-magnetisme-troyes",
             title: "Allergies et Eczéma : Le Magnétisme Peut-il Aider ? [Troyes]",
             description: "Magnétisme pour allergies, eczéma et zona à Troyes : comment ça marche, résultats patients, séances <span data-meta-price='allergies'>{{price}}</span>€. Cabinet Saint-Germain.",

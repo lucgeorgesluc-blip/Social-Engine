@@ -116,7 +116,7 @@ queue:
     unique_angle: "DIFFÉRENT de 'arret-tabac-prise-poids-solutions' — ici focus prévention AVANT l'arrêt, pas solutions après. Angle : préparer son corps avant de stopper."
     priority: "medium"
     priority_reason: "Angle complémentaire non couvert"
-    status: "planned"
+    status: "drafted"
     estimated_word_count: 1800
     eeat_plan: "Données Corinne sur patients ayant préparé l'arrêt"
     serp_analyzed: true

@@ -180,7 +180,7 @@ queue:
     unique_angle: "Seul article sur cette condition — segment de niche non couvert, peu de concurrence"
     priority: "low"
     priority_reason: "Feature disponible non documentée dans le blog"
-    status: "drafted"
+    status: "published"
     estimated_word_count: 1600
     eeat_plan: "Résultats patients + mécanisme magnétique sur peau"
     serp_analyzed: true

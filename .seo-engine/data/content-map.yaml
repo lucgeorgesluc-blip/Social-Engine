@@ -1280,7 +1280,8 @@ blogs:
     date: "2026-03-30"
   - slug: "allergies-eczema-magnetisme-troyes"
     title: "Allergies et Eczéma : Le Magnétisme Peut-il Aider ? [Troyes]"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-03T21:26:02.063Z"
     target_keywords: ["magnétisme allergies", "magnétiseur eczéma Troyes", "zona magnétisme"]
     cluster_id: ""
     date: "2026-03-30"

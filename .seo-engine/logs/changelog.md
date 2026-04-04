@@ -1,5 +1,26 @@
 # Changelog — SEO Content Engine
 
+## 2026-04-05 — Pillar tc_comparatifs_tabac + maillage bidirectionnel
+**Action:** Création du pillar article `methodes-arreter-fumer-comparatif-complet.html` pour le cluster tc_comparatifs_tabac (16 articles orphelins). Ajout de backlinks dans les 16 cluster articles pointant vers le pillar.
+**Modifications :**
+- blog/methodes-arreter-fumer-comparatif-complet.html : CRÉÉ (pillar, ~2800 mots, 9 méthodes comparées, FAQPage schema)
+- 16 cluster articles : backlink ajouté vers le pillar (section bg-accent/10 avant "Articles qui pourraient vous intéresser")
+- config.js + config.min.js : entrée blog ajoutée en tête
+- sitemap.xml : URL ajoutée (priority 0.8)
+- topic-clusters.yaml : pillar status planned → published
+- content-map.yaml : entrée pillar ajoutée avec liens bidirectionnels
+- assets/images/blog/methodes-arreter-fumer-comparatif-complet.webp : image ajoutée
+**Fix visuel :** pt-24 → pt-32 (titre derrière nav), ajout pb-4 mb-12 sur blocs méthodes (espacement entre sections)
+**Déploiement :** 17 fichiers uploadés via SFTP (pillar + 16 clusters + image)
+
+## 2026-04-05 — Pillar tc_arret_tabac optimisé (Option A)
+**Action:** Optimisation de `hypnose-pour-arret-du-tabac-guide-complet.html` comme pillar pour "hypnose pour arrêter de fumer" (2900/mois). Maillage bidirectionnel avec 5 cluster articles.
+**Modifications :**
+- Title/H1/meta/OG/schema : "Arrêt du Tabac" → "Arrêter de Fumer" (match SERP intent)
+- Canonical tag ajouté
+- 10 liens internes ajoutés vers cluster articles dans le corps
+- 5 cluster articles : backlink ajouté vers le guide
+
 ## 2026-03-30 — DataForSEO SERP data — q_006 à q_009
 **Action:** Requêtes Google Ads search volume via DataForSEO API pour tous les mots-clés des items q_006–q_009
 **Résultats clés :**
@@ -70,3 +91,4 @@
 - 2026-04-03 — Pipeline: drafted "prise-de-poids-apres-arret-tabac-eviter-de-grossir-guide" (Prise de Poids Après Arrêt Tabac : Éviter de Grossir [Guide])
 - 2026-04-04 — Pipeline: drafted "arret-tabac-sans-substituts-ni-medicaments-guide-2026" (Arrêt Tabac Sans Substituts Ni Médicaments [Guide 2026])
 - 2026-04-04 — Pipeline: drafted "magnetiseur-saint-germain-troyes-seances-cabinet" (Magnétiseur Saint-Germain (Troyes) : Séances Cabinet)
+- 2026-04-04 — Pipeline: drafted "sevrage-tabac-combien-de-temps-calendrier-30-jours" (Sevrage Tabac Combien de Temps ? Calendrier 30 Jours)

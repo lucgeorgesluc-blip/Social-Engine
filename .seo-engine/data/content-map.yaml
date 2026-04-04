@@ -1,7 +1,72 @@
 # Content Map — magnetiseuse-lacoste-corinne.fr
-last_updated: "2026-03-28"
+last_updated: "2026-04-05"
 
 blogs:
+  - slug: "methodes-arreter-fumer-comparatif-complet"
+    title: "Meilleures Méthodes pour Arrêter de Fumer : Comparatif Complet [2026]"
+    file_path: "blog/methodes-arreter-fumer-comparatif-complet.html"
+    status: "published"
+    published_date: "2026-04-05"
+    blog_type: "comparison"
+    content_type: "pillar"
+    cluster_id: "tc_comparatifs_tabac"
+    target_keywords:
+      - keyword: "meilleures méthodes arrêter fumer"
+        search_volume: 720
+        is_primary: true
+      - keyword: "comparatif méthodes arrêt tabac"
+        search_volume: 320
+        is_primary: false
+      - keyword: "arrêter de fumer quelle méthode choisir"
+        search_volume: 480
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_arret_tabac_seance"
+        context: "méthode principale avec 85% efficacité"
+      - feature_id: "feat_combo_magnetisme_hypnose"
+        context: "combo unique mental + physique"
+      - feature_id: "feat_suivi_gratuit"
+        context: "2 séances de suivi gratuites incluses"
+    competitors_mentioned: []
+    internal_links_to:
+      - "arreter-fumer-patchs-gommes-hypnose-comparatif"
+      - "cout-arret-tabac-combien-budget-prevoir"
+      - "applications-arret-tabac-avis-vs-hypnose"
+      - "acupuncture-arret-tabac-efficacite-avis"
+      - "arret-tabac-patch-meilleurs-comparatif"
+      - "substituts-nicotiniques-comparatif-efficacite"
+      - "allen-carr-arreter-fumer-livre-avis"
+      - "cigarette-electronique-arreter-fumer-efficacite"
+      - "arreter-fumer-sans-medicaments-methodes-naturelles"
+      - "arreter-fumer-sans-substituts-methodes-naturelles"
+      - "auriculotherapie-arret-tabac"
+      - "champix-zyban-arret-tabac-effets-secondaires"
+      - "gommes-nicorette-arret-tabac-efficacite"
+      - "hypnose-en-ligne-arret-tabac-youtube"
+      - "livres-hypnose-arret-tabac-classement"
+      - "spray-nicotine-arret-tabac-avis"
+    internal_links_from:
+      - "arreter-fumer-patchs-gommes-hypnose-comparatif"
+      - "cout-arret-tabac-combien-budget-prevoir"
+      - "applications-arret-tabac-avis-vs-hypnose"
+      - "acupuncture-arret-tabac-efficacite-avis"
+      - "arret-tabac-patch-meilleurs-comparatif"
+      - "substituts-nicotiniques-comparatif-efficacite"
+      - "allen-carr-arreter-fumer-livre-avis"
+      - "cigarette-electronique-arreter-fumer-efficacite"
+      - "arreter-fumer-sans-medicaments-methodes-naturelles"
+      - "arreter-fumer-sans-substituts-methodes-naturelles"
+      - "auriculotherapie-arret-tabac"
+      - "champix-zyban-arret-tabac-effets-secondaires"
+      - "gommes-nicorette-arret-tabac-efficacite"
+      - "hypnose-en-ligne-arret-tabac-youtube"
+      - "livres-hypnose-arret-tabac-classement"
+      - "spray-nicotine-arret-tabac-avis"
+    word_count: 2800
+    has_eeat_signals: true
+    needs_update_reason: ""
+    notes: "Pillar tc_comparatifs_tabac. 16 cluster articles liés bidirectionnellement. SERP DataForSEO analysé. Angle praticienne terrain."
+
   - slug: "arreter-fumer-troyes-methodes-locales-comparatif"
     title: "Arrêter de Fumer à Troyes : 5 Méthodes Locales Comparées [2026]"
     file_path: "blog/arreter-fumer-troyes-methodes-locales-comparatif.html"
@@ -1308,3 +1373,10 @@ blogs:
     target_keywords: ["magnétiseur Saint-Germain", "magnétiseur près gare Troyes", "cabinet magnétisme Troyes"]
     cluster_id: "tc_magnetiseur_troyes"
     date: "2026-04-04"
+  - slug: "sevrage-tabac-combien-de-temps-calendrier-30-jours"
+    title: "Sevrage Tabac Combien de Temps ? Calendrier 30 Jours"
+    status: "published"
+    published_at: "2026-04-04T22:54:50.651Z"
+    target_keywords: ["sevrage tabac combien de temps", "durée sevrage tabac", "arrêt tabac 30 jours"]
+    cluster_id: "tc_sevrage_symptomes"
+    date: "2026-04-05"

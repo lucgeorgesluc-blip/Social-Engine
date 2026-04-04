@@ -57,6 +57,12 @@
 
     <!-- Articles blog (priorité moyenne) -->
     <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/magnetiseur-saint-germain-troyes-seances-cabinet.html</loc>
+        <lastmod>2026-04-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/arret-tabac-sans-substituts-ni-medicaments-guide-2026.html</loc>
         <lastmod>2026-04-04</lastmod>
         <changefreq>monthly</changefreq>

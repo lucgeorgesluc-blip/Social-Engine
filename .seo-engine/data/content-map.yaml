@@ -1301,3 +1301,9 @@ blogs:
     target_keywords: ["arrêt tabac sans substituts", "arrêter fumer sans aide", "sevrage tabac naturel"]
     cluster_id: "tc_comparatifs_tabac"
     date: "2026-04-04"
+  - slug: "magnetiseur-saint-germain-troyes-seances-cabinet"
+    title: "Magnétiseur Saint-Germain (Troyes) : Séances Cabinet"
+    status: "drafted"
+    target_keywords: ["magnétiseur Saint-Germain", "magnétiseur près gare Troyes", "cabinet magnétisme Troyes"]
+    cluster_id: "tc_magnetiseur_troyes"
+    date: "2026-04-04"

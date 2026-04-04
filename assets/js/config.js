@@ -143,6 +143,12 @@ const SITE_CONFIG = {
     // ========================================
     blog: [
         {
+            slug: "magnetiseur-saint-germain-troyes-seances-cabinet",
+            title: "Magnétiseur Saint-Germain (Troyes) : Séances Cabinet",
+            description: "Magnétiseur Saint-Germain (Troyes) : Séances Cabinet",
+            date: "2026-04-04"
+        },
+        {
             slug: "arret-tabac-sans-substituts-ni-medicaments-guide-2026",
             title: "Arrêt Tabac Sans Substituts Ni Médicaments [Guide 2026]",
             description: "Guide complet pour arrêter de fumer sans substituts nicotiniques ni médicaments. Méthodes naturelles efficaces (hypnose + magnétisme à 85% réussite) comparées. Cabinet Troyes.",

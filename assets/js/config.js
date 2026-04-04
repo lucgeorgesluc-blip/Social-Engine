@@ -143,6 +143,18 @@ const SITE_CONFIG = {
     // ========================================
     blog: [
         {
+            slug: "methodes-arreter-fumer-comparatif-complet",
+            title: "Meilleures Méthodes pour Arrêter de Fumer [2026]",
+            description: "Comparatif complet : hypnose, patchs, acupuncture, Champix, e-cigarette, laser. Efficacité réelle, coûts, avis praticienne.",
+            date: "2026-04-05"
+        },
+        {
+            slug: "sevrage-tabac-combien-de-temps-calendrier-30-jours",
+            title: "Sevrage Tabac Combien de Temps ? Calendrier 30 Jours",
+            description: "Sevrage Tabac Combien de Temps ? Calendrier 30 Jours",
+            date: "2026-04-04"
+        },
+        {
             slug: "magnetiseur-saint-germain-troyes-seances-cabinet",
             title: "Magnétiseur Saint-Germain (Troyes) : Séances Cabinet",
             description: "Magnétiseur Saint-Germain (Troyes) : Séances Cabinet",

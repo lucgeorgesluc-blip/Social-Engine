@@ -1294,3 +1294,9 @@ blogs:
     target_keywords: ["prise de poids arrêt tabac éviter", "grossir arrêt tabac"]
     cluster_id: "tc_sevrage_symptomes"
     date: "2026-04-03"
+  - slug: "arret-tabac-sans-substituts-ni-medicaments-guide-2026"
+    title: "Arrêt Tabac Sans Substituts Ni Médicaments [Guide 2026]"
+    status: "drafted"
+    target_keywords: ["arrêt tabac sans substituts", "arrêter fumer sans aide", "sevrage tabac naturel"]
+    cluster_id: "tc_comparatifs_tabac"
+    date: "2026-04-04"

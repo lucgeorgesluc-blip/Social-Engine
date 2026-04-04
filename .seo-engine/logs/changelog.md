@@ -68,3 +68,4 @@
 - 2026-03-30 — Pipeline: drafted "magnetisme-enfants-troyes-guide-parents" (Magnétisme pour les Enfants à Troyes : Que Soigner ? [Guide Parents])
 - 2026-03-30 — Pipeline: drafted "allergies-eczema-magnetisme-troyes" (Allergies et Eczéma : Le Magnétisme Peut-il Aider ? [Troyes])
 - 2026-04-03 — Pipeline: drafted "prise-de-poids-apres-arret-tabac-eviter-de-grossir-guide" (Prise de Poids Après Arrêt Tabac : Éviter de Grossir [Guide])
+- 2026-04-04 — Pipeline: drafted "arret-tabac-sans-substituts-ni-medicaments-guide-2026" (Arrêt Tabac Sans Substituts Ni Médicaments [Guide 2026])

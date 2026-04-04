@@ -143,6 +143,12 @@ const SITE_CONFIG = {
     // ========================================
     blog: [
         {
+            slug: "arret-tabac-sans-substituts-ni-medicaments-guide-2026",
+            title: "Arrêt Tabac Sans Substituts Ni Médicaments [Guide 2026]",
+            description: "Guide complet pour arrêter de fumer sans substituts nicotiniques ni médicaments. Méthodes naturelles efficaces (hypnose + magnétisme à 85% réussite) comparées. Cabinet Troyes.",
+            date: "2026-04-04"
+        },
+        {
             slug: "prise-de-poids-apres-arret-tabac-eviter-de-grossir-guide",
             title: "Prise de Poids Après Arrêt Tabac : Éviter de Grossir [Guide]",
             description: "Découvrez comment préparer votre corps AVANT l'arrêt du tabac pour éviter la prise de poids. Stratégies nutritionnelles, métabolisme, témoignages Troyes.",

@@ -1262,7 +1262,8 @@ blogs:
     needs_update_reason: ""
   - slug: "prise-de-poids-apres-arret-tabac-eviter-de-grossir-guide"
     title: "Prise de Poids Après Arrêt Tabac : Éviter de Grossir [Guide]"
-    status: "planned"
+    status: "published"
+    published_at: "2026-04-03T00:00:00.000Z"
     target_keywords: ["prise de poids arrêt tabac éviter", "grossir arrêt tabac"]
     cluster_id: "tc_sevrage_symptomes"
     date: "2026-03-30"

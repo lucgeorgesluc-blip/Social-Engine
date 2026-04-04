@@ -1296,7 +1296,8 @@ blogs:
     date: "2026-04-03"
   - slug: "arret-tabac-sans-substituts-ni-medicaments-guide-2026"
     title: "Arrêt Tabac Sans Substituts Ni Médicaments [Guide 2026]"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-04T12:38:28.189Z"
     target_keywords: ["arrêt tabac sans substituts", "arrêter fumer sans aide", "sevrage tabac naturel"]
     cluster_id: "tc_comparatifs_tabac"
     date: "2026-04-04"

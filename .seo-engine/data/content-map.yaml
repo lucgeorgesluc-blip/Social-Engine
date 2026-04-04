@@ -1303,7 +1303,8 @@ blogs:
     date: "2026-04-04"
   - slug: "magnetiseur-saint-germain-troyes-seances-cabinet"
     title: "Magnétiseur Saint-Germain (Troyes) : Séances Cabinet"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-04T21:50:07.175Z"
     target_keywords: ["magnétiseur Saint-Germain", "magnétiseur près gare Troyes", "cabinet magnétisme Troyes"]
     cluster_id: "tc_magnetiseur_troyes"
     date: "2026-04-04"

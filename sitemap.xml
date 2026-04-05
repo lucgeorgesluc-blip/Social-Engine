@@ -30,6 +30,18 @@
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
+    <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/guide-complet-arret-tabac-troyes.html</loc>
+        <lastmod>2026-04-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/arret-tabac-timeline-jour-par-jour.html</loc>
+        <lastmod>2026-04-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
     <!-- Landing pages (priorité moyenne-haute) -->
     <url>
@@ -58,6 +70,24 @@
     <!-- Articles blog (priorité moyenne) -->
     <url>
         <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/sevrage-nicotine-symptomes-et-duree-calendrier.html</loc>
+        <lastmod>2026-04-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/arret-tabac-sans-rien-5-methodes-100-gratuites-2026.html</loc>
+        <lastmod>2026-04-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/hypnose-troyes-tarifs-avis-specialites-2026.html</loc>
+        <lastmod>2026-04-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/sevrage-tabagique-a-troyes-guide-complet-2026.html</loc>
         <lastmod>2026-04-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>

@@ -4,7 +4,7 @@ last_updated: "2026-04-05"
 blogs:
   - slug: "methodes-arreter-fumer-comparatif-complet"
     title: "Meilleures Méthodes pour Arrêter de Fumer : Comparatif Complet [2026]"
-    file_path: "blog/methodes-arreter-fumer-comparatif-complet.html"
+    file_path: "methodes-arreter-fumer-comparatif-complet.html"
     status: "published"
     published_date: "2026-04-05"
     blog_type: "comparison"
@@ -1386,4 +1386,22 @@ blogs:
     published_at: "2026-04-05T09:27:25.089Z"
     target_keywords: ["sevrage nicotine symptômes", "sevrage nicotinique durée", "symptômes manque nicotine"]
     cluster_id: "tc_sevrage_symptomes"
+    date: "2026-04-05"
+  - slug: "sevrage-tabagique-a-troyes-guide-complet-2026"
+    title: "Sevrage Tabagique à Troyes : Guide Complet [2026]"
+    status: "drafted"
+    target_keywords: ["sevrage tabagique Troyes", "arrêt tabac Troyes accompagnement", "sevrage nicotine Troyes"]
+    cluster_id: "tc_arret_tabac"
+    date: "2026-04-05"
+  - slug: "hypnose-troyes-tarifs-avis-specialites-2026"
+    title: "Hypnose Troyes : Tarifs, Avis, Spécialités [2026]"
+    status: "drafted"
+    target_keywords: ["hypnose Troyes", "hypnothérapeute Troyes tarifs", "hypnose Troyes avis"]
+    cluster_id: "tc_magnetiseur_troyes"
+    date: "2026-04-05"
+  - slug: "arret-tabac-sans-rien-5-methodes-100-gratuites-2026"
+    title: "Arrêt Tabac Sans Rien : 5 Méthodes 100% Gratuites [2026]"
+    status: "drafted"
+    target_keywords: ["arrêter fumer sans rien", "arrêt tabac gratuit méthodes", "arrêter fumer sans aide"]
+    cluster_id: "tc_comparatifs_tabac"
     date: "2026-04-05"

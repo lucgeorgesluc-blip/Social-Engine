@@ -149,6 +149,24 @@ const SITE_CONFIG = {
             date: "2026-04-05"
         },
         {
+            slug: "arret-tabac-sans-rien-5-methodes-100-gratuites-2026",
+            title: "Arrêt Tabac Sans Rien : 5 Méthodes 100% Gratuites [2026]",
+            description: "Arrêt Tabac Sans Rien : 5 Méthodes 100% Gratuites [2026]",
+            date: "2026-04-05"
+        },
+        {
+            slug: "hypnose-troyes-tarifs-avis-specialites-2026",
+            title: "Hypnose Troyes : Tarifs, Avis, Spécialités [2026]",
+            description: "Hypnose Troyes : Tarifs, Avis, Spécialités [2026]",
+            date: "2026-04-05"
+        },
+        {
+            slug: "sevrage-tabagique-a-troyes-guide-complet-2026",
+            title: "Sevrage Tabagique à Troyes : Guide Complet [2026]",
+            description: "Sevrage Tabagique à Troyes : Guide Complet [2026]",
+            date: "2026-04-05"
+        },
+        {
             slug: "methodes-arreter-fumer-comparatif-complet",
             title: "Meilleures Méthodes pour Arrêter de Fumer [2026]",
             description: "Comparatif complet : hypnose, patchs, acupuncture, Champix, e-cigarette, laser. Efficacité réelle, coûts, avis praticienne.",

@@ -15,6 +15,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import pino from 'pino';
 import { runAudit } from './runner.js';
+import { persistFile } from '../lib/state-persistence.js';
 
 const logger = pino({ name: 'ranking-watcher' });
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -152,6 +153,9 @@ export function startRankingWatcher(opts = {}) {
         running: false,
         completedAt: new Date().toISOString(),
       }, null, 2));
+
+      // Persist audit status to git (survives Render redeploys)
+      persistFile('audit-status.json').catch(() => {});
 
     } catch (err) {
       logger.error({ err: err?.message }, 'Ranking watcher onChange error');

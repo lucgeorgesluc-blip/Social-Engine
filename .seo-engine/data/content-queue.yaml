@@ -538,3 +538,123 @@ queue:
       - arreter-fumer-patchs-gommes-hypnose-comparatif
       - hypnose-arret-tabac-troyes
     slug: aimant-oreille-arret-tabac-arnaque-ou-efficace
+  - id: q_auto_016
+    title: 'Sevrage Tabagique à Troyes : Guide Complet [2026]'
+    blog_type: how-to
+    content_type: pillar
+    cluster_id: tc_arret_tabac
+    target_keywords:
+      - sevrage tabagique Troyes
+      - arrêt tabac Troyes accompagnement
+      - sevrage nicotine Troyes
+    target_features:
+      - feat_arret_tabac_seance
+      - feat_hypnose_ericksonienne
+      - feat_combo_magnetisme_hypnose
+    unique_angle: >-
+      Guide médical + pratique local : phases du sevrage (72h, 1 semaine, 1 mois) avec solutions Troyes à chaque étape —
+      comble le gap entre symptômes isolés et accompagnement concret
+    priority: high
+    priority_reason: >-
+      Terme médical à fort volume de recherche Google (« sevrage tabagique ») — aucun article ne traite l'accompagnement
+      phase par phase à Troyes, alors que le cluster sevrage existe mais manque de pont vers l'offre locale
+    status: planned
+    estimated_word_count: 2200
+    eeat_plan: >-
+      Citer études HAS + Tabac Info Service sur phases sevrage — témoignages patients Troyes à chaque phase — protocole
+      cabinet (1 séance + 2 suivis) — lien vers sevrage-tabac-combien-de-temps-calendrier-30-jours pour data granulaire
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: >-
+      Différent de arret-tabac-timeline-jour-par-jour (calendrier pur) et guide-complet-arret-tabac-troyes (vue
+      d'ensemble) — focus ici = accompagnement professionnel à chaque phase
+    depends_on: []
+    internal_link_targets:
+      - guide-complet-arret-tabac-troyes
+      - arret-tabac-timeline-jour-par-jour
+      - sevrage-tabac-combien-de-temps-calendrier-30-jours
+      - hypnose-arret-tabac-troyes
+      - magnetiseur-troyes-arreter-fumer
+      - irritabilite-arret-tabac-combien-temps
+      - insomnie-arret-tabac-combien-temps
+      - fatigue-arret-tabac-combien-temps
+    slug: sevrage-tabagique-a-troyes-guide-complet-2026
+  - id: q_auto_014
+    title: 'Hypnose Troyes : Tarifs, Avis, Spécialités [2026]'
+    blog_type: comparison
+    content_type: pillar
+    cluster_id: tc_magnetiseur_troyes
+    target_keywords:
+      - hypnose Troyes
+      - hypnothérapeute Troyes tarifs
+      - hypnose Troyes avis
+    target_features:
+      - feat_hypnose_ericksonienne
+      - feat_formation_gnoma
+      - feat_arret_tabac_seance
+    unique_angle: >-
+      Comparatif local objectif des praticiens hypnose Troyes (Corinne, concurrents) : tarifs, spécialités, avis Google,
+      formations — seul article du marché Troyes à comparer TOUS les hypnothérapeutes locaux
+    priority: high
+    priority_reason: >-
+      Keyword 'hypnose Troyes' = forte intention locale — aucune page ne traite cette requête générique
+      (hypnotherapeute-troyes-choisir = critères généraux, pas comparatif praticiens) — capture trafic avant choix
+      praticien
+    status: planned
+    estimated_word_count: 2400
+    eeat_plan: >-
+      Data vérifiée : avis Google de chaque praticien, tarifs sites web, formations (GNOMA pour Corinne) — tableau
+      comparatif neutre — section 'Comment j'ai construit ce comparatif' pour transparence — lien vers
+      hypnotherapeute-troyes-choisir pour critères choix
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: >-
+      Ne cannibalise PAS hypnotherapeute-troyes-choisir (critères abstraits) ni magnetiseur-troyes-corinne-vs-geoffron
+      (focus magnétisme) — ici = vue d'ensemble praticiens hypnose Troyes toutes spécialités
+    depends_on: []
+    internal_link_targets:
+      - hypnotherapeute-troyes-choisir
+      - tarifs-magnetiseur-hypnotherapeute-troyes-prix
+      - hypnose-arret-tabac-troyes
+      - hypnose-ericksonienne-vs-classique-differences
+      - hypnose-troyes-stress-naturellement
+    slug: hypnose-troyes-tarifs-avis-specialites-2026
+  - id: q_auto_015
+    title: 'Arrêt Tabac Sans Rien : 5 Méthodes 100% Gratuites [2026]'
+    blog_type: listicle
+    content_type: cluster
+    cluster_id: tc_comparatifs_tabac
+    target_keywords:
+      - arrêter fumer sans rien
+      - arrêt tabac gratuit méthodes
+      - arrêter fumer sans aide
+    target_features:
+      - feat_arret_tabac_seance
+    unique_angle: >-
+      Listicle 100% gratuit (applis gratuites, groupes soutien, techniques respiratoires, sevrage progressif, Allen
+      Carr) — puis section 'Quand investir dans un accompagnement pro' pour éviter 2-3 tentatives ratées à 0€ = perte 6
+      mois + risque santé
+    priority: medium
+    priority_reason: >-
+      Query 'arrêter fumer sans rien' = awareness top-funnel — aucun concurrent ne traite 'gratuité totale' comme USP —
+      capture audience réticente au coût puis éduc sur ROI hypnose (2000€/an cigarettes vs 80€ séance)
+    status: planned
+    estimated_word_count: 1900
+    eeat_plan: >-
+      Transparence totale : 'Voici 5 méthodes gratuites — je suis hypnothérapeute mais si votre budget est 0€, ces
+      solutions valent le coup' — data Tabac Info Service sur taux réussite seul (3-5%) vs accompagné (25-40%) — CTA
+      soft = 'Si échec après 2 tentatives, considérez accompagnement'
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: >-
+      Différent de arreter-fumer-sans-substituts (exclut patchs) et arreter-fumer-sans-medicaments (exclut pharma) — ici
+      angle = 0€ total — lien vers cout-arret-tabac-combien-budget-prevoir pour comparatif coûts
+    depends_on: []
+    internal_link_targets:
+      - methodes-arreter-fumer-comparatif-complet
+      - cout-arret-tabac-combien-budget-prevoir
+      - applications-arret-tabac-avis-vs-hypnose
+      - allen-carr-arreter-fumer-livre-avis
+      - arreter-fumer-sans-substituts-methodes-naturelles
+      - hypnose-arret-tabac-troyes
+    slug: arret-tabac-sans-rien-5-methodes-100-gratuites-2026

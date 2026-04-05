@@ -93,3 +93,6 @@
 - 2026-04-04 — Pipeline: drafted "magnetiseur-saint-germain-troyes-seances-cabinet" (Magnétiseur Saint-Germain (Troyes) : Séances Cabinet)
 - 2026-04-04 — Pipeline: drafted "sevrage-tabac-combien-de-temps-calendrier-30-jours" (Sevrage Tabac Combien de Temps ? Calendrier 30 Jours)
 - 2026-04-05 — Pipeline: drafted "sevrage-nicotine-symptomes-et-duree-calendrier" (Sevrage Nicotine : Symptômes et Durée [Calendrier])
+- 2026-04-05 — Pipeline: drafted "sevrage-tabagique-a-troyes-guide-complet-2026" (Sevrage Tabagique à Troyes : Guide Complet [2026])
+- 2026-04-05 — Pipeline: drafted "hypnose-troyes-tarifs-avis-specialites-2026" (Hypnose Troyes : Tarifs, Avis, Spécialités [2026])
+- 2026-04-05 — Pipeline: drafted "arret-tabac-sans-rien-5-methodes-100-gratuites-2026" (Arrêt Tabac Sans Rien : 5 Méthodes 100% Gratuites [2026])

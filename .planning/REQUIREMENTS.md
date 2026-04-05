@@ -103,46 +103,46 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | — | Pending |
-| INFRA-02 | — | Pending |
-| INFRA-03 | — | Pending |
-| INFRA-04 | — | Pending |
-| INFRA-05 | — | Pending |
-| INBOX-01 | — | Pending |
-| INBOX-02 | — | Pending |
-| INBOX-03 | — | Pending |
-| INBOX-04 | — | Pending |
-| POST-01 | — | Pending |
-| POST-02 | — | Pending |
-| POST-03 | — | Pending |
-| POST-04 | — | Pending |
-| POST-05 | — | Pending |
-| POST-06 | — | Pending |
-| CMT-01 | — | Pending |
-| CMT-02 | — | Pending |
-| CMT-03 | — | Pending |
-| DM-01 | — | Pending |
-| DM-02 | — | Pending |
-| DM-03 | — | Pending |
-| DM-04 | — | Pending |
-| DM-05 | — | Pending |
-| AI-01 | — | Pending |
-| AI-02 | — | Pending |
-| AI-03 | — | Pending |
-| STAT-01 | — | Pending |
-| STAT-02 | — | Pending |
-| STAT-03 | — | Pending |
-| STAT-04 | — | Pending |
-| FB-01 | — | Pending |
-| FB-02 | — | Pending |
-| FB-03 | — | Pending |
-| FB-04 | — | Pending |
+| INFRA-01 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Pending |
+| INFRA-05 | Phase 1 | Pending |
+| INBOX-01 | Phase 2 | Pending |
+| INBOX-02 | Phase 2 | Pending |
+| INBOX-03 | Phase 2 | Pending |
+| INBOX-04 | Phase 2 | Pending |
+| POST-01 | Phase 2 | Pending |
+| POST-02 | Phase 3 | Pending |
+| POST-03 | Phase 3 | Pending |
+| POST-04 | Phase 2 | Pending |
+| POST-05 | Phase 3 | Pending |
+| POST-06 | Phase 3 | Pending |
+| CMT-01 | Phase 2 | Pending |
+| CMT-02 | Phase 3 | Pending |
+| CMT-03 | Phase 3 | Pending |
+| DM-01 | Phase 2 | Pending |
+| DM-02 | Phase 3 | Pending |
+| DM-03 | Phase 3 | Pending |
+| DM-04 | Phase 2 | Pending |
+| DM-05 | Phase 2 | Pending |
+| AI-01 | Phase 4 | Pending |
+| AI-02 | Phase 4 | Pending |
+| AI-03 | Phase 4 | Pending |
+| STAT-01 | Phase 3 | Pending |
+| STAT-02 | Phase 2 | Pending |
+| STAT-03 | Phase 2 | Pending |
+| STAT-04 | Phase 3 | Pending |
+| FB-01 | Phase 5 | Pending |
+| FB-02 | Phase 5 | Pending |
+| FB-03 | Phase 5 | Pending |
+| FB-04 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 34 total
-- Mapped to phases: 0
-- Unmapped: 34
+- Mapped to phases: 34
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-05*
-*Last updated: 2026-04-05 after initial definition*
+*Last updated: 2026-04-05 after roadmap creation*

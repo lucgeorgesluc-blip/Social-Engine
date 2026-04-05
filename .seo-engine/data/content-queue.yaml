@@ -1,4 +1,4 @@
-last_updated: '2026-04-04'
+last_updated: '2026-04-05'
 queue:
   - id: q_001
     title: 'Magnétiseur Troyes : Guide Complet Magnétisme & Soins [2026]'
@@ -433,3 +433,108 @@ queue:
       - arret-tabac-deprime-combien-temps
       - hypnose-arret-tabac-troyes
     slug: sevrage-tabac-combien-de-temps-calendrier-30-jours
+  - id: q_auto_013
+    title: 'Sevrage Nicotine : Symptômes et Durée [Calendrier]'
+    blog_type: how-to
+    content_type: cluster
+    cluster_id: tc_sevrage_symptomes
+    target_keywords:
+      - sevrage nicotine symptômes
+      - sevrage nicotinique durée
+      - symptômes manque nicotine
+    target_features:
+      - feat_arret_tabac_seance
+    unique_angle: Calendrier heure par heure (0-72h) puis jour par jour (J4-J30) avec protocole hypnose pour chaque phase critique
+    priority: high
+    priority_reason: >-
+      Cluster tc_sevrage_symptomes sous-exploité (7 articles vs 14+ pour tc_arret_tabac). Intent awareness → conversion
+      via CTA vers séances. KW 'sevrage' non mappé.
+    status: planned
+    estimated_word_count: 2200
+    eeat_plan: >-
+      Tableau comparatif symptômes physiques vs psychologiques + témoignages Paul (déjà publié) + timeline scientifique
+      + protocole Corinne par phase
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: >-
+      Lien interne fort vers arret-tabac-timeline-jour-par-jour (pillar) + irritabilite/insomnie/fatigue (cluster
+      siblings). CTA post J3 et J10.
+    depends_on: []
+    internal_link_targets:
+      - arret-tabac-timeline-jour-par-jour
+      - irritabilite-arret-tabac-combien-temps
+      - insomnie-arret-tabac-combien-temps
+      - hypnose-arret-tabac-troyes
+    slug: sevrage-nicotine-symptomes-et-duree-calendrier
+  - id: q_auto_014
+    title: Arrêter Fumer Seul ou Accompagné ? [Statistiques]
+    blog_type: comparison
+    content_type: cluster
+    cluster_id: tc_comparatifs_tabac
+    target_keywords:
+      - arrêter fumer seul
+      - arrêt tabac seul ou accompagné
+      - taux réussite arrêt tabac volonté
+    target_features:
+      - feat_arret_tabac_seance
+      - feat_combo_magnetisme_hypnose
+    unique_angle: >-
+      Données chiffrées OMS/Santé Publique France (3-5% succès seul vs 50-70% accompagné) + tableau coût/efficacité 5
+      méthodes incluant magnétisme
+    priority: high
+    priority_reason: >-
+      Intent commercial fort ('ou accompagné' = recherche solution). Aucun article ne traite l'angle 'seul vs
+      accompagné' — gap majeur dans tc_comparatifs_tabac (16 articles mais pas cet angle).
+    status: planned
+    estimated_word_count: 1900
+    eeat_plan: >-
+      Statistiques officielles + graphique taux de réussite + témoignage Paul (échecs antérieurs seul) + tableau ROI 12
+      mois (volonté gratuite vs hypnose 290€)
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: >-
+      Lien pillar methodes-arreter-fumer-comparatif-complet + cout-arret-tabac-combien-budget-prevoir +
+      arreter-fumer-sans-medicaments-methodes-naturelles. CTA après statistiques échec.
+    depends_on: []
+    internal_link_targets:
+      - methodes-arreter-fumer-comparatif-complet
+      - cout-arret-tabac-combien-budget-prevoir
+      - hypnose-arret-tabac-troyes
+      - magnetiseur-troyes-arreter-fumer
+    slug: arreter-fumer-seul-ou-accompagne-statistiques
+  - id: q_auto_015
+    title: 'Aimant Oreille Arrêt Tabac : Arnaque ou Efficace ?'
+    blog_type: comparison
+    content_type: cluster
+    cluster_id: tc_comparatifs_tabac
+    target_keywords:
+      - aimant oreille arrêt tabac
+      - aimant auriculaire tabac avis
+      - zero smoke avis
+    target_features:
+      - feat_arret_tabac_seance
+    unique_angle: >-
+      Analyse scientifique aimants auriculaires (placebo 15-20% vs auriculothérapie médicale 35% vs hypnose 50-70%) +
+      décryptage publicités trompeuses Amazon/Cdiscount
+    priority: medium
+    priority_reason: >-
+      KW commercial 'aimant oreille' recherché sur marketplaces. Permet différencier auriculothérapie (article existant
+      auriculotherapie-arret-tabac) des gadgets. Opportunité debunk + redirect vers vraies solutions.
+    status: planned
+    estimated_word_count: 1800
+    eeat_plan: >-
+      Études placebo aimants + captures écran pubs Amazon + tableau comparatif aimant/auriculothérapie/hypnose (prix,
+      durée, efficacité) + avis ANSM si disponible
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: >-
+      Différenciation claire avec auriculotherapie-arret-tabac (méthode médicale) via section 'Différence aimant vs
+      auriculothérapie vraie'. Lien vers methodes-arreter-fumer-comparatif-complet +
+      cout-arret-tabac-combien-budget-prevoir.
+    depends_on: []
+    internal_link_targets:
+      - auriculotherapie-arret-tabac
+      - methodes-arreter-fumer-comparatif-complet
+      - arreter-fumer-patchs-gommes-hypnose-comparatif
+      - hypnose-arret-tabac-troyes
+    slug: aimant-oreille-arret-tabac-arnaque-ou-efficace

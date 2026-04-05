@@ -57,6 +57,12 @@
 
     <!-- Articles blog (priorité moyenne) -->
     <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/sevrage-nicotine-symptomes-et-duree-calendrier.html</loc>
+        <lastmod>2026-04-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/methodes-arreter-fumer-comparatif-complet.html</loc>
         <lastmod>2026-04-05</lastmod>
         <changefreq>monthly</changefreq>

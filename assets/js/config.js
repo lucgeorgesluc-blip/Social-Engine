@@ -143,6 +143,12 @@ const SITE_CONFIG = {
     // ========================================
     blog: [
         {
+            slug: "sevrage-nicotine-symptomes-et-duree-calendrier",
+            title: "Sevrage Nicotine : Symptômes et Durée [Calendrier]",
+            description: "Sevrage Nicotine : Symptômes et Durée [Calendrier]",
+            date: "2026-04-05"
+        },
+        {
             slug: "methodes-arreter-fumer-comparatif-complet",
             title: "Meilleures Méthodes pour Arrêter de Fumer [2026]",
             description: "Comparatif complet : hypnose, patchs, acupuncture, Champix, e-cigarette, laser. Efficacité réelle, coûts, avis praticienne.",

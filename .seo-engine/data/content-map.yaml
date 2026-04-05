@@ -1380,3 +1380,9 @@ blogs:
     target_keywords: ["sevrage tabac combien de temps", "durée sevrage tabac", "arrêt tabac 30 jours"]
     cluster_id: "tc_sevrage_symptomes"
     date: "2026-04-05"
+  - slug: "sevrage-nicotine-symptomes-et-duree-calendrier"
+    title: "Sevrage Nicotine : Symptômes et Durée [Calendrier]"
+    status: "drafted"
+    target_keywords: ["sevrage nicotine symptômes", "sevrage nicotinique durée", "symptômes manque nicotine"]
+    cluster_id: "tc_sevrage_symptomes"
+    date: "2026-04-05"

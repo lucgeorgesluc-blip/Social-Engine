@@ -92,3 +92,4 @@
 - 2026-04-04 — Pipeline: drafted "arret-tabac-sans-substituts-ni-medicaments-guide-2026" (Arrêt Tabac Sans Substituts Ni Médicaments [Guide 2026])
 - 2026-04-04 — Pipeline: drafted "magnetiseur-saint-germain-troyes-seances-cabinet" (Magnétiseur Saint-Germain (Troyes) : Séances Cabinet)
 - 2026-04-04 — Pipeline: drafted "sevrage-tabac-combien-de-temps-calendrier-30-jours" (Sevrage Tabac Combien de Temps ? Calendrier 30 Jours)
+- 2026-04-05 — Pipeline: drafted "sevrage-nicotine-symptomes-et-duree-calendrier" (Sevrage Nicotine : Symptômes et Durée [Calendrier])

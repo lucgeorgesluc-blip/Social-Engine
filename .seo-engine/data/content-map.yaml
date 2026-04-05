@@ -1403,7 +1403,8 @@ blogs:
     date: "2026-04-05"
   - slug: "arret-tabac-sans-rien-5-methodes-100-gratuites-2026"
     title: "Arrêt Tabac Sans Rien : 5 Méthodes 100% Gratuites [2026]"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-05T10:19:29.096Z"
     target_keywords: ["arrêter fumer sans rien", "arrêt tabac gratuit méthodes", "arrêter fumer sans aide"]
     cluster_id: "tc_comparatifs_tabac"
     date: "2026-04-05"

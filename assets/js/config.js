@@ -143,6 +143,12 @@ const SITE_CONFIG = {
     // ========================================
     blog: [
         {
+            slug: "arreter-fumer-seul-ou-accompagne-statistiques",
+            title: "Arrêter Fumer Seul ou Accompagné ? [Statistiques]",
+            description: "Arrêter Fumer Seul ou Accompagné ? [Statistiques]",
+            date: "2026-04-05"
+        },
+        {
             slug: "sevrage-nicotine-symptomes-et-duree-calendrier",
             title: "Sevrage Nicotine : Symptômes et Durée [Calendrier]",
             description: "Sevrage Nicotine : Symptômes et Durée [Calendrier]",

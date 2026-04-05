@@ -96,3 +96,4 @@
 - 2026-04-05 — Pipeline: drafted "sevrage-tabagique-a-troyes-guide-complet-2026" (Sevrage Tabagique à Troyes : Guide Complet [2026])
 - 2026-04-05 — Pipeline: drafted "hypnose-troyes-tarifs-avis-specialites-2026" (Hypnose Troyes : Tarifs, Avis, Spécialités [2026])
 - 2026-04-05 — Pipeline: drafted "arret-tabac-sans-rien-5-methodes-100-gratuites-2026" (Arrêt Tabac Sans Rien : 5 Méthodes 100% Gratuites [2026])
+- 2026-04-05 — Pipeline: drafted "arreter-fumer-seul-ou-accompagne-statistiques" (Arrêter Fumer Seul ou Accompagné ? [Statistiques])

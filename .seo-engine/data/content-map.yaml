@@ -1408,3 +1408,11 @@ blogs:
     target_keywords: ["arrêter fumer sans rien", "arrêt tabac gratuit méthodes", "arrêter fumer sans aide"]
     cluster_id: "tc_comparatifs_tabac"
     date: "2026-04-05"
+  - slug: "arreter-fumer-seul-ou-accompagne-statistiques"
+    title: "Arrêter Fumer Seul ou Accompagné ? [Statistiques]"
+    status: "drafted"
+    target_keywords: ["arrêter fumer seul", "arrêt tabac seul ou accompagné", "taux réussite arrêt tabac volonté"]
+    cluster_id: "tc_comparatifs_tabac"
+    date: "2026-04-05"
+    word_count: 2297
+    internal_links_to: ["arreter-fumer-seul-ou-accompagne-statistiques", "index", "a-propos", "hypnose-troyes", "magnetiseur-troyes", "faq", "magnetiseur-troyes-arreter-fumer", "cout-arret-tabac-combien-budget-prevoir", "arret-tabac-troyes", "mentions-legales", "politique-confidentialite", "cgv"]

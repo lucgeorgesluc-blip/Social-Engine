@@ -1410,7 +1410,8 @@ blogs:
     date: "2026-04-05"
   - slug: "arreter-fumer-seul-ou-accompagne-statistiques"
     title: "Arrêter Fumer Seul ou Accompagné ? [Statistiques]"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-05T11:15:31.198Z"
     target_keywords: ["arrêter fumer seul", "arrêt tabac seul ou accompagné", "taux réussite arrêt tabac volonté"]
     cluster_id: "tc_comparatifs_tabac"
     date: "2026-04-05"

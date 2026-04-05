@@ -1396,7 +1396,8 @@ blogs:
     date: "2026-04-05"
   - slug: "hypnose-troyes-tarifs-avis-specialites-2026"
     title: "Hypnose Troyes : Tarifs, Avis, Spécialités [2026]"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-05T10:19:25.362Z"
     target_keywords: ["hypnose Troyes", "hypnothérapeute Troyes tarifs", "hypnose Troyes avis"]
     cluster_id: "tc_magnetiseur_troyes"
     date: "2026-04-05"

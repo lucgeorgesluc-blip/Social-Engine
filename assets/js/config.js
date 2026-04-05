@@ -119,8 +119,8 @@ const SITE_CONFIG = {
     links: {
         calendly: "https://calendly.com/corinnelacoste/appel",
         calendlyWidget: "https://calendly.com/corinnelacoste/appel?hide_gdpr_banner=1&primary_color=DC512C",
-        googleMaps: "https://www.google.com/maps/search/?api=1&query=Corinne+Lacoste+7+rue+du+Printemps+Saint-Germain+10120",
-        googleReviews: "https://www.google.com/maps/search/?api=1&query=Corinne+Lacoste+7+rue+du+Printemps+Saint-Germain+10120"
+        googleMaps: "https://g.page/r/Cey6GOblJRfHEAE/review",
+        googleReviews: "https://g.page/r/Cey6GOblJRfHEAE/review"
     },
 
     // ========================================

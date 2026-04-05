@@ -125,7 +125,7 @@ Par ordre de priorite :
 #### C2. Google Reviews (Score +3 pts) — Continu
 - Objectif : 35 → 50+ avis en 3 mois
 - Methode : SMS post-seance avec lien direct
-- Lien : `https://search.google.com/local/writereview?placeid=ChIJeVdQE_mZ7kcE7rpheOUlF8c`
+- Lien : `https://g.page/r/Cey6GOblJRfHEAE/review`
 - Bouton "Laisser un avis" sur index.html et soins.html
 
 #### C3. Google Business Profile

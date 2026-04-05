@@ -19,7 +19,7 @@ Chaque article DOIT inclure AU MOINS UN de ces éléments :
 - Témoignage nommé d'un patient (Paul, Marie L., Thomas B., Sophie D., etc.)
 - Métrique chiffrée (85% taux réussite, 35 avis 4.9★, 15+ ans d'expérience)
 - Expérience personnelle de Corinne (formation Pascal Bescos, observation en cabinet)
-- Lien avis Google : https://search.google.com/local/writereview?placeid=ChIJeVdQE_mZ7kcE7rpheOUlF8c
+- Lien avis Google : https://g.page/r/Cey6GOblJRfHEAE/review
 
 Si config.trust_signals ne contient pas encore de témoignage pertinent → **demander au client avant de publier**.
 

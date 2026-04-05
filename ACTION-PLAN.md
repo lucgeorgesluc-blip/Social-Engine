@@ -279,7 +279,7 @@ Also add to the LocalBusiness schema in `config.js`:
 
 Add a direct review-writing link using the place ID from the Maps embed:
 ```html
-<a href="https://search.google.com/local/writereview?placeid=ChIJeVdQE_mZ7kcE7rpheOUlF8c"
+<a href="https://g.page/r/Cey6GOblJRfHEAE/review"
    target="_blank"
    rel="noopener">
   Laisser un avis Google

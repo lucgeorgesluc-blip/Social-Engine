@@ -1,0 +1,42 @@
+# Social Acquisition Engine — magnetiseuse-lacoste-corinne.fr
+# Source of truth for social media marketing
+
+brand:
+  name: "Corinne Lacoste"
+  title: "Magnetiseuse & Hypnotherapeute"
+  location: "Saint-Germain pres de Troyes (10120)"
+  calendly: "https://calendly.com/corinnelacoste/appel"
+  landing_page: "https://www.magnetiseuse-lacoste-corinne.fr/arret-tabac-troyes.html"
+  google_reviews: "https://g.page/r/Cey6GOblJRfHEAE/review"
+
+platforms:
+  facebook:
+    active: true
+    page_name: "Corinne Lacoste - Magnetiseuse Hypnotherapeute"
+    post_frequency: "3/week"
+    best_hours: ["07:00-09:00", "18:00-20:00"]
+    max_chars: 1500
+  linkedin:
+    active: true
+    profile_url: ""  # TODO: add LinkedIn URL
+    post_frequency: "1-2/week"
+    best_hours: ["08:00-09:00", "12:00-13:00"]
+    max_chars: 1000
+    hashtags: ["#ArretTabac", "#HypnoseTroyes", "#Magnetisme", "#BienEtre", "#SanteNaturelle"]
+
+trust_signals:
+  taux_reussite: "85%"
+  avis_google: "4.9 etoiles (35+ avis)"
+  experience: "15+ ans"
+  formation: "Pascal Bescos"
+  renforcement: "seance offerte sous 3 mois"
+
+dm_sequence:
+  message_1_delay: "0h"   # immediat apres INFO
+  message_2_delay: "48h"  # J+2
+  message_3_delay: "168h" # J+7
+  max_messages: 3
+
+tracking:
+  data_dir: ".social-engine/data"
+  logs_dir: ".social-engine/logs"

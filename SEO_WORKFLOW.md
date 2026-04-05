@@ -131,7 +131,7 @@ Dans `magnetiseur-troyes.html` et `hypnose-troyes.html` :
 ### Action 3 · Lien direct pour les avis Google
 Ajouter sur la page d'accueil et la page soins un bouton :
 ```html
-<a href="https://search.google.com/local/writereview?placeid=ChIJeVdQE_mZ7kcE7rpheOUlF8c"
+<a href="https://g.page/r/Cey6GOblJRfHEAE/review"
    target="_blank" rel="noopener">
   ⭐ Laisser un avis Google
 </a>
@@ -173,7 +173,7 @@ Applique intégralement INSTRUCTIONS_NOUVEAUX_ARTICLES_BLOG.md :
 **Méthode :** Après chaque séance réussie, envoyer un SMS ou message :
 > "Bonjour [Prénom], je suis ravie que notre séance vous ait aidé. Si vous souhaitez partager votre expérience, voici le lien pour laisser un avis Google (ça m'aide beaucoup) : [lien court]"
 
-**Lien avis Google :** https://search.google.com/local/writereview?placeid=ChIJeVdQE_mZ7kcE7rpheOUlF8c
+**Lien avis Google :** https://g.page/r/Cey6GOblJRfHEAE/review
 
 ---
 

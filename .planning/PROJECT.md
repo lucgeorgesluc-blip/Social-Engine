@@ -1,138 +1,86 @@
-# Corinne SEO Autopilot
-
-## Current Milestone: v1.48.0 — SEO Page Audit & Auto-Patch
-
-**Goal:** L'autopilot détecte les pages faibles (schema manquant, contenu fin, cannibalisation) quand un ranking chute, génère un patch HTML ciblé, et le déploie après validation — sans jamais proposer de créer une page qui existe déjà.
-
-**Target features:**
-- Page Scanner — inventaire complet des HTML + extraction signaux SEO (schema, mots, FAQ, avis, liens)
-- Audit Engine — scoring 100pts, détection cannibalisation, pages orphelines
-- Ranking Trigger — chute ≥5 positions → audit auto + déclenchement manuel
-- Patch Generator — Claude API génère le HTML corrigé (schema, FAQ) avec liste "never auto-apply"
-- Apply Flow — validation pre-patch → Corinne approuve → commit + SFTP (réutilise deploy-orchestrator)
-- Dashboard Audit Tab — health scores, alertes chutes, drill-down par page, boutons approve/reject
-
----
+# Social Acquisition Dashboard
 
 ## What This Is
 
-A daily autonomous agent + web dashboard that automatically drafts, images, and deploys SEO blog articles for magnetiseuse-lacoste-corinne.fr. Built in `autopilot/` (subfolder of the existing static site repo). The system reads the existing `.seo-engine/` data files as context, calls the Claude API to generate articles, notifies the site owner (Corinne) via Telegram for approval, then deploys to production SFTP and pings Google Search Console — all without manual intervention.
+A web dashboard hosted on Render that gives a single operator (Benjamin) full visibility and control over Corinne Lacoste's social media acquisition engine. It reads/writes to a PostgreSQL database (seeded from existing `.social-engine/` YAML files), connects to Facebook API for auto-posting and metrics, and uses Claude API for AI-powered post generation. The goal: convert Facebook engagement into booked appointments for a magnetiseuse near Troyes.
 
 ## Core Value
 
-Corinne approves one article per day from her phone and wakes up to a higher Google ranking — zero manual writing, deploying, or config editing required.
+See what needs attention right now (posts to publish, comments to answer, prospects to DM) and act on it in one click — so no lead falls through the cracks.
 
 ## Requirements
 
 ### Validated
 
-- [x] Generates hero image via Gemini API → sharp → WebP 800×450 @q85 — *Validated in Phase 3: Image Generation*
-- [x] Graceful fallback: when Gemini API fails, article HTML strips the `<img>` tag — no broken image shown — *Validated in Phase 3: Image Generation*
-- [x] `buildPageInventory()` returns slug-keyed list of all 68 HTML pages with path + lastModified — *Validated in Phase 9: Audit Foundation*
-- [x] `extractPageSignals(slug)` parses full HTML (head+body) via cheerio, returns 19 fields including JSON-LD types, data-price, internal links, image alt coverage — *Validated in Phase 9: Audit Foundation*
-- [x] `scorePageHealth(signals)` produces deterministic 0–100 score with French-language issues array (code, severity, message) — *Validated in Phase 9: Audit Foundation*
-- [x] `runAudit()` persists `state/page-audit.json` with per-slug score/issues/lastScanned — *Validated in Phase 9: Audit Foundation*
+- YAML-based social engine exists with: posts registry, post drafts, content calendar, comments tracker, DM pipeline, objections tracker, weekly metrics template
+- Brand config, trust signals, DM sequence rules already defined in `.social-engine/config.yaml`
+- 10 draft posts ready, 1 published post with real comment/prospect data
 
 ### Active
 
-**Pipeline (daily cron)**
-- [ ] Daily cron (09:00) reads `.seo-engine/` context files and picks next article from content queue
-- [ ] Calls Claude API (claude-sonnet-4-6) with full SEO engine context to draft article HTML
-- [ ] Cannibalization check before drafting (scans content-map.yaml)
-- [ ] Internal links injected automatically (max relevant, from existing published pages)
-- [ ] FAQPage + Article JSON-LD schema generated per article
-- [ ] Generates hero image via Gemini API → ImageMagick → WebP 800×450 @q85
-- [ ] Updates `config.js`, `config.min.js` (via terser), `sitemap.xml` atomically
-- [ ] Sends Telegram notification with article preview link + ✅ Approve / ✏️ Edit buttons
-- [ ] On approval: SFTP deploy → Google Search Console URL Inspection API ping
-- [ ] Updates `.seo-engine/data/` files: content-map, queue, changelog after deploy
-
-**Dashboard (web UI)**
-- [ ] Article queue view: status per article (Drafted / Pending Approval / Published / Queued)
-- [ ] Inline approve + edit buttons per article (mirrors Telegram)
-- [ ] Keyword rankings panel: per-keyword position over time (via GSC API), article publish date markers on timeline
-- [ ] Internal link mind map: hierarchy/arbre généalogique view, clickable nodes, orphan pages highlighted red
-- [ ] Today's pipeline workflow: visual step-by-step showing current automation stage
-- [ ] Activity feed: timestamped pipeline events (not raw logs — human-readable sentences)
-- [ ] Stats row: articles published / pending / SEO score / keywords in top 10
-- [ ] Mac-app dark aesthetic (Image #1 reference): navy bg, rounded cards, blue accents, sidebar nav
-
-**Security & Ops**
-- [ ] All secrets (SFTP password, API keys, Telegram token) in `.env` — never in code
-- [ ] Render environment variable support for cloud deploy
-- [ ] Per-day article cap (max 1) hardcoded — prevents runaway API spend
-- [ ] Spending safeguard: skip image generation if Claude API cost estimate exceeds threshold
-- [ ] Dashboard password-protected (simple auth)
+- [ ] Dashboard homepage with today's priorities: next post to publish, pending comments, DM follow-ups due
+- [ ] Post management: calendar view, create/edit/schedule posts, copy-to-clipboard for manual posting
+- [ ] AI post generation: click to generate a draft using Claude API, edit inline, save to schedule
+- [ ] Comment tracking: list unresponded comments, classify (info/objection/positive), mark as handled
+- [ ] DM pipeline: prospect cards with stage tracking (new -> msg1 -> msg2 -> msg3 -> booked -> converted/lost)
+- [ ] Performance dashboard: weekly metrics, engagement rate, conversion funnel (reach -> comments -> DM -> Calendly -> patient)
+- [ ] Objection tracker: frequency-based objection detection, auto-suggest post topics when threshold hit
+- [ ] Facebook API integration: auto-post scheduled content, pull real metrics/comments from Facebook
+- [ ] Content calendar: visual weekly/monthly view with drag-and-drop scheduling
+- [ ] Simple password authentication (single user)
+- [ ] YAML import: seed database from existing `.social-engine/data/*.yaml` files on first run
+- [ ] Responsive design (usable on mobile for quick checks)
 
 ### Out of Scope
 
-- Full CMS / article editor in dashboard — editing happens in Claude Code or direct file edit
-- Multi-site support — built for magnetiseuse-lacoste-corinne.fr only (v1)
-- Automatic publishing without human approval — approval gate is non-negotiable
-- rTMS mentions anywhere in generated content — per existing SEO engine rules
-- Hard-coded prices in articles — always `data-price="tabac"` pattern
+- Multi-user / role-based access — single operator only
+- LinkedIn integration — Facebook first, LinkedIn later
+- Automated DM sending — DMs are manual (Facebook policy), dashboard only tracks them
+- Direct Calendly integration — just track if prospect booked, no API connection
+- Real-time notifications / push alerts — check dashboard when needed
+- Public-facing features — this is an internal tool only
 
 ## Context
 
-**Existing infrastructure (reads, does not modify structure):**
-- `E:/Site CL/.seo-engine/` — SEO brain: config.yaml, features.yaml, content-queue.yaml, seo-keywords.csv, content-map.yaml, topic-clusters.yaml, tone-guide.md, blog-structures.yaml
-- `E:/Site CL/CLAUDE.md` — full workflow rules, article checklist
-- `E:/Site CL/INSTRUCTIONS_NOUVEAUX_ARTICLES_BLOG.md` — article creation checklist
-- `E:/Site CL/assets/js/config.js` — source of truth for prices, contact, schema
-
-**Deployment target:**
-- SFTP: `home755449657.1and1-data.host` port 22, user `u95030755`
-- Static HTML site, no build step — files deploy directly
-
-**APIs available:**
-- Claude API (Anthropic) — article drafting
-- Gemini API (`gemini-2.5-flash-image`) — hero image generation, key: in `.env`
-- DataForSEO MCP — keyword/SERP data (login: `yijop25811@fun4k.com`)
-- Google Search Console API — rankings + URL inspection
-- Telegram Bot API — approval notifications
-
-**Design reference:**
-- UI: dark Mac-app aesthetic (Image #1: `banana_20260329_114555_292068.png`)
-- Key screens: Queue view, Rankings with timeline markers, Internal link tree, Today's pipeline workflow, Telegram toast
-- Tech: Node.js + Express backend, vanilla JS or lightweight frontend framework, Tailwind CSS
-
-**Article rules (enforced by pipeline):**
-- No hard-coded prices — `<span data-price="tabac"></span>` pattern
-- No rTMS mentions
-- Add to HEAD of `SITE_CONFIG.blog` in config.js
-- Regenerate config.min.js after every article
-- Add URL to sitemap.xml
+- **Existing data:** `.social-engine/` contains 7 YAML files with posts, drafts, calendar, comments, DM pipeline, objections, and metrics template. This is the seed data.
+- **Niche:** Tobacco cessation via magnetism/hypnosis near Troyes. Posts target smokers, use objection-busting and social proof strategies.
+- **Conversion funnel:** Post -> "INFO" comment -> DM sequence (3 messages max) -> Calendly booking -> Patient
+- **Key KPIs:** Engagement rate >5%, INFO comments >2/post, INFO->DM >80%, DM->Calendly >30%, Calendly->Patient >70%
+- **Posting cadence:** 3/week on Facebook, best hours 07:00-09:00 and 18:00-20:00
+- **Trust signals:** 85% success rate, 4.9 stars (35+ reviews), 15+ years experience, Pascal Bescos training
 
 ## Constraints
 
-- **Security**: Secrets in `.env` only — never committed to git. Render env vars for cloud.
-- **Spend cap**: Max 1 article/day. Estimated ~€0.20–0.50/article (Claude Sonnet).
-- **Approval gate**: Deploy ONLY after Telegram ✅ or dashboard approval — never auto-publish.
-- **Stack**: Node.js (existing `package.json` in repo). No Python runtime dependency for core pipeline.
-- **Hosting**: Render (free tier cron jobs work; dashboard on $7/mo paid tier if always-on needed).
-- **Image tool**: Gemini `gemini-2.5-flash-image` via Python script fallback (nanobanana MCP when available).
+- **Hosting:** Render single web service (free or starter tier)
+- **Database:** Render free PostgreSQL
+- **Auth:** Simple shared password (no OAuth, no user management)
+- **AI:** Claude API (Anthropic) for post generation
+- **Facebook API:** Meta Graph API for posting, metrics, and comment retrieval
+- **Budget:** Minimal — free tiers where possible, only pay for AI API calls
+- **Tech stack:** Simplest that works (to be decided during research — likely Node.js + lightweight frontend)
+- **Repo:** Lives inside the existing Site CL repo under a dedicated directory (e.g., `dashboard/`)
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| `autopilot/` subfolder (not separate repo) | Same repo = reads `.seo-engine/` with relative paths, one git history | — Pending |
-| Telegram + dashboard approval (both) | Phone convenience + desktop visibility | — Pending |
-| Node.js backend | Existing package.json, JS ecosystem, good Anthropic SDK support | — Pending |
-| Interactive GSD mode | Complex multi-phase project — review gates catch mistakes early | — Pending |
-| GSC API for rankings (not DataForSEO) | GSC is free and authoritative for this site's own data | — Pending |
-| DataForSEO for SERP research | Enables full automation of keyword angle selection | — Pending |
+| Render for hosting | Already familiar, single service simplicity | — Pending |
+| Free PostgreSQL over SQLite | No persistent disk needed, more robust for production | — Pending |
+| Claude API for generation | Already have API access, consistent with existing tooling | — Pending |
+| Seed from YAML, then DB owns data | Clean break from file-based system, no sync complexity | — Pending |
+| Single password auth | Only one user, minimal complexity | — Pending |
+| Facebook-first, no LinkedIn v1 | Focus on the platform that drives actual conversions | — Pending |
 
 ## Evolution
 
 This document evolves at phase transitions and milestone boundaries.
 
 **After each phase transition** (via `/gsd:transition`):
-1. Requirements invalidated? → Move to Out of Scope with reason
-2. Requirements validated? → Move to Validated with phase reference
-3. New requirements emerged? → Add to Active
-4. Decisions to log? → Add to Key Decisions
-5. "What This Is" still accurate? → Update if drifted
+1. Requirements invalidated? -> Move to Out of Scope with reason
+2. Requirements validated? -> Move to Validated with phase reference
+3. New requirements emerged? -> Add to Active
+4. Decisions to log? -> Add to Key Decisions
+5. "What This Is" still accurate? -> Update if drifted
 
 **After each milestone** (via `/gsd:complete-milestone`):
 1. Full review of all sections
@@ -141,4 +89,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-01 — Phase 9 (Audit Foundation) complete: buildPageInventory + extractPageSignals + scorePageHealth + runAudit, 68 pages inventoried, 41/41 tests passing*
+*Last updated: 2026-04-05 after initialization*

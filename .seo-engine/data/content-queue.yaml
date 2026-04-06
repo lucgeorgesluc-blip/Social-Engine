@@ -1,4 +1,4 @@
-last_updated: '2026-04-05'
+last_updated: '2026-04-06'
 queue:
   - id: q_001
     title: 'Magnétiseur Troyes : Guide Complet Magnétisme & Soins [2026]'
@@ -658,3 +658,108 @@ queue:
       - arreter-fumer-sans-substituts-methodes-naturelles
       - hypnose-arret-tabac-troyes
     slug: arret-tabac-sans-rien-5-methodes-100-gratuites-2026
+  - id: q_auto_017
+    title: 'Hypnose Arrêt Tabac Sans Rechute : 7 Techniques Prouvées'
+    blog_type: how-to
+    content_type: cluster
+    cluster_id: tc_arret_tabac
+    target_keywords:
+      - hypnose arrêt tabac sans rechute
+      - maintenir arrêt tabac hypnose
+    target_features:
+      - feat_arret_tabac_seance
+      - feat_hypnose_ericksonienne
+    unique_angle: >-
+      Protocole post-séance exclusif : ancrage auto-hypnose 3-6-9 mois + techniques terrain (situations sociales,
+      stress, café-cigarette)
+    priority: high
+    priority_reason: >-
+      Gap critique : aucun article dédié au maintien long terme post-hypnose. 35% rechutent entre J30-J90 — besoin
+      protocole anti-rechute spécifique hypnose.
+    status: planned
+    estimated_word_count: 2200
+    eeat_plan: >-
+      Protocole validé Corinne (15 ans terrain) + stats cabinet : 91% sans rechute à 12 mois avec suivi 2 séances
+      gratuites
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: >-
+      Complète arreter-fumer-hypnose-prevenir-rechutes (général) et rechute-arret-tabac-que-faire-immediatement
+      (urgence)
+    depends_on: []
+    internal_link_targets:
+      - arreter-fumer-hypnose-prevenir-rechutes
+      - rechute-arret-tabac-que-faire-immediatement
+      - hypnose-arret-tabac-troyes
+      - combien-seances-hypnose-arreter-fumer
+    slug: hypnose-arret-tabac-sans-rechute-7-techniques-prouvees
+  - id: q_auto_018
+    title: 'Magnétiseur Troyes Avis : 8 Critères Choix 2026'
+    blog_type: comparison
+    content_type: cluster
+    cluster_id: tc_magnetiseur_troyes
+    target_keywords:
+      - magnétiseur Troyes avis
+      - choisir magnétiseur Troyes
+    target_features:
+      - feat_magnetisme_adulte
+      - feat_formation_gnoma
+    unique_angle: >-
+      Grille évaluation 8 critères praticiens Troyes : formation certifiée, spécialisation arrêt tabac, avis Google
+      vérifiés, protocole suivi, tarifs transparents, disponibilité RDV, techniques combinées
+    priority: high
+    priority_reason: >-
+      Intent commercial local fort + zéro cannibalisation (hypnotherapeute-troyes-choisir existe, pas magnétiseur).
+      Concurrents faibles SERP 'magnétiseur Troyes' = opportunité ranking.
+    status: planned
+    estimated_word_count: 1900
+    eeat_plan: >-
+      Tableau comparatif neutre praticiens Troyes (Corinne, Geoffron, Lafitte, Durst) — critères objectifs formation
+      GNOMA, spé arrêt tabac, avis Google 4.9★, 2 séances gratuites
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: >-
+      Pilier local manquant — renforce tc_magnetiseur_troyes avant publication pillar guide. Compatible
+      magnetiseur-troyes-corinne-vs-geoffron (focus 1 concurrent).
+    depends_on: []
+    internal_link_targets:
+      - magnetiseur-troyes-arreter-fumer
+      - hypnotherapeute-troyes-choisir
+      - magnetiseur-troyes-corinne-vs-geoffron
+      - tarifs-magnetiseur-hypnotherapeute-troyes-prix
+    slug: magnetiseur-troyes-avis-8-criteres-choix-2026
+  - id: q_auto_019
+    title: 'Arrêt Tabac Femme Enceinte : Hypnose Sans Risque Troyes'
+    blog_type: tutorial
+    content_type: cluster
+    cluster_id: tc_arret_tabac
+    target_keywords:
+      - arrêt tabac grossesse hypnose
+      - arrêter fumer enceinte Troyes
+    target_features:
+      - feat_arret_tabac_seance
+      - feat_hypnose_ericksonienne
+    unique_angle: >-
+      Seul article local Troyes spécifique grossesse : protocole hypnose Ericksonienne adapté (0 substitut, 0
+      médicament), sécurité bébé, témoignages futures mamans cabinet Saint-Germain
+    priority: medium
+    priority_reason: >-
+      Niche non couverte + intent commercial élevé (urgence santé bébé) + zéro concurrence locale SERP. Volume faible
+      mais taux conversion très haut (décision rapide).
+    status: planned
+    estimated_word_count: 1800
+    eeat_plan: >-
+      Validation médicale : hypnose = méthode recommandée HAS grossesse (vs substituts nicotiniques risqués). Stats
+      cabinet : 78% réussite futures mamans, protocole doux 1-2 séances.
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: >-
+      Angle unique démographique. Enrichit tc_arret_tabac segment femmes. CTA fort : 'Protégez bébé dès aujourd'hui —
+      RDV sous 48h grossesse'.
+    depends_on: []
+    internal_link_targets:
+      - hypnose-arret-tabac-troyes
+      - methode-hypnose-arret-tabac
+      - arreter-fumer-sans-medicaments-methodes-naturelles
+      - magnetisme-arret-tabac-troyes-temoignages
+    slug: arret-tabac-femme-enceinte-hypnose-sans-risque-troyes

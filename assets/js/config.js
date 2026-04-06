@@ -143,6 +143,12 @@ const SITE_CONFIG = {
     // ========================================
     blog: [
         {
+            slug: "hypnose-arret-tabac-sans-rechute-7-techniques-prouvees",
+            title: "Hypnose Arrêt Tabac Sans Rechute : 7 Techniques Prouvées",
+            description: "Hypnose Arrêt Tabac Sans Rechute : 7 Techniques Prouvées",
+            date: "2026-04-06"
+        },
+        {
             slug: "aimant-oreille-arret-tabac-arnaque-ou-efficace",
             title: "Aimant Oreille Arrêt Tabac : Arnaque ou Efficace ?",
             description: "Aimant Oreille Arrêt Tabac : Arnaque ou Efficace ?",

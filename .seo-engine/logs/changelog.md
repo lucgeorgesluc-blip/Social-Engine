@@ -98,3 +98,4 @@
 - 2026-04-05 — Pipeline: drafted "arret-tabac-sans-rien-5-methodes-100-gratuites-2026" (Arrêt Tabac Sans Rien : 5 Méthodes 100% Gratuites [2026])
 - 2026-04-05 — Pipeline: drafted "arreter-fumer-seul-ou-accompagne-statistiques" (Arrêter Fumer Seul ou Accompagné ? [Statistiques])
 - 2026-04-06 — Pipeline: drafted "aimant-oreille-arret-tabac-arnaque-ou-efficace" (Aimant Oreille Arrêt Tabac : Arnaque ou Efficace ?)
+- 2026-04-06 — Pipeline: drafted "hypnose-arret-tabac-sans-rechute-7-techniques-prouvees" (Hypnose Arrêt Tabac Sans Rechute : 7 Techniques Prouvées)

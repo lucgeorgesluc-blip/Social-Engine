@@ -69,6 +69,12 @@
 
     <!-- Articles blog (priorité moyenne) -->
     <url>
+        <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/hypnose-arret-tabac-sans-rechute-7-techniques-prouvees.html</loc>
+        <lastmod>2026-04-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.magnetiseuse-lacoste-corinne.fr/blog/aimant-oreille-arret-tabac-arnaque-ou-efficace.html</loc>
         <lastmod>2026-04-06</lastmod>
         <changefreq>monthly</changefreq>

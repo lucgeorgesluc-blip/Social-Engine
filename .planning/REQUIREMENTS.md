@@ -9,9 +9,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: Server runs as single Express + EJS process on Render, serving both API and frontend
-- [ ] **INFRA-02**: PostgreSQL database stores all application data (posts, comments, prospects, metrics)
-- [ ] **INFRA-03**: YAML seed import migrates existing `.social-engine/data/*.yaml` into database on first run (idempotent)
+- [x] **INFRA-01**: Server runs as single Express + EJS process on Render, serving both API and frontend
+- [x] **INFRA-02**: PostgreSQL database stores all application data (posts, comments, prospects, metrics)
+- [x] **INFRA-03**: YAML seed import migrates existing `.social-engine/data/*.yaml` into database on first run (idempotent)
 - [ ] **INFRA-04**: Simple password authentication with server-side sessions (connect-pg-simple)
 - [ ] **INFRA-05**: Responsive layout usable on mobile for quick checks
 
@@ -103,9 +103,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | Phase 1 | Pending |
-| INFRA-02 | Phase 1 | Pending |
-| INFRA-03 | Phase 1 | Pending |
+| INFRA-01 | Phase 1 | Complete |
+| INFRA-02 | Phase 1 | Complete |
+| INFRA-03 | Phase 1 | Complete |
 | INFRA-04 | Phase 1 | Pending |
 | INFRA-05 | Phase 1 | Pending |
 | INBOX-01 | Phase 2 | Pending |

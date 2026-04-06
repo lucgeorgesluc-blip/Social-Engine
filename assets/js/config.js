@@ -143,6 +143,12 @@ const SITE_CONFIG = {
     // ========================================
     blog: [
         {
+            slug: "aimant-oreille-arret-tabac-arnaque-ou-efficace",
+            title: "Aimant Oreille Arrêt Tabac : Arnaque ou Efficace ?",
+            description: "Aimant Oreille Arrêt Tabac : Arnaque ou Efficace ?",
+            date: "2026-04-06"
+        },
+        {
             slug: "arreter-fumer-seul-ou-accompagne-statistiques",
             title: "Arrêter Fumer Seul ou Accompagné ? [Statistiques]",
             description: "Arrêter Fumer Seul ou Accompagné ? [Statistiques]",

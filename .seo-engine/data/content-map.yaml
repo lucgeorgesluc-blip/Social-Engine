@@ -1419,7 +1419,8 @@ blogs:
     internal_links_to: ["arreter-fumer-seul-ou-accompagne-statistiques", "index", "a-propos", "hypnose-troyes", "magnetiseur-troyes", "faq", "magnetiseur-troyes-arreter-fumer", "cout-arret-tabac-combien-budget-prevoir", "arret-tabac-troyes", "mentions-legales", "politique-confidentialite", "cgv"]
   - slug: "aimant-oreille-arret-tabac-arnaque-ou-efficace"
     title: "Aimant Oreille Arrêt Tabac : Arnaque ou Efficace ?"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-06T17:59:12.879Z"
     target_keywords: ["aimant oreille arrêt tabac", "aimant auriculaire tabac avis", "zero smoke avis"]
     cluster_id: "tc_comparatifs_tabac"
     date: "2026-04-06"

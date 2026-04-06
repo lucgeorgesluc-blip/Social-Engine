@@ -1,7 +1,8 @@
-// Dashboard routes — health endpoint + root redirect
+// Dashboard routes — health endpoint + protected dashboard homepage
 const express = require('express');
 const router = express.Router();
 const { query } = require('../lib/db');
+const { isAuthenticated } = require('./auth');
 
 // GET /health — public, no auth required
 // Returns DB connection status and row counts per table
@@ -29,9 +30,27 @@ router.get('/health', async (req, res) => {
     }
 });
 
-// GET / — placeholder (Plan 02 will add auth-protected dashboard view)
-router.get('/', (req, res) => {
-    res.redirect('/health');
+// GET / — auth-protected dashboard homepage with DB health and seed counts
+router.get('/', isAuthenticated, async (req, res, next) => {
+    try {
+        const result = await query(`
+            SELECT
+                (SELECT COUNT(*) FROM posts)    AS posts,
+                (SELECT COUNT(*) FROM comments) AS comments,
+                (SELECT COUNT(*) FROM prospects) AS prospects
+        `);
+        res.render('dashboard', {
+            dbConnected: true,
+            dbError: false,
+            counts: result.rows[0]
+        });
+    } catch (err) {
+        res.render('dashboard', {
+            dbConnected: false,
+            dbError: true,
+            counts: { posts: '—', comments: '—', prospects: '—' }
+        });
+    }
 });
 
 module.exports = router;

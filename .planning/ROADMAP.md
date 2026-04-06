@@ -10,7 +10,7 @@ Five phases deliver a complete Facebook acquisition management tool: infrastruct
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Foundation** - Express server on Render with paid Postgres, session auth, complete DB schema, idempotent YAML seed
+- [x] **Phase 1: Foundation** - Express server on Render with paid Postgres, session auth, complete DB schema, idempotent YAML seed
 - [ ] **Phase 2: Read Layer** - Priority inbox, post list, comment list, DM pipeline, calendar — all visible, nothing writable yet
 - [ ] **Phase 3: Write Operations** - Mark handled, INFO-to-DM conversion, stage advancement, metrics input, clipboard workflows
 - [ ] **Phase 4: AI Generation** - Claude-powered post drafts, objection frequency tracker, performance benchmarks
@@ -32,7 +32,7 @@ Five phases deliver a complete Facebook acquisition management tool: infrastruct
 Plans:
 - [x] 01-01-PLAN.md — Scaffold project, DB schema, seed script, health endpoint
 - [x] 01-02-PLAN.md — Auth flow, EJS views, sidebar nav shell, responsive layout
-- [ ] 01-03-PLAN.md — Render deploy config, DB provisioning, end-to-end verification
+- [x] 01-03-PLAN.md — Render deploy config, DB provisioning, end-to-end verification
 **UI hint**: yes
 
 ### Phase 2: Read Layer
@@ -90,7 +90,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 2/3 | In Progress|  |
+| 1. Foundation | 3/3 | Complete | 2026-04-06 |
 | 2. Read Layer | 0/? | Not started | - |
 | 3. Write Operations | 0/? | Not started | - |
 | 4. AI Generation | 0/? | Not started | - |

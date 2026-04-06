@@ -9,13 +9,17 @@ const fs = require('fs');
 const path = require('path');
 const { pool } = require('./lib/db');
 const { runSeed } = require('./lib/seed');
+const { router: authRouter, isAuthenticated } = require('./routes/auth');
 const dashRouter = require('./routes/dashboard');
 
 const app = express();
 
 // View engine — EJS with express-ejs-layouts
+const expressLayouts = require('express-ejs-layouts');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use(expressLayouts);
+app.set('layout', 'layout');
 
 // Trust Render's proxy for secure cookies in production
 if (process.env.NODE_ENV === 'production') app.set('trust proxy', 1);
@@ -44,8 +48,20 @@ app.use(session({
     }
 }));
 
-// Mount routes
+// Mount routes — auth MUST be before dashboard routes
+app.use('/', authRouter);
 app.use('/', dashRouter);
+
+// 404 handler
+app.use((req, res) => {
+    res.status(404).render('error', { status: 404, message: 'Page non trouvée' });
+});
+
+// Error handler
+app.use((err, req, res, next) => {
+    console.error(err);
+    res.status(500).render('error', { status: 500, message: 'Erreur interne du serveur' });
+});
 
 const PORT = process.env.PORT || 3001;
 

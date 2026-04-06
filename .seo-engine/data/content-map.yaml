@@ -1428,7 +1428,8 @@ blogs:
     internal_links_to: ["aimant-oreille-arret-tabac-arnaque-ou-efficace", "index", "a-propos", "hypnose-troyes", "magnetiseur-troyes", "faq", "auriculotherapie-arret-tabac", "methodes-arreter-fumer-comparatif-complet", "arret-tabac-troyes", "mentions-legales", "politique-confidentialite", "cgv"]
   - slug: "hypnose-arret-tabac-sans-rechute-7-techniques-prouvees"
     title: "Hypnose Arrêt Tabac Sans Rechute : 7 Techniques Prouvées"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-06T18:05:52.937Z"
     target_keywords: ["hypnose arrêt tabac sans rechute", "maintenir arrêt tabac hypnose"]
     cluster_id: "tc_arret_tabac"
     date: "2026-04-06"

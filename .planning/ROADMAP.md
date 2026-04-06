@@ -31,7 +31,7 @@ Five phases deliver a complete Facebook acquisition management tool: infrastruct
 **Plans**: 3 plans
 Plans:
 - [x] 01-01-PLAN.md — Scaffold project, DB schema, seed script, health endpoint
-- [ ] 01-02-PLAN.md — Auth flow, EJS views, sidebar nav shell, responsive layout
+- [x] 01-02-PLAN.md — Auth flow, EJS views, sidebar nav shell, responsive layout
 - [ ] 01-03-PLAN.md — Render deploy config, DB provisioning, end-to-end verification
 **UI hint**: yes
 
@@ -90,7 +90,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/3 | In Progress|  |
+| 1. Foundation | 2/3 | In Progress|  |
 | 2. Read Layer | 0/? | Not started | - |
 | 3. Write Operations | 0/? | Not started | - |
 | 4. AI Generation | 0/? | Not started | - |

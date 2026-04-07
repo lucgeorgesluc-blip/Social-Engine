@@ -1,0 +1,141 @@
+<h2>Queue Articles Tab — Cluster Summary Bar</h2>
+<p class="subtitle">Collapsible section at the top of the existing Queue tab — quick glance at cluster health without switching tabs</p>
+
+<div class="mockup">
+  <div class="mockup-header">Dashboard &gt; Queue Articles (top section)</div>
+  <div class="mockup-body" style="background: #0d1117; color: #c9d1d9; padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+
+    <!-- Collapsible cluster summary -->
+    <div style="background: #1c2128; border: 1px solid #30363d; border-radius: 12px; margin-bottom: 20px; overflow: hidden;">
+      <!-- Header row - always visible -->
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; cursor: pointer;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-weight: 600; color: #f0f6fc; font-size: 15px;">Strategie clusters</span>
+          <span style="background: #1f3a5f; color: #3b82f6; font-size: 11px; padding: 2px 10px; border-radius: 12px;">Focus: Magnetiseur Aube</span>
+        </div>
+        <span style="color: #8b949e; font-size: 13px;">&#9660; Details</span>
+      </div>
+
+      <!-- Expanded content -->
+      <div style="border-top: 1px solid #30363d; padding: 16px 20px;">
+        <!-- Mini cluster bars -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+
+          <!-- Mini card - focused -->
+          <div style="background: #161b22; border: 1px solid #3b82f6; border-radius: 8px; padding: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-size: 13px; font-weight: 600; color: #f0f6fc;">Magn. Aube</span>
+              <span style="font-size: 11px; color: #3b82f6;">FOCUS</span>
+            </div>
+            <div style="background: #30363d; border-radius: 3px; height: 6px; overflow: hidden; margin-bottom: 6px;">
+              <div style="background: #3b82f6; height: 100%; width: 25%; border-radius: 3px;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #8b949e;">
+              <span>25% (2/8)</span>
+              <span>Pos: 42</span>
+            </div>
+          </div>
+
+          <!-- Mini card -->
+          <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px;">
+            <div style="margin-bottom: 8px;">
+              <span style="font-size: 13px; font-weight: 600; color: #f0f6fc;">Magn. Troyes</span>
+            </div>
+            <div style="background: #30363d; border-radius: 3px; height: 6px; overflow: hidden; margin-bottom: 6px;">
+              <div style="background: #3fb950; height: 100%; width: 63%; border-radius: 3px;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #8b949e;">
+              <span>63% (5/8)</span>
+              <span>Pos: 3.2</span>
+            </div>
+          </div>
+
+          <!-- Mini card -->
+          <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px;">
+            <div style="margin-bottom: 8px;">
+              <span style="font-size: 13px; font-weight: 600; color: #f0f6fc;">Arret Tabac</span>
+            </div>
+            <div style="background: #30363d; border-radius: 3px; height: 6px; overflow: hidden; margin-bottom: 6px;">
+              <div style="background: #3fb950; height: 100%; width: 93%; border-radius: 3px;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #8b949e;">
+              <span>93% (14/15)</span>
+              <span>Pos: 5.8</span>
+            </div>
+          </div>
+
+          <!-- Mini card -->
+          <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px;">
+            <div style="margin-bottom: 8px;">
+              <span style="font-size: 13px; font-weight: 600; color: #f0f6fc;">Sevrage</span>
+            </div>
+            <div style="background: #30363d; border-radius: 3px; height: 6px; overflow: hidden; margin-bottom: 6px;">
+              <div style="background: #d29922; height: 100%; width: 70%; border-radius: 3px;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #8b949e;">
+              <span>70% (7/10)</span>
+              <span>Pos: 12</span>
+            </div>
+          </div>
+
+          <!-- Mini card -->
+          <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px;">
+            <div style="margin-bottom: 8px;">
+              <span style="font-size: 13px; font-weight: 600; color: #f0f6fc;">Comparatifs</span>
+            </div>
+            <div style="background: #30363d; border-radius: 3px; height: 6px; overflow: hidden; margin-bottom: 6px;">
+              <div style="background: #3fb950; height: 100%; width: 88%; border-radius: 3px;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #8b949e;">
+              <span>88% (16/18)</span>
+              <span>Pos: 8.4</span>
+            </div>
+          </div>
+
+          <!-- Mini card -->
+          <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px;">
+            <div style="margin-bottom: 8px;">
+              <span style="font-size: 13px; font-weight: 600; color: #f0f6fc;">Bien-etre</span>
+            </div>
+            <div style="background: #30363d; border-radius: 3px; height: 6px; overflow: hidden; margin-bottom: 6px;">
+              <div style="background: #d29922; height: 100%; width: 50%; border-radius: 3px;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #8b949e;">
+              <span>50% (6/12)</span>
+              <span>Pos: 28</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Link to full clusters tab -->
+        <div style="text-align: right; margin-top: 12px;">
+          <a href="#" style="color: #3b82f6; font-size: 13px; text-decoration: none;">Voir details &amp; gerer le focus &#8594;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Existing article list below (abbreviated) -->
+    <div style="opacity: 0.5;">
+      <div style="font-size: 15px; font-weight: 600; color: #f0f6fc; margin-bottom: 12px;">Articles (12)</div>
+      <div style="background: #1c2128; border: 1px solid #30363d; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; font-size: 13px;">
+        <span style="color: #3fb950;">&#9679;</span> prise-de-poids-apres-arret-tabac... <span style="color: #8b949e; float: right;">published</span>
+      </div>
+      <div style="background: #1c2128; border: 1px solid #30363d; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; font-size: 13px;">
+        <span style="color: #d29922;">&#9679;</span> magnetiseur-aube-guerison-energetique... <span style="color: #8b949e; float: right;">pending</span>
+      </div>
+      <div style="text-align: center; color: #8b949e; font-size: 13px; padding: 8px;">... existing article list continues ...</div>
+    </div>
+
+  </div>
+</div>
+
+<h3 style="margin-top: 32px;">Key elements</h3>
+<ul style="color: #aaa; line-height: 1.8;">
+  <li><strong>Collapsible</strong> — defaults to expanded, can be collapsed to save space</li>
+  <li><strong>3-column grid</strong> of mini cluster cards (2 columns on mobile)</li>
+  <li><strong>Focus badge</strong> visible at a glance in both the header and the focused card</li>
+  <li><strong>Completion % + avg position</strong> — the two key metrics for quick decisions</li>
+  <li><strong>"Voir details"</strong> link navigates to the full Clusters tab for focus management</li>
+  <li><strong>No focus controls here</strong> — keep this read-only, focus management lives in the Clusters tab</li>
+</ul>

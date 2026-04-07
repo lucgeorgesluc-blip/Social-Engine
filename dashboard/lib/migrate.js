@@ -1,0 +1,20 @@
+const fs = require('fs');
+const path = require('path');
+const { query } = require('./db');
+
+async function runMigrations() {
+    const dir = path.join(__dirname, 'migrations');
+    if (!fs.existsSync(dir)) return;
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('.sql')).sort();
+    for (const file of files) {
+        const sql = fs.readFileSync(path.join(dir, file), 'utf8');
+        try {
+            await query(sql);
+            console.log('[migrate] Applied:', file);
+        } catch (err) {
+            console.error('[migrate] Error in', file, ':', err.message);
+        }
+    }
+}
+
+module.exports = { runMigrations };

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('consent', 'default', {
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500,
+      });
+      if (localStorage.getItem('consentGranted') === 'true') {
+        gtag('consent', 'update', {
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956035279"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'AW-17956035279');
+    </script>
+
+    <meta name="description" content="R&eacute;servez et payez votre accompagnement arr&ecirc;t du tabac en ligne. S&eacute;ance unique, Pack S&eacute;r&eacute;nit&eacute; ou Programme Minceur. Paiement s&eacute;curis&eacute; par Stripe.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://www.magnetiseuse-lacoste-corinne.fr/paiement.html">
+
+    <title>Paiement s&eacute;curis&eacute; | Corinne Lacoste &mdash; Magn&eacute;tiseuse &amp; Hypnoth&eacute;rapeute</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/playfair-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Stripe Buy Button JS -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+    <style>
+        .step-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .step-card:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        /* Connector line between steps */
+        .connector {
+            width: 2px;
+            height: 3rem;
+            background: linear-gradient(to bottom, #dc512c, #2c5f4f);
+            margin: 0 auto;
+        }
+        /* Arrow between steps */
+        .arrow-down {
+            width: 0; height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #dc512c;
+            margin: 0 auto;
+        }
+        /* Stripe button full-width */
+        stripe-buy-button { display: block; width: 100%; }
+        /* Pulsing badge */
+        @keyframes soft-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .pulse-badge { animation: soft-pulse 2s ease-in-out infinite; }
+        /* Grid columns (not in Tailwind build) */
+        .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .price-old { color: #ef4444; text-decoration: line-through; }
+        .price-save { color: #16a34a; }
+        .grid-footer { grid-template-columns: 1fr; }
+        @media (min-width: 640px) { .grid-footer { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        /* Mobile touch target */
+        @media (max-width: 640px) {
+            .pay-btn { min-height: 56px; font-size: 1.125rem; }
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-800 bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" x-data="{ mobileMenuOpen: false, servicesOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold text-secondary">Corinne Lacoste</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Accueil</a>
+                    <a href="a-propos.html" class="text-gray-700 hover:text-primary transition">&Agrave; propos</a>
+                    <div class="relative" @mouseenter="servicesOpen = true" @mouseleave="servicesOpen = false">
+                        <button type="button" class="text-gray-700 hover:text-primary transition inline-flex items-center gap-0.5">
+                            Soins
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="servicesOpen" x-transition class="absolute top-full left-0 pt-1 min-w-[10rem]">
+                            <div class="bg-white rounded-lg shadow-lg border border-gray-100 py-1">
+                                <a href="hypnose-troyes.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary">Hypnose</a>
+                                <a href="magnetiseur-troyes.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary">Magn&eacute;tisme</a>
+                                <a href="arret-tabac-troyes.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary">Arr&ecirc;t tabac</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="soins.html" class="text-gray-700 hover:text-primary transition">Tarifs</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-primary transition">FAQ</a>
+                    <a href="blog/hypnotherapeute-troyes-choisir.html" class="text-gray-700 hover:text-primary transition">Blog</a>
+                    <a href="tel:+33695486060" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition font-medium">
+                        Appeler
+                    </a>
+                </div>
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2" aria-label="Ouvrir le menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Accueil</a>
+                <a href="a-propos.html" class="block py-2 text-gray-700 hover:text-primary">&Agrave; propos</a>
+                <a href="arret-tabac-troyes.html" class="block py-2 text-gray-700 hover:text-primary">Arr&ecirc;t tabac</a>
+                <a href="soins.html" class="block py-2 text-gray-700 hover:text-primary">Tarifs</a>
+                <a href="faq.html" class="block py-2 text-gray-700 hover:text-primary">FAQ</a>
+                <a href="tel:+33695486060" class="block mt-4 bg-primary text-white px-6 py-3 rounded-full text-center font-medium">
+                    Appeler
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+    <!-- Hero — full-width like rest of site -->
+    <section class="relative pt-32 pb-8 sm:pt-40 sm:pb-12 bg-gradient-to-br from-accent via-white to-accent/30" style="opacity:1;transform:none;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 bg-secondary/10 text-secondary text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                Paiement 100% s&eacute;curis&eacute; par Stripe
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-secondary mb-4 leading-tight">
+                Votre accompagnement<br><span class="text-primary">arr&ecirc;t du tabac</span>
+            </h1>
+            <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
+                Corinne vous a recommand&eacute; une formule. Retrouvez-la ci-dessous et r&eacute;glez en toute s&eacute;curit&eacute;.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  STEP 1 — S&eacute;ance Arr&ecirc;t du Tabac                       -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="py-8 sm:py-12 bg-gray-50" style="opacity:1;transform:none">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
+                <div class="h-1 bg-primary"></div>
+                <div class="p-6 sm:p-8">
+
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-secondary mb-1">S&eacute;ance Arr&ecirc;t du Tabac</h2>
+                    <p class="text-gray-500 text-sm mb-4">1 s&eacute;ance &bull; 1 heure &bull; Au cabinet</p>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Magn&eacute;tisme et hypnose combin&eacute;s pour agir sur les causes profondes de votre d&eacute;pendance.
+                        <strong>85% de r&eacute;ussite d&egrave;s la 1&egrave;re s&eacute;ance.</strong>
+                    </p>
+
+                    <ul class="space-y-2.5 mb-8">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">Travail sur le manque, le geste et le stress</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">Bilan personnalis&eacute; de vos habitudes</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">Conseils post-s&eacute;ance pour les premiers jours</span>
+                        </li>
+                    </ul>
+
+                    <!-- Price + Button -->
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6 border-t border-gray-100">
+                        <div>
+                            <span class="text-4xl font-bold text-gray-800">120</span><span class="text-xl text-gray-500">&euro;</span>
+                        </div>
+                        <a href="https://buy.stripe.com/5kQ6oH0y40AUcGebYMdUY00" target="_blank" rel="noopener"
+                           class="pay-btn inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-opacity-90 hover:shadow-lg hover:shadow-primary/50 transition w-full sm:w-auto">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+                            Payer
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  Pack S&eacute;r&eacute;nit&eacute; Sans Tabac                                -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="py-8 sm:py-12 bg-gray-50" style="opacity:1;transform:none">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
+                <div class="h-1 bg-primary"></div>
+                <div class="p-6 sm:p-8">
+
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-secondary mb-1">Pack S&eacute;r&eacute;nit&eacute; Sans Tabac</h2>
+                    <p class="text-gray-500 text-sm mb-4">3 s&eacute;ances &bull; 2h30 au total &bull; Sur 4 semaines</p>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        70% des fumeurs qui arr&ecirc;tent seuls rechutent dans le premier mois.
+                        Ce pack vous prot&egrave;ge pendant la p&eacute;riode la plus critique.
+                    </p>
+
+                    <!-- 3 mini-cards for each session -->
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-start gap-3 bg-primary/5 rounded-xl p-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-xs">S1</span>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm">Suivi arr&ecirc;t tabac <span class="font-normal text-gray-500">&mdash; 1h</span></p>
+                                <p class="text-gray-500 text-xs mt-0.5">Renforcer le travail, d&eacute;bloquer les r&eacute;sistances</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-primary/5 rounded-xl p-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-xs">S2</span>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm">S&eacute;ance anti-stress <span class="font-normal text-gray-500">&mdash; 1h</span></p>
+                                <p class="text-gray-500 text-xs mt-0.5">&Eacute;vacuer le stress que la cigarette masquait</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-secondary/5 rounded-xl p-4">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold text-xs">S3</span>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm">Bilan S&eacute;r&eacute;nit&eacute; <span class="font-normal text-gray-500">&mdash; 30 min</span> <span class="inline-block bg-secondary text-white text-xs px-2 py-0.5 rounded ml-1">OFFERTE</span></p>
+                                <p class="text-gray-500 text-xs mt-0.5">Faire le point sur votre &eacute;quilibre global</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">Moins de 10% de rechute avec ce suivi</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">1 s&eacute;ance offerte (valeur 80&euro;)</span>
+                        </li>
+                    </ul>
+
+                    <!-- Price + Button -->
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6 border-t border-gray-100">
+                        <div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl font-bold text-gray-800">200</span><span class="text-xl text-gray-500">&euro;</span>
+                                <span class="text-sm line-through ml-1 font-semibold price-old">280&euro;</span>
+                            </div>
+                            <p class="text-sm font-semibold mt-1 price-save">-80&euro; &mdash; vous &eacute;conomisez 29%</p>
+                        </div>
+                        <a href="https://buy.stripe.com/fZu00j3Kg5Ve49IfaYdUY02" target="_blank" rel="noopener"
+                           class="pay-btn inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-opacity-90 hover:shadow-lg hover:shadow-primary/50 transition w-full sm:w-auto">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+                            Se lib&eacute;r&eacute; Maintenant
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  Programme &Eacute;quilibre Minceur                               -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="py-8 sm:py-12 bg-gray-50" style="opacity:1;transform:none">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
+                <div class="h-1 bg-gradient-to-r from-secondary to-secondary/80"></div>
+                <div class="p-6 sm:p-8">
+
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-secondary mb-1">Programme &Eacute;quilibre Minceur</h2>
+                    <p class="text-gray-500 text-sm mb-4">16 s&eacute;ances &bull; 4 mois &bull; Suivi progressif</p>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Les ex-fumeurs prennent en moyenne 4 &agrave; 5 kg. Ce programme vous accompagne
+                        pour que votre victoire sur le tabac ne se transforme pas en combat contre le poids.
+                    </p>
+
+                    <!-- 4 phases -->
+                    <div class="grid grid-2 gap-3 mb-6">
+                        <div class="bg-secondary/5 rounded-xl p-4 text-center">
+                            <p class="text-2xl font-bold text-secondary">1</p>
+                            <p class="text-xs text-gray-600 font-medium mt-1">S&eacute;ance lancement</p>
+                            <p class="text-xs text-gray-400">1h &mdash; Bilan complet</p>
+                        </div>
+                        <div class="bg-secondary/5 rounded-xl p-4 text-center">
+                            <p class="text-2xl font-bold text-secondary">8</p>
+                            <p class="text-xs text-gray-600 font-medium mt-1">S&eacute;ances hebdo</p>
+                            <p class="text-xs text-gray-400">30 min &mdash; Transformation</p>
+                        </div>
+                        <div class="bg-secondary/5 rounded-xl p-4 text-center">
+                            <p class="text-2xl font-bold text-secondary">4</p>
+                            <p class="text-xs text-gray-600 font-medium mt-1">S&eacute;ances bihebdo</p>
+                            <p class="text-xs text-gray-400">30 min &mdash; Consolidation</p>
+                        </div>
+                        <div class="bg-secondary/5 rounded-xl p-4 text-center">
+                            <p class="text-2xl font-bold text-secondary">3</p>
+                            <p class="text-xs text-gray-600 font-medium mt-1">S&eacute;ances mensuelles</p>
+                            <p class="text-xs text-gray-400">30 min &mdash; Stabilisation</p>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">Lib&eacute;r&eacute;(e) du tabac <strong>et</strong> en &eacute;quilibre dans votre corps</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">Soit 43&euro;/s&eacute;ance au lieu de 45&euro;</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">Accompagnement progressif vers l'autonomie</span>
+                        </li>
+                    </ul>
+
+                    <!-- Price + Button -->
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6 border-t border-gray-100">
+                        <div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl font-bold text-gray-800">699</span><span class="text-xl text-gray-500">&euro;</span>
+                                <span class="text-sm line-through ml-1 font-semibold price-old">755&euro;</span>
+                            </div>
+                            <p class="text-sm font-semibold mt-1 price-save">-56&euro; &mdash; 16 s&eacute;ances sur 4 mois</p>
+                        </div>
+                        <a href="https://buy.stripe.com/eVq3cvgx2abucGe0g4dUY03" target="_blank" rel="noopener"
+                           class="pay-btn inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-opacity-90 hover:shadow-lg hover:shadow-primary/50 transition w-full sm:w-auto">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+                            Se lancer
+                        </a>
+                    </div>
+
+                    <!-- Payment flexibility note -->
+                    <p class="text-xs text-gray-400 mt-4 text-center sm:text-right">
+                        Paiement en plusieurs fois possible &mdash; contactez-moi.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Cigarettes cost comparison -->
+    <section class="py-8 sm:py-12 bg-gray-50" style="opacity:1;transform:none">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-secondary/5 to-primary/5 rounded-2xl p-6 sm:p-8 text-center border border-secondary/10">
+                <p class="text-base sm:text-lg text-gray-700 mb-2">
+                    Un fumeur d&eacute;pense en moyenne <strong class="text-primary">250&euro;/mois</strong> en cigarettes.
+                </p>
+                <p class="text-xl sm:text-2xl font-serif font-bold text-secondary">
+                    En 4 mois, c'est 1&nbsp;000&euro; partis en fum&eacute;e.
+                </p>
+                <p class="text-gray-500 text-sm mt-3">
+                    L'argent du tabac finance votre bien-&ecirc;tre. Ce n'est pas une d&eacute;pense, c'est un transfert.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust signals -->
+    <section class="py-8 sm:py-12 bg-gray-50" style="opacity:1;transform:none">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-3 gap-4 text-center">
+                <div class="p-4">
+                    <div class="w-12 h-12 mx-auto mb-3 bg-secondary/10 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                        </svg>
+                    </div>
+                    <p class="font-semibold text-secondary text-sm">S&eacute;curis&eacute;</p>
+                    <p class="text-gray-500 text-xs mt-0.5">via Stripe</p>
+                </div>
+                <div class="p-4">
+                    <div class="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+                        </svg>
+                    </div>
+                    <p class="font-semibold text-secondary text-sm">4.9/5</p>
+                    <p class="text-gray-500 text-xs mt-0.5">35+ avis Google</p>
+                </div>
+                <div class="p-4">
+                    <div class="w-12 h-12 mx-auto mb-3 bg-secondary/10 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+                        </svg>
+                    </div>
+                    <p class="font-semibold text-secondary text-sm">15+ ans</p>
+                    <p class="text-gray-500 text-xs mt-0.5">d'exp&eacute;rience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ — matching site design -->
+    <section class="py-12 sm:py-20 bg-gradient-to-br from-accent/30 to-white" style="opacity:1;transform:none">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" x-data="{ openFaq: null }">
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-secondary text-center mb-8">Questions fr&eacute;quentes</h2>
+
+            <div class="space-y-4">
+                <div class="bg-white border-2 border-gray-200 rounded-xl overflow-hidden">
+                    <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <span class="font-bold text-lg">Dois-je prendre les 3 formules d'un coup ?</span>
+                        <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': openFaq === 1}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="openFaq === 1" x-transition class="px-6 pb-4">
+                        <p class="text-gray-700 leading-relaxed">
+                            Non. Chaque formule est ind&eacute;pendante. Commencez par la s&eacute;ance initiale.
+                            Si besoin, le Pack S&eacute;r&eacute;nit&eacute; et le Programme Minceur sont propos&eacute;s au moment
+                            o&ugrave; ils font sens dans votre parcours.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border-2 border-gray-200 rounded-xl overflow-hidden">
+                    <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <span class="font-bold text-lg">Le paiement est-il s&eacute;curis&eacute; ?</span>
+                        <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': openFaq === 2}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="openFaq === 2" x-transition class="px-6 pb-4">
+                        <p class="text-gray-700 leading-relaxed">
+                            Oui. Le paiement est trait&eacute; par Stripe, utilis&eacute; par des millions d'entreprises
+                            (Amazon, Google, Uber). Vos coordonn&eacute;es bancaires ne transitent jamais par notre site.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border-2 border-gray-200 rounded-xl overflow-hidden">
+                    <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <span class="font-bold text-lg">Que se passe-t-il apr&egrave;s le paiement ?</span>
+                        <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': openFaq === 3}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="openFaq === 3" x-transition class="px-6 pb-4">
+                        <p class="text-gray-700 leading-relaxed">
+                            Vous recevez un email de confirmation imm&eacute;diat. Je vous contacte sous 24h
+                            pour planifier votre premi&egrave;re s&eacute;ance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border-2 border-gray-200 rounded-xl overflow-hidden">
+                    <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                        <span class="font-bold text-lg">Puis-je payer en plusieurs fois ?</span>
+                        <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': openFaq === 4}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="openFaq === 4" x-transition class="px-6 pb-4">
+                        <p class="text-gray-700 leading-relaxed">
+                            Pour le Programme &Eacute;quilibre Minceur (699&euro;), un paiement en 2 ou 4 fois
+                            est possible. Appelez-moi pour en discuter.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA bottom — full-width like rest of site -->
+    <section class="py-20 bg-gradient-to-br from-secondary/95 to-secondary text-white" style="opacity:1;transform:none;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-3">
+                Une question ?
+            </h2>
+            <p class="text-white/80 text-lg mb-8">
+                Appelez-moi, je vous conseillerai la formule adapt&eacute;e.
+            </p>
+            <a href="tel:+33695486060" class="inline-flex items-center justify-center gap-2 bg-white text-secondary px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                06 95 48 60 60
+            </a>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Corinne Lacoste</h3>
+                    <p class="text-white/70 text-sm">
+                        Magn&eacute;tiseuse dipl&ocirc;m&eacute;e<br>
+                        Sp&eacute;cialiste sevrage tabagique
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="index.html" class="hover:text-primary transition">Accueil</a></li>
+                        <li><a href="a-propos.html" class="hover:text-primary transition">&Agrave; propos</a></li>
+                        <li><a href="hypnose-troyes.html" class="hover:text-primary transition">Hypnose</a></li>
+                        <li><a href="magnetiseur-troyes.html" class="hover:text-primary transition">Magn&eacute;tisme</a></li>
+                        <li><a href="arret-tabac-troyes.html" class="hover:text-primary transition">Arr&ecirc;t tabac</a></li>
+                        <li><a href="soins.html" class="hover:text-primary transition">Tarifs</a></li>
+                        <li><a href="faq.html" class="hover:text-primary transition">FAQ</a></li>
+                        <li><a href="blog/hypnotherapeute-troyes-choisir.html" class="hover:text-primary transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">L&eacute;gal</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="mentions-legales.html" class="hover:text-primary transition">Mentions l&eacute;gales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-primary transition">Confidentialit&eacute;</a></li>
+                        <li><a href="cgv.html" class="hover:text-primary transition">CGV</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li data-contact="telephone"></li>
+                        <li data-contact="adresse.rue"></li>
+                        <li><span data-contact="adresse.codePostal"></span> <span data-contact="adresse.ville"></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/50">
+                <p>&copy; 2026 <span data-contact="nom"></span>. Tous droits r&eacute;serv&eacute;s.</p>
+                <p class="mt-2">SIRET : <span data-contact="siret"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/config.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>

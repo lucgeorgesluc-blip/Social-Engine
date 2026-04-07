@@ -1,0 +1,215 @@
+# Posts Registry — Social Acquisition Engine
+# Mis a jour: 2026-04-05
+# Drafts complets dans: posts-drafts.yaml (copier-coller ready)
+
+posts:
+  # --- 10 NOUVEAUX POSTS (drafts) ---
+  - id: POST-2026-04-09-01
+    created_date: "2026-04-05"
+    published_date: null
+    status: draft
+    platform: facebook
+    type: objection-buster
+    objection_addressed: volonte
+    hook: "Il suffit de vouloir pour arreter."
+    cta_type: comment_volonte
+    metrics: {impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, link_clicks: 0, info_comments: 0, dm_opened: 0, calendly_booked: 0, engagement_rate: 0}
+    tags: [objection_volonte, neurosciences, educatif]
+
+  - id: POST-2026-04-11-01
+    created_date: "2026-04-05"
+    published_date: null
+    status: draft
+    platform: facebook
+    type: myth-buster
+    objection_addressed: arnaque
+    hook: "Je vais etre honnete avec vous."
+    cta_type: comment_question
+    metrics: {impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, link_clicks: 0, info_comments: 0, dm_opened: 0, calendly_booked: 0, engagement_rate: 0}
+    tags: [transparence, anti_arnaque, carte_sur_table]
+
+  - id: POST-2026-04-14-01
+    created_date: "2026-04-05"
+    published_date: null
+    status: draft
+    platform: facebook
+    type: timeline
+    objection_addressed: null
+    hook: "Voici ce qui se passe dans votre corps quand vous ecrasez votre derniere cigarette."
+    cta_type: comment_info
+    metrics: {impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, link_clicks: 0, info_comments: 0, dm_opened: 0, calendly_booked: 0, engagement_rate: 0}
+    tags: [timeline, educatif, viral_potential, partage]
+
+  - id: POST-2026-04-16-01
+    created_date: "2026-04-05"
+    published_date: null
+    status: draft
+    platform: both
+    type: stat-based
+    objection_addressed: trop_cher
+    hook: "5 000 euros. C'est ce que vous brulez chaque annee."
+    cta_type: comment_engagement
+    metrics: {impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, link_clicks: 0, info_comments: 0, dm_opened: 0, calendly_booked: 0, engagement_rate: 0}
+    tags: [economique, chiffres, linkedin, engagement_play]
+
+  - id: POST-2026-04-18-01
+    created_date: "2026-04-05"
+    published_date: null
+    status: draft
+    platform: facebook
+    type: temoignage
+    objection_addressed: rechute
+    hook: "Ca fait 8 mois. Je ne me reconnais plus."
+    cta_type: comment_info
+    metrics: {impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, link_clicks: 0, info_comments: 0, dm_opened: 0, calendly_booked: 0, engagement_rate: 0}
+    tags: [temoignage_long_terme, anti_rechute, philippe]
+
+  - id: POST-2026-04-21-01
+    created_date: "2026-04-05"
+    published_date: null
+    status: draft
+    platform: facebook
+    type: objection-buster
+    objection_addressed: peur_hypnose
+    hook: "Vous avez peur de l'hypnose ?"
+    cta_type: comment_question
+    metrics: {impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, link_clicks: 0, info_comments: 0, dm_opened: 0, calendly_booked: 0, engagement_rate: 0}
+    tags: [demystification, hypnose_ericksonienne, peur]
+
+  - id: POST-2026-04-23-01
+    created_date: "2026-04-05"
+    published_date: null
+    status: draft
+    platform: both
+    type: economic
+    objection_addressed: null
+    hook: "Marie a arrete de fumer il y a 1 an."
+    cta_type: comment_engagement
+    metrics: {impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, link_clicks: 0, info_comments: 0, dm_opened: 0, calendly_booked: 0, engagement_rate: 0}
+    tags: [feel_good, economies, engagement_play, linkedin]
+
+  - id: POST-2026-04-25-01
+    created_date: "2026-04-05"
+    published_date: null
+    status: draft
+    platform: facebook
+    type: temoignage
+    objection_addressed: placebo
+    hook: "Je suis venu pour faire plaisir a ma femme. Je n'y croyais pas du tout."
+    cta_type: comment_info
+    metrics: {impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, link_clicks: 0, info_comments: 0, dm_opened: 0, calendly_booked: 0, engagement_rate: 0}
+    tags: [sceptique_converti, anti_placebo, laurent]
+
+  - id: POST-2026-04-28-01
+    created_date: "2026-04-05"
+    published_date: null
+    status: draft
+    platform: facebook
+    type: health
+    objection_addressed: null
+    hook: "20 minutes. C'est le temps qu'il faut a votre corps pour commencer a se reparer."
+    cta_type: share
+    metrics: {impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, link_clicks: 0, info_comments: 0, dm_opened: 0, calendly_booked: 0, engagement_rate: 0}
+    tags: [sante, timeline_30j, viral_potential, partage]
+
+  - id: POST-2026-04-30-01
+    created_date: "2026-04-05"
+    published_date: null
+    status: draft
+    platform: both
+    type: objection-buster
+    objection_addressed: magie
+    hook: "Vous faites de la magie ?"
+    cta_type: comment_question
+    metrics: {impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, link_clicks: 0, info_comments: 0, dm_opened: 0, calendly_booked: 0, engagement_rate: 0}
+    tags: [demystification, magnetisme, INSERM, linkedin]
+
+  # --- POSTS PUBLIES ---
+  - id: POST-2026-04-07-01
+    created_date: "2026-04-05"
+    published_date: "2026-04-05"
+    status: published
+    platform: facebook
+    platform_post_id: null
+    type: temoignage
+    objection_addressed: arnaque
+    hook: "Grace a une seance d'hypnose, je ne fume plus."
+    content: |
+      "Grace a une seance d'hypnose, je ne fume plus."
+      Ce n'est pas moi qui le dis. C'est Chloe, dans son avis Google.
+      Elle est venue me voir pour arreter le tabac. Une seance. Une seule.
+      Depuis, plus une cigarette.
+      Elle a aussi voulu travailler sur un autre sujet, plus personnel.
+      Et la encore, une seance a suffi pour se sentir "bien mieux psychologiquement" — ce sont ses mots.
+      Ce que j'aime dans ce temoignage, c'est qu'il est simple. Pas de miracle, pas de formule magique.
+      Juste un accompagnement serieux, de l'ecoute, et un resultat concret.
+      Chloe fait partie des 85% de mes patients qui arretent des la 1ere seance.
+      Vous pouvez lire son avis et ceux de 35 autres personnes sur ma fiche Google —
+      tapez "Corinne Lacoste magnetiseuse" dans Google, les avis sont publics.
+      Vous avez des questions ? Posez-les ici en commentaire, je reponds a tout.
+      Ou ecrivez "INFO" et je vous envoie les details en prive.
+      Cabinet a Saint-Germain, pres de Troyes
+    cta_type: comment_info
+    metrics:
+      impressions: 0
+      reach: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      saves: 0
+      link_clicks: 0
+      info_comments: 7
+      dm_opened: 0
+      calendly_booked: 0
+      engagement_rate: 0
+    tags: ["temoignage_nomme", "avis_google_verifiable", "chloe_maire", "viral"]
+    notes: "Post Chloe Maire. 7 INFO en 24h + 2 negatifs (confusion autre praticien). ENORME amelioration vs post 1 (2 INFO). Temoignage nomme + verifiable = confiance."
+
+  - id: POST-2026-04-01-01
+    created_date: "2026-04-01"
+    published_date: "2026-04-01"
+    status: published
+    platform: facebook
+    platform_post_id: null  # TODO: ajouter URL du post Facebook
+    type: temoignage
+    objection_addressed: null
+    hook: "Je fumais depuis 20 ans... et je n'y croyais plus."
+    content: |
+      Je fumais depuis 20 ans... et je n'y croyais plus.
+      C'est ce que m'a dit une personne avant de venir me voir.
+      Elle avait tout essaye : patchs, volonte, arret brutal...
+      Et a chaque fois, elle replongeait.
+      Apres l'accompagnement en magnetisme et hypnose :
+      plus d'envie, plus de manque, un vrai sentiment de liberte.
+      Non, ce n'est pas magique.
+      C'est simplement une autre facon d'agir... la ou tout se joue vraiment.
+      Aujourd'hui, elle respire, elle est fiere d'elle, et surtout... elle est libre.
+      Et vous ?
+      Si vous souhaitez arreter de fumer, ecrivez-moi en message prive ou commentez "INFO".
+      Accompagnement a St GERMAIN 10 pres de TROYES
+    cta_type: comment_info
+    metrics:
+      impressions: 0    # TODO: remplir depuis FB insights
+      reach: 0
+      likes: 0
+      comments: 10      # 10 commentaires recenses
+      shares: 0
+      saves: 0
+      link_clicks: 0
+      info_comments: 2  # Nadege + Sylvie
+      dm_opened: 1       # Sylvie (reponse publique avec Calendly)
+      calendly_booked: 0
+      engagement_rate: 0
+    tags: ["premier_post", "bonne_interaction", "objections_volonte_arnaque"]
+    notes: |
+      Premier post. Bonne interaction (10 commentaires) mais beaucoup de scepticisme.
+      LECONS:
+      1. Format "histoire anonyme" = percue comme copier-coller (Nini)
+      2. Manque de preuves visibles (Caly: "ou sont les temoignages?")
+      3. Reactivite trop lente = prospects perdus (Sylvie passe de INFO a "arnaque")
+      4. Objection #1 = "la volonte suffit" (Martine, Marion)
+      5. Les reponses de Corinne sont bonnes: calmes, respectueuses, factuelles
+      ACTIONS:
+      - Prochains posts: temoignages NOMMES avec details specifiques
+      - Repondre aux INFO en < 2h
+      - Integrer preuves (avis Google, chiffres) dans les posts directement

@@ -1,0 +1,140 @@
+<h2>Clusters Tab — Full View</h2>
+<p class="subtitle">Dedicated tab in sidebar showing cluster health, completion, rankings, and focus controls</p>
+
+<div class="mockup">
+  <div class="mockup-header">Dashboard &gt; Clusters Tab</div>
+  <div class="mockup-body" style="background: #0d1117; color: #c9d1d9; padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+
+    <!-- Focus banner -->
+    <div style="background: #1f3a5f; border: 1px solid #3b82f6; border-radius: 8px; padding: 12px 16px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <span style="color: #3b82f6; font-weight: 600;">Focus actif:</span>
+        <span style="color: #f0f6fc; margin-left: 8px;">Magnetiseur Aube</span>
+        <span style="color: #8b949e; margin-left: 8px;">(jusqu'a retrait)</span>
+      </div>
+      <button style="background: transparent; border: 1px solid #f85149; color: #f85149; padding: 4px 12px; border-radius: 6px; cursor: pointer; font-size: 13px;">Retirer le focus</button>
+    </div>
+
+    <!-- Cluster cards grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+
+      <!-- Cluster card 1 - focused -->
+      <div style="background: #1c2128; border: 2px solid #3b82f6; border-radius: 12px; padding: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+          <div>
+            <div style="font-size: 16px; font-weight: 600; color: #f0f6fc;">Magnetiseur Aube</div>
+            <div style="font-size: 13px; color: #8b949e; margin-top: 2px;">tc_magnetiseur_aube</div>
+          </div>
+          <span style="background: #3b82f6; color: white; font-size: 11px; padding: 2px 8px; border-radius: 12px;">FOCUS</span>
+        </div>
+        <!-- Progress bar -->
+        <div style="margin-bottom: 12px;">
+          <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+            <span style="color: #8b949e;">Completion</span>
+            <span style="color: #f0f6fc;">2 / 8 articles (25%)</span>
+          </div>
+          <div style="background: #30363d; border-radius: 4px; height: 8px; overflow: hidden;">
+            <div style="background: #3b82f6; height: 100%; width: 25%; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <!-- Rankings -->
+        <div style="display: flex; gap: 16px; font-size: 13px; margin-bottom: 16px;">
+          <div><span style="color: #8b949e;">Pos. moy:</span> <span style="color: #f0f6fc;">42.3</span></div>
+          <div><span style="color: #8b949e;">Tendance:</span> <span style="color: #f85149;">&#9660; -2.1</span></div>
+          <div><span style="color: #8b949e;">Planifies:</span> <span style="color: #f0f6fc;">1</span></div>
+        </div>
+        <button style="background: transparent; border: 1px solid #30363d; color: #8b949e; padding: 6px 12px; border-radius: 6px; width: 100%; font-size: 13px; cursor: pointer;">Deja en focus</button>
+      </div>
+
+      <!-- Cluster card 2 -->
+      <div style="background: #1c2128; border: 1px solid #30363d; border-radius: 12px; padding: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+          <div>
+            <div style="font-size: 16px; font-weight: 600; color: #f0f6fc;">Magnetiseur Troyes</div>
+            <div style="font-size: 13px; color: #8b949e; margin-top: 2px;">tc_magnetiseur_troyes</div>
+          </div>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+            <span style="color: #8b949e;">Completion</span>
+            <span style="color: #f0f6fc;">5 / 8 articles (63%)</span>
+          </div>
+          <div style="background: #30363d; border-radius: 4px; height: 8px; overflow: hidden;">
+            <div style="background: #3fb950; height: 100%; width: 63%; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 16px; font-size: 13px; margin-bottom: 16px;">
+          <div><span style="color: #8b949e;">Pos. moy:</span> <span style="color: #f0f6fc;">3.2</span></div>
+          <div><span style="color: #8b949e;">Tendance:</span> <span style="color: #3fb950;">&#9650; +1.5</span></div>
+          <div><span style="color: #8b949e;">Planifies:</span> <span style="color: #f0f6fc;">2</span></div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button style="background: #3b82f6; border: none; color: white; padding: 6px 12px; border-radius: 6px; flex: 1; font-size: 13px; cursor: pointer;">Focus</button>
+          <button style="background: transparent; border: 1px solid #30363d; color: #8b949e; padding: 6px 12px; border-radius: 6px; font-size: 13px; cursor: pointer;" title="Focus pour N articles">N articles...</button>
+        </div>
+      </div>
+
+      <!-- Cluster card 3 -->
+      <div style="background: #1c2128; border: 1px solid #30363d; border-radius: 12px; padding: 20px;">
+        <div style="margin-bottom: 12px;">
+          <div style="font-size: 16px; font-weight: 600; color: #f0f6fc;">Arret Tabac</div>
+          <div style="font-size: 13px; color: #8b949e; margin-top: 2px;">tc_arret_tabac</div>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+            <span style="color: #8b949e;">Completion</span>
+            <span style="color: #f0f6fc;">14 / 15 articles (93%)</span>
+          </div>
+          <div style="background: #30363d; border-radius: 4px; height: 8px; overflow: hidden;">
+            <div style="background: #3fb950; height: 100%; width: 93%; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 16px; font-size: 13px; margin-bottom: 16px;">
+          <div><span style="color: #8b949e;">Pos. moy:</span> <span style="color: #f0f6fc;">5.8</span></div>
+          <div><span style="color: #8b949e;">Tendance:</span> <span style="color: #3fb950;">&#9650; +0.3</span></div>
+          <div><span style="color: #8b949e;">Planifies:</span> <span style="color: #f0f6fc;">0</span></div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button style="background: #3b82f6; border: none; color: white; padding: 6px 12px; border-radius: 6px; flex: 1; font-size: 13px; cursor: pointer;">Focus</button>
+          <button style="background: transparent; border: 1px solid #30363d; color: #8b949e; padding: 6px 12px; border-radius: 6px; font-size: 13px; cursor: pointer;">N articles...</button>
+        </div>
+      </div>
+
+      <!-- Cluster card 4 -->
+      <div style="background: #1c2128; border: 1px solid #30363d; border-radius: 12px; padding: 20px;">
+        <div style="margin-bottom: 12px;">
+          <div style="font-size: 16px; font-weight: 600; color: #f0f6fc;">Symptomes Sevrage</div>
+          <div style="font-size: 13px; color: #8b949e; margin-top: 2px;">tc_sevrage_symptomes</div>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+            <span style="color: #8b949e;">Completion</span>
+            <span style="color: #f0f6fc;">7 / 10 articles (70%)</span>
+          </div>
+          <div style="background: #30363d; border-radius: 4px; height: 8px; overflow: hidden;">
+            <div style="background: #d29922; height: 100%; width: 70%; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 16px; font-size: 13px; margin-bottom: 16px;">
+          <div><span style="color: #8b949e;">Pos. moy:</span> <span style="color: #f0f6fc;">12.1</span></div>
+          <div><span style="color: #8b949e;">Tendance:</span> <span style="color: #3fb950;">&#9650; +3.2</span></div>
+          <div><span style="color: #8b949e;">Planifies:</span> <span style="color: #f0f6fc;">3</span></div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button style="background: #3b82f6; border: none; color: white; padding: 6px 12px; border-radius: 6px; flex: 1; font-size: 13px; cursor: pointer;">Focus</button>
+          <button style="background: transparent; border: 1px solid #30363d; color: #8b949e; padding: 6px 12px; border-radius: 6px; font-size: 13px; cursor: pointer;">N articles...</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<h3 style="margin-top: 32px;">Key elements</h3>
+<ul style="color: #aaa; line-height: 1.8;">
+  <li><strong>Focus banner</strong> at top when a cluster is pinned — always visible, one-click remove</li>
+  <li><strong>Completion bar</strong> — color-coded: blue (focused), green (&gt;60%), amber (30-60%), red (&lt;30%)</li>
+  <li><strong>Ranking data</strong> — avg position + trend from DataForSEO cache</li>
+  <li><strong>Two focus buttons</strong> — "Focus" (until unpin) and "N articles..." (opens a small input for count)</li>
+  <li><strong>2-column grid</strong> on desktop, stacks on mobile</li>
+</ul>

@@ -1,0 +1,47 @@
+<div class="max-w-2xl">
+  <div class="flex items-center gap-3 mb-6">
+    <a href="/stats" class="text-sm text-gray-400 hover:text-secondary">← Statistiques</a>
+    <span class="text-gray-300">/</span>
+    <h1 class="text-lg font-semibold text-secondary">Métriques hebdomadaires</h1>
+  </div>
+
+  <form method="POST" action="/metrics/<%= week %>" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+    <div class="mb-5">
+      <label class="block text-sm font-medium text-secondary mb-1">Semaine</label>
+      <div class="flex items-center gap-3">
+        <input type="text" value="<%= week %>" disabled class="border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 text-gray-500">
+        <% var now = new Date(); var currentWeek = now.getFullYear() + '-W' + String(Math.ceil((((new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate() + 4 - (now.getDay()||7))) - new Date(Date.UTC(now.getFullYear(),0,1))) / 86400000) + 1) / 7)).padStart(2,'0'); %>
+        <% if (week !== currentWeek) { %>
+          <a href="/metrics/input" class="text-xs text-primary hover:underline">Semaine courante</a>
+        <% } %>
+      </div>
+    </div>
+
+    <% var fields = [
+      ['posts_published',   'Posts publiés'],
+      ['total_reach',       'Portée totale'],
+      ['total_impressions', 'Impressions'],
+      ['total_likes',       'Likes'],
+      ['total_comments',    'Commentaires'],
+      ['total_shares',      'Partages'],
+      ['info_comments',     'Commentaires INFO'],
+      ['dm_opened',         'DM ouverts'],
+      ['calendly_booked',   'RDV Calendly']
+    ]; %>
+
+    <div class="grid grid-cols-3 gap-4 mb-6">
+      <% fields.forEach(function(f) { %>
+        <div>
+          <label class="block text-xs font-medium text-gray-600 mb-1"><%= f[1] %></label>
+          <input type="number" name="<%= f[0] %>" value="<%= existing ? (existing[f[0]] || 0) : 0 %>" min="0"
+                 class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-secondary">
+        </div>
+      <% }); %>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <button type="submit" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition font-medium text-sm">Enregistrer</button>
+      <a href="/metrics/compare" class="text-sm text-gray-500 hover:text-secondary">Voir comparaison →</a>
+    </div>
+  </form>
+</div>

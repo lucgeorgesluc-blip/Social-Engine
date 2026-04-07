@@ -1,0 +1,281 @@
+# Content Calendar — Social Acquisition Engine
+# Genere: 2026-04-05
+# Base sur: analyse des commentaires POST-2026-04-01-01
+#
+# PRIORITES identifiees:
+# 1. OBJ-volonte (freq 3) -> post dedie URGENT
+# 2. OBJ-arnaque (freq 3) -> post credibilite/transparence URGENT
+# 3. OBJ-temoignages (freq 1) -> integrer temoignages DANS les posts
+# 4. OBJ-reactivite (freq 2) -> pas un post mais un COMPORTEMENT (repondre < 2h)
+#
+# LECONS du 1er post:
+# - Le format "histoire anonyme" genere du scepticisme ("copier-coller", "ou sont les temoignages")
+# - Prochains posts: plus personnels, avec preuves concretes (prenom, details, avis Google)
+# - Repondre DANS LES 2H aux "INFO" — Sylvie a tourne negative par manque de reactivite
+# - Ne jamais poster le lien Calendly en public (OK en DM uniquement)
+
+# ============================================================
+# SEMAINE 1 — 7-11 avril 2026
+# Theme: Credibilite + Preuve sociale (reponse aux critiques)
+# ============================================================
+
+weeks:
+  - week: "2026-W15"
+    dates: "07/04 - 11/04"
+    theme: "Credibilite et preuve sociale"
+    posts:
+      - id: POST-2026-04-07-01
+        day: lundi
+        date: "2026-04-07"
+        platform: facebook
+        type: temoignage
+        objection_addressed: arnaque
+        priority: 1
+        status: published
+        angle: "Temoignage NOMME avec details concrets — casser l'image 'copier-coller'"
+        brief: |
+          Post avec un vrai temoignage (prenom + details specifiques).
+          Mentionner: nombre de seances, delai, resultat concret.
+          Inclure: "Vous pouvez lire ses avis et ceux de 35 autres personnes sur Google"
+          Format: citation directe du patient, pas narration a la 3e personne.
+          HOOK: La citation du patient elle-meme, pas "une personne m'a dit"
+        cta: "Vous avez des questions ? Posez-les ici, je reponds a tout."
+        notes: "Reponse directe a Nini ('copier-coller') et Caly ('ou sont les temoignages')"
+
+      - id: POST-2026-04-08-01
+        day: mercredi
+        date: "2026-04-09"
+        platform: facebook
+        type: objection-buster
+        objection_addressed: volonte
+        priority: 1
+        status: drafted
+        angle: "La volonte ne suffit pas — et c'est normal (neurosciences)"
+        brief: |
+          Hook: "On me dit souvent : 'Il suffit de vouloir pour arreter.'"
+          Expliquer POURQUOI la volonte seule echoue (nicotine = recepteurs cerebraux,
+          pas un manque de caractere).
+          Transition: l'hypnose agit sur les automatismes inconscients,
+          la ou la volonte consciente n'a pas acces.
+          Ton: educatif, pas condescendant. Valider la volonte PUIS montrer ses limites.
+          Chiffre: "70% des fumeurs qui arretent par volonte seule rechutent dans les 6 mois"
+        cta: "Commentez VOLONTE si ca vous parle, je vous explique comment ca marche."
+        notes: "Reponse a Martine et Marion (OBJ-volonte freq 3)"
+
+      - id: POST-2026-04-11-01
+        day: vendredi
+        date: "2026-04-11"
+        platform: facebook
+        type: myth-buster
+        objection_addressed: arnaque
+        priority: 2
+        status: drafted
+        angle: "Transparence totale — qui je suis, comment ca marche, combien ca coute"
+        brief: |
+          Post "carte sur table" : presenter Corinne en personne.
+          - Qui: prenom, parcours, formation (Pascal Bescos), 15+ ans
+          - Quoi: magnetisme + hypnose ericksonienne, pas de magie
+          - Ou: cabinet a Saint-Germain, pas en ligne
+          - Combien: fourchette de prix (en DM si prefere)
+          - Preuves: "35 avis Google, 4.9 etoiles — allez voir par vous-meme"
+          - Photo: idealement photo du cabinet ou de Corinne
+          Ton: direct, humain, zero bullshit.
+          HOOK: "Je vais etre honnete avec vous."
+        cta: "Posez-moi la question qui vous bloque. Je reponds ici, publiquement."
+        notes: "Reponse frontale a OBJ-arnaque. Transparence = meilleure defense."
+
+  # ============================================================
+  # SEMAINE 2 — 14-18 avril 2026
+  # Theme: Comment ca marche concretement
+  # ============================================================
+
+  - week: "2026-W16"
+    dates: "14/04 - 18/04"
+    theme: "Demystification du processus"
+    posts:
+      - id: POST-2026-04-14-01
+        day: lundi
+        date: "2026-04-14"
+        platform: facebook
+        type: timeline
+        objection_addressed: null
+        priority: 2
+        status: drafted
+        angle: "Les 48 premieres heures apres l'arret — minute par minute"
+        brief: |
+          Timeline detaillee de ce qui se passe dans le corps/esprit.
+          Heure par heure puis jour par jour.
+          Montrer que c'est normal d'avoir des envies, et comment Corinne
+          prepare ses patients a les traverser.
+          Inclure: astuce concretes donnees en seance.
+          HOOK: "Voici ce qui se passe dans votre corps quand vous ecrasez votre derniere cigarette."
+        cta: "Commentez INFO pour recevoir le guide complet en MP."
+        notes: "Contenu informatif pur — genere des saves et des partages"
+
+      - id: POST-2026-04-16-01
+        day: mercredi
+        date: "2026-04-16"
+        platform: both
+        type: stat-based
+        objection_addressed: trop_cher
+        priority: 2
+        status: drafted
+        angle: "Le vrai cout du tabac vs le cout de l'arret"
+        brief: |
+          Calcul concret et visuel:
+          - 1 paquet/jour en 2026 = ~14 euros
+          - Par mois = ~420 euros
+          - Par an = ~5 000 euros
+          - Sur 5 ans = 25 000 euros (une voiture!)
+          VS accompagnement hypnose+magnetisme = [prix en DM]
+          "Rembourse" en moins de 2 semaines d'arret.
+          HOOK: "5 000 euros. C'est ce que vous brulez chaque annee."
+        cta: "Combien depensez-vous par mois ? Dites-le en commentaire."
+        notes: "Preparer l'objection 'trop cher' avant qu'elle arrive. LinkedIn aussi (angle economique)."
+
+      - id: POST-2026-04-18-01
+        day: vendredi
+        date: "2026-04-18"
+        platform: facebook
+        type: temoignage
+        objection_addressed: rechute
+        priority: 3
+        status: drafted
+        angle: "Temoignage long-terme — 6 mois apres l'arret"
+        brief: |
+          Temoignage d'un patient qui a arrete il y a 6+ mois.
+          Focus: la duree, pas juste l'arret immediat.
+          Details: ce qui a change dans sa vie (sante, argent, fierte).
+          Mention de la seance de renforcement gratuite.
+          HOOK: "[Prenom], 6 mois sans tabac : 'Je ne me reconnais plus.'"
+        cta: "Ecrivez INFO si vous voulez savoir comment ca se passe concretement."
+        notes: "Reponse anticipee a OBJ-rechute"
+
+  # ============================================================
+  # SEMAINE 3 — 21-25 avril 2026
+  # Theme: Les peurs et les doutes
+  # ============================================================
+
+  - week: "2026-W17"
+    dates: "21/04 - 25/04"
+    theme: "Adresser les peurs"
+    posts:
+      - id: POST-2026-04-21-01
+        day: lundi
+        date: "2026-04-21"
+        platform: facebook
+        type: objection-buster
+        objection_addressed: peur_hypnose
+        priority: 2
+        status: drafted
+        angle: "Non, vous ne perdez pas le controle sous hypnose"
+        brief: |
+          Demystifier l'hypnose ericksonienne vs hypnose de spectacle TV.
+          - Vous restez conscient
+          - Vous pouvez ouvrir les yeux a tout moment
+          - C'est un etat naturel (comme quand vous etes absorbe dans un film)
+          - Corinne guide, vous decidez
+          HOOK: "Vous avez peur de l'hypnose ? Moi aussi, avant ma formation."
+        cta: "Une question sur l'hypnose ? Posez-la en commentaire."
+        notes: ""
+
+      - id: POST-2026-04-23-01
+        day: mercredi
+        date: "2026-04-23"
+        platform: both
+        type: economic
+        objection_addressed: null
+        priority: 3
+        status: drafted
+        angle: "Ce que mes patients font avec l'argent economise"
+        brief: |
+          Angle feel-good: pas juste "vous economisez" mais "voici ce que
+          d'autres ont fait avec cet argent" (vacances, cadeau enfants, epargne).
+          Rend l'arret desirable, pas juste necessaire.
+          HOOK: "Thomas a arrete il y a 1 an. Avec les 5 000 euros economises, il est parti en Grece avec sa famille."
+        cta: "Et vous, que feriez-vous avec 5 000 euros de plus par an ? Dites-le en commentaire."
+        notes: "Engagement play — les gens adorent parler de ce qu'ils feraient avec plus d'argent"
+
+      - id: POST-2026-04-25-01
+        day: vendredi
+        date: "2026-04-25"
+        platform: facebook
+        type: temoignage
+        objection_addressed: placebo
+        priority: 2
+        status: drafted
+        angle: "Il n'y croyait pas du tout — resultat apres 1 seance"
+        brief: |
+          Temoignage d'un sceptique converti.
+          Le patient dit explicitement qu'il ne croyait pas au magnetisme.
+          Detail de ce qui s'est passe en seance et apres.
+          HOOK: "'Je suis venu pour faire plaisir a ma femme. Je n'y croyais pas du tout.'"
+          Chute: "3 mois plus tard, toujours pas une cigarette."
+        cta: "Meme si vous n'y croyez pas, ca peut marcher. Ecrivez INFO pour en savoir plus."
+        notes: "Reponse a OBJ-placebo — le meilleur argument est un temoignage de sceptique"
+
+  # ============================================================
+  # SEMAINE 4 — 28 avril - 2 mai 2026
+  # Theme: Passage a l'action
+  # ============================================================
+
+  - week: "2026-W18"
+    dates: "28/04 - 02/05"
+    theme: "Conversion et passage a l'action"
+    posts:
+      - id: POST-2026-04-28-01
+        day: lundi
+        date: "2026-04-28"
+        platform: facebook
+        type: health
+        objection_addressed: null
+        priority: 3
+        status: drafted
+        angle: "Ce qui se passe dans votre corps 30 jours apres l'arret"
+        brief: |
+          Timeline sante J+1 a J+30 avec benefices concrets.
+          - 20 min: tension arterielle baisse
+          - 24h: risque cardiaque diminue
+          - 48h: gout et odorat reviennent
+          - 1 mois: capacite pulmonaire +30%
+          Format visuel (liste numerotee).
+          HOOK: "20 minutes. C'est le temps qu'il faut a votre corps pour commencer a guerir."
+        cta: "Partagez ce post a quelqu'un qui en a besoin."
+        notes: "Post viral potential — partages eleves sur ce type de contenu"
+
+      - id: POST-2026-04-30-01
+        day: mercredi
+        date: "2026-04-30"
+        platform: both
+        type: objection-buster
+        objection_addressed: magie
+        priority: 2
+        status: drafted
+        angle: "Le magnetisme, ce n'est pas de la magie — voici ce que c'est vraiment"
+        brief: |
+          Explication simple et deculpabilisante.
+          - Pas d'esoterique, pas de sorcellerie
+          - Travail energetique reconnu
+          - Combine avec hypnose ericksonienne (validee scientifiquement)
+          - Pratique depuis 15+ ans, formation reconnue
+          HOOK: "'Vous faites de la magie ?' On me pose la question 1 fois sur 3."
+        cta: "Une question ? Je reponds a tout, ici ou en prive."
+        notes: ""
+
+      - id: POST-2026-05-02-01
+        day: vendredi
+        date: "2026-05-02"
+        platform: facebook
+        type: temoignage
+        objection_addressed: null
+        priority: 2
+        status: drafted
+        angle: "Bilan du mois — X patients accompagnes, Y arrêts confirmes"
+        brief: |
+          Post bilan mensuel avec chiffres reels d'avril 2026.
+          Transparence totale: nb de patients, taux de reussite reel,
+          temoignages du mois (avec accord).
+          HOOK: "Avril 2026 — bilan de mon cabinet."
+          Montre le volume et la regularite (pas un one-shot).
+        cta: "Mai commence — et si c'etait votre mois ? Ecrivez INFO."
+        notes: "Demander a Corinne les vrais chiffres d'avril avant publication"

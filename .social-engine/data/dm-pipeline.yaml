@@ -1,0 +1,168 @@
+# DM Conversion Pipeline — Social Acquisition Engine
+# Mis a jour: 2026-04-05
+
+prospects:
+  - id: DM-2026-04-05-01
+    source_comment_id: CMT-2026-04-05-01
+    source_post_id: POST-2026-04-07-01
+    platform: facebook
+    prospect_name: "Sylvie"
+    full_name: "Sylvie Forgues"
+    date_first_contact: "2026-04-05"
+    stage: new
+    messages:
+      - seq: 1
+        date_sent: null
+        content: "DM avec infos + lien Calendly"
+    calendly_date: null
+    conversion_date: null
+    lost_reason: null
+    notes: ""
+
+  - id: DM-2026-04-06-01
+    source_comment_id: CMT-2026-04-06-01
+    source_post_id: POST-2026-04-07-01
+    platform: facebook
+    prospect_name: "Sandrine"
+    full_name: "Sandrine Delaistre"
+    date_first_contact: "2026-04-06"
+    stage: new
+    messages:
+      - seq: 1
+        date_sent: null
+        content: "DM standard + Calendly"
+    calendly_date: null
+    conversion_date: null
+    lost_reason: null
+    notes: ""
+
+  - id: DM-2026-04-06-02
+    source_comment_id: CMT-2026-04-06-02
+    source_post_id: POST-2026-04-07-01
+    platform: facebook
+    prospect_name: "Odette"
+    full_name: "Odette Lartillier"
+    date_first_contact: "2026-04-06"
+    stage: new
+    messages:
+      - seq: 1
+        date_sent: null
+        content: "DM standard + Calendly"
+    calendly_date: null
+    conversion_date: null
+    lost_reason: null
+    notes: ""
+
+  - id: DM-2026-04-06-03
+    source_comment_id: CMT-2026-04-06-03
+    source_post_id: POST-2026-04-07-01
+    platform: facebook
+    prospect_name: "Jassim"
+    full_name: "Jassim Mavie"
+    date_first_contact: "2026-04-06"
+    stage: new
+    messages:
+      - seq: 1
+        date_sent: null
+        content: "DM standard + Calendly"
+    calendly_date: null
+    conversion_date: null
+    lost_reason: null
+    notes: ""
+
+  - id: DM-2026-04-06-04
+    source_comment_id: CMT-2026-04-06-04
+    source_post_id: POST-2026-04-07-01
+    platform: facebook
+    prospect_name: "Sandra"
+    full_name: "Sandra Pons"
+    date_first_contact: "2026-04-06"
+    stage: new
+    messages:
+      - seq: 1
+        date_sent: null
+        content: "DM standard + Calendly"
+    calendly_date: null
+    conversion_date: null
+    lost_reason: null
+    notes: ""
+
+  - id: DM-2026-04-06-05
+    source_comment_id: CMT-2026-04-06-05
+    source_post_id: POST-2026-04-07-01
+    platform: facebook
+    prospect_name: "Chris"
+    full_name: "Chris Telle Chris Par"
+    date_first_contact: "2026-04-06"
+    stage: new
+    messages:
+      - seq: 1
+        date_sent: null
+        content: "DM standard + Calendly"
+    calendly_date: null
+    conversion_date: null
+    lost_reason: null
+    notes: ""
+
+  - id: DM-2026-04-06-06
+    source_comment_id: CMT-2026-04-06-06
+    source_post_id: POST-2026-04-07-01
+    platform: facebook
+    prospect_name: "Fabrice"
+    full_name: "Fabrice Tirran"
+    date_first_contact: "2026-04-06"
+    stage: new
+    messages:
+      - seq: 1
+        date_sent: null
+        content: "DM standard + Calendly"
+    calendly_date: null
+    conversion_date: null
+    lost_reason: null
+    notes: ""
+
+  - id: DM-2026-03-29-01
+    source_comment_id: CMT-2026-03-29-01
+    source_post_id: POST-2026-04-01-01
+    platform: facebook
+    prospect_name: "Nadege"
+    full_name: "Nadege Guigner"
+    date_first_contact: "2026-03-29"
+    stage: msg1_sent  # DM envoye 2026-04-05 (7j de retard)
+    messages:
+      - seq: 1
+        date_sent: null
+        content: ""
+      - seq: 2
+        date_sent: null
+        content: ""
+      - seq: 3
+        date_sent: null
+        content: ""
+    calendly_date: null
+    conversion_date: null
+    lost_reason: null
+    notes: "DM envoye le 2026-04-05 avec excuses pour le retard (7j). Relance J+2 prevue le 2026-04-07 si pas de reponse."
+
+  - id: DM-2026-03-29-02
+    source_comment_id: CMT-2026-03-29-02
+    source_post_id: POST-2026-04-01-01
+    platform: facebook
+    prospect_name: "Sylvie"
+    full_name: "Sylvie Rostaing"
+    date_first_contact: "2026-03-29"
+    stage: msg1_sent
+    messages:
+      - seq: 1
+        date_sent: "2026-04-02"
+        content: "Reponse publique avec lien Calendly. DM envoye (a confirmer)."
+      - seq: 2
+        date_sent: null
+        content: ""
+      - seq: 3
+        date_sent: null
+        content: ""
+    calendly_date: null
+    conversion_date: null
+    lost_reason: null
+    notes: "Prospect ambivalent - a aussi poste 'arnaque' (CMT-2026-03-29-06). Reponse publique faite J+3 avec Calendly. Verifier si DM prive aussi envoye. Relance J+2 si pas de reponse."

@@ -1,0 +1,32 @@
+# Weekly Metrics Dashboard — Social Acquisition Engine
+# Rempli chaque dimanche soir avec les metriques de la semaine
+# Claude analyse les tendances et ajuste la strategie
+#
+# KPIs cles:
+# - Engagement rate cible: > 5%
+# - INFO comments par post: > 2
+# - Taux conversion INFO -> DM: > 80%
+# - Taux conversion DM -> Calendly: > 30%
+# - Taux conversion Calendly -> Patient: > 70%
+
+# --- TEMPLATE ---
+# - week: "YYYY-WNN"
+#   dates: "DD/MM - DD/MM"
+#   posts_published: 0
+#   total_reach: 0
+#   total_impressions: 0
+#   total_likes: 0
+#   total_comments: 0
+#   total_shares: 0
+#   info_comments: 0
+#   dm_opened: 0
+#   calendly_booked: 0
+#   patients_converted: 0
+#   engagement_rate: 0
+#   best_post_id: null
+#   worst_post_id: null
+#   top_objection: null
+#   learnings: ""
+
+weeks: []
+# Sera rempli a partir de la prochaine semaine complete

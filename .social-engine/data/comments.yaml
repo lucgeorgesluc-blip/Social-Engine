@@ -1,0 +1,259 @@
+# Comments Registry — Social Acquisition Engine
+# Post: POST-2026-04-01-01 (temoignage "20 ans de tabac")
+
+comments:
+  # --- INFO REQUESTS ---
+  - id: CMT-2026-04-05-01
+    post_id: POST-2026-04-07-01
+    date: "2026-04-05"
+    platform: facebook
+    author_name: "Sylvie"
+    full_name: "Sylvie Forgues"
+    classification: info
+    objection_type: null
+    comment_text: "Info"
+    response_text: "Bonjour Sylvie ! Je vous envoie un message prive avec toutes les informations."
+    response_status: pending
+    converted_to_dm: false
+    notes: "Post Chloe Maire."
+
+  # --- VAGUE 06 AVRIL (post Chloe) ---
+  - id: CMT-2026-04-06-01
+    post_id: POST-2026-04-07-01
+    date: "2026-04-06"
+    platform: facebook
+    author_name: "Sandrine"
+    full_name: "Sandrine Delaistre"
+    classification: info
+    objection_type: null
+    comment_text: "Info"
+    response_text: "Bonjour Sandrine ! Je vous envoie les infos en prive."
+    response_status: pending
+    converted_to_dm: false
+    notes: ""
+
+  - id: CMT-2026-04-06-02
+    post_id: POST-2026-04-07-01
+    date: "2026-04-06"
+    platform: facebook
+    author_name: "Odette"
+    full_name: "Odette Lartillier"
+    classification: info
+    objection_type: null
+    comment_text: "Info"
+    response_text: "Bonjour Odette ! Je vous envoie un message prive avec toutes les informations."
+    response_status: pending
+    converted_to_dm: false
+    notes: ""
+
+  - id: CMT-2026-04-06-03
+    post_id: POST-2026-04-07-01
+    date: "2026-04-06"
+    platform: facebook
+    author_name: "Jassim"
+    full_name: "Jassim Mavie"
+    classification: info
+    objection_type: null
+    comment_text: "Info"
+    response_text: "Bonjour Jassim ! Je vous envoie les details en message prive."
+    response_status: pending
+    converted_to_dm: false
+    notes: ""
+
+  - id: CMT-2026-04-06-04
+    post_id: POST-2026-04-07-01
+    date: "2026-04-06"
+    platform: facebook
+    author_name: "Sandra"
+    full_name: "Sandra Pons"
+    classification: info
+    objection_type: null
+    comment_text: "Info"
+    response_text: "Bonjour Sandra ! Je vous envoie un message prive."
+    response_status: pending
+    converted_to_dm: false
+    notes: ""
+
+  - id: CMT-2026-04-06-05
+    post_id: POST-2026-04-07-01
+    date: "2026-04-06"
+    platform: facebook
+    author_name: "Chris"
+    full_name: "Chris Telle Chris Par"
+    classification: info
+    objection_type: null
+    comment_text: "Info svp.merci"
+    response_text: "Bonjour Chris ! Merci pour votre interet, je vous envoie les infos en message prive."
+    response_status: pending
+    converted_to_dm: false
+    notes: ""
+
+  - id: CMT-2026-04-06-06
+    post_id: POST-2026-04-07-01
+    date: "2026-04-06"
+    platform: facebook
+    author_name: "Fabrice"
+    full_name: "Fabrice Tirran"
+    classification: info
+    objection_type: null
+    comment_text: "Info"
+    response_text: "Bonjour Fabrice ! Je vous envoie un message prive avec toutes les informations."
+    response_status: pending
+    converted_to_dm: false
+    notes: ""
+
+  - id: CMT-2026-04-06-07
+    post_id: POST-2026-04-07-01
+    date: "2026-04-06"
+    platform: facebook
+    author_name: "Patatie"
+    full_name: "Patatie Patata"
+    classification: skeptic
+    objection_type: arnaque
+    comment_text: "J ai juste paye 80 euros qui n a servit a rien. Sauf recuperation des paquets de cigarettes qui doive leur servir a fumer gratos"
+    response_text: "Bonjour, je suis desolee de lire votre experience. Je ne me reconnais pas dans ce que vous decrivez — je ne recupere pas les paquets de cigarettes, ce n'est pas ma methode. Il est possible que vous me confondez avec un autre praticien ? Si c'est bien de mon cabinet, contactez-moi directement."
+    response_status: pending
+    converted_to_dm: false
+    notes: "Probablement confusion avec un autre praticien (80 euros =/= tarif Corinne, methode paquets inconnue). Reponse calme, ouvre dialogue."
+
+  - id: CMT-2026-04-06-08
+    post_id: POST-2026-04-07-01
+    date: "2026-04-06"
+    platform: facebook
+    author_name: "Chrystelle"
+    full_name: "Chrystelle Rade"
+    classification: skeptic
+    objection_type: arnaque
+    comment_text: "Comment perdre son temps et son argent ! Son mari et Mme recuperent les paquets mais leur methode ne fonctionne qu'un petit temps ou pas du tout ! Il n'y a aucun suivi. Si vous voulez arreter, je vous conseille Mr C..."
+    response_text: "Bonjour Chrystelle, merci pour votre retour. Je suis navree si l'experience n'a pas ete a la hauteur. Je propose des seances de suivi justement pour accompagner mes patients jusqu'a l'arret definitif — c'est une partie essentielle de ma methode. Si ce suivi n'a pas ete suffisant dans votre cas, j'en prends note sincerement. Chaque praticien a sa methode, et je suis contente que vous ayez trouve quelqu'un qui vous convient."
+    response_status: pending
+    converted_to_dm: false
+    notes: "Mentionne 'son mari et Mme' + 'recuperation paquets' = probablement un AUTRE praticien. Recommande un concurrent. Ne pas polemiser."
+
+  - id: CMT-2026-03-29-01
+    post_id: POST-2026-04-01-01
+    date: "2026-03-29"
+    platform: facebook
+    author_name: "Nadege"
+    classification: info
+    objection_type: null
+    comment_text: "Info"
+    response_text: ""
+    response_status: pending
+    converted_to_dm: false
+    notes: "Pas de reponse visible - A TRAITER EN URGENCE si pas deja fait en DM"
+
+  - id: CMT-2026-03-29-02
+    post_id: POST-2026-04-01-01
+    date: "2026-03-29"
+    platform: facebook
+    author_name: "Sylvie"
+    full_name: "Sylvie Rostaing"
+    classification: info
+    objection_type: null
+    comment_text: "Info"
+    response_text: "Bonsoir Sylvie Rostaing ! Je vous envoie les informations en message prive. Vous pouvez aussi reserver un appel directement ici : calendly.com/corinnelacoste/appel"
+    response_status: sent
+    converted_to_dm: true
+    notes: "Sylvie a aussi poste un commentaire negatif (CMT-2026-03-29-06) - prospect ambivalent"
+
+  # --- SKEPTICS ---
+  - id: CMT-2026-03-30-01
+    post_id: POST-2026-04-01-01
+    date: "2026-03-30"
+    platform: facebook
+    author_name: "Martine"
+    full_name: "Martine Aucun Bienvenue"
+    classification: skeptic
+    objection_type: volonte
+    comment_text: "Ce n'est pas avec votre accompagnement que vous ferez des miracles! Elles memes doivent prendre une decision ferme qui se trouve dans leur cerveau!"
+    response_text: "Bonsoir Martine, vous avez tout a fait raison : la decision vient de la personne. C'est d'ailleurs ce que je dis a chaque client des le depart. Mon role n'est pas de faire le travail a leur place, c'est de les aider a calmer les envies physiques et les declencheurs emotionnels pour que leur decision tienne dans le temps."
+    response_status: sent
+    converted_to_dm: false
+    notes: "Martine est revenue 2 fois en reply pour renforcer les negatifs (troll borderline)"
+
+  - id: CMT-2026-03-29-03
+    post_id: POST-2026-04-01-01
+    date: "2026-03-29"
+    platform: facebook
+    author_name: "Nini"
+    full_name: "Nini Fiston"
+    classification: skeptic
+    objection_type: professionnalisme
+    comment_text: "Je crois au magnetisme et a l'hypnose mais serieux ce genre d'annonce toute faite copier coller de je ne sais ou, ca ne donne pas envie de vous appeler...et en plus vous ne repondez pas. Pas tres professionnel tout ca...surtout quand il faut vous contacter par MP."
+    response_text: "Bonjour, votre retour est legitime et je l'entends. Je vous remercie sincerement pour votre message. Si vous voulez voir ce que je propose concretement, tout est sur mon site : magnetiseuse-lacoste-corinne.fr."
+    response_status: sent
+    converted_to_dm: false
+    notes: "CRITIQUE IMPORTANTE - pointe le manque de reactivite et le format 'copier-coller'. A adresser dans les futurs posts."
+
+  - id: CMT-2026-03-29-04
+    post_id: POST-2026-04-01-01
+    date: "2026-03-29"
+    platform: facebook
+    author_name: "Kaloo"
+    full_name: "Kaloo Blaise Sabine"
+    classification: skeptic
+    objection_type: placebo
+    comment_text: "Perso, je n'y crois pas."
+    response_text: "Bonsoir, c'est une position tout a fait respectable. Le magnetisme et l'hypnose ne conviennent pas a tout le monde, et je ne cherche pas a convaincre ceux qui n'y croient pas. Bonne continuation a vous."
+    response_status: sent
+    converted_to_dm: false
+    notes: ""
+
+  - id: CMT-2026-03-29-05
+    post_id: POST-2026-04-01-01
+    date: "2026-03-29"
+    platform: facebook
+    author_name: "Marion"
+    full_name: "Marion Lje"
+    classification: skeptic
+    objection_type: volonte
+    comment_text: "Seule la volonte est efficace! Si on replonge c'est que la volonte n'etait pas vraiment presente (de mon avis)"
+    response_text: "Bonsoir Marion, vous avez raison que la volonte est centrale. La ou l'hypnose et le magnetisme interviennent, c'est sur ce qui fragilise cette volonte : le stress, les automatismes inconscients, les declencheurs emotionnels. C'est complementaire, pas un remplacement."
+    response_status: sent
+    converted_to_dm: false
+    notes: ""
+
+  - id: CMT-2026-03-29-06
+    post_id: POST-2026-04-01-01
+    date: "2026-03-29"
+    platform: facebook
+    author_name: "Sylvie"
+    full_name: "Sylvie Rostaing"
+    classification: skeptic
+    objection_type: professionnalisme
+    comment_text: "Encore une belle arnaque, les renseignements tardent a venir"
+    response_text: ""
+    response_status: ignored
+    converted_to_dm: false
+    notes: "Meme Sylvie que INFO - frustree par le delai de reponse. Montre l'URGENCE de repondre vite aux INFO."
+
+  # --- CURIOUS ---
+  - id: CMT-2026-03-29-07
+    post_id: POST-2026-04-01-01
+    date: "2026-03-29"
+    platform: facebook
+    author_name: "Caly"
+    full_name: "Caly Zubrowka"
+    classification: curious
+    objection_type: null
+    comment_text: "Mais ou sont ses temoignages??"
+    response_text: "Bonsoir, ils sont sur mon site : magnetiseuse-lacoste-corinne.fr/arret-tabac-troyes.html, ainsi que sur ma fiche Google (35+ avis verifies). Je prends note que ce n'est pas assez visible depuis Facebook, merci pour le retour."
+    response_status: sent
+    converted_to_dm: false
+    notes: "Feedback utile: les temoignages ne sont pas visibles depuis les posts FB. A integrer dans les futurs posts."
+
+  # --- TROLLS ---
+  - id: CMT-2026-03-30-02
+    post_id: POST-2026-04-01-01
+    date: "2026-03-30"
+    platform: facebook
+    author_name: "Martine"
+    full_name: "Martine Aucun Bienvenue"
+    classification: troll
+    objection_type: null
+    comment_text: "De l'arnaque vous avez raison! (reply to Nini)"
+    response_text: ""
+    response_status: ignored
+    converted_to_dm: false
+    notes: "Reply sur commentaire de Nini. Ignore - ne pas alimenter."

@@ -1,0 +1,104 @@
+# Objection Tracker — Social Acquisition Engine
+# Mis a jour: 2026-04-05 (analyse post POST-2026-04-01-01)
+# Regle: frequency >= 3 sans post dedie -> proposer ObjectionCrusher
+
+objections:
+  - id: OBJ-volonte
+    label: "Seule la volonte suffit / pas besoin d'aide"
+    frequency: 3
+    last_seen: "2026-03-30"
+    comment_ids: [CMT-2026-03-30-01, CMT-2026-03-29-05, CMT-2026-03-30-02]
+    post_response_ids: []
+    best_counter: "La volonte est essentielle, l'hypnose agit sur ce qui la fragilise (stress, automatismes, declencheurs emotionnels). Complementaire, pas remplacement."
+    status: "NEEDS_POST"  # freq >= 3, aucun post dedie
+
+  - id: OBJ-placebo
+    label: "C'est du placebo / Je n'y crois pas / Ca ne marche pas"
+    frequency: 1
+    last_seen: "2026-03-29"
+    comment_ids: [CMT-2026-03-29-04]
+    post_response_ids: []
+    best_counter: "INSERM 2015 + 85% reussite + avis Google"
+    status: active
+
+  - id: OBJ-arnaque
+    label: "C'est de l'arnaque / pas professionnel"
+    frequency: 5
+    last_seen: "2026-04-06"
+    comment_ids: [CMT-2026-03-29-03, CMT-2026-03-29-06, CMT-2026-03-30-02, CMT-2026-04-06-07, CMT-2026-04-06-08]
+    post_response_ids: []
+    best_counter: "Site web complet, 35+ avis Google verifies 4.9 etoiles, 15+ ans experience, formation Pascal Bescos"
+    status: "NEEDS_POST"  # freq >= 3, aucun post dedie
+
+  - id: OBJ-temoignages
+    label: "Ou sont les temoignages / preuves ?"
+    frequency: 1
+    last_seen: "2026-03-29"
+    comment_ids: [CMT-2026-03-29-07]
+    post_response_ids: []
+    best_counter: "35+ avis Google + temoignages sur le site + integrer les temoignages directement dans les posts"
+    status: active
+
+  - id: OBJ-trop_cher
+    label: "C'est trop cher"
+    frequency: 0
+    last_seen: null
+    comment_ids: []
+    post_response_ids: []
+    best_counter: "1 paquet/jour = 4000 euros/an vs 1-2 seances"
+    status: active
+
+  - id: OBJ-medecin
+    label: "Mon medecin n'y croit pas / Seuls les patchs marchent"
+    frequency: 0
+    last_seen: null
+    comment_ids: []
+    post_response_ids: []
+    best_counter: "Complementarite, pas opposition. Beaucoup viennent apres les patchs."
+    status: active
+
+  - id: OBJ-rechute
+    label: "Ca ne dure pas / On rechute"
+    frequency: 0
+    last_seen: null
+    comment_ids: []
+    post_response_ids: []
+    best_counter: "85% non-fumeurs apres 1 an + renforcement gratuit 3 mois"
+    status: active
+
+  - id: OBJ-magie
+    label: "C'est de la magie / sorcellerie / esoterique"
+    frequency: 0
+    last_seen: null
+    comment_ids: []
+    post_response_ids: []
+    best_counter: "Pratique de bien-etre reconnue + hypnose ericksonienne validee"
+    status: active
+
+  - id: OBJ-peur_hypnose
+    label: "J'ai peur de l'hypnose / perte de controle"
+    frequency: 0
+    last_seen: null
+    comment_ids: []
+    post_response_ids: []
+    best_counter: "Vous restez conscient et en controle a tout moment. Rien a voir avec l'hypnose de spectacle."
+    status: active
+
+  - id: OBJ-fume_peu
+    label: "Je fume peu, pas besoin d'aide"
+    frequency: 0
+    last_seen: null
+    comment_ids: []
+    post_response_ids: []
+    best_counter: "Meme 5 cigarettes/jour = dependance. Plus facile d'arreter maintenant que dans 10 ans."
+    status: active
+
+  - id: OBJ-reactivite
+    label: "Pas de reponse / pas professionnel / delai trop long"
+    frequency: 2
+    last_seen: "2026-03-29"
+    comment_ids: [CMT-2026-03-29-03, CMT-2026-03-29-06]
+    post_response_ids: []
+    best_counter: "Repondre dans les 2h. Montrer la reactivite dans les futurs posts."
+    status: active
+    notes: "PAS une objection a adresser par post, mais par COMPORTEMENT. Repondre plus vite."

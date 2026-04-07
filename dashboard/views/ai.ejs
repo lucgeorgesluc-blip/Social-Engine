@@ -1,0 +1,123 @@
+<div class="max-w-4xl">
+  <h1 class="text-lg font-semibold text-secondary mb-4">Génération IA</h1>
+
+  <%# Usage counter %>
+  <% var usagePct = Math.round((usage.count / usage.limit) * 100); %>
+  <div class="mb-4 px-4 py-3 rounded-lg text-sm flex items-center justify-between
+    <%= usage.count >= usage.limit ? 'bg-red-50 border border-red-200 text-red-700' : usage.count >= usage.warning ? 'bg-amber-50 border border-amber-200 text-amber-700' : 'bg-gray-50 border border-gray-100 text-gray-600' %>">
+    <span>
+      <span class="font-semibold"><%= usage.count %> / <%= usage.limit %></span> générations ce mois
+      <% if (usage.count >= usage.limit) { %> — <strong>Limite mensuelle atteinte.</strong> Réessayez le mois prochain.<% } %>
+      <% if (usage.count >= usage.warning && usage.count < usage.limit) { %> — Attention : vous approchez de la limite mensuelle.<% } %>
+    </span>
+    <div class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden ml-4">
+      <div class="h-2 rounded-full <%= usage.count >= usage.limit ? 'bg-red-500' : usage.count >= usage.warning ? 'bg-amber-500' : 'bg-green-500' %>" style="width: <%= usagePct %>%"></div>
+    </div>
+  </div>
+
+  <%# Objection suggestions %>
+  <% if (suggestions && suggestions.length > 0) { %>
+  <div class="mb-4 bg-blue-50 border border-blue-200 rounded-xl p-4">
+    <h3 class="text-sm font-semibold text-secondary mb-2">Suggestions basées sur les commentaires</h3>
+    <ul class="space-y-1">
+      <% suggestions.forEach(function(s) { %>
+      <li class="flex items-center justify-between text-sm">
+        <span class="text-gray-700">« <%= s.objection_type %> » <span class="text-gray-400">(vu <%= s.frequency %> fois)</span></span>
+        <a href="/dashboard/ai?type=objection-buster&context=<%= encodeURIComponent(s.objection_type) %>"
+           class="text-xs text-primary hover:underline ml-3">Générer un post →</a>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+  <% } %>
+
+  <%# Error display %>
+  <% if (error) { %>
+  <div class="mb-4 px-4 py-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm"><%= error %></div>
+  <% } %>
+
+  <%# Generation form %>
+  <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-6 mb-6">
+    <h2 class="text-sm font-semibold text-secondary mb-4">Nouveau post</h2>
+    <form method="POST" action="/dashboard/ai/generate" class="space-y-4">
+      <div>
+        <label class="block text-xs font-medium text-secondary mb-1">Type de post</label>
+        <select name="type" id="post-type-select" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-secondary" required>
+          <% postTypes.forEach(function(pt) { %>
+            <option value="<%= pt.id %>" <%= selectedType === pt.id ? 'selected' : '' %> data-needs-context="<%= pt.needsContext %>" data-context-label="<%= pt.contextLabel %>"><%= pt.label %></option>
+          <% }); %>
+        </select>
+      </div>
+      <div id="context-group" class="<%= !selectedType || postTypes.find(function(p){return p.id===selectedType;}).needsContext ? '' : 'hidden' %>">
+        <label id="context-label" class="block text-xs font-medium text-secondary mb-1">
+          <%= selectedType && postTypes.find(function(p){return p.id===selectedType;}) ? postTypes.find(function(p){return p.id===selectedType;}).contextLabel || 'Contexte' : 'Contexte' %>
+        </label>
+        <textarea name="context" id="context-input" rows="2" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-secondary resize-none" placeholder="Précisez le contexte..."><%= context %></textarea>
+      </div>
+      <button type="submit"
+              <%= usage.count >= usage.limit ? 'disabled' : '' %>
+              class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-opacity-90 transition <%= usage.count >= usage.limit ? 'opacity-50 cursor-not-allowed' : '' %>">
+        Générer
+      </button>
+    </form>
+  </div>
+
+  <%# Generated text + inline edit + save as draft %>
+  <% if (generated) { %>
+  <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+    <h2 class="text-sm font-semibold text-secondary mb-3">Post généré — modifiez puis sauvegardez</h2>
+    <form method="POST" action="/posts" class="space-y-4">
+      <textarea name="content" rows="12" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-secondary resize-y"><%= generated %></textarea>
+      <input type="hidden" name="type" value="<%= selectedType || '' %>">
+      <input type="hidden" name="status" value="draft">
+      <input type="hidden" name="platform" value="facebook">
+      <div class="flex items-center gap-3">
+        <button type="submit" class="bg-secondary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-opacity-90 transition">
+          Sauvegarder comme brouillon
+        </button>
+        <button type="button" id="copy-generated-btn" class="text-sm text-primary hover:underline">
+          Copier le texte
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('copy-generated-btn').addEventListener('click', function() {
+      var text = document.querySelector('textarea[name="content"]').value;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function() {
+          var btn = document.getElementById('copy-generated-btn');
+          btn.textContent = 'Copié !';
+          setTimeout(function() { btn.textContent = 'Copier le texte'; }, 2000);
+        });
+      } else {
+        window.prompt('Copiez manuellement :', text);
+      }
+    });
+  </script>
+  <% } %>
+</div>
+
+<script>
+(function() {
+  var typeSelect = document.getElementById('post-type-select');
+  var contextGroup = document.getElementById('context-group');
+  var contextLabel = document.getElementById('context-label');
+  var postTypes = <%- JSON.stringify(postTypes) %>;
+
+  function updateContext() {
+    var val = typeSelect.value;
+    var pt = postTypes.find(function(p) { return p.id === val; });
+    if (pt && pt.needsContext) {
+      contextGroup.classList.remove('hidden');
+      if (pt.contextLabel) contextLabel.textContent = pt.contextLabel;
+    } else {
+      contextGroup.classList.add('hidden');
+    }
+  }
+
+  typeSelect.addEventListener('change', updateContext);
+  updateContext();
+})();
+</script>

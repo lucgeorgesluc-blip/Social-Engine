@@ -11,7 +11,7 @@ Five phases deliver a complete Facebook acquisition management tool: infrastruct
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
 - [ ] **Phase 1: Foundation** - Express server on Render with paid Postgres, session auth, complete DB schema, idempotent YAML seed
-- [ ] **Phase 2: Read Layer** - Priority inbox, post list, comment list, DM pipeline, calendar — all visible, nothing writable yet
+- [x] **Phase 2: Read Layer** - Priority inbox, post list, comment list, DM pipeline, calendar — all visible, nothing writable yet (completed 2026-04-07)
 - [ ] **Phase 3: Write Operations** - Mark handled, INFO-to-DM conversion, stage advancement, metrics input, clipboard workflows
 - [ ] **Phase 4: AI Generation** - Claude-powered post drafts, objection frequency tracker, performance benchmarks
 - [ ] **Phase 5: Facebook Integration** - Comment pull, metrics sync, token health check, auto-posting if App Review approved
@@ -94,7 +94,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/3 | In Progress|  |
-| 2. Read Layer | 2/3 | In Progress|  |
+| 2. Read Layer | 3/3 | Complete   | 2026-04-07 |
 | 3. Write Operations | 0/? | Not started | - |
 | 4. AI Generation | 0/2 | Not started | - |
 | 5. Facebook Integration | 0/? | Not started | - |

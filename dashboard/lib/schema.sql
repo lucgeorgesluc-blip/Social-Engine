@@ -79,13 +79,10 @@ CREATE TABLE IF NOT EXISTS metrics_weekly (
 
 -- Session table for connect-pg-simple (INFRA-04)
 CREATE TABLE IF NOT EXISTS "user_sessions" (
-  "sid"    varchar NOT NULL COLLATE "default",
+  "sid"    varchar NOT NULL COLLATE "default" PRIMARY KEY,
   "sess"   json NOT NULL,
   "expire" timestamp(6) NOT NULL
 ) WITH (OIDS=FALSE);
-
-ALTER TABLE "user_sessions" ADD CONSTRAINT "session_pkey"
-  PRIMARY KEY ("sid") NOT DEFERRABLE INITIALLY IMMEDIATE;
 
 CREATE INDEX IF NOT EXISTS "IDX_session_expire"
   ON "user_sessions" ("expire");

@@ -13,6 +13,8 @@ const { router: authRouter, isAuthenticated } = require('./routes/auth');
 const dashRouter = require('./routes/dashboard');
 const postsRouter = require('./routes/posts');
 const commentsRouter = require('./routes/comments');
+const pipelineRouter = require('./routes/pipeline');
+const statsRouter = require('./routes/stats');
 
 const app = express();
 
@@ -55,6 +57,8 @@ app.use('/', authRouter);
 app.use('/', dashRouter);
 app.use('/', postsRouter);
 app.use('/', commentsRouter);
+app.use('/', pipelineRouter);
+app.use('/', statsRouter);
 
 // 404 handler
 app.use((req, res) => {

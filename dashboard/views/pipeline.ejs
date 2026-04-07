@@ -1,0 +1,72 @@
+<div class="max-w-full">
+  <div class="flex items-center justify-between mb-1">
+    <h1 class="text-lg font-semibold text-secondary">Pipeline DM</h1>
+    <span class="text-xs text-gray-400"><%= totalProspects %> prospect<%= totalProspects !== 1 ? 's' : '' %> (hors perdus)</span>
+  </div>
+
+  <!-- Acquisition funnel summary -->
+  <div class="mt-4 bg-white rounded-xl border border-gray-100 p-4">
+    <h2 class="text-sm font-semibold text-secondary mb-3">Entonnoir</h2>
+    <% funnel.forEach(function(f) { %>
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-xs text-gray-600 w-24 text-right truncate"><%= f.label %></span>
+        <div class="flex-1 bg-gray-100 rounded-full h-5 overflow-hidden">
+          <div class="h-5 rounded-full bg-secondary transition-all" style="width: <%= f.pct %>%; min-width: <%= f.count > 0 ? '0.5rem' : '0' %>"></div>
+        </div>
+        <span class="text-xs font-semibold text-secondary w-20 text-right"><%= f.count %> (<%= f.pct %>%)</span>
+      </div>
+    <% }); %>
+  </div>
+
+  <!-- HORIZONTAL KANBAN — CONTEXT D-06: 4 columns INFO / CHAUD / RDV_PRÉVU / CONVERTI -->
+  <div class="mt-6 overflow-x-auto">
+    <div class="flex gap-4 min-w-max pb-4">
+      <% DISPLAY_STAGES.forEach(function(stage) { %>
+        <% var col = byColumn[stage]; %>
+        <div class="w-72 flex-shrink-0 rounded-xl border <%= DISPLAY_COLORS[stage] %>">
+          <!-- Column header -->
+          <div class="px-4 py-3 border-b border-white/60">
+            <div class="flex items-center justify-between">
+              <h3 class="text-sm font-bold text-secondary"><%= DISPLAY_LABELS[stage] %></h3>
+              <span class="text-xs font-semibold text-gray-500 bg-white/70 px-2 py-0.5 rounded-full"><%= col.length %></span>
+            </div>
+          </div>
+          <!-- Column cards -->
+          <div class="p-3 space-y-2 min-h-32">
+            <% if (col.length === 0) { %>
+              <div class="text-xs text-gray-400 text-center py-6">Vide</div>
+            <% } else { %>
+              <% col.forEach(function(p) { %>
+                <div class="bg-white rounded-lg border border-gray-100 p-3 shadow-sm <%= p.isOverdue ? 'border-l-4 border-l-red-500' : '' %>">
+                  <div class="text-sm font-medium text-secondary truncate"><%= p.prospect_name || p.full_name || 'Inconnu' %></div>
+                  <div class="text-xs text-gray-400 mt-0.5 flex items-center gap-1">
+                    <span><%= p.date_first_contact ? new Date(p.date_first_contact).toLocaleDateString('fr-FR') : '—' %></span>
+                    <span class="text-gray-300">·</span>
+                    <span class="text-gray-500 italic"><%= p.stage %></span>
+                  </div>
+                  <% if (p.notes) { %>
+                    <div class="text-xs text-gray-500 mt-1 line-clamp-2"><%= p.notes %></div>
+                  <% } %>
+                  <% if (p.calendly_date && (stage === 'RDV_PREVU' || stage === 'CONVERTI')) { %>
+                    <div class="text-xs text-amber-600 mt-1 font-medium">
+                      RDV: <%= new Date(p.calendly_date).toLocaleDateString('fr-FR') %>
+                    </div>
+                  <% } %>
+                  <% if (p.isOverdue) { %>
+                    <div class="text-xs text-red-500 font-medium mt-1">En retard (<%= p.hoursSince %>h)</div>
+                  <% } %>
+                </div>
+              <% }); %>
+            <% } %>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+
+  <% if (totalProspects === 0) { %>
+    <div class="mt-4 bg-white rounded-lg border border-gray-100 p-6 text-sm text-gray-400 text-center">
+      Aucun prospect dans le pipeline
+    </div>
+  <% } %>
+</div>

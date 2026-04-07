@@ -1,0 +1,21 @@
+<h1 class="text-2xl font-bold text-secondary mb-6 font-serif">Choisir une page Facebook</h1>
+
+<div class="bg-white rounded-lg shadow p-6 max-w-xl">
+  <p class="text-gray-600 mb-4">Plusieurs pages ont été trouvées sur ce compte. Choisissez la page à connecter :</p>
+  <form method="POST" action="/dashboard/fb/select-page">
+    <div class="space-y-3 mb-6">
+      <% pages.forEach((page, i) => { %>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-accent/30 transition">
+          <input type="radio" name="page_id" value="<%= page.page_id %>" <%= i === 0 ? 'checked' : '' %> class="w-4 h-4 text-primary">
+          <div>
+            <div class="font-medium text-secondary"><%= page.page_name %></div>
+            <div class="text-xs text-gray-500"><%= page.category %> · ID: <%= page.page_id %></div>
+          </div>
+        </label>
+      <% }) %>
+    </div>
+    <button type="submit" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition font-medium">
+      Connecter cette page
+    </button>
+  </form>
+</div>

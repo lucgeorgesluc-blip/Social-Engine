@@ -101,36 +101,36 @@ async function debugToken(accessToken) {
 async function exchangeCodeForToken(code, redirectUri) {
     const appId = process.env.FB_APP_ID;
     const appSecret = process.env.FB_APP_SECRET;
-    const pageId = process.env.FB_PAGE_ID;
 
     // Step 1: Exchange code for short-lived user token
     const shortUrl = `https://graph.facebook.com/v21.0/oauth/access_token?client_id=${appId}&redirect_uri=${encodeURIComponent(redirectUri)}&client_secret=${appSecret}&code=${code}`;
     const shortRes = await fetch(shortUrl);
     const shortJson = await shortRes.json();
     if (shortJson.error) throw new Error(`OAuth exchange failed: ${shortJson.error.message}`);
-    const shortToken = shortJson.access_token;
 
     // Step 2: Exchange short-lived for long-lived user token
-    const longUrl = `https://graph.facebook.com/v21.0/oauth/access_token?grant_type=fb_exchange_token&client_id=${appId}&client_secret=${appSecret}&fb_exchange_token=${shortToken}`;
+    const longUrl = `https://graph.facebook.com/v21.0/oauth/access_token?grant_type=fb_exchange_token&client_id=${appId}&client_secret=${appSecret}&fb_exchange_token=${shortJson.access_token}`;
     const longRes = await fetch(longUrl);
     const longJson = await longRes.json();
     if (longJson.error) throw new Error(`Long-lived token exchange failed: ${longJson.error.message}`);
     const longToken = longJson.access_token;
-    const expiresAt = longJson.expires_in
-        ? new Date(Date.now() + longJson.expires_in * 1000)
-        : null;
 
-    // Step 3: Get Page Access Token from long-lived user token
-    const pageUrl = `https://graph.facebook.com/v21.0/${pageId}?fields=access_token&access_token=${longToken}`;
-    const pageRes = await fetch(pageUrl);
-    const pageJson = await pageRes.json();
-    if (pageJson.error) throw new Error(`Page token fetch failed: ${pageJson.error.message}`);
+    // Step 3: Fetch all pages the user manages (page tokens are already long-lived here)
+    const accountsUrl = `https://graph.facebook.com/v21.0/me/accounts?fields=id,name,category,access_token&access_token=${longToken}`;
+    const accountsRes = await fetch(accountsUrl);
+    const accountsJson = await accountsRes.json();
+    if (accountsJson.error) throw new Error(`Pages fetch failed: ${accountsJson.error.message}`);
 
-    return {
-        access_token: pageJson.access_token || longToken,
-        page_id: pageId,
-        expires_at: expiresAt
-    };
+    const pages = (accountsJson.data || []).map(p => ({
+        page_id: p.id,
+        page_name: p.name,
+        category: p.category,
+        access_token: p.access_token
+    }));
+
+    if (pages.length === 0) throw new Error('Aucune page Facebook trouvée pour ce compte.');
+
+    return { pages };
 }
 
 module.exports = {

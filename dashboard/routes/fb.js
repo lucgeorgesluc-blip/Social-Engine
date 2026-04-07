@@ -33,12 +33,37 @@ router.get('/dashboard/fb/callback', isAuthenticated, async (req, res) => {
     delete req.session.fbOAuthState;
 
     try {
-        const tokenData = await exchangeCodeForToken(code, redirectUri);
-        await storePageToken(tokenData);
-        console.log('[fb] Page token stored for page:', tokenData.page_id);
+        const { pages } = await exchangeCodeForToken(code, redirectUri);
+        if (pages.length === 1) {
+            // Auto-select the only page
+            await storePageToken(pages[0]);
+            console.log('[fb] Page token stored for page:', pages[0].page_id, pages[0].page_name);
+            return res.redirect('/');
+        }
+        // Multiple pages — let operator choose
+        req.session.fbPendingPages = pages;
+        return res.redirect('/dashboard/fb/select-page');
     } catch (err) {
         console.error('[fb] Token exchange failed:', err.message);
+        return res.redirect('/');
     }
+});
+
+// GET /dashboard/fb/select-page — page selection UI (when user manages multiple pages)
+router.get('/dashboard/fb/select-page', isAuthenticated, (req, res) => {
+    const pages = req.session.fbPendingPages || [];
+    if (pages.length === 0) return res.redirect('/');
+    res.render('fb-select-page', { pages, currentPath: null });
+});
+
+// POST /dashboard/fb/select-page — store chosen page token
+router.post('/dashboard/fb/select-page', isAuthenticated, async (req, res) => {
+    const pages = req.session.fbPendingPages || [];
+    const chosen = pages.find(p => p.page_id === req.body.page_id);
+    if (!chosen) return res.redirect('/dashboard/fb/select-page');
+    await storePageToken(chosen);
+    delete req.session.fbPendingPages;
+    console.log('[fb] Page token stored for page:', chosen.page_id, chosen.page_name);
     res.redirect('/');
 });
 

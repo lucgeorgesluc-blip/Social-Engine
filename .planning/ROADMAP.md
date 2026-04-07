@@ -10,7 +10,7 @@ Five phases deliver a complete Facebook acquisition management tool: infrastruct
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [x] **Phase 1: Foundation** - Express server on Render with paid Postgres, session auth, complete DB schema, idempotent YAML seed
+- [ ] **Phase 1: Foundation** - Express server on Render with paid Postgres, session auth, complete DB schema, idempotent YAML seed
 - [ ] **Phase 2: Read Layer** - Priority inbox, post list, comment list, DM pipeline, calendar — all visible, nothing writable yet
 - [ ] **Phase 3: Write Operations** - Mark handled, INFO-to-DM conversion, stage advancement, metrics input, clipboard workflows
 - [ ] **Phase 4: AI Generation** - Claude-powered post drafts, objection frequency tracker, performance benchmarks
@@ -32,7 +32,7 @@ Five phases deliver a complete Facebook acquisition management tool: infrastruct
 Plans:
 - [x] 01-01-PLAN.md — Scaffold project, DB schema, seed script, health endpoint
 - [x] 01-02-PLAN.md — Auth flow, EJS views, sidebar nav shell, responsive layout
-- [x] 01-03-PLAN.md — Render deploy config, DB provisioning, end-to-end verification
+- [ ] 01-03-PLAN.md — Render deploy config, DB provisioning, end-to-end verification
 **UI hint**: yes
 
 ### Phase 2: Read Layer
@@ -70,7 +70,10 @@ Plans:
   2. The generated draft is editable inline and saveable to the post list with one click
   3. When an objection type appears 3+ times in tracked comments, a suggested post topic appears on the dashboard homepage
   4. A generation counter is visible; the system warns at 50 generations/month and refuses at 100
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 04-01-PLAN.md — AI backend: Claude API wrapper, prompt templates, cost guardrails, objection tracker, routes
+- [ ] 04-02-PLAN.md — AI frontend: generation page, inline edit, save-as-draft, homepage suggestions, sidebar nav
 
 ### Phase 5: Facebook Integration
 **Goal**: The dashboard pulls real comments and metrics from Facebook automatically, the token health is always visible, and — if App Review for pages_manage_posts is approved — scheduled posts are auto-published without operator action
@@ -90,8 +93,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 3/3 | Complete | 2026-04-06 |
-| 2. Read Layer | 0/? | Not started | - |
+| 1. Foundation | 2/3 | In Progress|  |
+| 2. Read Layer | 1/3 | In Progress|  |
 | 3. Write Operations | 0/? | Not started | - |
-| 4. AI Generation | 0/? | Not started | - |
+| 4. AI Generation | 0/2 | Not started | - |
 | 5. Facebook Integration | 0/? | Not started | - |

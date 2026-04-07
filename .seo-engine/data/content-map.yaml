@@ -1437,7 +1437,8 @@ blogs:
     internal_links_to: ["hypnose-arret-tabac-sans-rechute-7-techniques-prouvees", "index", "a-propos", "hypnose-troyes", "magnetiseur-troyes", "faq", "arret-tabac-troyes", "mentions-legales", "politique-confidentialite", "cgv"]
   - slug: "magnetiseur-troyes-avis-8-criteres-choix-2026"
     title: "Magnétiseur Troyes Avis : 8 Critères Choix 2026"
-    status: "drafted"
+    status: "published"
+    published_at: "2026-04-07T12:11:42.768Z"
     target_keywords: ["magnétiseur Troyes avis", "choisir magnétiseur Troyes"]
     cluster_id: "tc_magnetiseur_troyes"
     date: "2026-04-07"

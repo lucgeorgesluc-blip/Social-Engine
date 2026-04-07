@@ -381,7 +381,7 @@ queue:
     priority_reason: >-
       Local SEO inexploité - Saint-Germain jamais ciblé en slug standalone - forte conversion (chercheurs à 2km du
       cabinet) - complète maillage tc_magnetiseur_troyes
-    status: planned
+    status: done
     estimated_word_count: 1800
     eeat_plan: >-
       Plan d'accès détaillé, photos cabinet (si autorisé), horaires précis, zone intervention 20km, protocole 1ère
@@ -600,7 +600,7 @@ queue:
       Keyword 'hypnose Troyes' = forte intention locale — aucune page ne traite cette requête générique
       (hypnotherapeute-troyes-choisir = critères généraux, pas comparatif praticiens) — capture trafic avant choix
       praticien
-    status: planned
+    status: done
     estimated_word_count: 2400
     eeat_plan: >-
       Data vérifiée : avis Google de chaque praticien, tarifs sites web, formations (GNOMA pour Corinne) — tableau
@@ -763,3 +763,99 @@ queue:
       - arreter-fumer-sans-medicaments-methodes-naturelles
       - magnetisme-arret-tabac-troyes-temoignages
     slug: arret-tabac-femme-enceinte-hypnose-sans-risque-troyes
+  - id: q_auto_020
+    title: 'Magnétisme pour Enfants à Troyes : Douleurs, Sommeil, Anxiété'
+    blog_type: how-to
+    content_type: cluster
+    cluster_id: tc_magnetiseur_troyes
+    target_keywords:
+      - magnétiseur enfant Troyes
+      - magnétisme enfant
+      - magnétisme pédiatrique Troyes
+    target_features:
+      - feat_magnetisme_adulte
+    unique_angle: >-
+      Seul article local ciblant les parents cherchant une alternative douce pour leur enfant (douleurs, troubles du
+      sommeil, anxiété scolaire) — aucun concurrent Troyes ne cible explicitement la clientèle pédiatrique
+    priority: high
+    priority_reason: >-
+      Segment non adressé dans le cluster — parents = forte intention de conversion — différencie Corinne des
+      magnétiseurs généralistes
+    status: planned
+    estimated_word_count: 1800
+    eeat_plan: >-
+      Témoignages parents patients + protocole adapté enfant vs adulte + âge minimum séance + déroulement séance enfant
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: Lier vers magnetiseur-troyes.html + a-propos.html
+    depends_on: []
+    internal_link_targets:
+      - magnetiseur-troyes.html
+      - a-propos.html
+      - burn-out-magnetisme-hypnose-troyes
+    slug: magnetisme-enfant-troyes-douleurs-sommeil-anxiete
+  - id: q_auto_021
+    title: 'Première Séance Chez un Magnétiseur : À Quoi S''Attendre ?'
+    blog_type: how-to
+    content_type: cluster
+    cluster_id: tc_magnetiseur_troyes
+    target_keywords:
+      - première séance magnétiseur
+      - comment se passe séance magnétiseur
+      - magnétiseur déroulement séance
+    target_features:
+      - feat_magnetisme_adulte
+      - feat_rdv_7_jours
+    unique_angle: >-
+      Guide rassurant étape par étape pour les sceptiques/novices — lève les freins psychologiques à la réservation
+      (peur du jugement, de ne rien ressentir, durée) — aucun concurrent Troyes ne détaille le protocole complet
+    priority: high
+    priority_reason: >-
+      Fort volume requêtes informationnelles pré-conversion — article qui transforme les curieux en patients — manquant
+      dans le cluster
+    status: planned
+    estimated_word_count: 1600
+    eeat_plan: >-
+      Protocole exact Corinne (durée, passes, ressenti courant, suivi) + témoignages première séance + FAQ 'et si je ne
+      ressens rien ?'
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: CTA fort vers Calendly — lier vers magnetiseur-troyes.html et soins.html
+    depends_on: []
+    internal_link_targets:
+      - magnetiseur-troyes.html
+      - soins.html
+      - magnetiseur-troyes-corinne-vs-geoffron
+    slug: premiere-seance-magnetiseur-a-quoi-s-attendre
+  - id: q_auto_022
+    title: 'Magnétiseur Remboursé Mutuelle 2026 : Ce Qui Est Possible'
+    blog_type: how-to
+    content_type: cluster
+    cluster_id: tc_magnetiseur_troyes
+    target_keywords:
+      - magnétiseur remboursé mutuelle
+      - remboursement magnétiseur
+      - magnétisme pris en charge mutuelle
+    target_features:
+      - feat_magnetisme_adulte
+    unique_angle: >-
+      Seul article qui distingue clairement remboursement mutuelle (possible via médecines douces) vs Sécurité sociale
+      (non) — avec liste mutuelles françaises couvrant les énergéticiens + démarche concrète
+    priority: medium
+    priority_reason: >-
+      Requête fréquente qui lève le frein prix — capture l'audience qui hésite à cause du coût — conversion forte si
+      l'article rassure sur le remboursement partiel possible
+    status: planned
+    estimated_word_count: 1400
+    eeat_plan: >-
+      Exemples mutuelles avec garanties médecines douces (Harmonie, MGEN, etc.) + montant remboursement moyen + conseil
+      de vérifier son contrat avant la séance
+    serp_analyzed: false
+    cannibalization_check: pending
+    notes: Lier vers soins.html pour les tarifs — data-price="magnetisme_adulte" pour le prix
+    depends_on: []
+    internal_link_targets:
+      - magnetiseur-troyes.html
+      - soins.html
+      - tarifs-magnetiseur-hypnotherapeute-troyes-prix
+    slug: magnetiseur-rembourse-mutuelle-2026

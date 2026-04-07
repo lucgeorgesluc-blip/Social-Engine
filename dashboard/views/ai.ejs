@@ -42,8 +42,9 @@
 
   <!-- Generation form -->
   <div class="card p-6 mb-5">
-    <h2 class="section-title mb-4">Nouveau post</h2>
+    <h2 class="section-title mb-4"><%= postId ? 'Générer le contenu du brouillon' : 'Nouveau post' %></h2>
     <form method="POST" action="/dashboard/ai/generate" class="space-y-4">
+      <input type="hidden" name="post_id" value="<%= postId || '' %>">
       <div>
         <label class="block text-xs font-medium text-ink-muted mb-1.5">Type de post</label>
         <select name="type" id="post-type-select" class="input" required>
@@ -72,13 +73,16 @@
   <% if (generated) { %>
   <div class="card p-6">
     <h2 class="section-title mb-4">Post généré — modifiez puis sauvegardez</h2>
-    <form method="POST" action="/posts" class="space-y-4">
+    <form method="POST" action="<%= postId ? '/posts/' + postId : '/posts' %>" class="space-y-4">
       <textarea name="content" rows="12" class="input resize-y font-mono text-xs leading-relaxed"><%= generated %></textarea>
       <input type="hidden" name="type" value="<%= selectedType || '' %>">
       <input type="hidden" name="status" value="draft">
       <input type="hidden" name="platform" value="facebook">
+      <% if (!postId) { %>
+        <input type="hidden" name="hook" value="">
+      <% } %>
       <div class="flex items-center gap-3">
-        <button type="submit" class="btn-secondary">Sauvegarder brouillon</button>
+        <button type="submit" class="btn-secondary"><%= postId ? 'Mettre à jour le brouillon' : 'Sauvegarder brouillon' %></button>
         <button type="button" id="copy-generated-btn" class="btn-ghost">Copier</button>
       </div>
     </form>

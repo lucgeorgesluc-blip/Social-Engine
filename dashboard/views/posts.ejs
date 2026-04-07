@@ -52,7 +52,11 @@
                 <%= post.published_date ? new Date(post.published_date).toLocaleDateString('fr-FR') : '—' %>
               </td>
               <td class="text-ink-primary font-medium text-sm">
-                <a href="/posts/<%= post.id %>/edit" class="hover:text-primary transition-colors"><%= post.hook || 'Sans titre' %></a>
+                <% if (post.status === 'draft') { %>
+                  <a href="/dashboard/ai?post_id=<%= post.id %>&type=<%= encodeURIComponent(post.type || '') %>&context=<%= encodeURIComponent(post.hook || '') %>" class="hover:text-primary transition-colors"><%= post.hook || 'Sans titre' %></a>
+                <% } else { %>
+                  <a href="/posts/<%= post.id %>/edit" class="hover:text-primary transition-colors"><%= post.hook || 'Sans titre' %></a>
+                <% } %>
               </td>
               <td><span class="badge badge-<%= post.status %>"><%= post.status %></span></td>
               <td class="text-right font-mono text-sm text-ink-muted"><%= post.comment_count %></td>

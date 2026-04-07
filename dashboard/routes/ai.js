@@ -14,9 +14,10 @@ router.get('/', isAuthenticated, async (req, res, next) => {
             getMonthlyUsage(),
             getFrequentObjections()
         ]);
-        // Pre-fill type/context from query params (e.g. from homepage suggestion link)
+        // Pre-fill type/context/post_id from query params
         const selectedType = POST_TYPE_IDS.includes(req.query.type) ? req.query.type : null;
         const context = req.query.context || '';
+        const postId = req.query.post_id || null;
         res.render('ai', {
             currentPath: '/dashboard/ai',
             postTypes: POST_TYPES,
@@ -25,7 +26,8 @@ router.get('/', isAuthenticated, async (req, res, next) => {
             generated: null,
             error: null,
             selectedType,
-            context
+            context,
+            postId
         });
     } catch (err) { next(err); }
 });
@@ -33,7 +35,8 @@ router.get('/', isAuthenticated, async (req, res, next) => {
 // POST /generate — generate a post via Claude
 router.post('/generate', isAuthenticated, async (req, res, next) => {
     try {
-        const { type, context } = req.body;
+        const { type, context, post_id } = req.body;
+        const postId = post_id || null;
         const [usage, suggestions] = await Promise.all([
             getMonthlyUsage(),
             getFrequentObjections()
@@ -44,7 +47,7 @@ router.post('/generate', isAuthenticated, async (req, res, next) => {
                 currentPath: '/dashboard/ai',
                 postTypes: POST_TYPES, usage, suggestions,
                 generated: null, error: 'Type de post invalide.',
-                selectedType: null, context: context || ''
+                selectedType: null, context: context || '', postId
             });
         }
 
@@ -59,7 +62,8 @@ router.post('/generate', isAuthenticated, async (req, res, next) => {
                 generated: result.text,
                 error: null,
                 selectedType: type,
-                context: context || ''
+                context: context || '',
+                postId
             });
         } catch (genErr) {
             const errorMsg = genErr.message === 'LIMIT_REACHED'
@@ -69,7 +73,7 @@ router.post('/generate', isAuthenticated, async (req, res, next) => {
                 currentPath: '/dashboard/ai',
                 postTypes: POST_TYPES, usage, suggestions,
                 generated: null, error: errorMsg,
-                selectedType: type, context: context || ''
+                selectedType: type, context: context || '', postId
             });
         }
     } catch (err) { next(err); }

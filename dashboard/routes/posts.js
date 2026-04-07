@@ -90,10 +90,14 @@ router.post('/posts/:id', isAuthenticated, async (req, res, next) => {
     try {
         const { hook, content, type, status, published_date } = req.body;
         const safeStatus = ['draft', 'scheduled', 'published'].includes(status) ? status : 'draft';
+        // Preserve existing hook when not sent (e.g. save from AI generation page)
         const { rowCount } = await query(
-            `UPDATE posts SET hook=$1, content=$2, type=$3, status=$4, published_date=$5 WHERE id=$6`,
-            [hook || null, content || null, type || null, safeStatus,
-             published_date || null, req.params.id]
+            `UPDATE posts
+             SET content=$1, type=$2, status=$3, published_date=$4,
+                 hook = CASE WHEN $5::text IS NOT NULL AND $5 != '' THEN $5 ELSE hook END
+             WHERE id=$6`,
+            [content || null, type || null, safeStatus,
+             published_date || null, hook || null, req.params.id]
         );
         if (rowCount === 0) return res.status(404).render('error', { status: 404, message: 'Post introuvable' });
         res.redirect('/posts/' + req.params.id + '/edit?saved=1');

@@ -1,28 +1,28 @@
 <div class="max-w-2xl">
   <div class="flex items-center gap-3 mb-6">
-    <a href="/posts" class="text-sm text-gray-400 hover:text-secondary">← Posts</a>
-    <span class="text-gray-300">/</span>
-    <h1 class="text-lg font-semibold text-secondary">Modifier le post</h1>
+    <a href="/posts" class="text-sm text-ink-muted hover:text-ink-base transition-colors">← Posts</a>
+    <span class="text-border-subtle">/</span>
+    <h1 class="text-lg font-semibold text-ink-base">Modifier le post</h1>
   </div>
 
-  <form method="POST" action="/posts/<%= post.id %>" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 space-y-4">
+  <form method="POST" action="/posts/<%= post.id %>" class="card p-6 space-y-4">
     <div>
-      <label class="block text-sm font-medium text-secondary mb-1">Accroche</label>
-      <input type="text" name="hook" value="<%= post.hook || '' %>" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-secondary">
+      <label class="block text-sm font-medium text-ink-base mb-1">Accroche</label>
+      <input type="text" name="hook" value="<%= post.hook || '' %>" class="input">
     </div>
 
     <div>
-      <label class="block text-sm font-medium text-secondary mb-1">Contenu <span class="text-red-400">*</span></label>
-      <textarea name="content" rows="6" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-secondary resize-y"><%= post.content %></textarea>
-      <button type="button" data-copy="<%= post.content %>" class="text-sm text-primary hover:underline mt-2">
+      <label class="block text-sm font-medium text-ink-base mb-1">Contenu <span class="text-danger">*</span></label>
+      <textarea name="content" rows="6" required class="input resize-y"><%= post.content %></textarea>
+      <button type="button" data-copy="<%= post.content %>" class="text-sm text-primary hover:underline mt-2 transition-colors">
         Copier le contenu
       </button>
     </div>
 
     <div class="grid grid-cols-2 gap-4">
       <div>
-        <label class="block text-sm font-medium text-secondary mb-1">Type</label>
-        <select name="type" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-secondary">
+        <label class="block text-sm font-medium text-ink-base mb-1">Type</label>
+        <select name="type" class="input">
           <option value="">— Choisir —</option>
           <option value="objection-buster" <% if (post.type === 'objection-buster') { %>selected<% } %>>Objection buster</option>
           <option value="temoignage" <% if (post.type === 'temoignage') { %>selected<% } %>>Témoignage</option>
@@ -34,8 +34,8 @@
         </select>
       </div>
       <div>
-        <label class="block text-sm font-medium text-secondary mb-1">Plateforme <span class="text-red-400">*</span></label>
-        <select name="platform" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-secondary">
+        <label class="block text-sm font-medium text-ink-base mb-1">Plateforme <span class="text-danger">*</span></label>
+        <select name="platform" required class="input">
           <option value="">— Choisir —</option>
           <option value="facebook" <% if (post.platform === 'facebook') { %>selected<% } %>>Facebook</option>
           <option value="both" <% if (post.platform === 'both') { %>selected<% } %>>Facebook + Instagram</option>
@@ -45,24 +45,24 @@
 
     <div class="grid grid-cols-2 gap-4">
       <div>
-        <label class="block text-sm font-medium text-secondary mb-1">Statut</label>
-        <select name="status" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-secondary">
+        <label class="block text-sm font-medium text-ink-base mb-1">Statut</label>
+        <select name="status" class="input">
           <option value="draft" <% if (post.status === 'draft') { %>selected<% } %>>Brouillon</option>
           <option value="scheduled" <% if (post.status === 'scheduled') { %>selected<% } %>>Programmé</option>
           <option value="published" <% if (post.status === 'published') { %>selected<% } %>>Publié</option>
         </select>
       </div>
       <div>
-        <label class="block text-sm font-medium text-secondary mb-1">Date prévue</label>
+        <label class="block text-sm font-medium text-ink-base mb-1">Date prévue</label>
         <input type="date" name="scheduled_date"
                value="<%= post.scheduled_date ? (post.scheduled_date instanceof Date ? post.scheduled_date.toISOString().split('T')[0] : String(post.scheduled_date).split('T')[0]) : '' %>"
-               class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-secondary">
+               class="input">
       </div>
     </div>
 
     <div class="flex items-center gap-4 pt-2">
-      <button type="submit" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition font-medium text-sm">Enregistrer</button>
-      <a href="/posts" class="text-sm text-gray-500 hover:text-secondary">Annuler</a>
+      <button type="submit" class="btn-primary">Enregistrer</button>
+      <a href="/posts" class="btn-ghost text-sm">Annuler</a>
     </div>
   </form>
 </div>

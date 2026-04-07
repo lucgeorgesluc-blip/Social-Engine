@@ -1,41 +1,61 @@
 <div class="max-w-5xl">
-  <h1 class="text-lg font-semibold text-secondary">Posts</h1>
-
-  <div class="mt-4 flex items-center gap-3">
-    <a href="/posts" class="text-sm font-medium text-primary border-b-2 border-primary pb-1">Liste</a>
-    <a href="/posts/calendar" class="text-sm font-medium text-gray-400 hover:text-gray-600 pb-1">Calendrier</a>
+  <div class="flex items-center justify-between mb-6">
+    <h1 class="page-title">Posts</h1>
+    <a href="/posts/new" class="btn-primary">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+      Nouveau
+    </a>
   </div>
 
-  <!-- Status filter tabs — selection preserved via query param ?status= -->
-  <div class="mt-4 flex gap-2 flex-wrap">
-    <a href="/posts" class="px-3 py-1.5 rounded-full text-xs font-medium <%= !filterStatus ? 'bg-secondary text-white' : 'bg-gray-100 text-gray-600' %>">Tous (<%= totalCount %>)</a>
-    <a href="/posts?status=draft" class="px-3 py-1.5 rounded-full text-xs font-medium <%= filterStatus==='draft' ? 'bg-secondary text-white' : 'bg-gray-100 text-gray-600' %>">Brouillons (<%= statusCounts.draft %>)</a>
-    <a href="/posts?status=scheduled" class="px-3 py-1.5 rounded-full text-xs font-medium <%= filterStatus==='scheduled' ? 'bg-secondary text-white' : 'bg-gray-100 text-gray-600' %>">Programmes (<%= statusCounts.scheduled %>)</a>
-    <a href="/posts?status=published" class="px-3 py-1.5 rounded-full text-xs font-medium <%= filterStatus==='published' ? 'bg-secondary text-white' : 'bg-gray-100 text-gray-600' %>">Publies (<%= statusCounts.published %>)</a>
+  <!-- View tabs -->
+  <div class="flex items-center gap-4 mb-5 border-b border-border-subtle">
+    <a href="/posts" class="text-sm font-medium pb-2.5 -mb-px <%= !filterStatus || !currentPath || currentPath === '/posts' ? 'text-ink-primary border-b-2 border-primary' : 'text-ink-muted hover:text-ink-primary' %>">Liste</a>
+    <a href="/posts/calendar" class="text-sm font-medium pb-2.5 -mb-px text-ink-muted hover:text-ink-primary transition-colors">Calendrier</a>
   </div>
 
-  <!-- TABLE: Date / Titre / Statut / Nb commentaires (CONTEXT D-02) -->
-  <div class="mt-4 bg-white rounded-xl border border-gray-100 overflow-hidden">
-    <table class="w-full text-sm">
-      <thead class="bg-gray-50 text-xs uppercase text-gray-500">
+  <!-- Status filters -->
+  <div class="flex gap-2 flex-wrap mb-5">
+    <%
+      var filters = [
+        { href: '/posts', label: 'Tous', count: totalCount, key: null },
+        { href: '/posts?status=draft', label: 'Brouillons', count: statusCounts.draft, key: 'draft' },
+        { href: '/posts?status=scheduled', label: 'Programmés', count: statusCounts.scheduled, key: 'scheduled' },
+        { href: '/posts?status=published', label: 'Publiés', count: statusCounts.published, key: 'published' }
+      ];
+    %>
+    <% filters.forEach(function(f) { %>
+      <% var isActive = f.key ? filterStatus === f.key : !filterStatus; %>
+      <a href="<%= f.href %>" class="px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-150 <%= isActive ? 'bg-primary text-white' : 'bg-surface-raised border border-border-subtle text-ink-muted hover:text-ink-primary hover:border-border-muted' %>">
+        <%= f.label %> <span class="font-mono <%= isActive ? 'text-white/70' : 'text-ink-faint' %>"><%= f.count %></span>
+      </a>
+    <% }); %>
+  </div>
+
+  <!-- Table -->
+  <div class="card overflow-hidden">
+    <table class="table-base">
+      <thead>
         <tr>
-          <th class="text-left px-4 py-3 w-32">Date</th>
-          <th class="text-left px-4 py-3">Titre</th>
-          <th class="text-left px-4 py-3 w-32">Statut</th>
-          <th class="text-right px-4 py-3 w-36">Nb commentaires</th>
+          <th class="w-28">Date</th>
+          <th>Titre</th>
+          <th class="w-28">Statut</th>
+          <th class="text-right w-32">Commentaires</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-gray-100">
+      <tbody>
         <% if (posts.length === 0) { %>
-          <tr><td colspan="4" class="px-4 py-6 text-center text-gray-400">Aucun post trouve</td></tr>
+          <tr><td colspan="4" class="px-4 py-10 text-center text-ink-faint">Aucun post trouvé</td></tr>
         <% } else { %>
           <% posts.forEach(function(post) { %>
-            <% var badgeClass = { draft:'bg-gray-100 text-gray-700', scheduled:'bg-blue-100 text-blue-700', published:'bg-green-100 text-green-700' }[post.status] || 'bg-gray-100 text-gray-500'; %>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-3 text-xs text-gray-500"><%= post.published_date ? new Date(post.published_date).toLocaleDateString('fr-FR') : '—' %></td>
-              <td class="px-4 py-3 text-secondary"><%= post.hook || 'Sans titre' %></td>
-              <td class="px-4 py-3"><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium <%= badgeClass %>"><%= post.status %></span></td>
-              <td class="px-4 py-3 text-right text-secondary font-medium"><%= post.comment_count %></td>
+            <tr>
+              <td class="font-mono text-xs text-ink-faint">
+                <%= post.published_date ? new Date(post.published_date).toLocaleDateString('fr-FR') : '—' %>
+              </td>
+              <td class="text-ink-primary font-medium text-sm">
+                <a href="/posts/<%= post.id %>/edit" class="hover:text-primary transition-colors"><%= post.hook || 'Sans titre' %></a>
+              </td>
+              <td><span class="badge badge-<%= post.status %>"><%= post.status %></span></td>
+              <td class="text-right font-mono text-sm text-ink-muted"><%= post.comment_count %></td>
             </tr>
           <% }); %>
         <% } %>

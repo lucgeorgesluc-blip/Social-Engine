@@ -1,58 +1,57 @@
 <div class="max-w-4xl">
-  <h1 class="text-lg font-semibold text-secondary">Commentaires</h1>
-  <div class="mt-2 text-sm text-gray-500">
-    <%= totalCount %> commentaire<%= totalCount !== 1 ? 's' : '' %> ·
-    <%= pendingCount %> en attente
-    <% if (overdueCount > 0) { %>
-      <span class="text-orange-600">· <%= overdueCount %> en retard (&gt;2h)</span>
-    <% } %>
+  <div class="flex items-center justify-between mb-6">
+    <div>
+      <h1 class="page-title">Commentaires</h1>
+      <p class="text-xs text-ink-faint mt-0.5 font-mono">
+        <%= totalCount %> total · <%= pendingCount %> en attente<% if (overdueCount > 0) { %> · <span class="text-danger"><%= overdueCount %> en retard</span><% } %>
+      </p>
+    </div>
   </div>
 
-  <div class="mt-4 space-y-3">
+  <div class="space-y-3">
     <% Object.keys(byPost).forEach(function(postId, idx) { %>
       <% var group = byPost[postId]; %>
-      <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+      <div class="card overflow-hidden">
 
-        <!-- Accordion header (clickable) — CONTEXT D-05 -->
+        <!-- Accordion header -->
         <button type="button"
                 data-accordion="<%= idx %>"
-                class="w-full flex items-center justify-between px-4 py-3 bg-gray-50 hover:bg-gray-100 text-left">
-          <div>
-            <div class="text-sm font-medium text-secondary"><%= group.post_hook %></div>
-            <div class="text-xs text-gray-400 mt-0.5">
+                class="w-full flex items-center justify-between px-4 py-3.5 bg-surface-raised hover:bg-surface-hover text-left transition-colors duration-150">
+          <div class="flex-1 min-w-0 pr-4">
+            <div class="text-sm font-medium text-ink-primary truncate"><%= group.post_hook %></div>
+            <div class="font-mono text-xs text-ink-faint mt-0.5">
               <%= group.comments.length %> commentaire<%= group.comments.length > 1 ? 's' : '' %>
-              <% if (group.pendingCount > 0) { %>· <%= group.pendingCount %> en attente<% } %>
-              <% if (group.overdueCount > 0) { %>· <span class="text-orange-600"><%= group.overdueCount %> en retard</span><% } %>
+              <% if (group.pendingCount > 0) { %> · <span class="text-ink-muted"><%= group.pendingCount %> en attente</span><% } %>
+              <% if (group.overdueCount > 0) { %> · <span class="text-danger"><%= group.overdueCount %> en retard</span><% } %>
             </div>
           </div>
-          <span data-accordion-icon class="text-gray-400">&#9662;</span>
+          <svg data-accordion-icon class="w-4 h-4 text-ink-faint flex-shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
         </button>
 
         <!-- Accordion body -->
-        <div id="accordion-body-<%= idx %>" class="divide-y divide-gray-50">
+        <div id="accordion-body-<%= idx %>" class="divide-y divide-border-subtle/50">
           <% group.comments.forEach(function(c) { %>
             <%
-              // CONTEXT D-05: grey / orange / green dot
-              var dotColor = { grey: 'bg-gray-400', orange: 'bg-orange-500', green: 'bg-green-500' }[c.dotState] || 'bg-gray-400';
-              var classifBadge = {
-                info: 'bg-blue-100 text-blue-700',
-                objection: 'bg-amber-100 text-amber-700',
-                positive: 'bg-green-100 text-green-700'
-              }[c.classification] || 'bg-gray-100 text-gray-500';
+              var dotColor = { grey: 'bg-ink-faint', orange: 'bg-amber', green: 'bg-success' }[c.dotState] || 'bg-ink-faint';
+              var badgeClass = {
+                info: 'badge-info',
+                objection: 'badge-objection',
+                positive: 'badge-positive'
+              }[c.classification] || 'badge-draft';
             %>
-            <div class="px-4 py-3">
-              <div class="flex items-start justify-between">
+            <div class="px-4 py-3.5 <%= c.isOverdue ? 'overdue' : '' %>">
+              <div class="flex items-start justify-between gap-3">
                 <div class="flex-1 min-w-0">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full flex-shrink-0 <%= dotColor %>" title="<%= c.dotState %>"></span>
-                    <span class="text-sm font-medium text-secondary"><%= c.author_name || 'Anonyme' %></span>
-                    <span class="text-xs text-gray-400"><%= c.date ? new Date(c.date).toLocaleDateString('fr-FR') : '' %></span>
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="w-2 h-2 rounded-full flex-shrink-0 <%= dotColor %>"></span>
+                    <span class="text-sm font-medium text-ink-primary"><%= c.author_name || 'Anonyme' %></span>
+                    <span class="font-mono text-xs text-ink-faint"><%= c.date ? new Date(c.date).toLocaleDateString('fr-FR') : '' %></span>
                   </div>
-                  <div class="text-sm text-gray-600 mt-1 ml-4"><%= c.comment_text %></div>
+                  <div class="text-sm text-ink-muted ml-4 leading-relaxed"><%= c.comment_text %></div>
                 </div>
-                <span class="ml-3 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium <%= classifBadge %>">
-                  <%= c.classification || 'non classe' %>
-                </span>
+                <span class="badge <%= badgeClass %> flex-shrink-0 mt-0.5"><%= c.classification || 'non classé' %></span>
               </div>
             </div>
           <% }); %>
@@ -61,7 +60,7 @@
     <% }); %>
 
     <% if (Object.keys(byPost).length === 0) { %>
-      <div class="bg-white rounded-lg border border-gray-100 p-6 text-sm text-gray-400 text-center">Aucun commentaire</div>
+      <div class="card p-10 text-sm text-ink-faint text-center">Aucun commentaire</div>
     <% } %>
   </div>
 

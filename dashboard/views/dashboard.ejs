@@ -1,90 +1,95 @@
-<h1 class="text-lg font-semibold text-secondary">Bienvenue, Benjamin</h1>
-
-<!-- Health card -->
-<div class="mt-4 bg-white rounded-xl shadow-sm border border-gray-100 p-4">
-  <div class="flex items-center gap-2 mb-3">
-    <% if (dbError) { %>
-      <span class="w-2.5 h-2.5 rounded-full bg-red-500 flex-shrink-0"></span>
-      <span class="text-sm text-gray-700">Erreur de connexion à la base de données</span>
-    <% } else { %>
-      <span class="w-2.5 h-2.5 rounded-full bg-green-500 flex-shrink-0"></span>
-      <span class="text-sm text-gray-700">Base de données connectée</span>
-    <% } %>
+<!-- Header -->
+<div class="flex items-center justify-between mb-6">
+  <div>
+    <h1 class="page-title">Bonjour, Benjamin</h1>
+    <p class="text-xs text-ink-faint mt-0.5 font-mono"><%= new Date().toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long'}) %></p>
   </div>
-  <div class="grid grid-cols-3 gap-3">
-    <div class="bg-gray-50 rounded-lg px-4 py-3 text-center">
-      <div class="text-2xl font-bold text-secondary"><%= counts.posts %></div>
-      <div class="text-xs text-gray-500">Posts</div>
-    </div>
-    <div class="bg-gray-50 rounded-lg px-4 py-3 text-center">
-      <div class="text-2xl font-bold text-secondary"><%= counts.comments %></div>
-      <div class="text-xs text-gray-500">Commentaires</div>
-    </div>
-    <div class="bg-gray-50 rounded-lg px-4 py-3 text-center">
-      <div class="text-2xl font-bold text-secondary"><%= counts.prospects %></div>
-      <div class="text-xs text-gray-500">Prospects</div>
-    </div>
+  <!-- DB status -->
+  <div class="flex items-center gap-1.5 text-xs text-ink-muted">
+    <span class="w-1.5 h-1.5 rounded-full flex-shrink-0 <%= dbError ? 'bg-danger' : 'bg-success' %>"></span>
+    <%= dbError ? 'DB hors ligne' : 'DB connectée' %>
   </div>
-  <% if (dbError) { %>
-    <div class="mt-4 bg-red-50 border border-red-200 rounded-lg p-3 text-red-700 text-sm">
-      Impossible de charger les données. Vérifiez la connexion à la base de données.
-    </div>
-  <% } %>
 </div>
 
-<!-- INBOX-01: Posts du jour -->
-<section class="mt-6">
+<!-- KPI row -->
+<div class="grid grid-cols-3 gap-3 mb-8">
+  <div class="card p-4 text-center">
+    <div class="font-mono text-2xl font-semibold text-ink-primary"><%= counts.posts %></div>
+    <div class="text-xs text-ink-faint mt-0.5">Posts</div>
+  </div>
+  <div class="card p-4 text-center">
+    <div class="font-mono text-2xl font-semibold text-ink-primary"><%= counts.comments %></div>
+    <div class="text-xs text-ink-faint mt-0.5">Commentaires</div>
+  </div>
+  <div class="card p-4 text-center">
+    <div class="font-mono text-2xl font-semibold text-ink-primary"><%= counts.prospects %></div>
+    <div class="text-xs text-ink-faint mt-0.5">Prospects</div>
+  </div>
+</div>
+
+<% if (dbError) { %>
+  <div class="mb-6 card p-4 border-danger/30 text-danger-light text-sm">
+    Impossible de charger les données. Vérifiez la connexion à la base de données.
+  </div>
+<% } %>
+
+<!-- Posts du jour -->
+<section class="mb-8">
   <div class="flex items-center justify-between mb-3">
-    <h2 class="text-base font-semibold text-secondary">
-      Posts du jour <span class="text-xs font-normal text-gray-400">(<%= todayPostsTotal %>)</span>
+    <h2 class="section-title">
+      Posts du jour
+      <span class="ml-1.5 font-mono text-xs text-ink-faint font-normal"><%= todayPostsTotal %></span>
     </h2>
     <% if (todayPostsTotal > 0) { %>
-      <a href="/posts" class="text-xs text-primary hover:underline">Voir tout →</a>
+      <a href="/posts" class="btn-ghost text-xs">Voir tout →</a>
     <% } %>
   </div>
   <% if (todayPosts.length === 0) { %>
-    <div class="bg-white rounded-lg border border-gray-100 p-4 text-sm text-gray-400">Aucun post prévu aujourd'hui</div>
+    <div class="card p-4 text-sm text-ink-faint">Aucun post prévu aujourd'hui</div>
   <% } else { %>
     <div class="space-y-2">
       <% todayPosts.forEach(function(post) { %>
-        <% var badgeClass = { draft:'bg-gray-100 text-gray-700', scheduled:'bg-blue-100 text-blue-700', published:'bg-green-100 text-green-700' }[post.status] || 'bg-gray-100 text-gray-500'; %>
-        <div class="bg-white rounded-lg border border-gray-100 p-4 flex items-center justify-between">
+        <div class="card p-4 flex items-center justify-between gap-3">
           <div class="flex-1 min-w-0">
-            <div class="text-sm font-medium text-secondary truncate"><%= post.hook || 'Sans titre' %></div>
-            <div class="text-xs text-gray-400 mt-0.5"><%= post.platform %> · <%= post.type || '' %></div>
+            <div class="text-sm font-medium text-ink-primary truncate"><%= post.hook || 'Sans titre' %></div>
+            <div class="text-xs text-ink-faint mt-0.5"><%= post.platform %><% if (post.type) { %> · <%= post.type %><% } %></div>
           </div>
-          <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium <%= badgeClass %>"><%= post.status %></span>
+          <span class="badge badge-<%= post.status %>"><%= post.status %></span>
         </div>
       <% }); %>
     </div>
   <% } %>
 </section>
 
-<!-- INBOX-02 + INBOX-04: Commentaires en attente -->
-<section class="mt-6">
+<!-- Commentaires en attente -->
+<section class="mb-8">
   <div class="flex items-center justify-between mb-3">
-    <h2 class="text-base font-semibold text-secondary">
-      Commentaires en attente <span class="text-xs font-normal text-gray-400">(<%= pendingCommentsTotal %>)</span>
-      <% if (overdueCommentCount > 0) { %><span class="ml-1 text-xs font-normal text-red-500">— <%= overdueCommentCount %> en retard</span><% } %>
+    <h2 class="section-title">
+      Commentaires
+      <span class="ml-1.5 font-mono text-xs text-ink-faint font-normal"><%= pendingCommentsTotal %></span>
+      <% if (overdueCommentCount > 0) { %>
+        <span class="ml-2 text-xs text-danger font-normal">— <%= overdueCommentCount %> en retard</span>
+      <% } %>
     </h2>
     <% if (pendingCommentsTotal > 0) { %>
-      <a href="/comments" class="text-xs text-primary hover:underline">Voir tout →</a>
+      <a href="/comments" class="btn-ghost text-xs">Voir tout →</a>
     <% } %>
   </div>
   <% if (pendingComments.length === 0) { %>
-    <div class="bg-white rounded-lg border border-gray-100 p-4 text-sm text-gray-400">Aucun commentaire en attente</div>
+    <div class="card p-4 text-sm text-ink-faint">Aucun commentaire en attente</div>
   <% } else { %>
     <div class="space-y-2">
       <% pendingComments.forEach(function(c) { %>
-        <!-- Per CONTEXT.md D-04: overdue = border-l-4 border-l-red-500, NO bg fill -->
-        <div class="bg-white rounded-lg border border-gray-100 p-4 <%= c.isOverdue ? 'border-l-4 border-l-red-500' : '' %>">
-          <div class="flex items-start justify-between">
+        <div class="card p-4 <%= c.isOverdue ? 'overdue' : '' %>">
+          <div class="flex items-start justify-between gap-3">
             <div class="flex-1 min-w-0">
-              <div class="text-sm font-medium text-secondary"><%= c.author_name || 'Anonyme' %></div>
-              <div class="text-xs text-gray-400 mt-0.5">sur "<%= c.post_hook || 'Post inconnu' %>"</div>
-              <div class="text-sm text-gray-600 mt-1 line-clamp-2"><%= c.comment_text %></div>
+              <div class="text-sm font-medium text-ink-primary"><%= c.author_name || 'Anonyme' %></div>
+              <div class="text-xs text-ink-faint mt-0.5">sur « <%= c.post_hook || 'Post inconnu' %> »</div>
+              <div class="text-sm text-ink-muted mt-1.5 line-clamp-2"><%= c.comment_text %></div>
             </div>
-            <% if (c.isOverdue) { %><span class="ml-3 text-xs text-red-500 font-medium">+2h</span><% } %>
+            <% if (c.isOverdue) { %>
+              <span class="text-xs text-danger font-mono flex-shrink-0">+2h</span>
+            <% } %>
           </div>
         </div>
       <% }); %>
@@ -92,31 +97,35 @@
   <% } %>
 </section>
 
-<!-- INBOX-03: Suivis DM -->
-<section class="mt-6">
+<!-- Suivis DM -->
+<section>
   <div class="flex items-center justify-between mb-3">
-    <h2 class="text-base font-semibold text-secondary">
-      Suivis DM <span class="text-xs font-normal text-gray-400">(<%= activeProspectsTotal %>)</span>
-      <% if (overdueProspectCount > 0) { %><span class="ml-1 text-xs font-normal text-red-500">— <%= overdueProspectCount %> en retard</span><% } %>
+    <h2 class="section-title">
+      Suivis DM
+      <span class="ml-1.5 font-mono text-xs text-ink-faint font-normal"><%= activeProspectsTotal %></span>
+      <% if (overdueProspectCount > 0) { %>
+        <span class="ml-2 text-xs text-danger font-normal">— <%= overdueProspectCount %> en retard</span>
+      <% } %>
     </h2>
     <% if (activeProspectsTotal > 0) { %>
-      <a href="/pipeline" class="text-xs text-primary hover:underline">Voir tout →</a>
+      <a href="/pipeline" class="btn-ghost text-xs">Voir tout →</a>
     <% } %>
   </div>
   <% if (activeProspects.length === 0) { %>
-    <div class="bg-white rounded-lg border border-gray-100 p-4 text-sm text-gray-400">Aucun suivi DM</div>
+    <div class="card p-4 text-sm text-ink-faint">Aucun suivi DM</div>
   <% } else { %>
     <div class="space-y-2">
       <% activeProspects.forEach(function(p) { %>
-        <!-- Per CONTEXT.md D-04: overdue = border-l-4 border-l-red-500, NO bg fill -->
-        <div class="bg-white rounded-lg border border-gray-100 p-4 <%= p.isOverdue ? 'border-l-4 border-l-red-500' : '' %>">
-          <div class="flex items-center justify-between">
-            <div>
-              <div class="text-sm font-medium text-secondary"><%= p.prospect_name || p.full_name || 'Inconnu' %></div>
-              <div class="text-xs text-gray-400 mt-0.5">Stage: <%= p.stage %> · Contact: <%= p.date_first_contact ? new Date(p.date_first_contact).toLocaleDateString('fr-FR') : '—' %></div>
+        <div class="card p-4 flex items-center justify-between gap-3 <%= p.isOverdue ? 'overdue' : '' %>">
+          <div>
+            <div class="text-sm font-medium text-ink-primary"><%= p.prospect_name || p.full_name || 'Inconnu' %></div>
+            <div class="text-xs text-ink-faint mt-0.5 font-mono">
+              <%= p.stage %> · <%= p.date_first_contact ? new Date(p.date_first_contact).toLocaleDateString('fr-FR') : '—' %>
             </div>
-            <% if (p.isOverdue) { %><span class="text-xs text-red-500 font-medium">En retard</span><% } %>
           </div>
+          <% if (p.isOverdue) { %>
+            <span class="text-xs text-danger font-medium flex-shrink-0">En retard</span>
+          <% } %>
         </div>
       <% }); %>
     </div>

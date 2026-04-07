@@ -1,169 +1,104 @@
 <div class="max-w-4xl">
-  <h1 class="text-lg font-semibold text-secondary mb-4">Statistiques</h1>
+  <div class="flex items-center justify-between mb-6">
+    <h1 class="page-title">Statistiques</h1>
+    <% if (latestWeek) { %>
+      <span class="font-mono text-xs text-ink-faint">Sem. <%= latestWeek.dates || latestWeek.week %></span>
+    <% } %>
+  </div>
 
   <% if (!latestWeek) { %>
-    <div class="bg-white rounded-xl border border-gray-100 p-8 text-center">
-      <p class="text-gray-400 text-sm">Aucune donnée hebdomadaire disponible.</p>
-      <p class="text-gray-300 text-xs mt-1">Les métriques apparaîtront ici après la première saisie.</p>
+    <div class="card p-10 text-center">
+      <p class="text-ink-muted text-sm">Aucune donnée hebdomadaire disponible.</p>
+      <p class="text-ink-faint text-xs mt-1">Les métriques apparaîtront après la première saisie.</p>
     </div>
   <% } else { %>
 
-    <!-- Semaine en cours -->
-    <div class="text-xs text-gray-400 mb-4">
-      Semaine du <%= latestWeek.dates || latestWeek.week %>
-    </div>
-
     <!-- 4 KPI cards -->
     <div class="grid grid-cols-2 gap-4 mb-6">
-
-      <!-- Taux d'engagement -->
-      <div class="bg-white rounded-xl border border-gray-100 p-4">
-        <div class="text-xs text-gray-500 mb-1">Taux d'engagement</div>
-        <div class="text-2xl font-bold text-secondary">
-          <% if (kpis.engagementRate !== null) { %>
-            <%= kpis.engagementRate.toFixed(1) %>%
-          <% } else { %>
-            —
-          <% } %>
+      <% var kpiData = [
+        { label: "Taux d'engagement", value: kpis.engagementRate !== null ? kpis.engagementRate.toFixed(1) + '%' : '—', target: '> 5%' },
+        { label: 'Taux INFO → DM', value: kpis.infoDmRate !== null ? kpis.infoDmRate + '%' : '—', target: '> 80%' },
+        { label: 'Taux DM → Calendly', value: kpis.dmCalendlyRate !== null ? kpis.dmCalendlyRate + '%' : '—', target: '> 30%' },
+        { label: 'Taux Calendly → Patient', value: kpis.calendlyPatientRate !== null ? kpis.calendlyPatientRate + '%' : '—', target: '> 70%' }
+      ]; %>
+      <% kpiData.forEach(function(k) { %>
+        <div class="card p-5">
+          <div class="text-xs text-ink-faint mb-2"><%= k.label %></div>
+          <div class="stat-number"><%= k.value %></div>
+          <div class="text-xs text-ink-faint mt-1.5">Cible <span class="text-ink-muted"><%= k.target %></span></div>
         </div>
-        <div class="text-xs text-gray-400 mt-1">Cible &gt; 5%</div>
-      </div>
-
-      <!-- INFO → DM -->
-      <div class="bg-white rounded-xl border border-gray-100 p-4">
-        <div class="text-xs text-gray-500 mb-1">Taux INFO → DM</div>
-        <div class="text-2xl font-bold text-secondary">
-          <% if (kpis.infoDmRate !== null) { %>
-            <%= kpis.infoDmRate %>%
-          <% } else { %>
-            —
-          <% } %>
-        </div>
-        <div class="text-xs text-gray-400 mt-1">Cible &gt; 80%</div>
-      </div>
-
-      <!-- DM → Calendly -->
-      <div class="bg-white rounded-xl border border-gray-100 p-4">
-        <div class="text-xs text-gray-500 mb-1">Taux DM → Calendly</div>
-        <div class="text-2xl font-bold text-secondary">
-          <% if (kpis.dmCalendlyRate !== null) { %>
-            <%= kpis.dmCalendlyRate %>%
-          <% } else { %>
-            —
-          <% } %>
-        </div>
-        <div class="text-xs text-gray-400 mt-1">Cible &gt; 30%</div>
-      </div>
-
-      <!-- Calendly → Patient -->
-      <div class="bg-white rounded-xl border border-gray-100 p-4">
-        <div class="text-xs text-gray-500 mb-1">Taux Calendly → Patient</div>
-        <div class="text-2xl font-bold text-secondary">
-          <% if (kpis.calendlyPatientRate !== null) { %>
-            <%= kpis.calendlyPatientRate %>%
-          <% } else { %>
-            —
-          <% } %>
-        </div>
-        <div class="text-xs text-gray-400 mt-1">Cible &gt; 70%</div>
-      </div>
+      <% }); %>
     </div>
 
-    <!-- Entonnoir d'acquisition -->
-    <div class="bg-white rounded-xl border border-gray-100 p-4 mb-6">
-      <h2 class="text-sm font-semibold text-secondary mb-4">Entonnoir d'acquisition</h2>
+    <!-- Funnel -->
+    <div class="card p-5 mb-6">
+      <h2 class="section-title mb-4">Entonnoir d'acquisition</h2>
       <% if (funnelData.length === 0) { %>
-        <p class="text-xs text-gray-400">Pas de données de funnel disponibles.</p>
+        <p class="text-xs text-ink-faint">Pas de données disponibles.</p>
       <% } else { %>
         <% funnelData.forEach(function(f) { %>
           <div class="flex items-center gap-3 mb-3">
-            <span class="text-xs text-gray-600 w-36 text-right truncate"><%= f.label %></span>
-            <div class="flex-1 bg-gray-100 rounded-full h-5 overflow-hidden">
-              <div class="h-5 rounded-full <%= f.color %> transition-all" style="width: <%= f.pct %>%; min-width: <%= f.value > 0 ? '0.5rem' : '0' %>"></div>
+            <span class="text-xs text-ink-muted w-36 text-right truncate flex-shrink-0"><%= f.label %></span>
+            <div class="flex-1 bg-surface-raised rounded-full h-2 overflow-hidden">
+              <div class="h-2 rounded-full bg-primary/70 transition-all duration-500" style="width: <%= f.pct %>%; min-width: <%= f.value > 0 ? '4px' : '0' %>"></div>
             </div>
-            <span class="text-xs font-semibold text-secondary w-10 text-right"><%= f.value %></span>
+            <span class="font-mono text-xs text-ink-muted w-8 text-right flex-shrink-0"><%= f.value %></span>
           </div>
         <% }); %>
       <% } %>
     </div>
 
-    <!-- Métriques brutes semaine en cours -->
-    <div class="bg-white rounded-xl border border-gray-100 p-4 mb-6">
-      <h2 class="text-sm font-semibold text-secondary mb-3">Métriques brutes — semaine en cours</h2>
+    <!-- Raw metrics -->
+    <div class="card p-5 mb-6">
+      <h2 class="section-title mb-4">Métriques brutes</h2>
       <div class="grid grid-cols-3 gap-3 text-center">
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-lg font-bold text-secondary"><%= latestWeek.posts_published || 0 %></div>
-          <div class="text-xs text-gray-500">Posts publiés</div>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-lg font-bold text-secondary"><%= latestWeek.total_reach || 0 %></div>
-          <div class="text-xs text-gray-500">Portée</div>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-lg font-bold text-secondary"><%= latestWeek.total_likes || 0 %></div>
-          <div class="text-xs text-gray-500">Likes</div>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-lg font-bold text-secondary"><%= latestWeek.total_comments || 0 %></div>
-          <div class="text-xs text-gray-500">Commentaires</div>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-lg font-bold text-secondary"><%= latestWeek.info_comments || 0 %></div>
-          <div class="text-xs text-gray-500">Coms INFO</div>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-lg font-bold text-secondary"><%= latestWeek.dm_opened || 0 %></div>
-          <div class="text-xs text-gray-500">DM ouverts</div>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-lg font-bold text-secondary"><%= latestWeek.calendly_booked || 0 %></div>
-          <div class="text-xs text-gray-500">RDV Calendly</div>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-lg font-bold text-secondary"><%= latestWeek.patients_converted || 0 %></div>
-          <div class="text-xs text-gray-500">Convertis</div>
-        </div>
-        <% if (latestWeek.total_shares) { %>
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-lg font-bold text-secondary"><%= latestWeek.total_shares %></div>
-          <div class="text-xs text-gray-500">Partages</div>
-        </div>
-        <% } %>
+        <% var metrics = [
+          { v: latestWeek.posts_published || 0, l: 'Posts publiés' },
+          { v: latestWeek.total_reach || 0, l: 'Portée' },
+          { v: latestWeek.total_likes || 0, l: 'Likes' },
+          { v: latestWeek.total_comments || 0, l: 'Commentaires' },
+          { v: latestWeek.info_comments || 0, l: 'Coms INFO' },
+          { v: latestWeek.dm_opened || 0, l: 'DM ouverts' },
+          { v: latestWeek.calendly_booked || 0, l: 'RDV Calendly' },
+          { v: latestWeek.patients_converted || 0, l: 'Convertis' }
+        ]; %>
+        <% metrics.forEach(function(m) { %>
+          <div class="card-raised p-3">
+            <div class="font-mono text-lg font-semibold text-ink-primary"><%= m.v %></div>
+            <div class="text-xs text-ink-faint mt-0.5"><%= m.l %></div>
+          </div>
+        <% }); %>
       </div>
       <% if (latestWeek.learnings) { %>
-        <div class="mt-3 text-xs text-gray-600 border-t border-gray-100 pt-3">
-          <span class="font-medium">Observations:</span> <%= latestWeek.learnings %>
+        <div class="mt-4 text-xs text-ink-muted border-t border-border-subtle pt-3">
+          <span class="text-ink-faint">Observations ·</span> <%= latestWeek.learnings %>
         </div>
       <% } %>
     </div>
 
-    <!-- Semaines précédentes -->
+    <!-- Historical table -->
     <% if (previousWeeks.length > 0) { %>
-    <div class="bg-white rounded-xl border border-gray-100 p-4">
-      <h2 class="text-sm font-semibold text-secondary mb-3">Semaines précédentes</h2>
+    <div class="card p-5">
+      <h2 class="section-title mb-4">Semaines précédentes</h2>
       <div class="overflow-x-auto">
-        <table class="w-full text-xs">
+        <table class="table-base">
           <thead>
-            <tr class="text-gray-500 border-b border-gray-100">
-              <th class="text-left pb-2 pr-3">Semaine</th>
-              <th class="text-right pb-2 px-2">Portée</th>
-              <th class="text-right pb-2 px-2">Coms</th>
-              <th class="text-right pb-2 px-2">INFO</th>
-              <th class="text-right pb-2 px-2">DM</th>
-              <th class="text-right pb-2 px-2">RDV</th>
-              <th class="text-right pb-2 pl-2">Convertis</th>
+            <tr>
+              <th>Semaine</th><th class="text-right">Portée</th><th class="text-right">Coms</th>
+              <th class="text-right">INFO</th><th class="text-right">DM</th>
+              <th class="text-right">RDV</th><th class="text-right">Convertis</th>
             </tr>
           </thead>
           <tbody>
             <% previousWeeks.forEach(function(w) { %>
-            <tr class="border-b border-gray-50 hover:bg-gray-50">
-              <td class="py-2 pr-3 text-gray-600"><%= w.dates || w.week %></td>
-              <td class="py-2 px-2 text-right text-gray-700"><%= w.total_reach || 0 %></td>
-              <td class="py-2 px-2 text-right text-gray-700"><%= w.total_comments || 0 %></td>
-              <td class="py-2 px-2 text-right text-gray-700"><%= w.info_comments || 0 %></td>
-              <td class="py-2 px-2 text-right text-gray-700"><%= w.dm_opened || 0 %></td>
-              <td class="py-2 px-2 text-right text-gray-700"><%= w.calendly_booked || 0 %></td>
-              <td class="py-2 pl-2 text-right text-gray-700"><%= w.patients_converted || 0 %></td>
+            <tr>
+              <td class="font-mono text-xs"><%= w.dates || w.week %></td>
+              <td class="text-right font-mono text-xs"><%= w.total_reach || 0 %></td>
+              <td class="text-right font-mono text-xs"><%= w.total_comments || 0 %></td>
+              <td class="text-right font-mono text-xs"><%= w.info_comments || 0 %></td>
+              <td class="text-right font-mono text-xs"><%= w.dm_opened || 0 %></td>
+              <td class="text-right font-mono text-xs"><%= w.calendly_booked || 0 %></td>
+              <td class="text-right font-mono text-xs"><%= w.patients_converted || 0 %></td>
             </tr>
             <% }); %>
           </tbody>

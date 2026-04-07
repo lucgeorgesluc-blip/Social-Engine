@@ -11,6 +11,8 @@ const { pool } = require('./lib/db');
 const { runSeed } = require('./lib/seed');
 const { router: authRouter, isAuthenticated } = require('./routes/auth');
 const dashRouter = require('./routes/dashboard');
+const postsRouter = require('./routes/posts');
+const commentsRouter = require('./routes/comments');
 
 const app = express();
 
@@ -51,6 +53,8 @@ app.use(session({
 // Mount routes — auth MUST be before dashboard routes
 app.use('/', authRouter);
 app.use('/', dashRouter);
+app.use('/', postsRouter);
+app.use('/', commentsRouter);
 
 // 404 handler
 app.use((req, res) => {

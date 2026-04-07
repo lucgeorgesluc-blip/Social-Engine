@@ -143,6 +143,12 @@ const SITE_CONFIG = {
     // ========================================
     blog: [
         {
+            slug: "magnetiseur-troyes-avis-8-criteres-choix-2026",
+            title: "Magnétiseur Troyes Avis : 8 Critères Choix 2026",
+            description: "Magnétiseur Troyes Avis : 8 Critères Choix 2026",
+            date: "2026-04-07"
+        },
+        {
             slug: "hypnose-arret-tabac-sans-rechute-7-techniques-prouvees",
             title: "Hypnose Arrêt Tabac Sans Rechute : 7 Techniques Prouvées",
             description: "Hypnose Arrêt Tabac Sans Rechute : 7 Techniques Prouvées",

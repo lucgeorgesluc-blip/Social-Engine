@@ -99,3 +99,4 @@
 - 2026-04-05 — Pipeline: drafted "arreter-fumer-seul-ou-accompagne-statistiques" (Arrêter Fumer Seul ou Accompagné ? [Statistiques])
 - 2026-04-06 — Pipeline: drafted "aimant-oreille-arret-tabac-arnaque-ou-efficace" (Aimant Oreille Arrêt Tabac : Arnaque ou Efficace ?)
 - 2026-04-06 — Pipeline: drafted "hypnose-arret-tabac-sans-rechute-7-techniques-prouvees" (Hypnose Arrêt Tabac Sans Rechute : 7 Techniques Prouvées)
+- 2026-04-07 — Pipeline: drafted "magnetiseur-troyes-avis-8-criteres-choix-2026" (Magnétiseur Troyes Avis : 8 Critères Choix 2026)

@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS post_metrics (
   impressions INTEGER DEFAULT 0,
   engagement INTEGER DEFAULT 0,
   clicks INTEGER DEFAULT 0,
+  metric_date DATE NOT NULL DEFAULT CURRENT_DATE,
   synced_at TIMESTAMPTZ DEFAULT NOW(),
-  UNIQUE(post_id, (synced_at::date))
+  UNIQUE(post_id, metric_date)
 );

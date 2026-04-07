@@ -51,10 +51,14 @@ async function generatePost(type, context) {
     const text = message.content[0].text;
     const tokensUsed = message.usage ? message.usage.output_tokens : 0;
 
-    await query(
-        'INSERT INTO ai_generations (month_key, post_type, tokens_used, generated_text, created_at) VALUES ($1, $2, $3, $4, NOW())',
-        [currentMonthKey(), type, tokensUsed, text]
-    );
+    try {
+        await query(
+            'INSERT INTO ai_generations (month_key, post_type, tokens_used, generated_text, created_at) VALUES ($1, $2, $3, $4, NOW())',
+            [currentMonthKey(), type, tokensUsed, text]
+        );
+    } catch (err) {
+        console.error('[ai] Failed to log generation (non-fatal):', err.message);
+    }
 
     const updatedUsage = await getMonthlyUsage();
     return { text, usage: { ...updatedUsage, isWarning: updatedUsage.count >= 50 } };

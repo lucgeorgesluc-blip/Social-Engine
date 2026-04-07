@@ -82,36 +82,36 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 3001;
 
-// Boot sequence — schema + seed, then listen
-(async () => {
+// Boot sequence — each step is independent so one failure never blocks the rest
+async function applySQL(label, filePath) {
     try {
-        // Run schema migrations
-        const schemaSQL = fs.readFileSync(path.join(__dirname, 'lib', 'schema.sql'), 'utf8');
-        await pool.query(schemaSQL);
-        console.log('[boot] Schema applied');
+        const sql = fs.readFileSync(filePath, 'utf8');
+        await pool.query(sql);
+        console.log(`[boot] ${label} applied`);
+    } catch (err) {
+        console.error(`[boot] ${label} failed:`, err.message);
+    }
+}
 
-        // Run column migrations (idempotent ALTER TABLE statements)
-        await runMigrations();
+(async () => {
+    await applySQL('schema', path.join(__dirname, 'lib', 'schema.sql'));
 
-        // AI schema — ai_generations table
-        const aiSchemaSQL = fs.readFileSync(path.join(__dirname, 'lib', 'ai-schema.sql'), 'utf8');
-        await pool.query(aiSchemaSQL);
-        console.log('[boot] AI schema applied');
+    try { await runMigrations(); } catch (err) {
+        console.error('[boot] migrations failed:', err.message);
+    }
 
-        // Facebook schema — fb_tokens, fb_sync_state, post_metrics tables
-        const schemaFbSQL = fs.readFileSync(path.join(__dirname, 'lib', 'schema-fb.sql'), 'utf8');
-        await pool.query(schemaFbSQL);
-        console.log('[boot] FB schema applied');
+    await applySQL('AI schema', path.join(__dirname, 'lib', 'ai-schema.sql'));
+    await applySQL('FB schema', path.join(__dirname, 'lib', 'schema-fb.sql'));
 
-        // Seed YAML data (idempotent — safe to run on every boot)
+    try {
         const counts = await runSeed();
         console.log('[boot] Seed complete:', counts);
-
-        // Start Facebook sync cron jobs
-        startCronJobs();
     } catch (err) {
-        // Do NOT crash — server must start so /health can report DB status
-        console.error('[boot] DB init failed (server still starting):', err.message);
+        console.error('[boot] seed failed:', err.message);
+    }
+
+    try { startCronJobs(); } catch (err) {
+        console.error('[boot] cron failed:', err.message);
     }
 
     app.listen(PORT, () => {

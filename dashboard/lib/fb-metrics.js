@@ -42,9 +42,9 @@ async function syncMetrics() {
                 }
 
                 await query(
-                    `INSERT INTO post_metrics (post_id, fb_post_id, reach, impressions, engagement, clicks)
-                     VALUES ($1, $2, $3, $4, $5, $6)
-                     ON CONFLICT (post_id, (synced_at::date)) DO UPDATE SET
+                    `INSERT INTO post_metrics (post_id, fb_post_id, reach, impressions, engagement, clicks, metric_date)
+                     VALUES ($1, $2, $3, $4, $5, $6, CURRENT_DATE)
+                     ON CONFLICT (post_id, metric_date) DO UPDATE SET
                        reach = $3, impressions = $4, engagement = $5, clicks = $6, synced_at = NOW()`,
                     [
                         post.id,

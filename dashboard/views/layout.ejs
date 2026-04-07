@@ -38,22 +38,18 @@
       <a href="/" class="flex items-center px-3 py-2.5 rounded-lg text-white bg-white/10 border-l-4 border-primary text-sm font-medium">
         Accueil
       </a>
-      <span class="flex items-center justify-between px-3 py-2.5 rounded-lg text-white/40 pointer-events-none text-sm">
+      <a href="/posts" class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition <%= typeof currentPath !== 'undefined' && (currentPath === '/posts' || currentPath === '/posts/calendar') ? 'text-white bg-white/10 border-l-4 border-primary' : 'text-white/70 hover:text-white hover:bg-white/5' %>">
         Posts
-        <span class="ml-auto text-xs bg-white/10 text-white/50 px-2 py-0.5 rounded-full">Bientôt</span>
-      </span>
-      <span class="flex items-center justify-between px-3 py-2.5 rounded-lg text-white/40 pointer-events-none text-sm">
+      </a>
+      <a href="/comments" class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition <%= typeof currentPath !== 'undefined' && currentPath === '/comments' ? 'text-white bg-white/10 border-l-4 border-primary' : 'text-white/70 hover:text-white hover:bg-white/5' %>">
         Commentaires
-        <span class="ml-auto text-xs bg-white/10 text-white/50 px-2 py-0.5 rounded-full">Bientôt</span>
-      </span>
-      <span class="flex items-center justify-between px-3 py-2.5 rounded-lg text-white/40 pointer-events-none text-sm">
+      </a>
+      <a href="/pipeline" class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition <%= typeof currentPath !== 'undefined' && currentPath === '/pipeline' ? 'text-white bg-white/10 border-l-4 border-primary' : 'text-white/70 hover:text-white hover:bg-white/5' %>">
         Pipeline
-        <span class="ml-auto text-xs bg-white/10 text-white/50 px-2 py-0.5 rounded-full">Bientôt</span>
-      </span>
-      <span class="flex items-center justify-between px-3 py-2.5 rounded-lg text-white/40 pointer-events-none text-sm">
+      </a>
+      <a href="/stats" class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition <%= typeof currentPath !== 'undefined' && currentPath === '/stats' ? 'text-white bg-white/10 border-l-4 border-primary' : 'text-white/70 hover:text-white hover:bg-white/5' %>">
         Statistiques
-        <span class="ml-auto text-xs bg-white/10 text-white/50 px-2 py-0.5 rounded-full">Bientôt</span>
-      </span>
+      </a>
     </nav>
 
     <!-- Logout at bottom -->

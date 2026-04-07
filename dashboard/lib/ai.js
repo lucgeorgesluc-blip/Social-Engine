@@ -15,11 +15,15 @@ function currentMonthKey() {
  * @returns {Promise<{ count: number, limit: number, warning: number }>}
  */
 async function getMonthlyUsage() {
-    const { rows } = await query(
-        'SELECT COUNT(*)::int AS count FROM ai_generations WHERE month_key = $1',
-        [currentMonthKey()]
-    );
-    return { count: rows[0].count, limit: 100, warning: 50 };
+    try {
+        const { rows } = await query(
+            'SELECT COUNT(*)::int AS count FROM ai_generations WHERE month_key = $1',
+            [currentMonthKey()]
+        );
+        return { count: rows[0].count, limit: 100, warning: 50 };
+    } catch {
+        return { count: 0, limit: 100, warning: 50 };
+    }
 }
 
 /**
@@ -61,17 +65,21 @@ async function generatePost(type, context) {
  * @returns {Promise<Array<{ objection_type: string, frequency: number }>>}
  */
 async function getFrequentObjections() {
-    const { rows } = await query(
-        `SELECT objection_type, COUNT(*)::int AS frequency
-         FROM comments
-         WHERE objection_type IS NOT NULL
-           AND objection_type != ''
-           AND created_at > NOW() - INTERVAL '90 days'
-         GROUP BY objection_type
-         HAVING COUNT(*) >= 3
-         ORDER BY frequency DESC`
-    );
-    return rows;
+    try {
+        const { rows } = await query(
+            `SELECT objection_type, COUNT(*)::int AS frequency
+             FROM comments
+             WHERE objection_type IS NOT NULL
+               AND objection_type != ''
+               AND created_at > NOW() - INTERVAL '90 days'
+             GROUP BY objection_type
+             HAVING COUNT(*) >= 3
+             ORDER BY frequency DESC`
+        );
+        return rows;
+    } catch {
+        return [];
+    }
 }
 
 module.exports = { generatePost, getMonthlyUsage, getFrequentObjections };

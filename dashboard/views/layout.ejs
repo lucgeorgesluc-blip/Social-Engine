@@ -6,67 +6,82 @@
   <title>Social Dashboard — Corinne Lacoste</title>
   <link rel="stylesheet" href="/css/tailwind.css">
 </head>
-<body class="bg-gray-50 min-h-screen font-sans">
+<body class="bg-surface-base min-h-screen font-sans">
 
-  <!-- Mobile hamburger button (visible below md breakpoint only) -->
-  <button
-    id="menu-toggle"
-    class="fixed top-3 left-3 z-40 md:hidden w-11 h-11 flex items-center justify-center bg-secondary text-white rounded-lg shadow-lg"
-    aria-label="Menu"
-  >
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+  <!-- Mobile menu toggle -->
+  <button id="menu-toggle" class="fixed top-4 left-4 z-40 md:hidden w-10 h-10 flex items-center justify-center bg-surface-raised border border-border-subtle rounded-lg text-ink-muted hover:text-ink-primary transition" aria-label="Menu">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
     </svg>
   </button>
 
-  <!-- Sidebar overlay for mobile -->
-  <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-20 hidden md:hidden"></div>
+  <!-- Mobile overlay -->
+  <div id="sidebar-overlay" class="fixed inset-0 bg-black/60 z-20 hidden md:hidden backdrop-blur-sm"></div>
 
   <!-- Sidebar -->
-  <aside
-    id="sidebar"
-    class="fixed inset-y-0 left-0 w-60 bg-secondary text-white transform -translate-x-full md:translate-x-0 transition-transform duration-200 z-30 flex flex-col"
-  >
-    <!-- Sidebar header -->
-    <div class="px-6 py-5">
-      <div class="text-sm font-semibold text-white">Social Dashboard</div>
-      <div class="text-xs text-white/70 mt-0.5">Corinne Lacoste</div>
+  <aside id="sidebar" class="fixed inset-y-0 left-0 w-56 bg-surface-card border-r border-border-subtle transform -translate-x-full md:translate-x-0 transition-transform duration-200 z-30 flex flex-col">
+
+    <!-- Brand -->
+    <div class="px-5 pt-6 pb-4 border-b border-border-subtle">
+      <div class="font-serif text-base font-semibold text-ink-primary leading-tight">Corinne Lacoste</div>
+      <div class="text-xs text-ink-faint mt-0.5 font-mono">Social Dashboard</div>
     </div>
 
-    <!-- Nav items -->
-    <nav class="flex-1 px-3 py-4 space-y-1">
-      <a href="/" class="flex items-center px-3 py-2.5 rounded-lg text-white bg-white/10 border-l-4 border-primary text-sm font-medium">
-        Accueil
+    <!-- Nav -->
+    <nav class="flex-1 px-3 py-4 space-y-0.5 overflow-y-auto">
+      <%
+        var p = typeof currentPath !== 'undefined' ? currentPath : '/';
+        function navClass(path) {
+          var active = (path === '/' ? p === '/' : p.startsWith(path));
+          return active ? 'nav-link-active' : 'nav-link';
+        }
+      %>
+
+      <a href="/" class="<%= navClass('/') %>">
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        <span>Accueil</span>
       </a>
-      <a href="/posts" class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition <%= typeof currentPath !== 'undefined' && (currentPath === '/posts' || currentPath === '/posts/calendar') ? 'text-white bg-white/10 border-l-4 border-primary' : 'text-white/70 hover:text-white hover:bg-white/5' %>">
-        Posts
+
+      <a href="/posts" class="<%= navClass('/posts') %>">
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <span>Posts</span>
       </a>
-      <a href="/comments" class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition <%= typeof currentPath !== 'undefined' && currentPath === '/comments' ? 'text-white bg-white/10 border-l-4 border-primary' : 'text-white/70 hover:text-white hover:bg-white/5' %>">
-        Commentaires
+
+      <a href="/comments" class="<%= navClass('/comments') %>">
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        <span>Commentaires</span>
       </a>
-      <a href="/pipeline" class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition <%= typeof currentPath !== 'undefined' && currentPath === '/pipeline' ? 'text-white bg-white/10 border-l-4 border-primary' : 'text-white/70 hover:text-white hover:bg-white/5' %>">
-        Pipeline
+
+      <a href="/pipeline" class="<%= navClass('/pipeline') %>">
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
+        <span>Pipeline</span>
       </a>
-      <a href="/dashboard/ai" class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition <%= typeof currentPath !== 'undefined' && currentPath === '/dashboard/ai' ? 'text-white bg-white/10 border-l-4 border-primary' : 'text-white/70 hover:text-white hover:bg-white/5' %>">
-        Génération IA
+
+      <a href="/dashboard/ai" class="<%= navClass('/dashboard/ai') %>">
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        <span>Génération IA</span>
       </a>
-      <a href="/stats" class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition <%= typeof currentPath !== 'undefined' && currentPath === '/stats' ? 'text-white bg-white/10 border-l-4 border-primary' : 'text-white/70 hover:text-white hover:bg-white/5' %>">
-        Statistiques
+
+      <a href="/stats" class="<%= navClass('/stats') %>">
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <span>Statistiques</span>
       </a>
     </nav>
 
-    <!-- Logout at bottom -->
-    <div class="px-3 py-4 border-t border-white/10">
+    <!-- Logout -->
+    <div class="px-3 py-4 border-t border-border-subtle">
       <form method="POST" action="/logout">
-        <button type="submit" class="w-full text-left px-3 py-2.5 text-white/70 hover:text-white text-sm transition">
-          Se déconnecter
+        <button type="submit" class="nav-link w-full">
+          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+          <span>Se déconnecter</span>
         </button>
       </form>
     </div>
   </aside>
 
-  <!-- Main content -->
-  <main class="md:ml-60 min-h-screen p-6">
+  <!-- Main -->
+  <main class="md:ml-56 min-h-screen p-6 md:p-8 max-w-[1400px]">
+    <%- include('partials/fb-banner') %>
     <%- body %>
   </main>
 

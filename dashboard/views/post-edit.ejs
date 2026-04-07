@@ -1,0 +1,90 @@
+<div class="max-w-2xl">
+  <div class="flex items-center gap-3 mb-6">
+    <a href="/posts" class="text-ink-faint hover:text-ink-muted transition-colors">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+    </a>
+    <h1 class="page-title"><%= isNew ? 'Nouveau post' : 'Modifier le post' %></h1>
+    <% if (!isNew && post) { %><span class="badge badge-<%= post.status %>"><%= post.status %></span><% } %>
+  </div>
+
+  <% if (typeof saved !== 'undefined' && saved) { %>
+    <div class="card p-3 mb-5 bg-success/10 border-success/30 text-success text-sm">Post sauvegardé.</div>
+  <% } %>
+
+  <form method="POST" action="<%= isNew ? '/posts' : '/posts/' + post.id %>" class="space-y-5">
+
+    <div class="card p-6 space-y-4">
+
+      <div>
+        <label class="block text-xs font-medium text-ink-muted mb-1.5">Accroche (titre / première ligne)</label>
+        <input type="text" name="hook" value="<%= isNew ? '' : (post.hook || '') %>"
+               class="input" placeholder="L'accroche qui donne envie de lire...">
+      </div>
+
+      <div>
+        <label class="block text-xs font-medium text-ink-muted mb-1.5">Contenu</label>
+        <textarea name="content" rows="14" class="input resize-y font-mono text-xs leading-relaxed"
+                  placeholder="Texte complet du post..."><%= isNew ? '' : (post.content || '') %></textarea>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs font-medium text-ink-muted mb-1.5">Type</label>
+          <select name="type" class="input">
+            <option value="">— Choisir —</option>
+            <% var types = ['objection-buster','temoignage','myth-buster','timeline','education','story','promotion','question'];
+               types.forEach(function(t) { %>
+              <option value="<%= t %>" <%= (!isNew && post && post.type === t) ? 'selected' : '' %>><%= t %></option>
+            <% }); %>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-ink-muted mb-1.5">Statut</label>
+          <select name="status" class="input">
+            <% ['draft','scheduled','published'].forEach(function(s) { %>
+              <option value="<%= s %>" <%= (!isNew && post && post.status === s) ? 'selected' : '' %>><%= s %></option>
+            <% }); %>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-xs font-medium text-ink-muted mb-1.5">Date de publication</label>
+        <input type="date" name="published_date"
+               value="<%= (!isNew && post && post.published_date) ? (post.published_date instanceof Date ? post.published_date.toISOString().split('T')[0] : String(post.published_date).split('T')[0]) : '' %>"
+               class="input">
+      </div>
+
+      <% if (!isNew) { %>
+        <input type="hidden" name="platform" value="<%= post.platform || 'facebook' %>">
+      <% } else { %>
+        <input type="hidden" name="platform" value="facebook">
+      <% } %>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button type="submit" class="btn-primary">Sauvegarder</button>
+      <% if (!isNew && post && post.content) { %>
+        <button type="button" id="copy-btn" class="btn-ghost">Copier le texte</button>
+      <% } %>
+      <% if (!isNew) { %>
+        <a href="/dashboard/ai" class="btn-ghost text-xs ml-auto">Générer avec IA →</a>
+      <% } %>
+    </div>
+  </form>
+</div>
+
+<% if (!isNew && post && post.content) { %>
+<script>
+  document.getElementById('copy-btn').addEventListener('click', function() {
+    var text = document.querySelector('textarea[name="content"]').value;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(function() {
+        var btn = document.getElementById('copy-btn');
+        btn.textContent = 'Copié ✓';
+        setTimeout(function() { btn.textContent = 'Copier le texte'; }, 2000);
+      });
+    }
+  });
+</script>
+<% } %>

@@ -46,6 +46,60 @@ router.get('/posts', isAuthenticated, async (req, res, next) => {
     } catch (err) { next(err); }
 });
 
+// POST-02: GET /posts/new — new post form
+router.get('/posts/new', isAuthenticated, (req, res) => {
+    res.render('post-edit', {
+        currentPath: '/posts',
+        post: null,
+        isNew: true
+    });
+});
+
+// POST-02: POST /posts — create post (also used by AI generation save)
+router.post('/posts', isAuthenticated, async (req, res, next) => {
+    try {
+        const { hook, content, type, status, published_date, platform } = req.body;
+        const id = 'post-' + Date.now();
+        const safeStatus = ['draft', 'scheduled', 'published'].includes(status) ? status : 'draft';
+        await query(
+            `INSERT INTO posts (id, hook, content, type, status, platform, published_date, created_at)
+             VALUES ($1, $2, $3, $4, $5, $6, $7, NOW())`,
+            [id, hook || null, content || null, type || null, safeStatus,
+             platform || 'facebook', published_date || null]
+        );
+        res.redirect('/posts/' + id + '/edit');
+    } catch (err) { next(err); }
+});
+
+// POST-02: GET /posts/:id/edit — view/edit a post
+router.get('/posts/:id/edit', isAuthenticated, async (req, res, next) => {
+    try {
+        const { rows } = await query('SELECT * FROM posts WHERE id = $1', [req.params.id]);
+        if (rows.length === 0) return res.status(404).render('error', { status: 404, message: 'Post introuvable' });
+        res.render('post-edit', {
+            currentPath: '/posts',
+            post: rows[0],
+            isNew: false,
+            saved: req.query.saved === '1'
+        });
+    } catch (err) { next(err); }
+});
+
+// POST-02: POST /posts/:id — update a post
+router.post('/posts/:id', isAuthenticated, async (req, res, next) => {
+    try {
+        const { hook, content, type, status, published_date } = req.body;
+        const safeStatus = ['draft', 'scheduled', 'published'].includes(status) ? status : 'draft';
+        const { rowCount } = await query(
+            `UPDATE posts SET hook=$1, content=$2, type=$3, status=$4, published_date=$5 WHERE id=$6`,
+            [hook || null, content || null, type || null, safeStatus,
+             published_date || null, req.params.id]
+        );
+        if (rowCount === 0) return res.status(404).render('error', { status: 404, message: 'Post introuvable' });
+        res.redirect('/posts/' + req.params.id + '/edit?saved=1');
+    } catch (err) { next(err); }
+});
+
 // POST-04: GET /posts/calendar — MONTHLY ONLY (CONTEXT D-03)
 router.get('/posts/calendar', isAuthenticated, async (req, res, next) => {
     try {

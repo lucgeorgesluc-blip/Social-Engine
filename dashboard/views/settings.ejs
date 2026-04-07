@@ -1,0 +1,55 @@
+<h1 class="text-2xl font-bold text-secondary mb-6 font-serif">Paramètres</h1>
+
+<div class="bg-white rounded-lg shadow p-6 max-w-xl">
+  <h2 class="text-lg font-semibold text-secondary mb-4">Publication automatique Facebook</h2>
+
+  <% if (!hasToken) { %>
+    <p class="text-gray-600 mb-4">Aucun token Facebook connecté.</p>
+    <a href="/dashboard/fb/auth" class="text-primary font-medium underline">Connecter un compte Facebook</a>
+  <% } else if (!hasPublishScope) { %>
+    <p class="text-amber-700 bg-amber-50 px-4 py-3 rounded-lg mb-4">
+      Nécessite l'approbation Meta App Review pour la permission <code>pages_manage_posts</code>.
+      En attendant, utilisez la copie dans le presse-papiers pour publier manuellement.
+    </p>
+    <div class="opacity-50 pointer-events-none">
+      <label class="flex items-center gap-3">
+        <input type="checkbox" disabled class="w-5 h-5">
+        <span>Publier automatiquement les posts programmés</span>
+      </label>
+    </div>
+  <% } else { %>
+    <form method="POST" action="/dashboard/settings/auto-publish">
+      <label class="flex items-center gap-3 cursor-pointer">
+        <input type="hidden" name="enable" value="<%= autoPublish ? 'false' : 'true' %>">
+        <input type="checkbox" <%= autoPublish ? 'checked' : '' %> onchange="this.form.submit()"
+               class="w-5 h-5 text-primary rounded border-gray-300 focus:ring-primary">
+        <span class="text-gray-800">Publier automatiquement les posts programmés</span>
+      </label>
+      <p class="text-sm text-gray-500 mt-2 ml-8">
+        Les posts avec le statut "programmé" seront publiés automatiquement sur votre page Facebook à l'heure prévue.
+      </p>
+    </form>
+    <% if (errorParam === 'no_scope') { %>
+      <p class="text-red-600 text-sm mt-2">Erreur : la permission pages_manage_posts n'est pas disponible.</p>
+    <% } else if (errorParam === 'no_token') { %>
+      <p class="text-red-600 text-sm mt-2">Erreur : aucun token Facebook connecté.</p>
+    <% } %>
+  <% } %>
+</div>
+
+<div class="bg-white rounded-lg shadow p-6 max-w-xl mt-6">
+  <h2 class="text-lg font-semibold text-secondary mb-4">Synchronisation manuelle</h2>
+  <div class="flex gap-4 flex-wrap">
+    <form method="POST" action="/dashboard/fb/sync-comments">
+      <button type="submit" class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition text-sm">
+        Synchroniser les commentaires
+      </button>
+    </form>
+    <form method="POST" action="/dashboard/fb/sync-metrics">
+      <button type="submit" class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition text-sm">
+        Synchroniser les métriques
+      </button>
+    </form>
+  </div>
+  <p class="text-xs text-gray-500 mt-3">Synchronisation automatique : commentaires toutes les 15 min, métriques chaque nuit à 6h.</p>
+</div>

@@ -1,0 +1,31 @@
+<div id="token-health-banner" class="mb-4 px-4 py-3 rounded-lg flex items-center justify-between text-sm">
+  <span id="token-health-message">Chargement...</span>
+  <a id="token-health-action" href="/dashboard/fb/auth" class="hidden font-medium underline">Connecter</a>
+</div>
+<script>
+  fetch('/dashboard/fb/status')
+    .then(r => r.json())
+    .then(data => {
+      const banner = document.getElementById('token-health-banner');
+      const msg = document.getElementById('token-health-message');
+      const action = document.getElementById('token-health-action');
+      msg.textContent = data.message;
+      banner.classList.remove('bg-green-100', 'text-green-800', 'bg-amber-100', 'text-amber-800', 'bg-red-100', 'text-red-800');
+      if (data.color === 'green') {
+        banner.classList.add('bg-green-100', 'text-green-800');
+      } else if (data.color === 'amber') {
+        banner.classList.add('bg-amber-100', 'text-amber-800');
+        action.textContent = 'Renouveler';
+        action.classList.remove('hidden');
+      } else {
+        banner.classList.add('bg-red-100', 'text-red-800');
+        action.textContent = data.status === 'missing' ? 'Connecter' : 'Reconnecter';
+        action.classList.remove('hidden');
+      }
+    })
+    .catch(() => {
+      const banner = document.getElementById('token-health-banner');
+      banner.classList.add('bg-gray-100', 'text-gray-600');
+      document.getElementById('token-health-message').textContent = 'Statut Facebook indisponible';
+    });
+</script>
